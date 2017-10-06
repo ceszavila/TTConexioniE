@@ -1,0 +1,115 @@
+\section{Modelo de información del metadato}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   CLASE METADATO
+
+\begin{BusinessEntity}{Metadato}{Metadato}
+	\Battr{folioRelacionado}{Folio}{\tdNumerico}{Es un identificador que se le asigna al registro de un beneficiario con el objetivo de dar seguimiento a su caso cuando presente alguna inconsistencia en su información. Debe cumplir con la \cdtIdRef{RN-S5}{Formato de folio del metadato}}{\requerido}
+	\Battr{alta}{Alta}{\tdFecha}{Es la fecha que se registra cuando se ingresa por primera vez la información del beneficiario en el sistema. El formato de la fecha debe ser \cdtRef{gls:fechaCorta}{corta}}{\requerido}
+	\Battr{ultimaActualizacion}{Actualizado}{\tdFecha}{Es la fecha que se registra cuando la información del beneficiario sufre algún cambio. El formato de la fecha debe ser \cdtRef{gls:fechaCorta}{corta}}{\requerido}
+	\Battr{primerApellido}{Primer apellido}{\tdPalabra}{Es el primer apellido del beneficiario conforme al documento oficial presentado. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\requerido}
+	\Battr{segundoApellido}{Segundo apellido}{\tdPalabra}{Es el segundo apellido del beneficiario conforme al documento oficial presentado. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\requerido}
+	\Battr{nombre}{Nombre}{\tdFrase}{Nombre o nombres del beneficiario conforme al documento oficial presentado. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\requerido}
+	\Battr{fechaNacimiento}{Fecha de nacimiento}{\tdFecha}{Es la fecha de nacimiento del beneficiario según el documento oficial que presente. El formato de la fecha debe ser \cdtRef{gls:fechaCorta}{corta}}{\requerido}
+	\Battr{sexo}{Sexo}{\tdBooleano}{Es el género del beneficiario y debe cumplir con la \cdtIdRef{RN-S7}{Formato del género en el metadato}}{\requerido}
+	\Battr{curp}{CURP}{\tdPalabra}{Es la Clave Única de Registro de Población. Debe cumplir con la \cdtIdRef{RN-S8}{Estructura de la CURP}}{\requerido}
+	\Battr{calle}{Calle}{\tdFrase}{Es el nombre de la calle del domicilio del beneficiario. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\requerido}
+	\Battr{numeroExterior}{Número exterior}{\tdNumerico}{Es el número con el cual se identifica el lote del beneficiario. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\requerido}
+	\Battr{numeroInterior}{Número interior}{\tdPalabra}{Es el número con el cual se identifica la vivienda del beneficiario. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\opcional}
+	\Battr{calleReferencia1}{Calle de referencia 1}{\tdFrase}{Es el nombre de una calle que servirá de referencia para ubicar la vivienda del beneficiario. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\opcional}
+	\Battr{calleReferencia2}{Calle de referencia 2}{\tdFrase}{Es el nombre de una calle, diferente a la primer referencia, que servirá de referencia para ubicar la vivienda del beneficiario. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\opcional}
+	\Battr{otraReferencia}{Otra referencia}{\tdPalabra}{Es la descripción de una característica o señalamiento en el domicilio del beneficiario con la cual se podrá identificar rápidamente su vivienda. En caso de haber ingresado la cadena “DOMICILIO CONOCIDO” en el campo ``calle'' este atributo es obligatorio. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\requerido}
+	\Battr{colonia}{Colonia}{\tdFrase}{Es el nombre de la colonia del domicilio del beneficiario y deberá tomarse del comprobante de domicilio presentado. Debe cumplir con la \cdtIdRef{RN-S6}{Formato de texto en el metadato}}{\requerido} 
+\end{BusinessEntity}
+
+\subsubsection{Relaciones}
+
+%TipoRelacion: Puede ser: Herencia (flecha), Composición (rombo negro), Agregación (rombo blanco), Asociación (linea simple)
+ \begin{BusinessFact}{Nacionalidad}{Nacionalidad}
+	\BRitem{Descripción}{Un \cdtRef{Metadato}{beneficiario} tiene una \cdtRef{Nacionalidad}{nacionalidad} correspondiente al país de nacimiento. Sólo se permiten las nacionalidades descritas en el catálogo de la CGG}%correspondiente al catálogo de nacionalidades de la CGG. En caso de no contar con las claves de este catálogo, podrá aceptarse la descripción de las claves de este catálogo, por ejemplo: MEXICANO, GUATEMALTECO ó ESTADOUNIDENSE.
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{TipoBeneficiario}{Tipo de beneficiario}
+	\BRitem{Descripción}{El \cdtRef{Metadato}{beneficiario} pertenece a una clasificación y por lo tanto se le asocia un \cdtRef{gls:statusBeneficiario}{Estatus del beneficiario}. Sólo se permiten los estatus de beneficiarios descritos en el catálogo de la CGG, pero por defecto debe ser ``B''}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{TipoIdentificacion}{Tipo de identificación}
+	\BRitem{Descripción}{La información del \cdtRef{Metadato}{beneficiario} se debe obtener de un \cdtRef{gls:documentoOficial}{documento oficial}. Sólo se permiten los documentos oficiales descritos en el catálogo de la CGG}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{Parentesco}{Parentesco}
+	\BRitem{Descripción}{El \cdtRef{Metadato}{beneficiario} tiene un \cdtRef{Parentesco}{parentesco} asociado. Sólo se permiten los tipos de parentesco descritos en el catálogo de la CGG, pero por defecto debe ser ``0''}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{EstadoCivil}{Estado civil}
+	\BRitem{Descripción}{El \cdtRef{Metadato}{beneficiario} tiene un \cdtRef{EstadoCivil}{estado civil}. Sólo se permiten los tipos de estado civil descritos en el catálogo de la CGG}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{GradoEstudios}{Grado de estudios}
+	\BRitem{Descripción}{El \cdtRef{Metadato}{beneficiario} puede tener un \cdtRef{GradoEstudios}{grado de estudios}. Sólo se permiten los tipos de grado de estudio descritos en el catálogo de la CGG}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{Referencias}{Referencias}
+	\BRitem{Descripción}{El \cdtRef{Metadato}{beneficiario} puede presentar una o varias \cdtRef{Referencias}{referencias} con las cuales se pueda localizar}
+	\BRitem{Tipo}{\relComposicion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{Municipio}{Municipio}
+	\BRitem{Descripción}{El domicilio del \cdtRef{Metadato}{beneficiario} debe presentar un \cdtRef{Municipio}{municipio}. Sólo se permiten los municipios registrados en el catálogo de la CGG}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{CodigoPostal}{Código postal}
+	\BRitem{Descripción}{El domicilio del \cdtRef{Metadato}{beneficiario} debe presentar un \cdtRef{CodigoPostal}{código postal}. Sólo se permiten los códigos postales registrados en el catálogo de la CGG}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{Localidad}{Localidad}
+	\BRitem{Descripción}{El domicilio del \cdtRef{Metadato}{beneficiario} debe presentar una \cdtRef{Localidad}{localidad}. Sólo se permiten las localidades registradas en el catálogo de la CGG}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+\begin{BusinessFact}{EntidadFederativa}{Entidad federativa}
+	\BRitem{Descripción}{El domicilio del \cdtRef{Metadato}{beneficiario} debe presentar una \cdtRef{EntidadFederativa}{entidad federativa}. Sólo se permiten las entidades federativas registradas en el catálogo de la CGG}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%    CLASE REFERENCIAS
+
+\begin{BusinessEntity}{Referencia}{Referencias}		
+	\Battr{referencia}{Referencia}{\tdPalabra}{Se refiere al número de teléfono, la dirección de correo electrónico, etc., por medio del cual se puede poner en contacto rápidamente con el beneficiario}{\requerido}
+	\Battr{detalle}{Detalle}{\tdParrafo}{Es una especificación o aclaración textual acerca de la referencia proporcionada por el beneficiario}{\opcional}
+\end{BusinessEntity}
+
+\subsubsection{Relaciones}
+
+ \begin{BusinessFact}{TipoReferencia}{Tipo de referencia}
+	\BRitem{Descripción}{La \cdtRef{Referencia}{referencia} proporcionada por el beneficiario debe ser de un  \cdtRef{TipoReferencia}{tipo de referencia} especificado en el catálogo mismo}
+	\BRitem{Tipo}{\relAsociacion}
+	\BRitem{Cardinalidad}{Uno a muchos}
+\end{BusinessFact}
+
+
+

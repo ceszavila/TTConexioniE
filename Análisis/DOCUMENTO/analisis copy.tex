@@ -1,0 +1,250 @@
+\documentclass[10pt]{book}
+\usepackage{cdt/cdtBusiness}
+\usepackage{sprach}
+\usepackage{subfigure}
+\usepackage{cite}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Datos del proyecto
+
+\organizacion[SPRACH]{SPRACH}
+\autor[CE]{Corporativo Emeth}
+\sistema[SIS]{Sistema de Información SPRACH}
+\proyecto[SPRACH]{SPRACH Etapa 1}
+\documento{C1--DT}{Componente 1: Documento de análisis del Sistema de información SPRACH}{\RELEASE{1.0}} %\DRAFT{\today}
+
+%\entregable{}{\Large{Módulo de Recolección de Información (MRI)}}
+
+
+
+% Descomentar y establecer la fecha cuando se desee congelar la fecha del documento.
+%\fecha{12 de Abril de 2013}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Datos para revisión
+\elaboro[Natalia G. Hernández Sánchez]{Líder de análisis} % Responsable del contenido (IPN)
+\superviso[José J. López Rabadán]{Líder de proyecto} % Quien recibe el documento (Contraparte)
+\aprobo[Diego Ruedas Arias]{Director SPRACH} % Responsable Técnico (Contraparte)
+
+
+%\title{\varProyecto}
+%\subtitle{\varCveDocumento--\varDocumento}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%
+\docRefs{
+	\docItem{M0}{1.0}{ \cdtLabel{Minuta0}{Minuta de introducción}}
+	\docItem{M180316}{1.0}{ \cdtLabel{Minuta180316}{Minuta del día 18 de marzo de 2016}}
+    \docItem{M290316}{1.0}{ \cdtLabel{Minuta290316}{Minuta del día 29 de marzo de 2016}}
+	\docItem{M080416}{1.0}{ \cdtLabel{Minuta080416}{Minuta del día 8 de abril de 2016}}
+	}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Elementos contenidos en el documento
+
+% TODO: Al finalizar el análisis resuma aquí todos los elementos del componente: RN, CU, IU, MSG.
+\elemRefs{
+    %Actores
+	\elemItem{Gerente Administrativo}{1.0}{Descripción del actor}                         
+	\elemItem{Coordinador}{1.0}{Descripción del actor}                           
+	\elemItem{Coach}{1.0}{Descripción del actor}                 % P1
+	\elemItem{Alumno}{1.0}{Descripción del actor}                            % P1
+
+    %Entidades
+    \elemItem{Nivel}{1.0}{Modelo estructural}
+    
+    %Reglas de negocio
+	%\elemItem{RN1}{1.0}{Información correcta}                           % P1, P2, P3
+	
+	%Casos de uso
+	%\elemItem{CUT 9}{1.1}{Gestionar tares de la unidad administrativa}                                                                                    
+	
+	%Pantallas
+	%\elemItem{IUT 1}{1.0}{Registrar tarea}                                                         % P1
+	                                                        % P3
+    %Mensajes
+	%\elemItem{MSG1}{1.0}{Operación realizada exitosamente}                                         % P1, P2, P3
+	
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Portada
+\ThisLRCornerWallPaper{1}{cdt/theme/agua.png}
+\thispagestyle{empty}
+%\maketitle
+% Hoja de revisión
+%\makeDocInfo
+%\vspace{0.5cm}
+%\makeElemRefs
+%\makeDocRefs
+%\makeFirmas
+%\vspace{0.5cm}
+
+\makeObservaciones[20cm]
+% Indices del documento
+\frontmatter
+%%\LRCornerWallPaper{1}{cdt/theme/pleca.png}
+\tableofcontents
+\listoffigures
+%\listoftables
+\mainmatter
+
+% Para esconder la información del documentador se descomenta el \hideControlVersion
+\hideControlVersion
+
+%--------------------------------------------------------------------------------
+\chapter{Introducción}\label{chp:introduccion}
+
+%\cfinput{Introduccion/introduccion}
+
+%--------------------------------------------------------------------------------
+\chapter{Glosario de términos}\label{chp:glosarioTerminos}
+
+\cfinput{ModeloNegocios/glosario}
+\cfinput{ModeloNegocios/reglas}
+
+
+%--------------------------------------------------------------------------------
+\chapter{Modelo de negocios}\label{chp:modeloNegocios}
+\cfinput{ModeloNegocios/estructura}
+
+%--------------------------------------------------------------------------------
+\chapter{Modelo de comportamiento}\label{chp:modeloComportamiento}
+
+\cfinput{ModeloComportamiento/comportamiento}
+
+%--------------------------------------------------------------------------------
+\chapter{Modelo de comportamiento del subsistema: General}
+\label{chp:general}
+
+	En este capítulo se describen los casos de uso que son utilizados en distintos módulos
+	del sistema.\bigskip
+
+\cfinput{General/descripcionCU}
+\cfinput{cu1/cu}
+%\cfinput{cu2/cu}
+%--------------------------------------------------------------------------------
+\chapter{Modelo de comportamiento del subsistema: Administración de Coaches}
+\label{chp:administracionCoaches}
+
+	En este capítulo se describen los casos de uso que tienen que ver con el registro, modificación, eliminación o consulta de los coaches.\bigskip
+
+\cfinput{General/descripcionCU}
+\cfinput{cug3/cu}            
+\cfinput{cug3.1/cu} 
+\cfinput{cug3.2/cu}
+\cfinput{cug3.3/cu}
+\cfinput{cug3.10/cu}
+\cfinput{cug3.11/cu}
+%--------------------------------------------------------------------------------
+\chapter{Modelo de comportamiento del subsistema: Administración de Clientes Potenciales}
+\label{chp:administracionClientesPotenciales}
+
+	En este capítulo se describen los casos de uso que tienen que ver con el registro, modificación, eliminación o consulta de los clientes potenciales.\bigskip
+
+\cfinput{General/descripcionCU}
+\cfinput{cucp1/cu}
+\cfinput{cucp1.1/cu}
+
+\cfinput{cucp1.3/cu}
+\cfinput{cucp2/cu}
+%--------------------------------------------------------------------------------
+\chapter{Modelo de comportamiento del subsistema: Administración de Clientes}
+\label{chp:administracionClientes}
+
+	En este capítulo se describen los casos de uso que tienen que ver con el registro, modificación, eliminación o consulta de los clientes.\bigskip
+
+\cfinput{General/descripcionCU}
+\cfinput{cuc1/cu}
+\cfinput{cuc2/cu}
+\cfinput{cuc1.5/cu}
+%--------------------------------------------------------------------------------
+\chapter{Modelo de comportamiento del subsistema: Administración de Grupos}
+\label{chp:administracionGrupos}
+
+	En este capítulo se describen los casos de uso que tienen que ver con el registro, modificación, eliminación o consulta de los grupos.\bigskip
+
+\cfinput{General/descripcionCU}
+\cfinput{cuc1.1/cu}
+\cfinput{cugr1/cu}
+\cfinput{cugr2/cu}
+\cfinput{cugr8/cu}
+
+
+
+
+%--------------------------------------------------------------------------------
+\chapter{Modelo de comportamiento del subsistema: Administración de Libros}
+\label{chp:administracionLibros}
+
+	En este capítulo se describen los casos de uso que tienen que ver con el registro, modificación, eliminación o consulta de los libros.\bigskip
+
+\cfinput{General/descripcionCU}
+\cfinput{cul1/cu}
+\cfinput{cul1.1/cu}
+\cfinput{cul1.2/cu}
+\cfinput{cul1.3/cu}
+\cfinput{cul1.4/cu}
+
+
+
+
+%--------------------------------------------------------------------------------
+\chapter{Modelo de interacción con el usuario}\label{chp:modeloInteraccionUsuario}
+
+\cfinput{ModeloInteraccion/interaccion}
+%--------------------------------------------------------------------------------
+\section{Menús}
+\cfinput{ModeloInteraccion/menu.tex}
+%--------------------------------------------------------------------------------
+\section{Interfaces del subsistema: General}
+
+\cfinput{cu1/iu}
+\cfinput{cu2/iu}
+%--------------------------------------------------------------------------------
+\section{Interfaces del subsistema: Administración de Coaches}
+
+\cfinput{cug3/iu}  
+\cfinput{cug3.1/iu}                              
+\cfinput{cug3.2/iu}
+\cfinput{cug3.3/iu}
+\cfinput{cug3.10/iu}
+\cfinput{cug3.11/iu}
+%--------------------------------------------------------------------------------
+\section{Interfaces del subsistema: Administración de Clientes Potenciales}
+\cfinput{cucp1/iu}
+\cfinput{cucp1.1/iu}
+
+\cfinput{cucp1.3/iu}
+\cfinput{cucp2/iu}
+%--------------------------------------------------------------------------------
+\section{Interfaces del subsistema: Administración de Clientes}
+\cfinput{cuc1/iu}
+\cfinput{cuc2/iu}
+\cfinput{cuc1.5/iu}
+%--------------------------------------------------------------------------------
+\section{Interfaces del subsistema: Administración de Grupos}
+\cfinput{cuc1.1/iu}
+\cfinput{cugr1/iu}
+\cfinput{cugr2/iu}
+\cfinput{cugr8/iu}
+%--------------------------------------------------------------------------------
+\section{Interfaces del subsistema: Administración de Libros}
+\cfinput{cul1/iu}
+\cfinput{cul1.1/iu}
+\cfinput{cul1.2/iu}
+\cfinput{cul1.4/iu}
+
+%--------------------------------------------------------------------------------
+\section{Diseño de mensajes}
+\cfinput{ModeloInteraccion/mensajes.tex}
+
+\clossing
+\end{document}

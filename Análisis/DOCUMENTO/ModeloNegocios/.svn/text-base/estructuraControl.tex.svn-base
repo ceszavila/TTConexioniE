@@ -1,0 +1,81 @@
+% Por el momento no se está incluyendo en el documento
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CLASE CONTROLADO
+
+%\begin{BusinessEntity}{Controlado}{Controlado}	
+%	\Battr{estatus}{Estatus}{EstatusControl}{Es el estado en que se encuentra el objeto al que se hace referencia}{\requerido}		
+%\end{BusinessEntity}
+%
+%\subsection{Relaciones}
+%\begin{BusinessFact}{StatusControl}{Estatus}
+%	\BRitem{Descripción}{ \cdtRef{Controlado}{Controlado} tiene asociado varios \cdtRef{StatusControl}{StatusControl} }
+%	\BRitem{Tipo}{\relAsociacion}
+%	\BRitem{Cardinalidad}{Varios a varios.}
+%\end{BusinessFact}
+
+
+
+%%=================================================================
+%%  CLASE USUARIO
+%
+%\begin{BusinessEntity}{usuario}{Usuario}	
+%	\Battr{id}{Id}{\tdNumerico}{Identifica al usuario dentro del sistema}{\requerido}	
+%	\Battr{nombre}{Nombre}{\tdPalabra}{Es el nombre de pila de la persona}{\requerido}		
+%	\Battr{primerApellido}{Primer apellido}{\tdPalabra}{Es el primer apellido de la persona}{\requerido}	
+%	\Battr{segundoApellido}{Segundo apellido}{\tdPalabra}{Es el segundo apellido de la persona}{\requerido}		
+%\end{BusinessEntity}
+%
+%\subsection{Relaciones}
+%
+%\begin{BusinessFact}{Cuenta}{Cuenta de usuario}
+%	\BRitem{Descripción}{ \cdtRef{Usuario}{Usuario} tiene asociada una o varias \cdtRef{Cuenta}{Cuentas} }
+%	\BRitem{Tipo}{\relAsociacion}
+%	\BRitem{Cardinalidad}{uno a muchos}
+%\end{BusinessFact}
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% CLASE CAMBIO STATUS
+%
+%\begin{BusinessEntity}{cambioStatus}{Cambio status}
+%	\Battr{cambio}{Cambio}{\tdFecha}{Es la fecha en que ocurre el cambio de estado del objeto al que se hace referencia, el cual tiene tiene una cuenta respectiva asociada}{\requerido}					
+%\end{BusinessEntity}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% CLASE PERFIL
+%
+%\begin{BusinessEntity}{perfil}{Perfil}		
+%	\Battr{id}{Id}{\tdNumerico}{Número que identifica a cada perfil dentro del sistema}{\requerido}		
+%	\Battr{nombre}{Nombre}{\tdPalabra}{Denominación que se le otorga al tipo de usuario que interactúa con el sistema: Enlace, Experto, Finanzas, UIPPyE, Titular de la UIPPyE, Administrador o Secretario.}{\requerido}	
+%	\Battr{nivelDeAcceso}{Nivel de acceso}{\tdNumerico}{Número que representa los niveles de acceso que tiene al sistema cada usuario, limitados según su perfil}{\requerido}						
+%\end{BusinessEntity}
+%
+%\subsection{Relaciones}
+%\begin{BusinessFact}{Cuenta}{Perfil de la cuenta}
+%	\BRitem{Descripción}{ \cdtRef{perfil}{Perfil} tiene asociada una o varias \cdtRef{Cuenta}{Cuentas} }
+%	\BRitem{Tipo}{\relAsociacion}
+%	\BRitem{Cardinalidad}{uno a muchos}
+%\end{BusinessFact}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% CLASE STATUS CONTROL
+%
+%
+%\begin{BusinessEntity}{statusControl}{Status control}		
+%	\Battr{estatus}{Estatus}{\tdNumerico}{Muestra el estado en que se encuentra el objeto al que se hace referencia.}{\requerido}		
+%	\Battr{nombre}{Nombre}{\tdPalabra}{Designación que se otorga al estado en que se encuentra un objeto referenciado.}{\requerido}
+%	\Battr{descripcion}{Descripción}{\tdParrafo}{Texto que detalla el estado en que se encuentra el objeto referenciado.}{\requerido}	
+%\end{BusinessEntity}
+%
+%\subsection{Relaciones}
+%\begin{BusinessFact}{Controlado}{Cambio de status}
+%	\BRitem{Descripción}{ \cdtRef{statusControl}{StatusControl} tiene asociada uno o varios \cdtRef{controlado}{Controlado} }
+%	\BRitem{Tipo}{\relAsociacion}
+%	\BRitem{Cardinalidad}{uno a muchos}
+%\end{BusinessFact}

@@ -1,0 +1,262 @@
+%=========================================================
+\section{Módulos del sistema}
+
+El sistema se encuentra organizado por módulos con la finalidad de agrupar y administrar de mejor manera los requerimientos funcionales del sistema. Dividir el sistema en módulos permite visualizar e identificar rápidamente aquellos aspectos funcionales que pueden tratarse conjuntamente.
+
+La figura \ref{fig:ModulosSEIPA} muestra los módulos que conforman \seipae. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema.
+
+Para la primer etapa del \seipae\ se implementaron algunos casos de uso del módulo {\bf gestión de tareas}  el cual se muestra en color naranja en la figura \ref{fig:ModulosSEIPA}. Cada uno de los módulos que se muestran en la figura se describe a continuación.
+
+\begin{itemize}
+	\item Gestión de tareas: Agrupa los casos de uso que tienen que ver con el registro, modificación, eliminación o consulta de las tareas y sus elementos asociados, tales como: entregables, actividades, financiamientos, beneficios, etc. Este módulo se diseño para que las Unidades Administrativas puedan reportar a la UIPPyE las actividades que llevan a cabo.
+	\item Instrumentos de planeación: Agrupa los casos de uso que tienen que ver con el registro, modificación, eliminación o consulta de los instrumentos de planeación, como son: Estructura Programática, Plan de Desarrollo y Acciones de Gobierno. Este módulo se diseño para que el \cdtRef{actor:Titular de la UIPPyE}{Titular de la UIPPyE} pueda administrar los instrumentos de planeación: registrar nuevos o modificar alguno ya vigente.
+	\item Seguimiento de tareas: Agrupa los casos de uso que tienen que ver con el tablero de control y monitoreo de las tareas. Este módulo se diseño especialmente para que la UIPPyE de seguimiento a las tareas en cualquier etapa del proceso.
+	\item Consulta de información ambiental: Agrupa los casos de uso que tienen que ver únicamente con la consulta de información a nivel Secretaría o a nivel Unidad Administrativa. Este módulo tienen la finalidad de subsanar la solicitud de información del \cdtRef{actor:Secretario}{Secretario}, \cdtRef{actor:UIPPyE}{UIPPyE} y \cdtRef{gls:unidadAdministrativa}{Unidad Administrativa} en cualquier etapa del proceso. 
+	\item Administración: Agrupa los casos de uso que tienen que ver con el mantenimiento y soporte técnico del sistema responsabilidad del \cdtRef{actor:Administrador}{administrador}.
+\end{itemize}
+
+\begin{figure}[h!]
+	\begin{center}
+		\fbox{\includegraphics[width=\textwidth]{images/modulosGral.png}}
+	\caption{Módulos del \seipae.}
+	\label{fig:ModulosSEIPA}
+	\end{center}
+\end{figure}
+
+%=========================================================
+\section{Actores del sistema}\label{sec:Comportamiento:ActoresSistema}
+
+	Los perfiles de usuario identificados para el SEIPA-E1 se agrupan de acuerdo a las actividades que desarrollan:
+
+\begin{itemize}
+	\item Unidad Administrativa: Los actores pertenecientes a este grupo (ver figura \ref{fig:actoresUA}) son aquellos que laboran en todas las Unidades Administrativas
+	\item UIPPyE: Los actores pertenecientes en este grupos son aquellos que laboran en la UIPPyE y que se encargan de coordinar la integración de la información y la operación en el SEIPA-E1.
+	\item \varOrganizacion: presenta sólo un tipo de usuario (ver figura \ref{fig:actoresSMA}) facultado para consultar la información de las tareas que las Unidades Administrativas reportan.
+	%\item Sistema Estatal de Informática: presenta un tipo de usuario (ver figura \ref{fig:actoresSEI}) facultado para administrar y dar soporte técnico al SEIPA-E1. 
+\end{itemize}
+
+Los  actores para cada unidad se describen a continuación.
+
+	\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[width=0.49\textwidth]{images/actoresUA.png}
+		\caption{Perfiles identificados para las Unidades Administrativas.}
+		\label{fig:actoresUA}
+	\end{center}
+	\end{figure}
+
+\begin{actor}{Enlace}{Servidor público designado para coordinarse con la UIPPyE en lo referente a el uso SEIPA.} 
+	\BRitem{Estatus}{{\color{cdtDONEColor}Aprobado}, 27 de agosto, 2013}
+	\item[Área:] A cada una de las Unidades Administrativas.
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Registrar todas las tareas de su Unidad Administrativa.
+		\item Alinea las tareas registradas a los diferentes instrumentos de planeación y Acciones de Gobierno.
+		\item Actualizar, y en su caso corregir, la información de las tareas con previa autorización.
+		\item Eliminar las tareas que se hayan registrado por equivocación.
+		
+		\item Corregir las tareas con base en los comentarios enviados por la UIPPyE siempre y cuando no haya pasado a revisión.
+		\item Registrar los avances físicos de las tareas registradas en los tiempos establecidos.
+		\item Cerrar una tarea una vez que hayan concluido sus entregables y no quede nada por reportar, previa autorización de la UIPPyE.
+		\item Eliminar una tarea la cual presente reporte de avances, previa autorización de la UIPPyE.
+		\item Consultar todas aquellas tareas, de su propia unidad o de cualquier otra, que tengan la aprobación de la UIPPyE.
+	\end{itemize}
+
+	\item[Perfil:] \hspace{1pt}
+	\begin{itemize}
+		\item Conocimientos en la aplicación de recursos.
+		\item Saber como usar una computadora.
+		\item Contar con una cuenta de correo electrónico.
+		\item Conocer los procesos de su Unidad Administrativa.
+		\item Conocer los diferentes instrumentos de planeación (Estructura Programática, Plan de Desarrollo y Acciones de Gobierno). 
+		\item Nociones básicas de planeación de proyectos.
+	\end{itemize}
+
+	\item[Cantidad:] Uno por cada Unidad Administrativa que reporta a la UIPPyE.
+\end{actor}
+
+\begin{actor}{Experto}{Servidor público facultado para registrar tareas nuevas en el SEIPA y responsable de registrar los avances físicos de las tareas de su área de conocimiento.} % {Titular de la Unidad Administrativa (UA)}{persona responsable de revisar y dar el visto bueno a las tareas registradas por la Unidad Administrativa, antes de ser enviadas a la UIPPyE. Presenta las mismas atribuciones que el \cdtRef{actor:Enlace}{Enlace}.}
+	\item[Área:] Unidad Administrativa
+
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Registrar todas las tareas de su Unidad Administrativa y del área de conocimientos que le corresponde.
+		\item Actualizar, y en su caso corregir, la información de las tareas con previa autorización.
+		\item Eliminar las tareas que se hayan registrado por equivocación.
+		%\item Enviar una tarea para su respectiva revisión y autorización.
+		\item Realizar las correcciones a las tareas de los comentarios enviados por la UIPPyE resultado de la revisión previa.
+		\item Registrar los avances físicos de las tareas registradas en los tiempos establecidos.
+		%\item Cerrar una tarea una vez que hayan concluido sus actividades y no que de nada por reportar, previa autorización de la UIPPyE.
+		\item Consultar todas aquellas tareas, de su propia unidad, que tengan la aprobación de la UIPPyE.
+	\end{itemize}
+
+	\item[Perfil:] \hspace{1pt}
+	\begin{itemize}
+		\item Saber como usar una computadora.
+		\item Contar con una cuenta de correo electrónico.
+		\item Conocer los procesos de su Unidad Administrativa.
+		\item Conocer los diferentes instrumentos de planeación (Estructura Programática, Plan de Desarrollo y Acciones de Gobierno). 
+		\item Nociones básicas de planeación de proyectos.
+	\end{itemize}
+
+	\item[Cantidad:] Al menos uno por cada área de conocimientos de la Unidad Administrativa a la que pertenece.
+\end{actor}
+
+\begin{actor}{Enlace financiero}{Servidor público responsable de registrar la información de las tareas referente al ámbito financiero.}
+	\item[Área:] Unidad Administrativa
+
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		%\item Enviar una tarea para su respectiva revisión y autorización. ya no
+		\item Programa los montos estimados de las actividades de la tarea con base en el monto autorizado y el contrato definido.
+		\item Registrar los avances financieros de las tareas registradas en los tiempos establecidos.
+		\item Revisar si una tarea amerita el registro de un beneficio.
+	\end{itemize}
+
+	\item[Perfil:] \hspace{1pt}
+	\begin{itemize}
+		\item Saber como usar una computadora.
+		\item Contar con una cuenta de correo electrónico.
+		\item Conocer los procesos de su Unidad Administrativa.
+		\item Conocer los procesos financieros de su Unidad Administrativa.
+		\item Conocer los diferentes instrumentos de planeación (Estructura Programática, Plan de Desarrollo y Acciones de Gobierno). 
+		\item Nociones básicas de planeación de proyectos.
+	\end{itemize}
+
+	\item[Cantidad:] Uno por cada Unidad Administrativa.
+\end{actor}
+
+	\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[width=0.49\textwidth]{images/actoresUIPPE.png}
+		\caption{Perfiles identificados para la UIPPyE.}
+		\label{fig:actoresUIPPE}
+	\end{center}
+	\end{figure}
+
+\begin{actor}{UIPPyE}{Personal de la UIPPyE que apoya los procesos administrativos, de planeación y de evaluación de las tareas.}
+	\item[Área:] UIPPyE
+
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Consultar las tareas registradas por las Unidades Administrativas.%. En partícular: 
+			%+ Por estatus (para conocer las que están activas, las que se deben de revisar, las que están en el organo colegiado, etc.)
+			%+ Por fuente de financiamiento (para conocer el tipo de gasto asignado)
+			%+ Por unidad administrativa (para conocer las tareas que tiene cada unidad administrativa) 
+			%+ Por ubicación geográfica (para conocer los proyectos ya sea por región o por municipio) 
+		\item Revisar tareas para dar el visto bueno o realizar comentarios.
+		\item Revisar y en su caso corregir la alineación de las tareas registradas.
+		\item Consultar los avances físicos y financieros de la tarea.
+%		\item Acceder al tablero de control que le permita conocer el estado actual de las tareas.%si una tarea: tiene pagos atrasados, está retrasada, caé en incumplimiento, está visiblemente atrasado, conocer aquellas tareas cuyo alcance haya sido mayor al planeado.
+	\end{itemize}
+
+	\item[Perfil:] \hspace{1pt}
+	\begin{itemize}
+		\item Saber usar una computadora.
+		\item Contar con una cuenta de correo electrónico.
+		\item Conocer los procesos de cada Unidad Administrativa.
+		\item Conocer los diferentes instrumentos de planeación (Estructura Programática, Plan de Desarrollo y Acciones de Gobierno) 
+		\item Conocimientos sobre planeación, gestión, seguimiento y evaluación de proyectos.
+	\end{itemize}
+
+	\item[Cantidad:] los que la UIPPyE considere necesarios.
+\end{actor}
+
+\begin{actor}{Titular de la UIPPyE}{Es el titular de la UIPPyE o la persona designada por él, para realizar las activiades referentes a la toma de decisiones dentro del sistema.}
+	\item[Área:] UIPPyE
+
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Registrar el dictamen sobre una tarea en proceso de autorización.
+		\item Autorizar el cierre de un proyecto.
+		\item Autorizar la eliminación de un proyecto.
+		\item Reactivar las tareas que se hayan marcado para su cierre por error.
+		\item Cancelar la eliminación de una tarea.
+		\item Aprobar una solicitud para reajustar el proyecto.
+		\item Aprobar o rechazar la solicitud de registro de una tarea extemporánea.
+	\end{itemize}
+
+	\item[Perfil:] \hspace{1pt}
+	\begin{itemize}
+		\item Debe tener un amplio conocimiento sobre el impacto de las desiciones que toma dentro del sistema. 
+		\item Apoyo total por parte del titular de la UIPPyE de las acciones que toma.
+	\end{itemize}
+
+	\item[Cantidad:] uno.
+\end{actor}
+
+\begin{actor}{Administrador}{Es la persona encargada de administrar y dar soporte técnico al SEIPA.}
+	\item[Área:] UIPPyE
+
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Registrar a los usuarios que requieran usar el SEIPA-E1: asignar un usuario y contraseña.
+		\item Asignar perfiles a los usuarios registrados para limitar el acceso a la información en el SEIPA-E1.
+		\item Registrar información en los catálogos, derivado de una solicitud por parte del titular de la UIPPyE.
+		\item Dar soporte técnico al SEIPA-E1, en lo referente a conectividad y acceso por parte de los usuarios.
+		\item Aprobar o rechazar la solicitud de registro de una tarea extemporánea.
+		\item Puede realizar todas las operaciones de los demás usuarios por instrucciones del titular de la UIPPyE. 
+	\end{itemize}
+
+	\item[Perfil:] \hspace{1pt}
+	\begin{itemize}
+		\item Conocimientos técnicos del SEIPA-E1.
+		\item Conocimientos del sistema operativo sobre el cual se instale el SEIPA-E1.
+		\item Conocimientos acerca de la administración de sistemas.
+		\item Contar con una cuenta de correo electrónico.
+		\item Conocer los diferentes instrumentos de planeación (Estructura Programática, Plan de Desarrollo y Acciones de Gobierno) 
+		\item Conocimientos sobre planeación y gestión de proyectos.
+	\end{itemize}
+
+	\item[Cantidad:] uno.
+\end{actor}
+
+	\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[width=0.49\textwidth]{images/actoresSMA.png}
+		\caption{Perfiles identificados para la dirección general de la \varOrganizacion.}
+		\label{fig:actoresSMA}
+	\end{center}
+	\end{figure}
+
+\begin{actor}{Secretario}{Es titular de la Secretaría de Medio Ambiente o persona designada por él para el uso del SEIPA-E1.}
+	\item[Área:] Oficina del Secretario de Medio Ambiente del Gobierno del Estado de México.%\varOrganizacion.
+
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Consultar todas las tareas en cualquier etapa del proceso. 
+		\item Acceder a los reportes.
+		\item Acceder al tablero de control.
+	\end{itemize}
+
+	\item[Perfil:] \hspace{1pt}
+	\begin{itemize}
+		\item Saber usar una computadora.
+		\item Contar con una cuenta de correo electrónico.
+		\item Conocer los procesos de cada Unidad Administrativa.
+		\item Conocer los diferentes instrumentos de planeación (Estructura Programática, Plan de Desarrollo y Acciones de Gobierno) 
+		\item Conocimientos sobre planeación, gestión, seguimiento y evaluación de proyectos.
+	\end{itemize}
+
+	\item[Cantidad:] uno.
+\end{actor}
+
+%=========================================================
+\section{Casos de uso}
+
+	Los casos de uso que se entregarán en el primer prototipo del sistema, son los que se muestran en color naranja en la figura \ref{fig:casosUsoGestionTareas}.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[angle=90,height=1.3\textwidth]{images/CasosUso/CUGestion}
+		\caption{Casos de uso para el módulo {\bf gestión de tareas}.}
+		\label{fig:casosUsoGestionTareas}
+	\end{center}
+\end{figure}
+
+
+	Dichos casos de uso contienen la funcionalidad mínima necesaria para definir una tarea de manera completa para que posteriormente sea revisada por la UIPPyE.
+	
+	Cada uno de los casos de uso se detallan en el siguiente capítulo.
+
+

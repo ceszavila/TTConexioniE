@@ -1,0 +1,98 @@
+%CUCA1.1 Activar Cuenta
+
+\begin{UseCase}{CUCA1.1}{Activar cuenta}
+	{		
+%		Una vez que se haya solicitado activar la cuenta del usuario, el paso que sigue es activar la cuenta, la cual consiste en realizar el último paso para su activación, por lo que el usuario habrá recibido previamente un correo con un link.
+		Tener una cuenta activa, le permite al usuario poder ingresar al sistema. El usuario deberá completar el último paso para su activación, seleccionando el link que aparece en un correo que previamente le envió el SREP. El link mostrará una pantalla en la que el usuario ingresará la contraseña de su preferencia y su confirmación. \\
+	}
+	\UCitem{Versión}{1.0}
+	\UCitem{Autor}{Liliana Flores Sánchez}
+	\UCsection{Atributos}
+	\UCitem{Actor}{\cdtRef{actor:Alumno}{Alumno}, \cdtRef{actor:Profesor}{Profesor}, \cdtRef{actor:Presidente de Academia}{Presidente de Academia} y \cdtRef{actor:Gestor TT}{Gestor TT}}
+	\UCitem{Propósito}{Activar una cuenta para poder ingresar al sistema.}
+	\UCitem{Entradas}{
+		\begin{UClist}
+			\UCli \cdtRef{Usuario:contrasenia}{*Contraseña}
+		\end{UClist}
+	}
+	\UCitem{Salidas}{
+		
+		\begin{UClist}
+			\UCli Mensaje del estado de operación.
+		\end{UClist}				
+	}
+	\UCitem{Precondiciones}{
+		\begin{UClist}			
+			\UCli La cuenta debe encontrarse en el sistema con un estado inactivo.
+		\end{UClist}
+	}
+	
+	\UCitem{Postcondiciones}{
+		\begin{UClist}
+			\UCli Cambia el estado de la cuenta a \textbf{activa}.
+		\end{UClist}
+	}
+	
+	\UCitem{Reglas de negocio}{
+		\begin{UClist}
+			\UCli \cdtIdRef{RN-S1}{Información correcta}
+		\end{UClist}
+	}
+	
+	\UCitem{Tipo}{Primario}
+	
+	
+	
+\end{UseCase}
+
+
+%-------------------------Trayectoria principal------------------------------
+\begin{UCtrayectoria}
+	\UCpaso[\UCactor] Desea activar su cuenta seleccionando el link que aparece en el correo que le envió el sistema previamente en el caso de uso \cdtIdRef{CUCA1}{Solicitar Activar Cuenta}. Cuando un Gestor TT desea activar su cuenta, el correo que se le envía previamente proviene del caso de uso \cdtIdRef{CUCA3.1}{Registrar Gestor TT}. \refTray{A}
+	\UCpaso[\UCsist]  Muestra la pantalla \cdtIdRef{IUCA1.1A}{Registrar contraseña}. \label{cuca1.1:muestraPantalla}
+	\UCpaso[\UCactor] Ingresa una contraseña y la confirmación de la misma.
+	\UCpaso[\UCactor] Oprime el botón \cdtButton{Aceptar}. \refTray{D}
+	\UCpaso[\UCsist] Verifica que la información haya sido introducida con base en la regla de negocios \cdtIdRef{RN-S1}{Información correcta}. \refTray{B} \refTray{C} \label{cuca1.1:ingresaContrasena}
+	\UCpaso[\UCsist] Verifica que la contraseña y la confirmación de la misma coincidan. \refTray{E}
+	\UCpaso[\UCsist] Cambia el estado de la cuenta de inactiva a activa. \refTray{F}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación exitosa} en la pantalla \cdtIdRef{IUCA2A}{Iniciar Sesión}.
+\end{UCtrayectoria}
+
+%-------------------------Trayectoria A------------------------------
+\begin{UCtrayectoriaA}{A}{El usuario tiene dos o más correos para activar su cuenta.}
+	\UCpaso[\UCactor] Selecciona el link del último correo. \refTray{A1}
+	\UCpaso[\UCsist] Se dirige al paso \ref{cuca1.1:muestraPantalla} de la trayectoria principal.
+\end{UCtrayectoriaA}
+
+%-------------------------Trayectoria A1------------------------------
+\begin{UCtrayectoriaA}[Fin de caso de uso]{A1}{El usuario selecciona el link de un correo anterior al último correo de activación de cuenta.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG20}{Link inválido} en la pantalla \cdtIdRef{IUCA2A}{Iniciar sesión}. 
+\end{UCtrayectoriaA}
+
+%-------------------------Trayectoria B------------------------------
+\begin{UCtrayectoriaA}{B}{No se introdujo un campo que es obligatorio.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG2}{Campo obligatorio}.
+	\UCpaso[] Regresa al paso \ref{cuca1.1:ingresaContrasena} de la trayectoria principal.
+\end{UCtrayectoriaA}
+
+%-------------------------Trayectoria C------------------------------
+\begin{UCtrayectoriaA}{C}{Se ingresó un dato que no cumple con la longitud especificada.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG4}{Longitud incorrecta}.
+	\UCpaso[] Regresa al paso \ref{cuca1.1:ingresaContrasena} de la trayectoria principal.
+\end{UCtrayectoriaA}
+
+%-------------------------Trayectoria D------------------------------
+\begin{UCtrayectoriaA}[Fin de caso de uso]{D}{El usuario desea cancelar la operación.}
+	\UCpaso[\UCactor] Oprime el botón \cdtButton{Cancelar}.
+\end{UCtrayectoriaA}
+
+%-------------------------Trayectoria E------------------------------
+\begin{UCtrayectoriaA}{E}{La contraseña y la confirmación de la misma no coinciden.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG36}{Las contraseñas no coinciden} en la pantalla \cdtIdRef{IUCA2.1B}{Recuperar Contraseña}.
+	\UCpaso Regresa al paso \label{cuca1.1:ingresarContrasena} de la trayectoria principal.
+\end{UCtrayectoriaA}
+
+%-------------------------Trayectoria F------------------------------
+\begin{UCtrayectoriaA}[Fin de caso de uso]{F}{No se pudo cambiar el estado de la cuenta.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG31}{Error al realizar la operación} en la pantalla \cdtIdRef{IUCA2A}{Iniciar Sesión}.
+\end{UCtrayectoriaA}

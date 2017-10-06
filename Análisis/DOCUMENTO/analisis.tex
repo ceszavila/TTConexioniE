@@ -1,0 +1,288 @@
+\documentclass[10pt]{book}
+\usepackage{cdt/cdtBusiness}
+\usepackage{sprach}
+\usepackage{subfigure}
+\usepackage{cite}
+\usepackage[spanish]{babel}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Datos del proyecto
+
+\organizacion[]{Escuela Superior de Cómputo}
+\autor []{Instituto Politécnico Nacional}
+\sistema[SREP]{Sistema para el Registro y Evaluación de Protocolos de Trabajo Terminal de la ESCOM "SREP"}
+\proyecto[CATT]{Sistema para el Registro y Evaluación de Protocolos}
+\documento{C2--DCU}{C2-DCU Documento de Casos de Uso }{\RELEASE{2.0}} %\DRAFT{\today}
+
+
+\entregable{1.1}{\Large{Prototipo de interconectividad con el sistema C20 y SAES y prototipo de registro de protocolos}}
+
+
+
+% Descomentar y establecer la fecha cuando se desee congelar la fecha del documento.
+%\fecha{12 de Abril de 2013}en
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Datos para revisión
+\elaboro[Liliana Flores Sánchez, Ricardo Ruiz Maldonado y Antony Brandon Vargas Duran]{} % Responsable del contenido (IPN)
+\superviso[Liliana flores sanchez]{Líder de proyecto} % Quien recibe el documento (Contraparte)
+\aprobo[]{} % Responsable Técnico (Contraparte)
+
+%\title{\varProyecto}
+%\subtitle{\varCveDocumento--\varDocumento}
+
+
+% Elementos contenidos en el documento
+
+% TODO: Al finalizar el análisis resuma aquí todos los elementos del componente: RN, CU, IU, MSG.
+\elemRefs{
+	%Actores
+%	\elemItem{Administrador CATT}{1.0}{Descripción del actor}                         
+%	\elemItem{Personal CATT}{1.0}{Descripción del actor}                           
+%	\elemItem{Presidente de academia}{1.0}{Descripción del actor}                 % P1
+%	\elemItem{Profesor}{1.0}{Descripción del actor}        
+%	\elemItem{Director}{1.0}{Descripción del actor}                    % P1
+%	\elemItem{Director Externo}{1.0}{Descripción del actor} 
+%	\elemItem{Alumno}{1.0}{Descripción del actor} 
+%	%Entidades
+%	\elemItem{Nivel}{1.0}{Modelo estructural}
+	
+	%Reglas de negocio
+	%\elemItem{RN1}{1.0}{Información correcta}                           % P1, P2, P3
+	
+	%Casos de uso
+	%\elemItem{CUT 9}{1.1}{Gestionar tares de la unidad administrativa}                                                                                    
+	%Pantallas
+	%\elemItem{IUT 1}{1.0}{Registrar tarea}                                                         % P1
+	% P3
+	%Mensajes
+	%\elemItem{MSG1}{1.0}{Operación realizada exitosamente}                                         % P1, P2, P3
+	
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	% Portada
+	\ThisLRCornerWallPaper{1}{cdt/theme/logoIpnEscomB.png}
+	\thispagestyle{empty}
+	\maketitle
+	% Hoja de revisión
+	\makeDocInfo
+	\vspace{0.5cm}
+	\makeElemRefs
+	\makeDocRefs
+	\makeFirmas
+	\vspace{0.5cm}
+	
+	\makeObservaciones[20cm]
+	% Indices del documento
+	\frontmatter
+	%%\LRCornerWallPaper{1}{cdt/theme/pleca.png}
+	\tableofcontents
+	%\listoffigures
+	\listoftables
+	\mainmatter
+	
+	% Para esconder la información del documentador se descomenta el \hideControlVersion
+	\hideControlVersion
+	
+	%--------------------------------------------------------------------------------
+	%\chapter{Introducción}\label{chp:introduccion}
+	%\cfinput{Introduccion/introduccion}
+	
+	%--------------------------------------------------------------------------------
+	\chapter{Glosario de términos}\label{chp:glosarioTerminos}
+	
+	\cfinput{ModeloNegocios/glosario}
+	\cfinput{ModeloNegocios/reglas}
+	
+	%--------------------------------------------------------------------------------
+	\chapter{Modelo de negocios}\label{chp:modeloNegocios}
+	\cfinput{ModeloNegocios/estructura}
+	
+	%--------------------------------------------------------------------------------
+	
+	\chapter{Modelo de comportamiento}\label{chp:modeloComportamiento}
+	
+	\cfinput{ModeloComportamiento/comportamiento}
+	
+%	\chapter{Interfaces del subsistema: Configuración}
+%	\label{chp:configuracion}
+%	
+%	En este capítulo se describen los casos de uso referente a la Configuración.\bigskip
+%	
+%	\cfinput{cuc1/cu}			% Configurar Organigrama
+	
+	%--------------------------------------------------------------------------------
+	\chapter{Modelo de comportamiento del subsistema: Control de Acceso}
+	\label{chp:controlAcceso}
+	
+	En este capítulo se describen los casos de uso referente al Control de Acceso.\bigskip
+	
+	\cfinput{General/descripcionCU}
+	%\cfinput{cug1/cu} 			% Pantalla de inicio
+	\cfinput{cuca1/cu}			% Solicitar Activar Cuenta
+	\cfinput{cuca1.1/cu}		% Activar cuenta
+%	\cfinput{cuca2/cu}			% Iniciar sesión
+%	\cfinput{cuca2.1/cu}		% Solicitar Recuperar contraseña
+%	\cfinput{cuca2.2/cu}		% Recuperar contraseña
+%	\cfinput{cuca2.3/cu}		% Modificar correo
+%	\cfinput{cuca2.4/cu}		% Buscar Usuario
+%	\cfinput{cuca3/cu}			% Administrar Gestores TT
+%	\cfinput{cuca3.1/cu}		% Registrar Gestor TT
+%	\cfinput{cuca3.2/cu}		% Modificar Gestor TT
+%	\cfinput{cuca3.3/cu}		% Eliminar Gestor TT
+%	\cfinput{cuca3.4/cu}		% Activar Gestor TT
+%	\cfinput{cuca4/cu}			% Cargar información de alumnos
+%	\cfinput{cuca5/cu}			% Cargar información de profesores
+%	\cfinput{cuca6/cu} 			% Administrar Directores Externos
+%	\cfinput{cuca6.1/cu} 		% Registrar Director Externo
+%	\cfinput{cuca6.2/cu} 		% Consultar Director Externo
+%	\cfinput{cuca6.3/cu} 		% Modificar Director Externo
+%	\cfinput{cuca6.4/cu} 		% Buscar Directores Externos
+%	\cfinput{CUJC1/cujc1_1} 	% Admistrar administradores CATT
+%	\cfinput{CUJC1/cujc1_2} 	% Registrar administrador CATT
+%	%\cfinput{CUPR04/cupr4.3}	% Modificar administrador CATT
+%	%\cfinput{CUJC1/cujc1.4} 	% Eliminar administrador CATT
+%	%--------------------------------------------------------------------------------
+%	\chapter{Modelo de comportamiento del subsistema: Protocolo}
+%	\label{chp:protocolo}
+%	
+%	En este capítulo se describen los casos de uso referente al Protocolo.\bigskip
+%	
+%	\cfinput{General/descripcionCU}
+%	\cfinput{cup1/cu}			% Administrar Protocolo Alumno
+%	\cfinput{cup1.1/cu}			% Registrar Información General del Protocolo
+%	\cfinput{cup1.2/cu}			% Agregar integrante al protocolo
+%	\cfinput{cup1.3/cu}			% Agregar director al protocolo
+%	\cfinput{cup1.4/cu}			% Consultar Opciones de Participación en Protoolo
+%	\cfinput{cup1.5/cu}			% Consultar Protocolo
+%	\cfinput{cup1.6/cu}			% Modificar Información General del Protocolo
+%	\cfinput{cup1.7/cu}			% Buscar Alumno
+%	\cfinput{cup1.8/cu}			% Buscar Profesor
+%	\cfinput{cup2/cu}			% Visualizar Protocolos por Validar
+%	\cfinput{cup2.1/cu}			% Validar Formato de Protocolo
+%	\cfinput{cup2.2/cu}			% Administrar Actualización de Protocolo
+%	\cfinput{cup2.3/cu}			% Finalizar Registro de Protocolos Validados
+%	\cfinput{cup2.4/cu}			% Visualizar Protocolos por Actualizar
+%	\cfinput{cup2.5/cu}			% Actualizar archivo del protocolo
+%	\cfinput{cup3/cu}			% Administrar Protocolos Registrados
+%%	\cfinput{cup3.1/cu}			% Buscar Protocolo
+%	\cfinput{cup4/cu}			% Consultar Trabajos Terminales Dirigidos
+%	\cfinput{cup4.1/cu}			% Consultar Historial de Trabajos Terminales Dirigidos
+%	\cfinput{cup5/cu}			% Consultar Trabajos Terminales Sinodados
+%	\cfinput{cup5.1/cu}			% Consultar Historial de Trabajos Terminales Sinodados
+%	\cfinput{cup5.2/cu}			% Consultar Protocolo a Evaluar
+%	\cfinput{cup5.3/cu}			% Evaluar Protocolo
+%	\cfinput{cup5.4/cu}			% Consultar Evaluación de Protocolo
+%	\cfinput{cup6/cu}			% Buscar Trabajos Terminales por Periodo
+%	
+%	%--------------------------------------------------------------------------------
+%	\chapter{Modelo de comportamiento del subsistema: Distribución del Protocolo}
+%	\label{chp:distribucionProtocolo}
+%	
+%	En este capítulo se describen los casos de uso referente a la Distribución del Protocolo.\bigskip
+%	
+%	\cfinput{General/descripcionCU}
+%	\cfinput{cudp1/cu}			% Consultar Asociación de Protocolos a Academias
+%	\cfinput{cudp1.1/cu}		% Asignar Academias al Protocolo
+%	\cfinput{cudp2/cu}			% Consultar Protocolos Asignados a una Academia
+%	\cfinput{cudp2.1/cu}		% Asignar Sinodal a Protocolo
+%	\cfinput{cudp2.2/cu}		% Eliminar Sinodal a Protocolo
+%	\cfinput{cudp3/cu}			% Administrar Protocolos Registrados
+%	\cfinput{cudp4/cu}			% Consultar Control de Asignación de Sinodales
+%	\cfinput{cudp4.1/cu}		% Consultar Sinodales de un Protocolo
+%	\cfinput{cudp5/cu}			% Consultar Sinodales Asignados
+	
+	
+	%--------------------------------------------------------------------------------
+	\chapter{Modelo de interacción con el usuario} \label{chp:modeloInteraccionUsuario}
+	\cfinput{ModeloInteraccion/interaccion}
+	
+	%--------------------------------------------------------------------------------
+	\section{Menús del sistema}
+	
+	Las funcionalidades del sistema se encuentran organizadas por menús. Cada actor accede a un menú diferente dependiendo del perfil que tenga, ya que describe las funciones que el actor puede realizar sobre el sistema.
+	
+	\cfinput{menu/iu}
+
+	
+%	\section{Interfaces del subsistema: Pantalla de Bienvenida}
+%	\cfinput{cug4/iu}			% Pantalla de inicio Alumno
+%	
+	%--------------------------------------------------------------------------------
+%	\section{Interfaces del subsistema: Configuración}
+%	\cfinput{cuc1/iu}			% Configurar Organigrama
+	
+	%--------------------------------------------------------------------------------
+	\section{Interfaces del subsistema: Control de Acceso}
+	\cfinput{cuca1/iu}			% Solicitar Activar Cuenta
+	\cfinput{cuca1.1/iu}		% Activar Cuenta
+%	\cfinput{cuca2/iu}			% Iniciar Sesión
+%	\cfinput{cuca2.1/iu}		% Solicitar Recuperar Contraseña
+%	\cfinput{cuca2.2/iu}		% Recuperar Contraseña
+%	\cfinput{cuca2.3/iu}		% Modificar Correo
+%	\cfinput{cuca2.4/iu}		% Buscar Usuario
+%	\cfinput{cuca3/iu}			% Administrar Gestores TT
+%	\cfinput{cuca3.1/iu}		% Registrar Gestor TT
+%	\cfinput{cuca3.2/iu}		% Modificar Gestor TT
+%%	\cfinput{cug3.3/iu}			% Modificar Contraseña
+%	\cfinput{cuca4/iu}			% Cargar información de alumnos
+%	\cfinput{cuca5/iu}			% Cargar información de profesores
+%	\cfinput{cuca6/iu} 			% Administrar Directores Externos
+%	\cfinput{cuca6.1/iu} 		% Registrar Director Externo
+%	\cfinput{cuca6.2/iu} 		% Consultar Director Externo
+%	\cfinput{cuca6.3/iu} 		% Modificar Director Externo
+%	\cfinput{cuca6.4/iu} 		% Buscar Directores Externos
+%	
+%	\cfinput{CUJC1/iujc1_1} 	% Administrar Admnisitradores CATT
+%	\cfinput{CUJC1/iujc1_2} 	% Registrar Admnisitrador CATT
+%	%--------------------------------------------------------------------------------
+%	\section{Interfaces del subsistema: Protocolo}
+%	\cfinput{cup1/iu}    		% Administrar Protocolo Alumno
+%	\cfinput{cup1.1/iu}			% Registrar Información General del Protocolo
+%	\cfinput{cup1.2/iu}			% Agregar integrante al protocolo
+%	\cfinput{cup1.3/iu}			% Agregar director al protocolo
+%	\cfinput{cup1.4/iu}			% Consultar Opciones de Participación en Protocolo
+%	\cfinput{cup1.5/iu}			% Consultar Protocolo
+%	\cfinput{cup1.6/iu}			% Modificar Información General del Protocolo
+%	\cfinput{cup1.7/iu}			% Buscar Alumno
+%	\cfinput{cup1.8/iu}			% Buscar Profesor
+%%	\cfinput{cup1.9/iu}			% Terminar Registro de Protocolo
+%	\cfinput{cup2/iu}			% Visualizar Protocolos por Validar
+%	\cfinput{cup2.1/iu}			% Validar Formato de Protocolo
+%	\cfinput{cup2.2/iu}			% Administrar Actualización de Protocolo
+%	\cfinput{cup2.3/iu}			% Finalizar Registro de Protocolos Validados
+%	\cfinput{cup2.4/iu}			% Actualizar Documento de Protocolo
+%	\cfinput{cup2.5/iu}			% Actualizar Archivo del Protocolo
+%	\cfinput{cup3/iu}			% Administrar Protocolos Registrados
+%%	\cfinput{cup3.1/iu}			% Buscar Protocolo
+%	\cfinput{cup4/iu}			% Consultar Trabajos Terminales Dirigidos
+%	\cfinput{cup4.1/iu}			% Consultar Historial de Trabajos Terminales Dirigidos
+%	\cfinput{cup5/iu}			% Consultar Trabajos Terminales Sinodados
+%	\cfinput{cup5.1/iu}			% Consultar Historial de Trabajos Terminales Sinodados
+%	\cfinput{cup5.2/iu}			% Consultar Protocolo a Evaluar
+%	\cfinput{cup5.3/iu}			% Evaluar Protocolo
+%	\cfinput{cup5.4/iu}			% Consultar Evaluación de Protocolo
+%	\cfinput{cup6/iu}			% Buscar Trabajos Terminales por Periodo
+%	%--------------------------------------------------------------------------------
+%	\section{Interfaces del subsistema: Distribución de Protocolos}
+%	\cfinput{cudp1/iu}			% Consultar Asociación de Protocolos a Academias
+%	\cfinput{cudp1.1/iu}		% Asignar Academias al Protocolo
+%	\cfinput{cudp2/iu}			% Consultar Protocolos Asignados a una Academia
+%	\cfinput{cudp2.1/iu}		% Asignar Sinodal a Protocolo
+%	\cfinput{cudp3/iu}			% Administrar Protocolos Registrados
+%	\cfinput{cudp4/iu}			% Consultar Control de Asignación de Sinodales
+%	\cfinput{cudp4.1/iu}		% Consultar Sinodales de un Protocolo
+%	\cfinput{cudp5/iu}			% Consultar Sinodales Asignados
+%	
+	%--------------------------------------------------------------------------------
+	\section{Diseño de mensajes}
+	\cfinput{ModeloInteraccion/mensajes.tex}
+	
+	%\clossing
+\end{document}

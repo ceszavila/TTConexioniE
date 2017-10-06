@@ -1,0 +1,444 @@
+
+	En esta sección se describen los mensajes utilizados en el prototipo actual del sistema. Los mensajes se refieren a todos aquellos avisos que el sistema muestra al actor a través de la pantalla o por medio de un correo electrónico, debido a diversas razones, por ejemplo: informar acerca de algún fallo en el sistema, notificar acerca de alguna operación importante sobre la información, etc. \\		
+	Cada mensaje pertenece a una clasificación según su objetivo.
+	
+\begin{description}
+	\item[Notificación:] Estos mensajes se utilizan para indicar que la acción solicitada por el actor (registrar, modificar, eliminar, etc.) se ejecutó correctamente. 
+	Estos mensajes aparecen en color verde.
+	\item[Error:] Estos mensajes se utilizan para indicar que no se puede ejecutar alguna operación, para indicar que el usuario ha ingresado algún dato incorrecto, o indicar algún problema en general.
+	\item[Informativo:] Estos mensajes se utilizan para dar instrucciones al usuario o recordarle alguna acción. 
+	\item[Confirmación:] Estos mensajes se muestran regularmente en ventanas emergentes y sirven para que el usuario confirme alguna operación. En la ventana emergente se muestran los botones \cdtButton{Aceptar} y \cdtButton{Cancelar} para que el usuario acepte o cancele la operación.
+	\item[Correo:] Estos mensajes se envían por correo electrónico.
+\end{description}
+
+    Existen mensajes con parámetros, un parámetro es una palabra que será sustituida de acuerdo con lo que se está ejecutando en ese momento en la aplicación.\\ 
+    A continuación se enlistan los mensajes utilizados en el sistema, los mensajes parametrizados tienen una descripción de cada parámetro, así como un ejemplo para que se entienda la funcionalidad que tiene. \\
+
+%===========================  MSG1 ==================================
+\begin{mensaje}{MSG1}{Operación exitosa}{Notificación}
+	\item[Objetivo:] Indicar al usuario que la operación se ha realizado con éxito.
+    \item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] OPERACION exitosa[mente]. 
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item OPERACION: Es la operación que se realizó con éxito, por ejemplo registrar, activar cuenta, modificar, etcétera.
+	\end{Citemize}
+	\item[Ejemplo:] Registro exitoso. Correo enviado exitosamente.
+\end{mensaje}
+
+%===========================  MSG2 ==================================
+%\begin{mensaje}{MSG2}{Campo obligatorio}{Error}
+%	\item[Objetivo:] Indicar que el campo es obligatorio.
+%    \item[Ubicación:] Debajo del campo.
+%	\item[Redacción:] El campo CAMPO es obligatorio.
+%	\begin{Citemize}
+%		\item CAMPO: Es el nombre del campo que es obligatorio.
+%	\end{Citemize}
+%	\item[Ejemplo:] El campo número de boleta es obligatorio.
+%\end{mensaje}
+
+\begin{mensaje}{MSG2}{Campo obligatorio}{Error}
+	\item[Objetivo:] Indicar que el campo es obligatorio.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción:] Falta el campo CAMPO el cual es requerido para OPERACIÓN.
+	\begin{Citemize}
+		\item CAMPO: Es el nombre del campo que es obligatorio.
+		\item OPERACIÓN: Es la operación que se quiere realizar.
+	\end{Citemize}
+	\item[Ejemplo:] Falta el campo usuario el cual es requerido para iniciar sesión.
+\end{mensaje}
+
+%===========================  MSG3 ==================================
+\begin{mensaje}{MSG3}{Formato incorrecto}{Error}
+	\item[Objetivo:] Indicar que la información en el campo es incorrecta.
+    \item[Ubicación:] Debajo del campo.
+    	\item[Redacción:] El formato del campo CAMPO es incorrecto.
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item CAMPO: Es el nombre del campo que tiene datos incorrectos.
+	\end{Citemize}
+	\item[Ejemplo:] El formato del campo Número de boleta es incorrecto.
+\end{mensaje}
+
+%===========================  MSG4 ==================================
+%\begin{mensaje}{MSG4}{Longitud incorrecta}{Error}
+%	\item[Objetivo:] Indicar que la longitud del campo es incorrecta, a veces en el mensaje se indica solo la
+%	    longitud máxima, en otras ocasiones se indica también la longitud mínima y en otras ocasiones indica la longitud exacta.
+%    \item[Ubicación:] Debajo del campo.
+%    	\item[Redacción:] El campo CAMPO debe ser de NUM [Ingresar menos de MAX caracteres [y más de MIN caracteres]].
+%	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+%	\begin{Citemize}
+%		\item MAX: El número máximo de caracteres permitidos en el campo.
+%		\item MIN: El número mínimo de caracteres permitidos en el campo.
+%	\end{Citemize}
+%	\item[Ejemplo:] Ingresar menos de 10 caracteres [y más de 6 caracteres].
+%	El usuario debe ser de 10 caracteres.
+%\end{mensaje}
+
+\begin{mensaje}{MSG4}{Longitud incorrecta}{Error}
+	\item[Objetivo:] Indicar que la longitud del campo es incorrecta. El mensaje puede indicar la longitud mínima y máxima o la longitud exacta.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción 1:] El campo CAMPO debe tener NUM DATO.
+	\item[Redacción 2:] El campo CAMPO debe tener mínimo MIN DATO y máximo MAX DATO.
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item DATO: Tipo de datos que deben ser ingresados con una longitud correcta.
+		\item CAMPO: Es el nombre del campo que tiene una longitud incorrecta.
+		\item NUM: El número exacto de caracteres permitidos en el campo.
+		\item MAX: El número máximo de caracteres permitidos en el campo.
+		\item MIN: El número mínimo de caracteres permitidos en el campo.
+	\end{Citemize}
+	\item[Ejemplo 1:] El campo Usuario debe tener 10 caracteres.
+	\item[Ejemplo 2:] El campo Contraseña debe tener mínimo 6 caracteres y máximo 20 caracteres.
+\end{mensaje}
+
+%===========================  MSG5 ==================================
+\begin{mensaje}{MSG5}{Correo electrónico ya registrado}{Error}
+	\item[Objetivo:] Indicar que el correo ingresado ya está registrado en el sistema.
+    \item[Ubicación:] Debajo del campo.
+    \item[Redacción:] Este correo ya ha sido registrado. Por favor ingresar otro correo.
+\end{mensaje}
+
+%===========================  MSG6 ==================================
+\begin{mensaje}{MSG6}{Alumno no registrado}{Error}
+	\item[Objetivo:] Indicar que el número de boleta que se ingresó no está registrada en el sistema.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción:] El alumno con el No. de boleta BOLETA no está registrado en el sistema.
+	\begin{Citemize}
+		\item BOLETA: Es el número de boleta del alumno.
+	\end{Citemize}
+\end{mensaje}
+
+%===========================  MSG7 ==================================
+\begin{mensaje}{MSG7}{Director obligatorio}{Error}
+	\item[Objetivo:]  Indicar que al menos debe ser agregado un director interno.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción:] Se requiere al menos un director interno.
+\end{mensaje}
+
+%===========================  MSG8 ==================================
+\begin{mensaje}{MSG8}{Problemas al mandar el correo de confirmación}{Error}
+	\item[Objetivo:]  Informar que hubo un problema de envío del correo de confirmación.
+	\item[Ubicación:] En la parte superior de la pantalla..
+	\item[Redacción:] Hubo un problema al mandar el correo de confirmación. Favor de intentarlo más tarde.
+\end{mensaje}
+
+%===========================  MSG9 ==================================
+\begin{mensaje}{MSG9}{Alumno con protocolo}{Error}
+	\item[Objetivo:] Indicar que el alumno es parte de otro protocolo.
+    \item[Ubicación:] Debajo del campo.
+    \item[Redacción:] Este alumno se encuentra participando en otro protocolo.
+\end{mensaje}
+
+%===========================  MSG10 ==================================
+\begin{mensaje}{MSG10}{Palabra clave inválida}{Error}
+	\item[Objetivo:] Indicar que la palabra clave no se encuentra registrada en el sistema.
+    \item[Ubicación:] Debajo del campo.
+    \item[Redacción:] La palabra clave introducida no se encuentra registrada en el sistema. Debes acudir al departamento de la CATT o ingresar otra palabra clave.
+\end{mensaje}
+
+%===========================  MSG11 ==================================
+\begin{mensaje}{MSG11}{Operación fallida}{Notificación}
+	\item[Objetivo:] Indicar al usuario que la operación no se pudo realizar.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] Error al realizar la OPERACION. Inténtelo más tarde. 
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item OPERACION: Es la operación que no se pudo realizar, por ejemplo registrar, activar cuenta, modificar, etcétera.
+	\end{Citemize}
+	\item[Ejemplo:] Error al realizar el Registro. Favor de intentarlo más tarde.
+\end{mensaje}
+
+%===========================  MSG12 ==================================
+\begin{mensaje}{MSG12}{Archivo que rebasa el tamaño}{Error}
+	\item[Objetivo:] Indicar que se debe ingresar un archivo con menos de 10 MB.
+    \item[Ubicación:] Debajo del campo.
+	\item[Redacción:] El tamaño del archivo debe ser menor de CANTIDAD MB.
+	\begin{Citemize}
+	   	\item CANTIDAD: Número entero que representa el tamaño que debe tener un archivo como máximo.
+	\end{Citemize}
+\end{mensaje}
+
+%===========================  MSG13 ==================================
+\begin{mensaje}{MSG13}{Alumno no eliminado}{Error}
+	\item[Objetivo:] Indicar que el alumno que se quiere eliminar no puede ser eliminado debido a que ha aceptado participar en el protocolo.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] Este alumno no puede ser eliminado del protocolo, debido a que ya ha aceptado participar en él. Para eliminarlo, debes acudir a las oficinas de la CATT.
+\end{mensaje}
+
+%===========================  MSG14 ==================================
+\begin{mensaje}{MSG14}{Director no eliminado}{Error}
+	\item[Objetivo:] Indicar que el director que se quiere eliminar no puede ser eliminado debido a que ha aceptado participar en el protocolo.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] Este director no puede ser eliminado del protocolo, debido a que ya ha aceptado participar en él. Para eliminarlo, debes acudir a las oficinas de la CATT.
+\end{mensaje}
+%===========================  MSG15 ==================================
+\begin{mensaje}{MSG15}{Usuario o contraseña incorrecta}{Error}
+	\item[Objetivo:] Indicar que el usuario o la contraseña son incorrectos.
+	\item[Ubicación:] En la parte inferior del campo.
+	\item[Redacción:] El Usuario o contraseña es incorrecta.
+\end{mensaje}
+
+%===========================  MSG16 ==================================
+\begin{mensaje}{MSG16}{Cuenta activada}{Error}
+	\item[Objetivo:] Indicar que la cuenta, número de boleta o RFC, ya ha sido activada.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción:] Esta cuenta ya ha sido activada con el siguiente correo: CORREO.
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item CORREO: Es el correo electrónico con el que se activó la cuenta.
+	\end{Citemize}
+	\item[Ejemplo:] Esta cuenta ya ha sido activada con el siguiente correo: jrf***@gmail.com.
+\end{mensaje}
+
+%===========================  MSG17 ==================================
+\begin{mensaje}{MSG17}{No existe correo electrónico}{Error}
+	\item[Objetivo:] Notificar al usuario que no tiene un correo electrónico registrado en el sistema.
+	\item[Ubicación:] Debajo de la información que muestra el sistema.
+	\item[Redacción:] No se tiene un correo registrado para esta cuenta. Favor de acudir al departamento de la CATT.
+\end{mensaje}
+
+%===========================  MSG18 ==================================
+\begin{mensaje}{MSG18}{Correo de confirmación de cuenta}{Notificación}
+	\item[Objetivo:] Notificar al usuario que se le enviará un correo para que confirme su cuenta.
+	\item[Ubicación:] Debajo de la información que muestra el sistema.
+	\item[Redacción:] Se enviará por correo una confirmación de activación de cuenta. Si no es tu correo, favor de acudir al departamento de la CATT.
+\end{mensaje}
+
+%===========================  MSG19 ==================================
+\begin{mensaje}{MSG19}{RFC registrado}{Error}
+	\item[Objetivo:] Notificar al usuario que el RFC que se ingresó ya está registrado en el sistema.
+    \item[Ubicación:] En la parte superior de la pantalla.
+    \item[Redacción:] Error al ingresar a esta página.
+\end{mensaje}
+
+%===========================  MSG20 ==================================
+\begin{mensaje}{MSG20}{Link inválido}{Error}
+	\item[Objetivo:] Notificar al usuario que el link que seleccionó no es válido.
+	\item[Ubicación:] Arriba del campo {Usuario}.
+	\item[Redacción:] El link seleccionado es inválido. 
+\end{mensaje}
+
+%===========================  MSG21 ==================================
+\begin{mensaje}{MSG21}{Correo electrónico registrado}{Error}
+	\item[Objetivo:] Indicar que el correo que se desea agregar ya está registrado en el sistema.
+    \item[Ubicación:] Debajo del campo.
+    \item[Redacción:] Este correo ya ha sido registrado en el sistema.
+\end{mensaje}
+
+%===========================  MSG22 ==================================
+\begin{mensaje}{MSG22}{Notificación de cambio de correo}{Notificación}
+	\item[Objetivo:] Notificar al usuario que su corre electrónico ha sido modificado.
+	\item[Ubicación:] Correo electrónico.
+	\item[Redacción:] Tu correo  ha sido modificado exitosamente.\\
+	Si aún no has activado tu cuenta, favor de seleccionar el link aquí, de lo contrario inicie sesión.\\
+	Si no solicitaste un cambio en tu correo electrónico, favor de acudir a las oficinas de la CATT.
+\end{mensaje}
+
+%===========================  MSG23 ==================================
+\begin{mensaje}{MSG23}{Archivo inválido}{Error}
+	\item[Objetivo:] Indicar que se debe ingresar un archivo válido.
+    \item[Ubicación:] Debajo del campo.
+    \item[Redacción:] Solo se permite el archivo en FORMATO.
+    \begin{Citemize}
+    	\item FORMATO: Es el formato que debe tener el documento seleccionado. Puede ser: PDF, XLSX, XLSM o XLSB.
+    \end{Citemize}
+\end{mensaje}
+
+%===========================  MSG24 ==================================
+\begin{mensaje}{MSG24}{Falta información necesaria}{Error}
+	\item[Objetivo:] Notificar al usuario que no hay información necesaria para ejecutar la operación solicitada.
+    \item[Ubicación:] En la parte superior de la pantalla.
+    \item[Redacción:] Falta información necesaria para realizar esta operación.
+\end{mensaje}
+
+%===========================  MSG25 ==================================
+\begin{mensaje}{MSG25}{Correo electrónico inválido}{Error}
+	\item[Objetivo:] Indicar que se debe ingresar un correo electrónico válido.
+    \item[Ubicación:] Debajo del campo.
+    \item[Redacción:] Introduzca un correo válido: nombre@ejemplo.com
+\end{mensaje}
+
+%===========================  MSG26 ==================================
+%\begin{mensaje}{MSG26}{Cuenta inactiva}{Error}
+%	\item[Objetivo:] Indicar que la cuenta se encuentra en estado inactiva.
+%	\item[Ubicación:] Debajo del campo.
+%	\item[Redacción:] La cuenta CUENTA no ha sido activada. Favor de activar POSESIVO cuenta.
+%	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+%	\begin{Citemize}
+%		\item CUENTA: Es el RFC o número de boleta.
+%	\end{Citemize}
+%	\item[Ejemplo:] La cuenta 2013630908 no ha sido activada. Favor de activar su cuenta.
+%\end{mensaje}
+
+\begin{mensaje}{MSG26}{Cuenta inactiva}{Error}
+	\item[Objetivo:] Indicar que la cuenta se encuentra en estado inactiva.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción:] Cuenta no activada. Favor de activar su cuenta.
+\end{mensaje}
+
+%===========================  MSG27 ==================================
+\begin{mensaje}{MSG27}{Número de palabras clave incorrecto}{Error}
+	\item[Objetivo:] Indicar que el número de palabras clave es incorrecto.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción:] Favor de ingresar de 2 a 4 palabras clave.
+\end{mensaje}
+
+%===========================  MSG28 ==================================
+\begin{mensaje}{MSG28}{No hay protocolos para mostrar}{Error}
+	\item[Objetivo:] Indicar que no se encontraron protocolos para mostrar.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] No hay protocolos para mostrar.
+\end{mensaje}
+
+%===========================  MSG29 ==================================
+\begin{mensaje}{MSG29}{Desactivar Gestor TT}{Confirmación}
+	\item[Objetivo:] Preguntar al usuario si desea desactivar a un Gestor TT.
+    \item[Ubicación:] Ventana emergente.
+    \item[Redacción:] ¿Está seguro de querer desactivar al Gestor TT NOMBRE?
+    \begin{Citemize}
+	   	\item NOMBRE: Es el nombre del Gestor TT que se desea desactivar.
+	\end{Citemize}
+\end{mensaje}
+
+%===========================  MSG30 ==================================
+\begin{mensaje}{MSG30}{Profesor/Alumno inactivo}{Error}
+	\item[Objetivo:] Indicar que la cuenta de un profesor o de un alumno no se encuentra activa.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] No se puede agregar a este ACTOR al protocolo debido a que su cuenta no ha sido activada.
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item ACTOR: Hace referencia a un profesor o a un alumno.
+	\end{Citemize}
+	\item[Ejemplo:] No se puede agregar a este profesor al protocolo debido a que su cuenta no ha sido activada.
+	\item[Ejemplo:] No se puede agregar a este alumno al protocolo debido a que su cuenta no ha sido activada.
+	
+	
+\end{mensaje}
+
+%===========================  MSG31 ==================================
+\begin{mensaje}{MSG31}{Error al realizar la operación}{Error}
+	\item[Objetivo:] Indicar que no se pudo realizar la operación.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] Nos se pudo realizar la operación. Favor de intentarlo más tarde.
+\end{mensaje}
+
+%===========================  MSG32 ==================================
+\begin{mensaje}{MSG32}{No se encontraron elementos}{Error}
+	\item[Objetivo:] Indicar que no se encontraron elementos con los criterios ingresados.
+    \item[Ubicación:] En la parte superior de la pantalla.
+    \item[Redacción:] No se encontraron elementos.
+\end{mensaje}
+ 
+%===========================  MSG33 ================================== 
+\begin{mensaje}{MSG33}{No existe información}{Error}
+	\item[Objetivo:] Indicar que no se encontraron elementos.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción:] El CAMPO no está registrado en el sistema. Verifique si la información introducida es correcta, de lo contrario favor de acudir al departamento de la CATT.
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item CAMPO: Es el nombre del campo cuya información no se encuentra en el sistema.
+	\end{Citemize}
+	\item[Ejemplo:] El RFC introducido no se encuentra en el sistema. Verifique si la información introducida es correcta, de lo contrario favor de acudir al departamento de la CATT.
+\end{mensaje}
+
+
+
+%===========================  MSG34 ==================================
+\begin{mensaje}{MSG34}{Alumno agregado}{Error}
+	\item[Objetivo:] Indicar que el alumno que se quiere agregar ya ha sido agregado al protocolo.
+	\item[Ubicación:] Debajo del campo.
+	\item[Redacción:] Este alumno ya ha sido agregado a este protocolo.
+\end{mensaje}
+
+%===========================  MSG35 ==================================
+\begin{mensaje}{MSG35}{Estado del protocolo}{Correo}
+	\item[Objetivo:] Indicar el estado del protocolo en alguna fase del proceso.
+	\item[Ubicación:] En la Bandeja de Entrada del correo personal de los integrantes.
+	\item[Redacción:] El protocolo ha sido revisado por PERSONA. El estado del protocolo es ESTADO. [Las observaciones son las siguientes: OBSERVACIONES].
+	\begin{Citemize}
+		\item PERSONA: Es la persona quien evaluó el protocolo.
+		\item ESTADO: Es el estado que se encuentra el protocolo.
+		\item OBSERVACIONES: Es el comentario que realiza la persona que revisa el protocolo.
+	\end{Citemize}
+	\item[Ejemplo1:] El protocolo ha sido revisado por Juanita Sánchez. El estado del protocolo es Validado.
+	\item[Ejemplo2:] El protocolo ha sido revisado por Juanita Sánchez. El estado del protocolo es Con observaciones. Las observaciones son las siguiente: No se respetaron los márgenes en el documento del protocolo.
+\end{mensaje}
+
+%===========================  MSG36 ==================================
+\begin{mensaje}{MSG36}{Las contraseñas no coinciden}{Error}
+	\item[Objetivo:] Indicar que la contraseña y la confirmación de la misma no coinciden.
+	\item[Ubicación:] En la parte superior del campo Contraseña.
+	\item[Redacción:] Las contraseñas no coinciden.
+\end{mensaje}
+
+%===========================  MSG37 ==================================
+\begin{mensaje}{MSG37}{Director no agregado}{Error}
+	\item[Objetivo:] Indicar que el profesor seleccionado no puede ser agregado como directora un protocolo, ya que cumplió con el límite de protocolos y TTI dirigidos.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] No se puede agregar al profesor seleccionado, ya que llegó al límite de direcciones.
+\end{mensaje}
+
+%===========================  MSG38 ==================================
+\begin{mensaje}{MSG38}{Archivo vacío}{Error}
+	\item[Objetivo:] Indicar que el archivo seleccionado se encuentra vacío.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] El archivo seleccionado se encuentra vacío.
+\end{mensaje}
+
+%===========================  MSG39 ==================================
+\begin{mensaje}{MSG39}{Sin conexión al C20}{Error}
+	\item[Objetivo:] Indicar que no existe conexión con el sistema C20.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] No se puede establecer conexión el C20. Favor de intentarlo más tarde.
+\end{mensaje}
+
+%===========================  MSG40 ==================================
+\begin{mensaje}{MSG40}{Sinodales asignados permitidos}{Error}
+	\item[Objetivo:] Indicar que solo puede agregar el número de Sinodales que le fueron asignados a su Academia.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] Solo puede asignar NUM Sinodales.
+	\begin{Citemize}
+		\item NUM: Es el número de Sinodales asignados a la Academia.
+	\end{Citemize}
+	\item [Ejemplo:] Solo se pueden asignar 2 Sinodales.
+\end{mensaje}
+
+%===========================  MSG41 ==================================
+\begin{mensaje}{MSG41}{Sinodales permitidos}{Error}
+	\item[Objetivo:] Indicar que un profesor puede ser Sinodal de un Protocolo solo si no es Director de éste.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] Los Directores del Protocolo no pueden ser Sinodales del mismo.
+\end{mensaje}
+
+%===========================  MSG42 ==================================
+\begin{mensaje}{MSG42}{Unicidad de Sinodal}{Error}
+	\item[Objetivo:] Indicar que no se puede agregar al mismo profesor como Sinodal más de una vez en un mismo Protocolo.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] No se puede asignar el mismo Sinodal al mismo Protocolo.
+\end{mensaje}
+
+%===========================  MSG43 ==================================
+\begin{mensaje}{MSG43}{Falta asignar Sinodal}{Error}
+	\item[Objetivo:] Indicar que falta por asignar Sinodales a un Protocolo.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] Falta por asignar Sinodal.
+\end{mensaje}
+
+%===========================  MSG44 ==================================
+\begin{mensaje}{MSG44}{Protocolo Validado}{Error}
+	\item[Objetivo:] Indicar que el protocolo es validado y sellado por parte de los Gestores TT o Secretario Ejecutivo.
+	\item[Ubicación:] En la parte superior de la pantalla.
+	\item[Redacción:] Protocolo Validado.
+\end{mensaje}
+
+%===========================  MSG45 ==================================
+\begin{mensaje}{MSG45}{Activar Gestor TT}{Confirmación}
+	\item[Objetivo:] Preguntar al usuario si desea activar a un Gestor TT.
+	\item[Ubicación:] Ventana emergente.
+	\item[Redacción:] ¿Está seguro de querer activar al Gestor TT NOMBRE?
+	\begin{Citemize}
+		\item NOMBRE: Es el nombre del Gestor TT que se desea activar.
+	\end{Citemize}
+\end{mensaje}
+

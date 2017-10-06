@@ -1,0 +1,47 @@
+\begin{UseCase}{CUG1}{Pantalla de inicio}
+	{	
+		En la pantalla de inicio, los usuarios podrán visualizar información referente al departamento de la CATT.
+	}
+	\UCitem{Versión}{1.0}
+	\UCitem{Autor}{Liliana Flores Sánchez}
+	\UCsection{Atributos}
+	\UCitem{Actor}{\cdtRef{actor:Alumno}{Alumno}, \cdtRef{actor:Jefe CATT}{Jefe CATT}, \cdtRef{actor:Profesor}{Profesor}, \cdtRef{actor:Presidente de Academia}{Presidente de Academia}, \cdtRef{actor:Administrador CATT}{Administrador CATT}}
+	\UCitem{Propósito}{Visualizar información del departamento de la CATT.}
+	\UCitem{Entradas}{
+		\begin{UClist}
+			\UCli {Ninguna.}
+		\end{UClist}
+	}
+	\UCitem{Salidas}{
+		\begin{UClist}
+			\UCli Ninguna.
+		\end{UClist}				
+	}
+	\UCitem{Precondiciones}{
+		\begin{UClist}			
+			\UCli Ninguna.
+		\end{UClist}
+	}
+	\UCitem{Postcondiciones}{
+		\begin{UClist}
+			\UCli Ninguna.
+		\end{UClist}
+	}
+	\UCitem{Reglas de negocio}{
+		\begin{UClist}
+		   \UCli Ninguna.
+		\end{UClist}
+	}
+
+	\UCitem{Tipo}{Primario.}
+
+ \end{UseCase}
+
+
+%-------------------------Trayectoria principal------------------------------
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Requiere visualizar información acerca del departamento de la CATT.
+    \UCpaso[\UCsist] Muestra la pantalla  \cdtIdRef{IUG1A}{Pantalla de inicio}.
+    \UCpaso[\UCactor] Consulta la información requerida.         
+ \end{UCtrayectoria}
+ 

@@ -1,0 +1,45 @@
+\subsection{IUA 1 Administrar cuentas de usuario}
+
+\subsubsection{Objetivo}
+
+	Esta pantalla permite al \cdtRef{actor:Administrador}{Administrador} gestionar las cuentas usuario del sistema.\\
+	\DONEUI{Aprobada el 24 de Octubre 2013}
+\subsubsection{Diseño}
+
+	En la figura~\ref{IUA 1} se muestra la pantalla ``Administrar cuentas de usuario'', donde el actor ingresará al Menú de Administrador y presionará la 
+	opción ``Administrar cuentas de usuario'', en la cual se mostrará la pantalla \cdtIdRef{IUA 1}{Administrar cuentas de usuario} en la cual el 
+	\cdtRef{actor:Administrador}{Administrador} podrá llevar el control de todas las cuentas que ha registrado el sistema, y así podrá 
+	registrar, modificar, desbloquear, cancelar y activar, así como también restablecer una cuenta que ha excedido el número de intentos para ingresar al sistema mediante los botones:
+	\cdtButton{Registrar nueva cuenta} \botEdit, \botLock,  \botReestCont, \botOk y \botKo.\\
+	
+	Los botones que aparecen en la tabla de resultados dependen del estatus de la cuenta de usuario, como se muestra a continuación:
+	
+	\begin{itemize}
+	 \item {\bf Inactiva:} \botOk
+	 \item {\bf Bloqueada:} \botLock
+	 \item {\bf Activa:} \botEdit \botKo \botReestCont
+	\end{itemize}
+
+	
+	
+	\IUfig[.9]{pantallas/cua1/IUA1GestionarCuentasUsuario.png}{IUA 1}{Administrar cuentas de usuario.}
+
+
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \cdtButton{Registrar nueva cuenta}: Permite al actor registrar una cuenta de usuario, dirige a la pantalla \cdtIdRef{IUA 1.1}{Registrar cuenta de usuario}.
+	\item \botEdit: Permite al actor modificar una cuenta de usuario, dirige a la pantalla \cdtIdRef{IUA 1.2}{Modificar cuenta de usuario}.
+	\item \botLock: Permite al actor desbloquear una cuenta de usuario, dirige a la pantalla \cdtIdRef{IUA 1.3}{Desbloquear cuenta de usuario}.
+	\item \botKo: Permite al actor cancelar una cuenta de usuario, dirige a la pantalla \cdtIdRef{IUA 1.4}{Cancelar cuenta de usuario}.
+	\item \botReestCont: Permite al actor restablecer la contraseña de una cuenta de usuario, dirige a la pantalla \cdtIdRef{IUA 1.5}{Restablecer contraseña de usuario}.
+	\item \botOk: Permite al actor  activar una cuenta de usuario que se encuentra inactiva, dirige a la pantalla \cdtIdRef{IUA 1.6}{Activar cuenta de usuario}.
+	
+	
+	
+\end{itemize}
+
+\subsubsection{Mensajes}	
+    \begin{description}
+	  \item[\cdtIdRef{MSG2}{No se encontró información sustantiva}]: Se muestra en la pantalla \cdtIdRef{IUA 1}{Administrar de cuentas de usuario} en caso de que no exista información 
+	  necesaria para administrar las cuentas.
+    \end{description}

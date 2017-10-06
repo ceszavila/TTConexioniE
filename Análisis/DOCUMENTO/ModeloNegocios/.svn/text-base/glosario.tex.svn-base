@@ -1,0 +1,518 @@
+\label{sec:glosario}
+%TOCHK: Evelyn 25 Jun.
+%TODO: Agregar al glosario el término: Indicador físico. Indicar en la definición que se divide en dos: social y ambiental.
+%TODO: Agregar al glosario el término: Indicador financiero. Indicar en la definición que se divide en dos: estratégicos y de gestión.
+
+
+	Este capítulo describe los términos usados a lo largo del documento que tienen un significado singular en la SMAGEM o el Sistema y que se consideran necesario definirlos para evitar ambigüedades o malos entendidos.
+	
+	La lista de términos se encuentra agrupada por áreas de conocimiento:
+\begin{Citemize}
+	\item Términos técnicos: Agrupa los términos que tienen que ver con el sistema.
+	\item Términos del negocio: Agrupa los términos que tienen significado dentro de la SMAGEM.
+	\item Términos de la ``Norma Técnica de Domicilios Geográficos de INEGI'': Es un subconjunto de los términos del glosario de dicha norma.
+\end{Citemize}
+
+	Para fines de este documento la siguiente lista de términos se deben interpretar como se describen en este capítulo.
+
+%====================================================================
+\section{Términos técnicos}
+\label{gls:terminosTecnicos}
+
+	En esta sección se definen los términos técnicos que se utilizan para describir el comportamiento del sistema.
+	
+	\begin{description}
+	
+		\BRterm{gls:atributo}{Atributo} Son las características que definen o identifican a una entidad en un conjunto de entidades.
+	
+		\BRterm{gls:booleano}{Booleano} Es un \cdtRef{gls:tipoDato}{tipo de dato} que puede tomar los siguientes valores verdadero ó falso (1 ó 0).
+		
+		\BRterm{gls:cadena}{Cadena} Es el \cdtRef{gls:tipoDato}{tipo de dato} definido por cualquier valor que se compone de una secuencia de caracteres, con o sin acentos, espacios, dígitos y signos de puntuación. Existen tres tipos de cadenas: Palabra, frase y párrafo.
+		
+		\BRterm{gls:decimal}{Decimal} Es el \cdtRef{gls:tipoDato}{tipo de dato} \cdtRef{gls:numerico}{numérico} Los números decimales son valores que denotan números racionales e irracionales, es decir que los números decimales son la expresión de números no enteros, que a diferencia de los números fraccionarios, no se escriben como el cociente de dos números enteros sino como una aproximación de tal valor.
+		
+		\BRterm{gls:entero}{Entero} Es el \cdtRef{gls:tipoDato}{tipo de dato} \cdtRef{gls:numerico}{numérico} definido por todos los valores numéricos enteros, tanto positivos como negativos.
+
+		\BRterm{gls:entidad}{Entidad} Término genérico que se utiliza para determinar un ente el cual puede ser concreto, abstracto o conceptual por ejemplo: Unidad administrativa, entregable, persona, etc. La entidades se caracterizan a través de atributos que personalizan a la entidad.		
+		%Se usa para hacer referencia a un objeto con existencia física (entidad concreta) como: Una persona, un animal, una casa, etc.; o un objeto con existencia conceptual (entidad abstracta) como: Un puesto de trabajo, una asignatura de clases, un nombre, etc. Una \cdtRef{gls:entidad}{entidad} se representa por sus características o atributos, por ejemplo: La entidad persona tiene características como: Nombre, apellido, género, estatura, peso, fecha de nacimiento, etc.
+
+		\BRterm{gls:fecha}{Fecha} Es un \cdtRef{gls:tipoDato}{tipo de dato} que indica un día único en referencia al calendario gregoriano. Los tipos de fecha utilizados son: \cdtRef{gls:fechaCorta}{fecha corta} y \cdtRef{gls:fechaLarga}{fecha larga}. %con formato DD/MM/YYYY, por ejemplo: 24/02/2013.
+
+		\BRterm{gls:fechaCorta}{Fecha corta} Es la representación del \cdtRef{gls:tipoDato}{tipo de dato} \cdtRef{gls:fecha}{fecha} en la forma DD/MM/YYYY, por ejemplo: 24/02/2013.
+
+		\BRterm{gls:fechaLarga}{Fecha larga} Es la representación del \cdtRef{gls:tipoDato}{tipo de dato} \cdtRef{gls:fecha}{fecha} en la forma DD de MM del YYYY, por ejemplo: 24 de febrero del 2013.
+
+		\BRterm{gls:frase}{Frase} Es un \cdtRef{gls:tipoDato}{tipo de dato}  conformado por \cdtRef{gls:palabra}{palabras} y espacios.
+		
+		%\BRterm{gls:frase}{Frase} Es un \cdtRef{gls:tipoDato}{tipo de dato} \cdtRef{gls:cadena}{cadena} conformado por más de una palabra, puede contener espacios, números y signos de puntuación; y generalmente ocupa un renglón de manera visual.
+		\BRterm{gls:imagen}{Imagen} Es una imagen de tamaño pequeño (no más de un Megabyte) en formato jpeg.
+
+		\BRterm{gls:numeracion}{Numeración de domicilio} Es un \cdtRef{gls:tipoDato}{tipo de dato} que se compone de un valor numérico sin signo seguido de letras.
+		
+		\BRterm{gls:numerico}{Numérico} Es un \cdtRef{gls:tipoDato}{tipo de dato} que se compone de la combinación de los símbolos \textit{0,1,2,3,4,5,6,7,8,9,. y -.}  que expresan una cantidad en relación a su unidad.
+		
+		
+		\BRterm{gls:opcional}{Opcional} Es un elemento que el actor puede o no porporcionar en el formulario o la pantalla, su decisión no afectará la ejecución de la operación solicitada.
+
+		\BRterm{gls:palabra}{Palabra} Es un \cdtRef{gls:tipoDato}{tipo de dato} \cdtRef{gls:cadena}{cadena} conformado por el alfabeto y símbolos especiales como son \textit{\#,-,\$,\%,\&,(,),etc} y se caracteriza por no tener espacios.
+		
+		
+
+		\BRterm{gls:parrafo}{Párrafo} Es un \cdtRef{gls:tipoDato}{tipo de dato}  conformado por \cdtRef{gls:frase}{frases}.
+		%\BRterm{gls:sn}{S/N} Abreviación del término ``Sin número'' utilizado para indicar cuando una Dirección Geográfica no tiene numeración.
+
+		\BRterm{gls:requerido}{Requerido} Es un tipo de dato que debe proporcionarse de manera obligatoria.
+		
+		%Es un atributo de una \cdtRef{gls:entidad}{entidad} que por definición no puede quedar indeterminado. Lo cual implica para el sistema, que, si se solicita mediante una pantalla, base de datos o servicio externo, el dato debe proporcionarse de manera obligatoria para el registro adecuado en el sistema.
+
+		\BRterm{gls:tipoDato}{Tipo de dato} Es el dominio o conjunto de valores que puede tomar un atributo de una \cdtRef{gls:entidad}{entidad} en el modelo de información. Los tipos de datos utilizados son: \cdtRef{gls:palabra}{palabra}, \cdtRef{gls:frase}{frase}, \cdtRef{gls:parrafo}{párrafo}, \cdtRef{gls:numerico}{numérico}, \cdtRef{gls:fecha}{fecha} y \cdtRef{gls:booleano}{booleano}.
+
+		%\BRterm{gls:na}{NA} Abreviación del término ``No Aplica'', se utiliza para indicar que algún elemento en la estructura del documento o en el sistema no aplica.
+\end{description}
+
+
+%====================================================================
+\section{Términos del negocio}
+\label{gls:terminosNegocio}
+
+	En esta sección se definen los términos del negocio que se utilizan para comprender el comportamiento del sistema.
+
+\begin{description}
+
+ 	\BRterm{gls:accion}{Acción:} Hecho por medio del cual se ejecutan los proyectos y actividades de la administración. \cite[pag.1,GT]{bibange:SecretariaFinanzasGT} 
+
+ 	%TOCHK  Atziry Ags 12
+ 	\BRterm{gls:accionAltoImpacto}{Acción de alto impacto:}  Hecho por medio del cual se ejecutan los proyectos y actividades de la administración y que por su incidencia o relevancia tienen un efecto sobresaliente en el lugar que se aplica.
+	
+ 	%TOCHK  Atziry Ags 12
+ 	\BRterm{gls:accionDeGobierno}{Acción de Gobierno:} Se refiere a los compromisos adquiridos por el gobernador. A los compromisos adquiridos durante la campaña electoral por el entonces candidato son denominadas \cdtRef{gls:accionDeGobiernoEstatal}{acciones de gobierno estatales} y \cdtRef{gls:accionDeGobiernoMunicipal}{acciones de gobierno municipales}. Mientras que los compromisos adquiridos durante su gobierno se denominan \cdtRef{gls:accionDeGobiernoInstitucionalMunicipal}{acciones de gobierno institucionales municipales} y \cdtRef{gls:accionDeGobiernoInstitucionalEstatal}{acciones de gobierno institucionales estatales}.
+ 	
+ 	%TOCHK  Atziry Ags 12
+ 	\BRterm{gls:accionDeGobiernoEstatal}{Acción de Gobierno estatal:} Son aquellas \cdtRef{gls:accionDeGobierno}{acciones de gobierno} cuya cobertura cubre todo el estado.
+	
+ 	%TOCHK  Atziry Ags 12
+ 	\BRterm{gls:accionDeGobiernoInstitucionalEstatal}{Acción de Gobierno institucional estatal:} Son aquellas \cdtRef{gls:accionDeGobierno}{acciones de gobierno} cuya cobertura cubre solo un municipio.
+
+ 	%TOCHK  Atziry Ags 12
+ 	\BRterm{gls:accionDeGobiernoInstitucionalMunicipal}{Acción de Gobierno institucional municipal:} Son aquellas \cdtRef{gls:accionDeGobierno}{acciones de gobierno} cuya cobertura cubre todo el estado.
+ 	
+ 	%TOCHK  Atziry Ags 12
+ 	\BRterm{gls:accionDeGobiernoMunicipal}{Acción de Gobierno municipal:} Son aquellas \cdtRef{gls:accionDeGobierno}{acciones de gobierno} cuya cobertura cubre solo un municipio.
+ 	 	
+	%TODO: referenciar unidad administrativa, programa, subprograma.
+ 	%TOCHK Evelyn 25 Jun.
+ 	\BRterm{gls:meta}{Actividad:} Se refiere al quehacer que permitirá cumplir con el \cdtRef{gls:actividad}{entregable}.
+	
+	\BRterm{gls:alineacion}{Alineación:} Se refiere a la vinculación con algún pilar y/o eje transversal, objetivo, estrategia y línea de acción del Plan de Desarrollo, además de su articulación con algún proyecto de la Estructura Programática y en su caso, con alguna de las Acciones de Gobierno estatales, municipales e institucionales.
+	
+	%TODO: Referenciar proyecto.
+	%TOCHK: Recuerda que un anteproyecto contiene la información mínima necesaria de un proyecto para su presentacion ante Finanzas y posterior aprobación, una vez que es aprobado y detallado se convertirá en un Proyecto. 
+	%CHKED: Ulises, 20 jun.
+	%Evelyn 21 jun
+	\BRterm{gls:anteproyecto}{Anteproyecto:} Definición preliminar del proyecto, el cual contiene la información mínima necesaria para su presentación y aprobación por parte de la Secretaría de Finanzas. Una vez aprobado el anteproyecto se puede llevar a cabo el proyecto principal o definitivo.  \cite[pag.2,CUM]{bibange:SecretariaFinanzasCUM} %(obtenido del catálogo de unidades de medida).
+	
+	\BRterm{gls:apoyoSocialFamiliar}{Apoyo social:} Actividad gubernamental dirigida a modificar la condición de desigualdad social mediante la entrega de un bien o una transferencia de recursos, la cual se norma a partir de sus respectivas reglas de operación.
+
+	\BRterm{gls:area}{Área de conocimiento:} Corresponde a una subdirección o dominio de la Unidad Administrativa encargada de administrar y supervisar las tareas relacionadas con su quehacer, por ejemplo: la Dirección General de Prevención y Control de la Contaminación del Agua, Suelo y Residuos tiene dos áreas, una encargada de las tareas relacionadas con agua y otra encargada de las tareas relacionadas con suelo y residuos.
+
+	\BRterm{gls:avance}{Avance:} Se utiliza para planear y reportar el avance de una tarea. %Véase \cdtRef{gls:metaFisicaDeGestion}{Meta física de gestión}.
+	%DONE Ulises 28 jun.
+	%CHKED: Ulises, 20 jun. 
+	
+	\BRterm{gls:beneficio}{Beneficio:} Se utiliza para reportar las consecuencias, beneficios o resultados indirectos de una tarea. En caso de que el beneficio corresponda a un \cdtRef{gls:apoyoSocialFamiliar}{apoyo social familiar} se debe registrar mediante el uso del \cdtRef{gls:metadato}{metadato}.
+	
+	%Evelyn 21 jun
+	\BRterm{gls:categoriaProgramatica}{Categorías programáticas:} Las categorías programáticas vinculan el proceso presupuestario con la
+	acción pública; las categorías programáticas se integran por cinco diferentes niveles de agrupación: \cdtRef{gls:funcion}{función}, \cdtRef{gls:subfuncion}{subfunción}, \cdtRef{gls:programa}{programa}, \cdtRef{gls:subprograma}{subprograma} y \cdtRef{gls:proyecto}{proyecto}.\cite[pag.4,EP]{bibange:SecretariaFinanzasEP} %(Obtenido de EP para el ejercicio fiscal 2013).
+
+	%\BRterm{gls:cimiento}{Cimiento:} Término que se utilizada como fundamento o principio para sostener el \cdtRef{gls:planDeDesarrollo}{Plan de Desarrollo}.Un cimiento puede  hacer referecia a un \cdtRef{gls:Pilar}{pilar} o a un \cdtRef{gls:ejeTransversal}{eje transversal}.
+
+	%TODO: referenciar acción, obra y proyecto.
+	%CHKED: Ulises, 28 jun.
+	%CHKED: Ulises, 20 jun.
+	\BRterm{gls:compromisosDeGobierno}{Compromiso de Gobierno:} Véase   \cdtRef{gls:accionDeGobierno}{Acción de Gobierno}.
+	
+	%TODO: Deescribir ambos conceptos para que quede claro que la principal diferencia es que unos se fiman durante la campaña y los otros durante la gestión. 
+	%TOCHK: Solo quita la misión y di: ``Un compromiso Comunitario plasma ...'' 
+	%CHKED: Ulises, 20 jun. 
+	%Evelyn 21 jun
+	%\BRterm{gls:compromisosDeGobiernoComunitario}{Compromisos de gobierno comunitarias:} Una Accion de Gobierno Comunitaria plasma en un documento firmado por todos los participantes, la generación de una construcción ciudadana que se traduzca en una comunidad más responsable, respetuosa, inclusiva y solidaria del espacio público y el ambiente en general.%checar esta definición la saque de internet http://www.slideshare.net/inclusiongcba/preguntas-frecuentes-2669647.
+	
+	%TOCHK: EVELYN cHECAR ESTA DEFICIÓN 21 DE JUN
+	%\BRterm{gls:compromisosDeGobiernoInstitucionales}{Compromisos de Gobierno Institucionales:} Una Acción de Gobierno Institucional ejecuta políticas y servicios para mejorar los procesos de gobierno y mejorar los resultados buscados.% esta definición no se si sea correcta me apoye de la definición de compromiso en la pag 57 de http://www.eclac.org/ddpe/publicaciones/xml/9/46119/W465.pdf 
+	
+	%DONE: 28 jun.
+	%CHKED: Ulises, 28 jun.
+	%TOCHK: Referenciar ``pilares'' y ``Plan de Desarrollo''. 
+	%CHKED: Ulises, 20 jun.
+	%Evelyn 21 junio
+	
+	%REVISADO POR ANGELINA EL 24 DE OCTUBRE DE 2013
+	\BRterm{gls:cuentaActiva}{Cuenta de usuario activa:} Es un estatus de la cuenta de usuario, el cual indica que el actor puede ingresar al sistema y realizar las acciones correspondientes a su \cdtRef{gls:perfilUsuario}{perfil}.
+	
+	%REVISADO POR ANGELINA EL 24 DE OCTUBRE DE 2013
+	\BRterm{gls:cuentaBloqueada}{Cuenta de usuario bloqueada:} Es un estatus de la cuenta de usuario, el cual indica que el actor no puede ingresar al sistema debido a que su cuenta de usuario se encuentra obstruida por intentar ingresar al sistema más de cinco veces con un ``nombre de usuario'' y/o ``contraseña'' incorrectos. El actor debe solicitar al \cdtRef{actor:Administrador}{Administrador} el desbloqueo de su cuenta para poder ingresar al sistema.
+	
+	%REVISADA POR ANGELINA EL 24 DE OCTUBRE DE 2013
+	\BRterm{gls:cuentaInactiva}{Cuenta de usuario inactiva:} Es un estatus de la cuenta de usuario, el cual indica que el actor ya no puede ingresar al sistema. Para tener ingresar nuevamente al sistema el actor debe solicitar al \cdtRef{actor:Administrador}{Administrador} una cuenta de usuario diferente.
+	
+	\BRterm{gls:cumplimiento}{Cumplimiento:} Se refiere a la forma cuantitativa en que se debe de atender una actividad. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: ``\cdtRef{gls:cumplimientoRigido}{Rígido}'' y ``\cdtRef{gls:cumplimientoFlexible}{Flexible}''.
+	
+	\BRterm{gls:cumplimientoFlexible}{Cumplimiento flexible:} Indica que podría no cumplirse la cantidad programada de manera estricta, en cuyo caso será necesario proporcionar una justificación para dar por terminado el entregable. Nota: El caso flexible aplica únicamente para las ``Acciones de alto impacto'' y ``Acciones'' cuyos entregables no estén determinados cotractualmente. % redaccion dada por federico
+
+ 	\BRterm{gls:cumplimientoRigido}{Cumplimiento rígido:} Especifica que debe cumplirse la cantidad  programada de manera estricta para dar por terminado el entregable. % redaccion dada por federico
+
+ 	\BRterm{gls:documentoOficial}{Documento oficial:} Son aquellos escritos que expiden los Organismos Oficiales o aquellos que cualquier ciudadano puede presentar ante un Organismo Oficial o la Administración Pública.
+ 	
+ 	\BRterm{gls:economia}{Economía:} Es la optimización de los recursos financieros al finalizar la ejecución de la tarea. Se obtiene a través de la diferencia del monto total aprobado menos el monto total ejercido.
+	 	
+	\BRterm{gls:ejeTransversal}{Eje transversal:} Concepto donde se integran las políticas públicas que se tienen en el \cdtRef{gls:planDeDesarrollo}{Plan de Desarrollo} del Estado de México 2011-2017, para dar soporte e interconectar la ejecución de los \cdtRef{gls:Pilar}{pilares}. Los ejes transversales son: \cdtRef{gls:financimientoParaElDesarrollo}{financiamiento para el desarrollo}, \cdtRef{gls:gobiernoMunicipalista}{gobierno municipalista} y \cdtRef{gls:gobiernoDeResultados}{gobierno de resultados}.
+	 \cite[pag.9,GT]{bibange:SecretariaFinanzasGT}
+	%(obtenido del glosario de términos del GEM).
+	
+	%
+	%TOCHK Jun 21 evelyn
+	\BRterm{gls:elementoProgramatico}{Elemento programático:}  Los elementos programáticos establecen los objetivos, estrategias y entregables del gasto público y proporcionan los elementos de evaluación. \cite[pag.10,GT]{bibange:SecretariaFinanzasGT}
+	%(obtenido de la pag. 10 del glosario de términos del GEM).% pag 5 del glosario del GEM
+	
+	%\TOCHK{Revisar redacción de concepto.}
+	\BRterm{gls:Entidad}{Entidad federativa:} Unidad delimitada territorialmente cuyos habitantes se rigen por sus propias leyes pero están sometidos a las decisiones del poder federal. Los valores para este dato son los que se definen en el catálogo de la CGG.
+	
+	\BRterm{gls:actividad}{Entregable:} Es el nombre con el cual se denomina a cada uno de los productos establecidos contractualmente que se obtendrán con la ejecución de la tarea.
+	
+	%\TOCHK{Revisar redacción de concepto.}
+	\BRterm{gls:EstadoCivil}{Estado civil:} Es la situación de las personas determinada por sus relaciones personales en el ámbito matrimonial. Los valores para este dato son los que se definen en el catálogo de la CGG.
+	
+	\BRterm{gls:estadoProgresista}{Estado progresista:} Es el \cdtRef{gls:Pilar}{pilar} que promueve el desarrollo económico regional, empleando herramientas legales e incentivos  que detonen el incremento del bienestar social y generen mercados dinámicos en la entidad.\cite[pag.35,PD]{bibange:PlanDeDesarrollo}  
+	%(obtenido de la pag. 35 del PD).% pag.35 el Plan de Desarrollo 
+	
+	\BRterm{gls:estatusCuentaUsuario}{Estatus de la cuenta de usuario:} Representa el estado en el que se encuentra una cuenta de usuario y determina si un actor puede o no acceder al \seipae \ para realizar las acciones correspondientes a su \cdtRef{gls:perfilUsuario}{perfil}. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: \cdtRef{gls:cuentaActiva}{Activa}, \cdtRef{gls:cuentaInactiva}{Inactiva} y \cdtRef{gls:cuentaBloqueada}{Bloqueada}.
+	
+	\BRterm{gls:statusTarea}{Estatus de la tarea:} Representa el estado en el que se encuentra una \cdtRef{gls:tarea}{tarea} y determina lo que se puede hacer con ella, se especifica a detalle en la sección 3.3. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: Edición, en revisión, en aprobación, en ajuste, activa, por cerrar, por eliminar, extemporánea, eliminada y cerrada.
+	
+	\BRterm{gls:statusBeneficiario}{Estatus del beneficiario:} También conocido como \cdtRef{gls:tipoBeneficiario}{Tipo de beneficiario}.
+	
+	%Modificado el 4 de noviembre por Angelina
+	\BRterm{gls:statusFinanciamiento}{Estatus del financiamiento:} Representa el estado en el que se encuentra un \cdtRef{gls:financiamiento}{financiamiento}. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: ``Solicitado'', ``Aprobado'', ``No aprobado'', ``Ampliación'', ``Reducción'', ``Cancelado'' y ``Economía''.
+
+	\BRterm{gls:statusInstrumentoPlaneacion}{Estatus del instrumento de planeación:} Representa el estado en el que se encuentra un instrumento de planeación. Se utiliza como tipo de dato para el sistema con los valores: ``Activo'', ``Edición'' y ``Cerrado''.
+	
+	\BRterm{gls:statusTextoD}{Estatus del texto descriptivo:} Representa el estado en el que se encuentra el texto descriptivo. Se utiliza como tipo de dato para el sistema con los valores:``Aprobado'' y ``No aprobado''.
+	
+	%TOCHK: Agrega a la descripción la relación existente entre las Estrategias y los objetivos. Indicar el istrumento de planeación en el que se define.
+	%CHKED: Ulises, 20 jun. 
+	%Evelyn 21 jun checar el último comentario de este termino.
+	\BRterm{gls:estrategia}{Estrategia:} Principios y rutas fundamentales que orientan el proceso administrativo para alcanzar los \cdtRef{gls:objetivo}{objetivos} establecidos en el \cdtRef{gls:planDeDesarrollo}{Plan de Desarrollo}. \cite[pag.10,GT]{bibange:SecretariaFinanzasGT}% (obtenido de la pag. 10 del glosario de términos del GEM)%o a los propósitos institucionales, si se trata de las categorías programáticas.	
+	%glosario de términos del GEM
+	
+	%DONE Evelyn 20 junio.
+	%CHKED: Ulises, 20 jun.
+	%\BRterm{gls:estructuraProgramatica}{Estructura Programática:} Conjunto de categorías y elementos programáticos que permiten definir las acciones que efectúan los entes públicos, para alcanzar  objetivos y metas de acuerdo con las estrategias y líneas de acción definidas.  %11 del glosario de terminos de la estructura Programatica
+	
+ 	%TOCHK Evelyn 21 junio. Agregué esta definición porque relaciona lo que es una categoría programatica.
+	\BRterm{gls:estructuraProgramatica}{Estructura Programática:} Conjunto de categorías y elementos programáticos que sirven para dar orden y dirección al gasto público en su clasificación funcional y a la vez define el ámbito de su aplicación, lo que facilita vincular las políticas de gobierno con los programas que ejecutan las dependencias y entidades públicas; así como el diseño y seguimiento de los planes y sus programas, según las funciones encomendadas al gobierno. \cite[pag.11,GT]{bibange:SecretariaFinanzasGT} %(obtenido de la pag. 11 del glosario de términos del GEM)
+
+	
+	%TOCHK: Especifica la relación entre funciones y cimientos. Indicar en que instrumento se define el término.eVELYN jun 21
+	%CHKED: Ulises, 20 jun.
+	% no hice la relación entre funciones y cimientos, sino hice la referencia con categoria programatica, que forma parte de la estructura programatica.
+	
+	\BRterm{gls:financiamiento}{Financiamiento:} Se refiere a los recursos financieros contemplados y con los que se cuentan para la realización de una \cdtRef{gls:tarea}{tarea}.
+	
+	%TOCHK
+	\BRterm{gls:financimientoParaElDesarrollo}{Financiamiento para el desarrollo:} Es el \cdtRef{gls:ejeTransversal}{eje transversal} que cuenta con un financiamiento para el desarrollo a través del ejercicio sustentable de la hacienda pública. 	 \cite[pag.35,PD]{bibange:PlanDeDesarrollo}% (obtenido de la pag. 35 del PD). % pag.35 el Plan de Desarrollo %PA
+	
+	%\BRterm{gls:frecuencia}{Frecuencia de actualización:} Indica la periodicidad con la que se debe reportar el avance de una tarea o de una actividad mediante un entregable. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: Diario, semanal, quincenal, mensual, trimestral, cuatrimestral, semestral y anual. %COMENTADO POR ANGELINA EL DÍA 18 DE OCTUBRE POR NO SER COMPATIBLE CON LO QUE ACTUALMENTE SE REALIZA
+	\BRterm{gls:frecuencia}{Frecuencia de actualización:} Indica la periodicidad con la que se debe reportar el avance de un entregable o la frecuencia con la que se debe actualizar el texto descriptivo de la tarea. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: Diario, semanal, quincenal, mensual, trimestral, cuatrimestral, semestral y anual. %MODIFICADO POR ANGELINA EL DÍA 18 DE OCTUBRE
+	
+	
+%	\BRterm{gls:frecuenciaPM}{Frecuencia de reporte (Programación de entregable):}Indica la frecuencia con la que se debe reportar la programación de un entregable, existen Diario, semanal, quincenal, mensual, trimestral y anual.
+%	
+	%\BRterm{gls:frecuenciaTA}{Frecuencia de reporte (Tareas):} Indica la periodicidad con la que se debe reportar una tarea las cuales pueden ser: Diario, semanal, quincenal, mensual, trimestral y anual.
+	
+	\BRterm{gls:fuenteDeFinanciamiento}{Fuente de financiamiento:} Es el origen de los recursos para ejecutar una tarea. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: ``Federal'', ``Estatal'', ``Municipal'', ``Organización no gubernamental'', ``Ingresos propios'', ``Fideicomisos'' y ``Gasto corriente''.
+	
+	\BRterm{gls:funcion}{Función:} Forma parte de las \cdtRef{gls:categoriaProgramatica}{categorías programáticas} y representa el nivel máximo de agregación del destino de los recursos del sector público, con el fin  de agrupar los gastos del sector público con base en los objetivos que se persiguen.  \cite[pag.5,EP]{bibange:SecretariaFinanzasEP}% (obtenido de la pag.5 de la EP para el ejercicio fiscal 2013).% pag 5 del ESTRUCTURA PROGRAMÁTICA PARA EL EJERCICIO FISCAL 2013
+
+	
+	\BRterm{gls:gestionar}{Gestionar:} Agrupa todos los trámites necesarios para administrar todos los elementos que involucra una \cdtRef{gls:tarea}{tarea}. Entre los trámites están los siguientes: Ordenar, registrar, modificar, eliminar y consultar.
+
+	%\TOCHK{Revisar redacción de concepto.}
+	\BRterm{gls:GradoDeEstudios}{Grado de estudios:} Es el máximo nivel de estudios adquirido por una persona. Los valores para este dato son los que se definen en el catálogo de la CGG.
+	
+	%APROBADO 05 septiembre
+	\BRterm{gls:gobiernoDeResultados}{Gobierno de resultados:} Es aquel cuyas acciones pueden evaluarse en un entorno de transparencia.  \cite[pag.35,PD]{bibange:PlanDeDesarrollo} %(obtenido de la pag. 35 del PD).% pag.35 el Plan de Desarrollo
+	
+	%APROBADO 05 septiembre
+	\BRterm{gls:gobiernoMunicipalista}{Gobierno municipalista:} Es aquel que reconoce la importancia y el valor de las administraciones locales, que destacan la responsabilidades de sus atribuciones y que permiten su coordinación e interacción con estricto respeto de su autonomía. \cite[pag.35,PD]{bibange:PlanDeDesarrollo}% (obtenido de la pag. 35 del PD). % pag.35 el Plan de Desarrollo
+	
+	%APROBADO 05 septiembre
+	\BRterm{gls:gobiernoSolidario}{Gobierno solidario:} Es aquel que responde a las necesidades sociales, culturales y educativas de sus habitantes, a través de la creación de instituciones y la implementación de programas para atender a las personas. \cite[pag.35,PD]{bibange:PlanDeDesarrollo}.% (obtenido de la pag. 35 del PD).% pag.35 el Plan de Desarrollo
+	
+	%\BRterm{gls:indicador}{Indicador:} Instrumento utilizado para medir el desempeño y avance de una tarea. Un indicador puede ser clasificado como cualitativo y cuantitativo, físico o financiero, de gestión o estrategia.
+	
+	\BRterm{gls:ImpactoTarea}{Impacto de tarea:} El impacto de la \cdtRef{gls:tarea}{tarea} puede ser: Alto, medio o bajo.
+
+	\BRterm{gls:metaFinanciera}{Indicador financiero:} Se refiere a la \cdtRef{gls:meta}{entregable} que se usará para planear y reportar la situación financiera de una \cdtRef{gls:tarea}{tarea}. Esta \cdtRef{gls:meta}{entregable} permite conocer los montos solicitados, aprobados y ejercidos mediante la definición de \cdtRef{gls:financiamiento}{financiamientos} y el reporte de los movimientos sobre cada uno.
+%----------------------------------------------------------------------
+% COMENTARIO: Desaparece el término Indicador y se usa Meta en su lugar.
+	
+%	\BRterm{gls:indicador}{Indicador:} Herramienta de medición que permite comparar los resultados obtenidos en la ejecución de un programa, proyecto o actividad. Un indicador puede ser clasificado como cualitativo y cuantitativo, físico o financiero, de gestión o estrategia. \cite[pag.15,GT]{bibange:SecretariaFinanzasGT}%(obtenido de la pag. 15 del glosario de términos del GEM).% del glosario de términos del GEM
+	
+%	\BRterm{gls:IndCualitativo}{Indicador cualitativo:} Es un indicador que no se puede medir mediante un número, su resultado es mas bien descriptivo.
+	
+%	\BRterm{gls:IndCuantitativo}{Indicador cuantitativo:} Es un indicador cuya meta y medición están definidas con base en un valor numérico.
+	
+	%TOCHK: Indica que no es una herramienta, sino un Indicador, y agrega la definición de Indicador al glosario. No todos los indicadores están alineados a los Objetivos del Milenio. 
+	%eve jun 21, lo segui poniendo así por una referencia que encontre en el Plan de Desarrollo en la pag 123.
+	%CHKED: Ulises, 20 jun.
+%	\BRterm{gls:indicadorExterno}{Indicador externo:} Tipo de \cdtRef{gls:indicador}{indicador} que se encuentra en línea con los objetivos del milenio (ODM).
+
+%	\BRterm{gls:metaFisica}{Indicador físico:} Es un indicador que mide el avance de los resultados del trabajo realizado en una \cdtRef{gls:tarea}{tarea}. El término indicador físico se utiliza para referirse a los indicadores físicos cuantitativos, mientras que los cualitativos son llamados beneficios.
+	
+%	\BRterm{gls:IndFisGest}{Indicador físico de gestión:} Se refiere a un indicador físico cuantitativo que se utiliza para medir el avance de las \cdtRef{gls:actividad}{actividades} de una \cdtRef{gls:tarea}{tarea}.
+	
+%	\BRterm{gls:IndFisEst}{Indicador físico estratégico:} Se refiere a un indicador físico cuantitativo que se utiliza para medir el resultado de las \cdtRef{gls:actividad}{actividades} de una \cdtRef{gls:tarea}{tarea}.
+	
+%	\BRterm{gls:indicadorFinanciero}{Indicador financiero:} Se utiliza para conocer el avance financiero de una \cdtRef{gls:tarea}{tarea}. El SEIPA sólo considera el caso de indicador financiero cualitativo de gestión.
+	
+	
+	
+	%DONE ulises 20 junio
+	\BRterm{gls:instrumentoDePlaneacion}{Instrumento de planeación:} Concepto utilizado para referirnos a todas las estructuras que rigen, regulan u orientan el quehacer del gobierno del Estado de México, consideradas para la construcción del \varProyecto. En este caso: \cdtRef{gls:estructuraProgramatica}{Estructura Programática} , \cdtRef{gls:planDeDesarrollo}{Plan de Desarrollo} y \cdtRef{gls:accionDeGobierno}{Acciones de Gobierno}.
+	
+	%TOCHK: Especificar la relación con las estrategias y en que instrumento se definen.EVELYN 21 jun
+	%CHKED: Ulises, 20 jun.
+	\BRterm{gls:lineasDeAccion}{Líneas de acción:}El tipo de trabajo que podría realizarse para implementar las \cdtRef{gls:estrategia}{estrategias} especificadas en el \cdtRef{gls:planDeDesarrollo}{Plan de Desarrollo}		
+	
+	\BRterm{gls:localidad}{Localidad} Espacio territorial que aglutina núcleos de población y puede ser urbana y rural \cite[pag.15,CUM]{bibange:SecretariaFinanzasCUM}
+
+	\BRterm{gls:metadato}{Metadato:} Son datos altamente estructurados que describen información, el contenido, la calidad, la condición y otras características de los beneficiarios o solicitantes de algún programa. %Es ``información sobre información'' o ``datos sobre los datos''. 
+		
+	%TOCHK
+	\BRterm{gls:metaFisica}{Meta física:} Esta \cdtRef{gls:meta}{meta} se utiliza para medir el avance y los beneficios obtenidos como resultado del trabajo realizado en una \cdtRef{gls:tarea}{tarea}. El sistema contempla el uso de metas físicas \cdtRef{gls:metaFisicaDirecta}{directas} e \cdtRef{gls:metaFisicaIndirecta}{indirectas}.
+
+	\BRterm{gls:metaFisicaDeGestion}{Meta física de gestión:} También conocida como \cdtRef{gls:avance}{avance}, esta \cdtRef{gls:metaFisica}{meta física} se utiliza para planear y reportar el avance de una tarea.
+	
+	\BRterm{gls:metaFisicaDirecta}{Meta física directa:} Esta \cdtRef{gls:metaFisica}{meta física} se utiliza para medir el trabajo realizado directamente dentro de la \cdtRef{gls:tarea}{tarea}. El sistema contempla el uso de dos tipos de metas físicas directas: las de \cdtRef{gls:metaFisicaDeGestion}{gestión}  y las \cdtRef{gls:metaFisicaEstraegica}{estratégicas} .
+
+	\BRterm{gls:metaFisicaEstraegica}{Meta física estratégica:} También conocida como \cdtRef{gls:resultado}{resultado}, esta \cdtRef{gls:metaFisica}{meta física} se utiliza para planear y reportar los resultados directos de una tarea. 
+
+	\BRterm{gls:metaFisicaIndirecta}{Meta física indirecta:} También conocida como \cdtRef{gls:beneficio}{beneficio}, esta \cdtRef{gls:metaFisica}{meta física} se utiliza para reportar las consecuencias,  beneficios o resultados indirectos de una tarea. En caso de que el beneficio corresponda a un \cdtRef{gls:apoyoSocialFamiliar}{apoyo social familiar} se debe registrar mediante el uso del \cdtRef{gls:metadato}{metadato}.
+	
+	\BRterm{gls:metaIntermedia}{Meta intermedia:} Véase \cdtRef{gls:actividad}{Entregable}.
+
+	\BRterm{gls:montoAutorizado}{Monto autorizado:} Se refiere al monto del financiamiento autorizado para la ejecución de una tarea. 
+
+	\BRterm{gls:montoModificado}{Monto modificado:} Es el resultado de aplicar todas las cancelaciones, reducciones y ampliaciones a un financiamiento autorizado.
+
+	\BRterm{gls:montoSolicitado}{Monto solicitado:} Se refiere al monto del financiamiento solicitado para la ejecución de una tarea.
+	
+	%Modificado el 4 noviembre por Angelina
+	\BRterm{gls:movimiento}{Movimiento} Término utilizado para referirse a los movimientos financieros que definen el estatus de un \cdtRef{gls:financiamiento}{financiamiento}. Cada movimiento se debe \cdtRef{gls:tipoEvidencia}{evidenciar} dentro del sistema con un documento en particular.
+
+	%\TOCHK{Revisar redacción de concepto.}
+	\BRterm{gls:Municipio}{Municipio:} Unidad delimitada territorialmente que integra una entidad federativa. Los valores para este dato son los que se definen en el catálogo de la CGG.
+		
+	%\TOCHK{Revisar redacción de concepto.}
+	\BRterm{gls:Nacionalidad}{Nacionalidad:} Estado propio de la persona nacida o naturalizada en una nación. Los valores para este dato son los que se definen en el catálogo de la CGG.
+	
+	%APROBADO 05 SEPTIEMBRE
+	\BRterm{gls:NivelDetalle}{Nivel de detalle:} Se refiere a la cobertura geográfica en la que se deben reportar los avances de las \cdtRef{gls:meta}{actividades} de un entregable. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: ``Municipal'' y ``Local''.
+	
+	%TOCHK eve 21 jun
+	\BRterm{gls:objetivo}{Objetivo:} Elemento programático que identifica la finalidad hacia la cual deben dirigirse los recursos y esfuerzos para dar cumplimiento a la misión del \cdtRef{gls:planDeDesarrollo}{Plan de Desarrollo} o a los propósitos institucionales, si se trata de las \cdtRef{gls:categoriaProgramatica}{categorías programáticas}. %http://www.definicion.org/objetivo 
+	
+	%Expresión cualitativa de un propósito que se pretende alcanzar en un tiempo y espacio específicos a través de determinadas acciones. % del glosario de términos del GEM
+	
+	%TOCHK  Atziry Ags 12
+	\BRterm{gls:obraPublica}{Obra:} Obra u obra pública es el trabajo que tiene por objeto crear, construir, conservar o modificar los bienes inmuebles cuyo desempeño y servicio son competencia o de interés del gobierno.
+
+	%TOCHK  Atziry Ags 12
+	\BRterm{gls:obrDeAltoImpacto}{Obra de alto impacto:} Se refiere a una \cdtRef{gls:obraPublica}{obra} que por su incidencia o relevancia tiene un efecto relevante en el lugar que se aplica.
+	
+	
+	\BRterm{gls:obra}{Obra en proceso:} Dícese del estatus en el que se encuentra una \cdtRef{gls:obraPublica}{obra} con inversión autorizada, que fue sujeta a cancelación parcial para dar suficiencia a otros proyectos, o en su defecto la obra que su ejecución se realice en etapas y cuyos recursos presupuestales fueron ejercidos en su totalidad, siendo requisito que esté estipulado desde su primera autorización el período de ejecución global, dentro de este rubro se considerarán, los refrendos, obras complementarias y ampliaciones. \cite[pag.19,GT]{bibange:SecretariaFinanzasGT}%(obtenido de la pag. 19 del glosario de términos del GEM).
+	
+	%TOCHK  Atziry Ags 12
+	\BRterm{gls:obraPublica}{Obra pública:} Véase \cdtRef{gls:obraPublica}{obra}.	
+	
+	
+	%TOCHK  Evelyn Jun 25
+	
+	
+	\BRterm{gls:obraTerminada}{Obra terminada:} Se refiere a la infraestructura que cumple con los requerimientos contractuales establecidos, la cual culmina con el acta entrega recepción.
+	
+	\BRterm{gls:tipoDeOperacion}{Operación:} Indica la forma en la que se procesa una \cdtRef{gls:meta}{actividad}. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: Suma, promedio, máximo, mínimo y constante.
+	
+	%\TOCHK{Revisar redacción de concepto.}
+	\BRterm{gls:Parentesco}{Parentesco:} Vínculo que une a personas que se hayan relacionadas por una comunidad de sangre. Los valores para este dato son los que se definen en el catálogo de la CGG.
+	
+	\BRterm{gls:perfilUsuario}{Perfil de usuario:} Es un entorno personalizado específicamente para un actor. Contiene la configuración de las acciones que un actor determinado puede
+	realizar dentro del \seipae , las cuales se detallan en la sección \ref{sec:Comportamiento:ActoresSistema}.
+	
+	\BRterm{gls:periodo}{Periodo:} Espacio de tiempo que incluye toda la duración o el proceso de una tarea o actividad.
+
+	%TOCHK
+	\BRterm{gls:Pilar}{Pilar:} Término que se utilizada como fundamento o principio para sostener el \cdtRef{gls:planDeDesarrollo}{Plan de Desarrollo}, dicho plan cuenta con tres pilares los cuales son: \cdtRef{gls:gobiernoSolidario}{gobierno solidario}, \cdtRef{gls:estadoProgresista}{estado progresista}, \cdtRef{gls:sociedadProtegida}{sociedad protegida}.  \cite[pag.16,PD]{bibange:PlanDeDesarrollo}% (obtenido de la pag. 16 del PD). %Pag.16 del Plan de Desarrollo
+
+	%TOCHK Atziry Ags 12
+	\BRterm{gls:planDeDesarrollo}{Plan de Desarrollo:} Instrumento de planeación que sirve para promover la política de desarrollo que refuerce las bases económicas y sociales de la entidad estatal, a fin de satisfacer las necesidades de la sociedad a través de un desarrollo integral, de acuerdo con las normas, principios y objetivos que la propia constitución estatal y las leyes establecen en esta materia. \cite[pag.19,GT]{bibange:SecretariaFinanzasGT}% (obtenido de la pag. 19 del glosario de términos del GEM). %pag 21 del glosario gem
+
+% 	%TOCHK
+% 	\BRterm{gls:planDeDesarrollo}{Plan de Desarrollo:} Instrumento de planeación que sirve para promover la política de desarrollo que refuerce las bases económicas y sociales de la entidad estatal, a fin de satisfacer las necesidades de la sociedad a través de un desarrollo integral, de acuerdo con las normas, principios y objetivos que la propia constitución estatal y las leyes establecen en esta materia. %pag 21 del glosario gem
+	
+	%TOCHK
+	\BRterm{gls:programa}{Programa:} Forma parte de las \cdtRef{gls:categoriaProgramatica}{categorías programáticas} y es un conjunto organizado de proyectos agrupados en subprogramas, que satisfacen un objetivo específico de las dependencias o entidades públicas para alcanzar entregables. \cite[pag.5,EP]{bibange:SecretariaFinanzasEP} %(obtenido de la pag.5 de la EP para el ejercicio fiscal 2013).
+	%pag 5 del ESTRUCTURA PROGRAMÁTICA PARA EL EJERCICIO FISCAL 2013	
+	
+	
+	%TOCHK Atziry Ags 12
+	\BRterm{gls:proyecto}{Proyecto:} Término utilizado para referirse a un conjunto de actividades afines y complementarias que se derivan de un programa y que tiene como características, un responsable, un período de ejecución, costo estimado y resultado esperado. Resuelve un problema o aprovecha una oportunidad.\cite[pag.5,EP]{bibange:SecretariaFinanzasEP} % (obtenido de la pag.5 de la EP para el ejercicio fiscal 2013)% 
+
+	%pag 6 del ESTRUCTURA PROGRAMÁTICA PARA EL EJERCICIO FISCAL 2013
+	
+	%TOCHK
+	%\BRterm{gls:proyectoDeAltoImpacto}{Proyecto:}
+	
+	\BRterm{gls:region}{Región:}  Área territorial con características específicas y homogéneas. \cite[pag.22,CUM]{bibange:SecretariaFinanzasCUM} 
+	
+	\BRterm{gls:resultado}{Resultado:} Nombre que se le da a entregable obtenido de un indicador físico estratégico.
+
+	\BRterm{gls:revision}{Revisión:} Descripción textual que describe el resultado de una revisión e instrucciones para correcciones de una \cdtRef{gls:tarea}{tarea}.
+	%TOCHK  Evelyn Jun 25
+	\BRterm{gls:sociedadProtegida}{Sociedad protegida:} Es el \cdtRef{gls:Pilar}{pilar} que donde todos sus miembros, sin distinción alguna, tienen derecho a acceder a la seguridad en todos sus niveles y a una justicia imparcial y equitativa.  \cite[pag.35,PD]{bibange:PlanDeDesarrollo}% (obtenido de la pag. 35 del PD).% pag.35 el Plan de Desarrollo
+	
+	%TOCHK
+	\BRterm{gls:subfuncion}{Subfunción:} Forma parte de las \cdtRef{gls:categoriaProgramatica}{categorías programáticas}  e identifica con mayor detalle la participación del sector público. Conjunto de acciones que persiguen objetivos y metas específicas que favorecen el logro del objetivo de la función. \cite[pag.5,EP]{bibange:SecretariaFinanzasEP} % (obtenido de la pag.5 de la EP para el ejercicio fiscal 2013).% pag 5 del ESTRUCTURA PROGRAMÁTICA PARA EL EJERCICIO FISCAL 2013
+	
+	%TOCHK 
+	\BRterm{gls:subprograma}{Subprograma:} Forma parte de las \cdtRef{gls:categoriaProgramatica}{categorías programáticas} y es un subconjunto del programa que reviste las mismas características y tiene la finalidad de agrupar los proyectos con base en objetivos y metas específicas que identifican un logro o un beneficio producto del programa.  \cite[pag.6,EP]{bibange:SecretariaFinanzasEP}%(obtenido de la pag.6 de la EP para el ejercicio fiscal 2013) 
+	%pag 6 del ESTRUCTURA PROGRAMÁTICA PARA EL EJERCICIO FISCAL 2013
+	
+	%TOCHK Evelyn Jun 25
+	\BRterm{gls:tarea}{Tarea:} Término utilizado para referirse a una \cdtRef{gls:accion}{acción}, \cdtRef{gls:accionAltoImpacto}{acción de alto impacto}, \cdtRef{gls:obra}{obra} y \cdtRef{gls:obrDeAltoImpacto}{obra de alto impacto}.
+	%SE DEBE AGREGAR EL TÉRMINO PROYECTO DE ALTO IMPACTO
+% 	
+% 	\TOCHK EVELYN AGOS. 12
+% 	%Término utilizado para referirse a \cdtRef{gls:accion}{acción}, \cdtRef{gls:accionDeGobierno}{Acción de Gobierno}, \cdtRef{gls:accionAltoImpacto}{acción de alto impacto}, \cdtRef{gls:proyecto}{proyecto}, \cdtRef{gls:obra}{obra} y \cdt{gls:obraDeAltoImpacto}{obra de alto impacto}
+	
+	
+	%TOCHK Evelyn Jun 25
+	%\BRterm{gls:tema}{Tema:} Es la clasificación que se realiza al interior de cada \cdtRef{gls:estrategia}{estrategia} para agrupar las diversas \cdtRef{gls:lineasDeAccion}{líneas de acción} que guían el quehacer gubernamental.
+
+	\BRterm{gls:textoDescriptivo}{Texto descriptivo:} Es un texto analítico que da la oportunidad de hacer un análisis cuantitativo y cualitativo que permita confrontar y exhibir de la mejor manera los resultados del proyecto.
+
+	%\TOCHK{Revisar definición}
+	\BRterm{gls:tipoBeneficiario}{Tipo de beneficiario:} Se refiere al estatus en que se encuentra el beneficio para la persona que lo solicita, los valores son: Solicitado o beneficiado. 
+	
+	\BRterm{gls:tipoBeneficio}{Tipo de beneficio:} Se refiere a la forma en que beneficia a la comunidad la realización de una tarea. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: Ambiental y social.
+	
+	%APROBADO: 18 sep 2013
+	\BRterm{gls:tipoEvidencia}{Tipo de evidencia:} Se refiere a los documentos que respaldan un \cdtRef{gls:movimiento}{movimiento financiero}, los cuales pueden ser: ``Oficio'' y ``Autorización de pago''. 
+	
+	%\BRterm{gls:tipoDeMeta}{Tipo de entregable:} Se usa para determinar una \cdtRef{gls:metaFisicaDirecta}{meta física directa} es de gestión o estratégica. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: De gestión y estratégica.
+	
+	%\BRterm{gls:TipoTarea}{Tipo de tarea:} Las \cdtRef{gls:Tarea}{tareas} pueden ser de tres tipos: Acción, Obra o Proyecto.
+	
+	\BRterm{gls:tipoRevision}{Tipo de revisión:} Identifica a cada uno de los comentarios que los actores realizan en el \seipae\ en las diferentes etapas del proceso, los cuales son: ``Comentario'', ``Justificación por revisión'', ``Justificación por eliminación'', ``Observación por revisión'', ``Observación por aprobación'', ``Observación por registro extemporáneo'', ``Observación por ajustes'', ``Observación por autorizar cierre'' y ``Observación por eliminación''.
+	
+	\BRterm{gls:TipoTarea}{Tipo de tarea:} Se utiliza para determinar la naturaleza de una \cdtRef{gls:tarea}{tarea}. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: \cdtRef{gls:accion}{Acción}, \cdtRef{gls:accionAltoImpacto}{acción de alto impacto}, \cdtRef{gls:obra}{obra} u \cdtRef{gls:obrDeAltoImpacto}{obra de alto impacto}.
+	
+	\BRterm{gls:tramiteFinanciamiento}{Trámite de financiamiento:} Es la ejecución del financiamiento en una fecha establecida.
+	
+	%Comentado por Angelina el 08 de octubre, 2013
+	%\BRterm{gls:unidad}{Unidad:} Se utiliza para definir la \cdtRef{gls:UnidadDeMedida}{unidad de medida} con la que se reportarán las cantidades de las diferentes \cdtRef{gls:meta}{actividades}. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema cuyos valores podrán definirse dentro del sistema.
+	
+	\BRterm{gls:unidadAdministrativa}{Unidad Administrativa:} Es una dirección general o equivalente a la que se le confieren atribuciones específicas en el reglamento interno. Puede ser también un órgano que tiene funciones propias que lo distinguen de los demás en la institución. Elemento de la clave que identifica y clasifica el gasto público por entidades, según la organización interna de cada institución.
+
+	\BRterm{gls:UnidadDeMedida}{Unidad de medida:} Expresión asociada a una magnitud la cual permite medir el producto o resultado de una actividad. Su determinación debe proporcionar elementos de juicio al responsable a fin de que pueda ejercer un mejor análisis y evaluación de los resultados establecidos como actividades. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema cuyos valores podrán definirse dentro del mismo.
+	
+	%TOCHK
+	\BRterm{gls:unidadEjecutora}{Unidad ejecutora:} Unidad administrativa subordinada a una \cdtRef{gls:unidadResponsable}{unidad responsable}, en la cual se desconcentra parte del ejercicio presupuestario, con el objeto de cumplir con eficiencia la misión encomendada.
+
+	%\BRterm{gls:unidadMedidaDetallada}{Unidad de medida detallada:} Es una subclasificación de las \cdtRef{gls:UnidadDeMedida}{unidades de medida}, por ejemplo: árboles plantados, toneladas de residuos recolectados, toneladas de residuos depositados, toneladas de residuos separados, etc.
+	
+	%TOCHK
+	\BRterm{gls:unidadResponsable}{Unidad responsable:} Institución pública subordinada en forma directa al titular del poder ejecutivo estatal en el ejercicio de sus atribuciones y para el despacho de los asuntos de orden administrativo que tiene encomendados.  \cite[pag.32,GT]{bibange:SecretariaFinanzasGT} %(obtenido de la pag. 32 del glosario de términos del GEM).% Las unidades responsables (dependencias) de la Administración Pública estatal son las Secretarías, Procuraduría General y la Coordinación General que, en su caso, representan asimismo la cabeza de un sector.
+	  
+\end{description}
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Términos que se habian propuesto para el glosario, hay que aprobarlos%%%%%%%%%%%%%%%%%%%%%%%%%
+	%TOCHK
+% 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Términos que se habian propuesto para el glosario, hay que aprobarlos%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	
+% 	
+% 	
+% 	%TOCHK
+% 	\BRterm{claveFuncionalProgramatica}{Clave Funcional Programática:} Representación numérica de las categorías de la clasificación programática que permite identificar la función, subfunción, programa, subprograma y proyecto.%creo que este concepto es importante
+% 	%TOCHK
+% 	\BRterm{diagnosticoSituacionActual}{Diagnostico (situación actual):} Describe en forma cualitativa y cuantitativa la información que refleje la problemática y la necesidad de atender diversos asuntos que correspondan a la ejecución del proyecto por cada unidad ejecutora.%manual de actor.
+% 	%TOCHK
+% 	\BRterm{metasSinCuantificar}{Metas sin cuantificar:} Metas que la unidad responsable definió para el proyecto y que aun no han sido cuantificadas.
+% 	%TOCHK
+% 	\BRterm{metasCuantificadas}{Metas cuantificadas:} Metas que la unidad responsable definió para este proyecto y que ya fueron cuantificadas.
+
+
+% 	%TOCHK
+% 	\BRterm{unidadDeInformacion}{Unidades de Información (UIPPE):} Unidades de Información, Planeación,Programación y Evaluación de las dependencias y entidades públicas que establece la Ley de Planeación del Estado de México y Municipios.
+% 	
+% 	%TOCHK
+
+%%====================================================================
+%\section{Derivados del registro de una Entidad}
+%	En esta sección se describen los términos relacionados con el registro de la Entidad en el sistema.
+%
+%\begin{description}
+%	\BRterm{Entidad} Entiéndase por Entidad a aquella institución, centro y/o empresa, de los sectores social y privado, dedicado o no a actividades con fines económicos o comerciales, para satisfacer las necesidades, bienes y/o servicios de los demandantes. 
+%	\BRterm{Perfil} El perfil es el rol que va a tener el Usuario dentro del \Catalogo, por ejemplo puede ser un  \refActor{Solicitante}, \refActor{Cotejador} o \refActor{Supervisor}
+%	\BRterm{Razón Social} Las palabras y caracteres que conforman el nombre de una sociedad o asociación, que permiten individualizarla y distinguirla de otras, sin considerar su régimen jurídico, especie, ni modalidad. Es el nombre que se le da a una Persona Moral y que la identifica para todos los efectos legales. %www.tuempresa.gob.mx. Denicion de razon social, Marzo 2013. www.tuempresa.gob.mx/web/ciudadanos/glosario;jsessionid=6fe231517fbd0ab6b8416eb8ebd2.
+%	\BRterm{Registro Federal de Contribuyentes o RFC} El SAT lo define como: ``Es el que incluye información sobre el domicilio físcal, obligaciones y declaraciones registradas de toda Persona Física o Moral, que conforme a las leyes vigentes sea contribuyente y/o responsable del pago de contribuciones. La información contenida es confiencial".
+%	\BRterm{Representante Legal} Es una Persona Física con facultades jurídicas para representar legalmente a la Entidad.
+%	\BRterm{Usuario} Es aquella persona tiene acceso y uso del sistema \NCatalogo, pudiendo ser un \refActor{Solicitante}, \refActor{Cotejador} o \refActor{Supervisor}
+% 	
+%	
+%	
+%\end{description}
+%
+%====================================================================
+\section{Términos de la Norma Técnica de Domicilios Geográficos de INEGI}
+	En esta sección se describen los términos relacionados con la aplicación de la Norma Técnica sobre Domicilios Geográficos de INEGI.
+
+\begin{description}
+	\BRterm{gls:asentamientoHumano}{Asentamiento humano} Es un \cdtRef{gls:tipoDato}{tipo de dato} definido por medio de el catálogo de asentamientos humanos proporcionados por INEGI. Según INEGI un asentamiento humano se refiere a: Un establecimiento de un conglomerado demográfico, con el conjunto de sus sistemas de convivencia, en un área físicamente localizada, considerando dentro de la misma los elementos naturales y las obras materiales que la integran, los tipos se encuentran en la pág. 5 de la Norma. \cite[pag.9,NT]{bibange:normaTecnica}
+	
+
+	\BRterm{gls:codigoPostal}{Código postal} Número que identifica al código postal, constituido por cinco dígitos, obtenido de la información oficial de Correos de México.
+	
+	\BRterm{gls:coordenada}{Coordenada} Es una secuencia de N números que hacen referencia a una ubicación en un espacio N dimensional. Una coordenada siempre se expresa utilizando un sistema de coordenadas de referencia (CRS).
+	
+	\BRterm{gls:domicilioGeografico}{Domicilio geográfico} El espacio al interior de una localidad o referido a una vía de comunicación que ocupa un inmueble (edificación o terreno) donde pueden establecerse una o más personas o unidades económicas, a fin de dar cumplimiento a sus obligaciones o derechos, deberá comprender atributos del ámbito urbano-rural, y deberá aplicarse para el concepto de un lugar localizable espacialmente, donde alguien o algo se considere establecido y sus atributos se dividen en principales y complementarios.
+
+	\BRterm{gls:domicilioConocido}{Domicilios geográficos conocidos} Se refiere a un domicilio geográfico en el que la ubicación es conocida de manera local por referencias de la gente y no se cuenta con una numeración.\cite[pag.9,NT]{bibange:normaTecnica}
+	
+	\BRterm{gls:entidadFederativa}{Entidad federativa} Unidades político-administrativas que dividen la República Mexicana; hay 31 estados libres y soberanos y un Distrito Federal. \cite[pag.9,NT]{bibange:normaTecnica}
+	
+	\BRterm{gls:localidad}{Localidad} Lugar ocupado con una o más edificaciones utilizadas como viviendas, las cuales pueden estar habitadas o no, este lugar es reconocido por un nombre dado por alguna disposición legal o la costumbre. \cite[pag.9,NT]{bibange:normaTecnica}
+
+
+	\BRterm{gls:municipio}{Municipio} Conjunto de habitantes de un mismo término jurisdiccional, regido por un ayuntamiento %\footnote{Definición tomada del diccionario de la Real Academia Española}
+	 En el caso del D.F. un municipio equivale a una delegación. \cite[pag.9,NT]{bibange:normaTecnica}
+
+	\BRterm{gls:nombreVialidad}{Nombre de la vialidad} Sustantivo propio que identifica a la superficie del terreno destinada para el tránsito vehicular y/o peatonal.
+	
+	\BRterm{gls:tipoAsentamiento}{Tipo de asentamiento} Es la clasificación que se le da al tipo de asentamiento. Ver pág. 5 de la Norma. 
+	
+	\BRterm{gls:tipoDomicilio}{Tipo de domicilio} Especifica la forma en que se describe un domicilio en función del lugar en el que se encuentra ubicado. Se utiliza como \cdtRef{gls:tipoDato}{tipo de dato} para el sistema con los valores: En zona urbana, en zona rural, en vías de comunicación.
+	
+	\BRterm{gls:tipoUbicacion}{Tipo de ubicación} Hace referencia a la zona en la que se encuentra el domicilio: zona urbana, zona rural o vía de comunicación.
+
+	\BRterm{gls:tipoViaComunicacion}{Tipo de vía de comunicación} Hace referencia al tipo de una vía de comunicación. Los tipos definidos son: Carretera, brecha, camino, terracería y vereda.
+	
+	\BRterm{gls:tipoVialidad}{Tipo de vialidad} Clasificación que se le da a la vialidad, en función de lo determinado por la Autoridad Local.
+
+	\BRterm{gls:vialidad}{Vialidad} Es un \cdtRef{gls:tipoDato}{tipo de dato}  conformado por el \cdtRef{gls:tipoVialidad}{tipo} y \cdtRef{gls:nombreVialidad}{nombre} de la vialidad.
+	
+\end{description}

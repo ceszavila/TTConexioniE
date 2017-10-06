@@ -1,0 +1,66 @@
+\section{Modelo de información del domicilio geográfico}
+
+    En esta sección se describen las entidades de un domicilio, con base en lo establecido en la {\it Norma Técnica Sobre Domicilios Geográficos de INEGI}. Un domicilio es el espacio al interior de una localidad o referido a una vía de comunicación que ocupa un inmueble (edificio o terreno) donde pueden establecerse una o más personas o unidades económicas, a fin de dar cumplimiento a sus obligaciones o derechos.\\
+    
+    El {\it Domicilio Geográfico} deberá comprender atributos del ámbito urbano-rural y deberá aplicarse para el concepto de un lugar localizable espacialmente, donde alguien o algo se considere establecido.
+    
+\subsection{Descripción General}
+
+    En la figura~\ref{fig:domicilioGeografico} se muestra la estructura de información que el sistema manejará.
+	
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[angle=90,height=1.2\textwidth]{images/clases/DomicilioGeografico}}
+		\caption{Modelo de información de domicilio.}
+		\label{fig:domicilioGeografico}
+	\end{center}
+\end{figure}
+
+\begin{BusinessEntity}{Domicilio}{Domicilio}	%\Battr{alias}{Nombre de atributo}{\tdPalabra|\tdFrase|\tdParrafo|\tdNumerico|\tdBooleano|\tdFecha}{Descripcion del atributo}{\requerido|\opcional}
+	\Battr{numeroExterior}{Número exterior}{Se debe proporcionar como una \cdtRef{gls:numeracion}{numeración de domicilio}}{Son los caracteres alfanuméricos y símbolos que identifican un inmueble sobre una vialidad}{\requerido. En caso de no conocerse el dato debe colocarse ``SN'', que significa ``sin número''}
+	
+	\Battr{numeroInterior}{Número interior}{Se debe proporcionar como una \cdtRef{gls:numeracion}{numeración de domicilio}}{Son los caracteres alfanuméricos y símbolos que identifican una vivienda o establecimiento al interior de un inmueble, con número exterior designado}{\requerido. En caso de no conocerse el dato debe colocarse ``SN'', que significa ``sin número''}
+	
+	\Battr{numeroExteriorAnterior}{Número exterior anterior}{\tdParrafo}{Son los caracteres alfanuméricos y símbolos que identificaban un inmueble en una vialidad. Este dato hace referencia al número exterior del domicilio si fue cambiado recientemente, a lo más 6 meses atrás. Ejemplo: Manzana 4 Lote 21}{\requerido. En caso de no conocerse el dato debe colocarse ``SN'', que significa ``sin número''}
+	
+	\Battr{descripcion}{Descripción}{\tdParrafo}{Es una descripción de los rasgos naturales o culturales (edificaciones) que aportan información adicional para facilitar la ubicación del domicilio geográfico, esto es fundamental en vialidades sin nombre y sin número exterior, en carreteras, caminos, terracerías, brechas, veredas, localidades rurales de difícil acceso, elementos del territorio insular, cadenamiento original y que ha sido sustituido por la numeración oficial, derivado del crecimiento de una zona urbana y ``domicilios conocidos''}{\opcional}
+	
+	\Battr{entidadFederativa}{Entidad federativa}{Corresponde a una de las \cdtRef{gls:entidadFederativa}{entidades federativas} del catálogo}{Se refiere a la Entidad Federativa en donde se encuentra ubicado el domicilio}{\requerido}
+	
+	\Battr{municipio}{Municipio}{Corresponde a uno de los \cdtRef{gls:municipio}{municipios} del catálogo}{Se refiere al municipio en donde se encuentra ubicado el domicilio}{\requerido}
+	
+	\Battr{localidad}{Localidad}{Corresponde a una de las \cdtRef{gls:localidad}{localidades} del catálogo}{Se refiere a la localidad en donde se encuentra ubicado el domicilio}{\requerido}
+	
+	\Battr{tipoDomicilio}{Tipo de ubicación}{Corresponde a uno de los \cdtRef{gls:tipoUbicacion}{tipos de ubicación} del catálogo}{Se refiere al tipo de domicilio que se está describiendo}{\requerido}
+		
+	\Battr{vialidad}{Vialidad}{Corresponde a una de las \cdtRef{gls:vialidad}{vialidades} del catálogo}{Se refiere a la \cdtRef{gls:vialidad}{Vialidad} sobre la cual se encuentra el inmueble que describe el domicilio}{\requerido}
+	
+	\Battr{asentamientoHumano}{Asentamiento humano}{Corresponde a uno de los \cdtRef{gls:asentamientoHumano}{asentamientos humanos} del catálogo}{Se refiere al \cdtRef{gls:asentamientoHumano}{Asentamiento humano} en donde se encuentra ubicado el domicilio}{\requerido}
+	
+	\Battr{codigoPostal}{Código postal}{\tdPalabra~formada por 5 dígitos}{Se refiere al \cdtRef{gls:codigoPostal}{Código Postal} asignado por el SEPOMEX al asentamiento humano en donde se encuentra ubicado el domicilio}{\requerido}
+	
+	\Battr{entreVialidades}{Entre vialidades}{Corresponde a dos valores de las \cdtRef{gls:vialidad}{vialidades} del catálogo}{Se refiere al tipo y nombre de las vialidades entre las cuales se ubica un Domicilio Geográfico, que corresponden a aquellas vialidades que generalmente son perpendiculares a la vialidad en donde está establecido el domicilio geográfico de interés.}{\opcional}
+	
+	\Battr{vialidadPosterior}{Vialidad posterior}{Corresponde a una de las \cdtRef{gls:vialidad}{vialidades} del catálogo}{Se refiere a la vialidad posterior donde se encuentra el domicilio geográfico}{\opcional}
+	
+	\Battr{coordenada}{Coordenada}{Son dos valores numéricos con decimales, que representan la latitud y longitud del domicilio}{Se refiere a la \cdtRef{gls:coordenada}{coordenada geográfica} del domicilio}{\opcional}
+\end{BusinessEntity}
+
+\begin{BusinessEntity}{Carretera}{Carretera}	%\Battr{alias}{Nombre de atributo}{\tdPalabra|\tdFrase|\tdParrafo|\tdNumerico|\tdBooleano|\tdFecha}{Descripcion del atributo}{\requerido|\opcional}
+	\Battr{tipoViaComunicacion}{Tipo de vía de comunicación}{Corresponde a uno de los \cdtRef{gls:tipoViaComunicacion}{tipos de vía de comunicación} del catálogo}{Se refiere al tipo de la vía de comunicación sobre la leal se encuentra ubicado el domicilio}{\requerido}
+	\Battr{administracion}{Administración}{Corresponde a uno de los \cdtRef{gls:tipoViaComunicacion}{tipos de vía de comunicación} del catálogo}{Se refiere a la entidad que administra la vía de comunicación: Estatal, Federal, Municipal o Particular}{\requerido}
+	\Battr{derechoTransito}{Derecho de Tránsito}{Corresponde a uno de los valores: libre o de cuota}{Se refiere al derecho de tránsito de la vía de comunicación carretera: libre o de cuota}{\requerido}
+	\Battr{origen}{Origen}{\tdFrase}{Se refiere al nombre de la población origen de la vía de comunicación}{\requerido}
+	\Battr{destino}{Destino}{\tdFrase}{Se refiere al nombre de la población destino de la vía de comunicación}{\requerido}
+	\Battr{codigo}{Código}{\tdNumerico}{Se refiere al número de la carretera}{\requerido}
+	\Battr{margen}{Margen}{Corresponde al valor ``derecha'' o ``izquierda''}{Se refiere al lado del a vía de comunicación en el que se encuentra el domicilio, visto desde el punto de vista de alguien que va del origen al destino de la vía de comunicación}{\requerido}
+	\Battr{cadenamiento}{Cadenamiento}{Es un valor numérico o de la forma ``Numero+Numero''}{Se refiere al kilómetro en el que se encuentra el domicilio sobre la vía de comunicación, por ejemplo: 230+100}{\requerido}
+\end{BusinessEntity}
+
+\begin{BusinessEntity}{Camino}{Camino, Brecha, Vereda o Terracería}	%\Battr{alias}{Nombre de atributo}{\tdPalabra|\tdFrase|\tdParrafo|\tdNumerico|\tdBooleano|\tdFecha}{Descripcion del atributo}{\requerido|\opcional}
+	\Battr{tipoViaComunicacion}{Tipo de vía de comunicación}{Corresponde a uno de los \cdtRef{gls:tipoViaComunicacion}{tipos de vía de comunicación} del catálogo}{Se refiere al tipo de la vía de comunicación sobre la leal se encuentra ubicado el domicilio}{\requerido}
+	\Battr{origen}{Origen}{\tdFrase}{Se refiere al nombre de la población origen de la vía de comunicación}{\requerido}
+	\Battr{destino}{Destino}{\tdFrase}{Se refiere al nombre de la población destino de la vía de comunicación}{\requerido}
+	\Battr{margen}{Margen}{Corresponde a uno de los valores: derecha izquierda}{Se refiere al lado del a vía de comunicación en el que se encuentra el domicilio, visto desde el punto de vista de alguien que va del origen al destino de la vía de comunicación}{\requerido}
+	\Battr{cadenamiento}{Cadenamiento}{Es un valor numérico o de la forma ``Numero+Numero''}{Se refiere al kilómetro en el que se encuentra el domicilio sobre la vía de comunicación, por ejemplo: 230+100}{\requerido}
+\end{BusinessEntity}

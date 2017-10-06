@@ -1,0 +1,247 @@
+%TODO: Revisar la introducción de este capí­tulo
+
+
+El presente capítulo describe el modelo de negocios utilizado para el desarrollo del {\bf \varProyecto}, el cual se conforma de los siguientes elementos:
+
+\begin{itemize}
+	\item Modelo del proceso AS-IS. Describe los procesos que actualmente se llevan a cabo en el sector con la finalidad recabar la información ambiental que generan las Unidades Administrativas por medio de la UIPPyE.
+	\item Modelo del proceso TO-BE. Define los procesos modificados por la introducción del sistema a fin de aclarar la forma en que el sistema afectará la operación diaria de los involucrados.
+	\item Modelo de la estructura de la información. En esta sección se presentan los atributos y relaciones de toda la información que contemplará el sistema.
+	\item Reglas de negocio. Son las directivas destinadas a gobernar, guiar o influenciar el comportamiento de los procesos del negocio.\\
+\end{itemize}
+
+
+%===================================
+\section{Modelo del proceso AS-IS}
+
+	Al momento de desarrollar el sistema se hizo un análisis de la información que la UIPPyE solicita a las Unidades Administrativas de la Secretaría de Medio Ambiente. Durante esta etapa se decidió que el análisis se centrará principalmente a la información relativa a el Programa Anual de Operación, al Informe del Gobernador, a las Acciones de Gobierno y las Acciones de Alto Impacto de cada Unidad Administrativa.\\
+	
+	A continuación se describe el proceso para cada uno de los casos sin entrar a detalles y enfatizando el flujo de la información y el proceso de recolección.
+
+
+%---------------------------------------------------------
+\subsection{Modelo de procesos del SPP}
+
+
+	Como parte del Programa Anual de Operación, es necesario considerar los compromisos que se establecen en el Plan de Desarrollo del Estado de México y en los programas que de éste se derivan, además de tener presente las categorías programáticas que utilice cada Unidad Administrativa, así como los montos comunicados como techo financiero que la secretaría asigne a cada dependencia o entidad pública del gobierno estatal, el cual servirá de base para comprometer la programación de las actividades a desarrollar y establecer la presupuestación para el ejercicio siguiente por cada uno de los proyectos programáticos a los que se inscriban las unidades ejecutoras y responsables.\\
+
+	El Sistema de Planeación y Presupuesto (SPP) es el sistema informático WEB que sirve para desarrollar los procesos de planeación, programación y presupuestación como los mecanismos para el seguimiento y evaluación del desempeño del Gobierno Estatal.\\
+
+	El proceso del SPP se muestra en la figura \ref{fig:procesoSPP} y consiste básicamente en que las unidades hagan la planeación y reporten avances en el sistema con la supervisión de la UIPPyE con base en los siguientes pasos:
+
+\begin{enumerate}
+	\item La Secretaría de Finanzas otorga el techo financiero a cada organismo, en caso de ser sector central proporciona el techo a la coordinación administrativa con copia a la UIPPyE.
+	\item La unidad ejecutora junto con la UIPPyE identifica cuales son los proyectos de Estructura Programática y las acciones que le corresponden.
+	\item La unidad ejecutora registra el anteproyecto en el sistema, el cual cuenta con un diagnóstico, estrategias del proyecto, entregables, acciones e indicadores.
+	\item La UIPPyE mantiene contacto continuo con las unidades ejecutoras cuando éstas se encuentran generando el anteproyecto, de esta forma en el momento que cada unidad envía el anteproyecto, la UIPPyE aprueba el mismo y lo envía a la Secretaría de Finanzas.
+	\item La Secretaría de Finanzas analiza los anteproyectos. Dicho análisis se basa en identificar la congruencia de la solicitud con los entregables y el presupuesto. Si la Secretaría de Finanzas identifica incongruencia en el anteproyecto entonces analiza en conjunto con la unidad ejecutora el anteproyecto.
+	\item La Secretaría de Finanzas ingresa a la legislatura y registra el proyecto en el sistema.
+	\item La Secretaría de Finanzas comunica los resultados a la Coordinación de Administración enviando copia a la UIPPyE, ésta última ratifica  la acciones de proyecto de la Estructura Programática.
+	\item La unidad ejecutora ajusta entregables y presupuesto ya sea por recorte presupuestal, por ampliación o por reconducción.
+	\item La unidad ejecutora realiza la calendarización de los entregables con base en los procesos que se requieran cumplir o atender para alcanzar la entregable establecida.
+	\item Trimestralmente las unidades ejecutoras reportan su avance respecto a la entregable establecida, buscando cumplir con todos los compromisos adquiridos durante la planeación.
+	\item La UIPPyE revisa los informes y si es necesario el enlace financiero puede emitir observaciones sobre lo reportado con el fin de que se cumplan los entregables o se amplié la descripción o justificación de lo reportado.
+\end{enumerate}
+
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[width=.9\textheight,angle=90]{images/Procesos/SPP.png}
+		\caption{Proceso SPP}
+		\label{fig:procesoSPP}
+	\end{center}
+\end{figure}
+
+
+
+%---------------------------------------------------------
+\subsection{Modelo de procesos para el Informe de Gobierno}
+
+	Para la elaboración del informe anual del gobernador el Instituto de Información e Investigación Geográfica, Estadística y Catastral (IGECEM) solicita al Secretario, a través de la UIPPyE, la descripción de cada una de las actividades a fin de poder conjuntar, organizar y presentar de mejor manera los logros y actividades realizadas durante el año de gestión.\\
+	
+	El proceso es soportado por el Sistema de Información Estadística del Informe de Gobierno (SIEIG) y se muestra en la figura \ref{fig:procesoSIEG}. En este caso, el proceso para reportar la información se realiza con el apoyo de archivos en Excel para la integración de la información y posteriormente la captura en el sistema la UIPPyE en coordinación con las Unidades Administrativas.
+	%El proceso se diferencía un poco del anterior sobre todo por que en este caso quien captura todo en el sistema es la UIPPyE, quien se auxilia de formatos en excel par aortanizar la información que le solicita a las unidades ejecutoras.
+	El proceso se detalla en los siguientes pasos:
+
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[width=.9\textheight,angle=90]{images/Procesos/SIEIG.png}
+		\caption{Proceso SIEIG}
+		\label{fig:procesoSIEG}
+	\end{center}
+\end{figure}
+
+\begin{enumerate}
+	\item El IGECEM solicita a la UIPPyE que se actualice la información en el SIEIG. 
+	\item La UIPPyE {\bf crea fichas xls} y las envía a la unidad ejecutora.
+	\item La unidad ejecutora {\bf llena las fichas xls} y las reenvía a la UIPPyE.
+	\item  La UIPPyE realiza un análisis de las fichas, si el análisis arroja que la información de las fichas es incorrecta, la UIPPyE le regresa la ficha a la unidad ejecutora para que se corrija la ficha. De ser correcta la información la UIPPyE en coordinación con las Unidades Administrativas ingresa al sistema
+	%la UIPPyE ingresa al sistema SIEIG
+	alineando la información con el Plan de Desarrollo 2011-2017 y adecuando la información al sistema.
+	\item En caso de requerir más información la solicita a las unidades ejecutoras correspondientes.
+	\item Si la acción u obra está asociada a una Acción de Gobierno estatal o municipal 
+	%Si el proyecto esta asociado a algún compromiso de gobierno
+	se debe especificar en el sistema y se debe llenar la ficha informativa.
+	\item Al final el IGECEM verifica la información proporcionada por la secretaría y genera el Informe de Gobierno.
+	%por la UIPPyE y se encarga de generar el Informe de Gobierno.
+\end{enumerate}
+
+%---------------------------------------------------------
+%\subsection{Acciones de gobierno y Acciones de alto impacto}
+\subsection{Coordinación de imagen institucional}
+
+	Las Acciones de Gobierno son gestionadas por un área específica debido a la importancia de su seguimiento y cumplimiento durante el sexenio del gobernador. Sin embargo cada vez que las unidades ejecutoras reportan algún informe de los procesos anteriores relacionado con una Acción de Gobierno, se solicita que llenen la ficha técnica correspondiente.
+	
+	En relación a las Acciones de Alto Impacto, la UIPPyE solicita con cierta regularidad la actualización de esta información. El proceso se muestra en la figura~\ref{fig:procAcciones} y se explica a continuación:
+	
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=.9\textheight, angle=90]{images/Procesos/procAcciones}
+		\caption{Proceso general para la actualización de información de Acciones de Gobierno y Alto impacto.}
+		\label{fig:procAcciones}
+	\end{center}
+\end{figure}
+
+
+\begin{enumerate}
+	\item El Secretario solicita la información a las Unidades Administrativas y la UIPPyE interviene (utiliza las fichas)
+	%Inicialmente la UIPPyE solicita a las unidades que actualicen o reporten la información resultado del trabajo realizado por una Acción de Gobierno o Acción de Alto Impacto.
+	\item A continuación la unidad responsable busca si cuenta con la información y si es necesario la solicita a las áreas correspondientes.
+	\item Una vez recolectada la información la organiza de la mejor manera y verifica que  la acción en cuestión es una Acción de Gobierno, en cuyo caso, llenará la ficha técnica correspondiente. 
+	\item Cuando la UIPPyE recibe la información la verifica a fin de que sea coherente y cumpla con los resultados esperados, en caso de encontrar algún dato atípico o incompleto vuelve a solicitar la información indicando la causa de que se vuelva a solicitar.
+	\item Al final la unidad ejecutora se encarga de subsanar las observaciones hasta que el informe quede completo.
+\end{enumerate}
+
+
+%---------------------------------------------------------
+\subsection{Hallazgos}
+
+	Aunque el análisis que aquí se presenta es muy general, se pudieron identificar varios aspectos relevantes que sirven de base para el diseño del sistema. Como resultado del análisis y presentación de los procesos anteriores encontramos los siguientes problemas con sus respectivas causas:
+	
+\begin{Citemize}
+	\item Duplicidad de trabajo. Debido a que la información que se presenta durante un proceso se presenta en ocasiones en otro, de esta forma la gente que reporta la información tiene la sensación de hacer dos veces lo mismo, aunque la información que se solicita cambie en algún dato o se solicite para un propósito diferente.
+	\item Diversidad de formatos. Debido a esta diversidad la gente se ve obligada a procesar la información cada vez que se pide en función de lo solicitado y los formatos utilizados. Así mismo tiene la sensación de que hay mucha información relevante que no se reporta.
+	\item Planeación inadecuada. A diferencia de lo que se reporta en el SPP, no hay una planeación que permita conocer los tiempos en los que puede ser adecuado o pertinente solicitar o actualizar la información.
+\end{Citemize}
+
+	Con base en estos resultados, se presentan los principales aspectos a considerar para la elaboración del sistema en la siguiente sección.
+
+
+
+%===================================
+\section{Modelo del proceso TO-BE}
+
+	La introducción de un sistema siempre causa la adecuación de los procesos actuales a fin de mejorar la operación y determinar las responsabilidades que podrán ser delegadas al sistema. En este caso los objetivos que se buscan alcanzar con la incorporación de un sistema son:
+	
+\begin{Citemize}
+	\item Unificación del proceso. Ya que al utilizar esquemas y políticas distintas, los \cdtRef{actor:Experto}{Expertos} y \cdtRef{actor:Enlace}{Enlaces} suelen perderse o confundirse. Como cuando se genera la impresión de que se pide el mismo dato varias veces o los tiempos límites para responder.
+	\item Planeación de trabajo. Aprovechar el mecanismo que usa el SPP para pedir a las unidades que hagan una proyección del trabajo a fin de que puedan organizar el trabajo que realizan y reportarlo en función de esa misma organización.
+	\item Definición de tiempos de reporte. En esa misma planeación que se pueda configurar la frecuencia de las actividades a fin de identificar que actividades o tareas son más factibles de reportar con mucha frecuencia y cuales no.
+	\item Construir un solo canal de comunicación y repositorio de información. Al conjuntar la información en el sistema, se reduce el número de formatos a utilizar y se puede consultar y compartir la información reportada mes a mes, por las diferentes unidades ejecutoras de la SMAGEM.
+\end{Citemize}
+
+%---------------------------------------------------------
+\subsection{SEIPA-E1}%Recolección de Información
+
+	A continuación presentamos el proceso con el que se estará reportando la información en el SEIPA. El objetivo de éste es que toda la información de Acciones de Alto Impacto y para el Informe de Gobierno se puedan reportar mediante este proceso. 
+	
+	Desafortunadamente la información que se reporta en el SPP deberá seguir el mismo proceso ya que el SPP pertenece a finanzas y es para seguimiento financiero. Sin embargo se podrá hacer una comparativa a fin de compulsar los datos vertidos en el SEIPA y compararlos con lo reportado en el SPP.
+	
+	Por otro lado, los formatos de Excel utilizados para el Informe de Gobierno, pueden ser reemplazados debido a que la información se colocará en el SEIPA y en coordinación con la Unidad Administrativa podrá capturarlos en el SIEIG posteriormente.
+	
+	En la figura~\ref{fig:procesoSEIPA} se muestra el proceso y se describe a continuación:
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=1.2\textwidth,angle=90]{images/Procesos/SEIPA}
+		\caption{Proceso para el uso del SEIPA.}
+		\label{fig:procesoSEIPA}
+	\end{center}
+\end{figure}
+
+
+\begin{enumerate}
+	\item La Unidad Administrativa a través del \cdtRef{actor:Enlace}{Enlace} registra la información de la tarea con apoyo de los expertos.
+	\item La Unidad Administrativa envía la información de la tarea a la UIPPyE.
+	\item La UIPPyE revisa la información correspondiente a la tarea, de ser correcta se procede a revisarla con el titular de la UIPPyE.
+	\item Si la UIPPyE determina que la tarea requiere ajustes los solicita a la Unidad Administrativa, ésta última modifica lo solicitado y envía a revisión nuevamente.
+	\item Si el Titular de la UIPPyE determina que la tarea debe ser ajustada remite sus comentarios a la UIPPyE, ésta solicita los cambios pertinentes a la Unidad Administrativa, la cual modifica y envía la tarea nuevamente a revisión.
+	\item Si el titular de la UIPPyE determina que la tarea debe ser eliminada realiza la solicitud a la Unidad Administrativa, la cual borra el registro de la tarea.
+	\item Si el Titular de la UIPPyE determina que la tarea es aceptada notifica la aprobación de ésta a la Unidad Administrativa.
+	\item La Unidad Administrativa reporta periódicamente los avances de la tarea hasta que ésta llegue a su término.
+	\item La Unidad Administrativa solicita el cierre de la tarea al titular de la UIPPyE.
+	\item El titular de la UIPPyE aprueba el cierre de la tarea y notifica a la Unidad Administrativa.
+\end{enumerate}
+
+
+%-----------------------------------------------------------------------------------------------------------------------
+\section{Modelo del ciclo de vida de las tareas}
+\label{sec:estadosTarea}
+  
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=.9\textheight,angle=90]{images/Tarea2}}
+		\caption{Estatus de las tareas}
+		\label{fig:estadosTarea}
+	\end{center}
+\end{figure}
+	
+	Una tarea puede pasar por una serie de etapas o ``estatus'', los cuales se asignan desde su definición hasta su cierre o eliminación. El ciclo de vida de una tarea, sus estatus y los eventos que la hacen pasar de un estatus a otro se muestran en la figura \ref{fig:estadosTarea} y se lleva a cabo de la siguiente manera:
+  
+  \begin{itemize}
+	  \item {\bf Edición:} Las unidades ejecutoras son las encargadas de definir y programar las tareas que se reportarán a la UIPPyE, es en este momento cuando se les asigna un estatus de ``edición''. En este estatus la unidad ejecutora puede modificar y eliminar toda la información de la tarea.
+	  \item {\bf En revisión:} La tarea cambia a este estatus cuando la unidad ejecutora termina de definirla y la envía a la UIPPyE para su revisión. En este estatus, la UIPPyE puede dar su visto bueno sobre la tarea para su aprobación o regresarla a la unidad ejecutora para su corrección. La unidad ejecutora no puede modificar la tarea mientras permanezca en este estatus.
+	  \item {\bf En aprobación:} La tarea cambia a este estatus cuando la UIPPyE ha revisado la tarea y está de acuerdo con su definición. En este estatus el titular de la UIPPyE y el titular de la unidad ejecutora determinan si la tarea puede ser aprobada o no. Durante este estatus la definición de la tarea no puede modificarse ni por la UIPPyE ni por la unidad ejecutora.
+	  \item {\bf Activa:} Este estatus indica que la tarea ha sido aprobada por ambos titulares y por lo tanto la unidad ejecutora puede reportar avances sobre la tarea y hasta que las actividades concluyan.
+	  \item {\bf En ajuste:} Este estatus ocurre cuando se detecta que la tarea requiere ajustes para poder continuar con su ejecución. La UIPPyE debe aprobar los cambios solicitados sobre la definición de la tarea y posteriormente la unidad ejecutora puede realizarlos. Una tarea en este estatus deberá pasar por revisión y aprobación nuevamente antes de volver a activarse. Una vez activa, se podrán reportar avances nuevamente.
+	  \item {\bf Por cerrar:} Una vez que se hayan concluido todas las actividades de la tarea (se hayan reportado avances y resultados), la unidad ejecutora cerrará aparentemente la tarea, pero será la UIPPyE quien la cierre definitivamente. Una vez en este estatus la unidad ejecutora no podrá reportar más avances sobre la tarea.
+	  \item {\bf Por eliminar:} En caso de que una tarea amerite eliminarse, la unidad ejecutora eliminará aparentemente la tarea, pero será la UIPPyE quien autorizará su eliminación. En este caso la tarea es eliminada de forma completa del sistema o si se rechaza su eliminación ésta será reactivada.
+	  \item {\bf Extemporánea:} Una tarea se registra con este estatus cuando su fecha de inicio se define en una fecha anterior a la del registro. La UIPPyE debe revisar y aprobar que dicha tarea se defina de manera extemporánea. Durante este estatus, la unidad ejecutora no puede modificar o definir los elementos restantes de la tarea (actividades, entregables, etc.) hasta que la UIPPyE aprueba o rechace dicha definición.
+  \end{itemize}
+
+%-----------------------------------------------------------------------------------------------------------------------
+
+\section{Modelo del ciclo de vida del financiamiento}
+%\cdtSecLabel{sec:estadosFinanciamiento}
+\label{sec:estadosTarea}
+  
+%\begin{figure}[htbp!]
+%	\begin{center}
+%		\fbox{\includegraphics[width=.9\textheight,angle=90]{images/estadosFinanciamiento.png}}
+%		\caption{Estatus del Financiamiento}
+%		\label{fig:estadosFinanciamiento}
+%	\end{center}
+%\end{figure}
+%	
+%	Un financiamiento puede pasar por una serie de etapas o ``estatus'', los cuales se asignan desde su definición hasta su cierre o eliminación. El ciclo de vida de un financiamiento, sus estatus y los eventos que lo hacen pasar de un estatus a otro se muestran en la figura \ref{fig:estadosFinanciamiento} y se lleva a cabo de la siguiente manera:
+%  
+%  \begin{itemize}
+%	  \item{\bf Solicitado:} Un oficio se registra en el sistema como solicitado cuando éste ha sido solicitado formalmente mediante un oficio. 
+%	  \item{\bf Aprobado:} Cuando el financiamiento ha sido aprobado mediante un oficio, especificando el monto y demás atributos. 
+%	  \item{\bf Parcialmente programado:} Cuando un financiamiento aprobado ha sido distribuido a lo largo de los meses que se consideran dentro del periodo de una tarea.
+%	  \item{\bf Totalmente programado:} Cuando el total del monto aprobado ha sido distribuido en el tiempo que dura la tarea.
+%	  \item{\bf Parcialmente ejecutado:} Cuando parte del monto ha sido  erogado.
+%	  \item{\bf Totalmente ejecutado:} Cuando el monto total de una tarea ha sido aprobado.
+%  \end{itemize}
+
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=.9\textheight,angle=90]{images/estadosFinanciamiento2.png}}
+		\caption{Estatus del financiamiento}
+		\label{fig:estadosFinanciamiento2}
+	\end{center}
+\end{figure}
+	
+	Un financiamiento puede pasar por una serie de etapas o ``estatus'', los cuales se asignan desde su definición hasta su cierre o eliminación. El ciclo de vida de un financiamiento, sus estatus y los eventos que lo hacen pasar de un estatus a otro se muestran en la figura \ref{fig:estadosFinanciamiento2} y se lleva a cabo de la siguiente manera:
+	
+\begin{itemize}
+	  \item{\bf Solicitado:} El financiamiento se registra en el sistema cuando éste ha sido solicitado formalmente mediante un oficio. 
+	  \item{\bf Aprobado:} Cuando el financiamiento ha pasado de solicitado a aprobado, lo cual significa que el monto solicitado ha sido aprobado mediante un oficio, especificando el monto y demás atributos. 
+	  \item{\bf No aprobado:} Cuando el financiamiento ha pasado de solicitado a no aprobado, lo cual significa que el monto solicitado no ha sido aprobado.
+	  \item{\bf Ampliación:} Cuando el financiamiento sufre alguna ampliación durante su tiempo de vida. Esto sólo puede ocurrir una vez que el financiamiento ha sido aprobado previamente. 
+	  \item{\bf Reducción:} Cuando el financiamiento sufre alguna reducción durante su tiempo de vida. Ésto sólo puede ocurrir una vez que el financiamiento ha sido aprobado previamente
+	  \item{\bf Cancelado:} Cuando el financiamiento es cancelado durante su tiempo de vida. Esto sólo puede puede ocurrir una vez que el financiamiento ha sido aprobado previamente.
+	  \item{\bf Economía:} Cuando al termino de la ejecución de la tarea se obtiene un ahorro financiero. Esto sólo puede puede ocurrir una vez que el financiamiento ha sido aprobado previamente.
+\end{itemize}

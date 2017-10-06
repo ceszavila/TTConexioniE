@@ -1,0 +1,385 @@
+%----------------------------------------------------------
+\section{Entorno de trabajo}
+
+	El entorno de trabajo es el medio por el cual el usuario interactúa con el sistema para poder gestionar la información referente a las tareas. En este capítulo se describe el comportamiento y los elementos que conforman el entorno de trabajo del \seipae\, como son: la disposición de los elementos principales y comunes de las pantallas, los colores, la iconografía, componentes, etc. \bigskip
+
+	\begin{objetivos}
+		\item Describir las áreas principales del entorno de trabajo.
+		\item Describir la iconografía utilizada en las pantallas.
+		\item Describir el mapa de navegación del sistema.
+		\item Describir los componentes principales de las pantallas, tales como: controles de entrada, datos obligatorios, separadores, tablas de resultados, entre otros.
+	\end{objetivos}
+
+%----------------------------------------------------------
+\subsection{Diseño}
+
+	El diseño de las páginas del sistema sigue un enfoque minimalista que permite a los usuarios trabajar sin gran dificultad y sin distracción. Son homogéneas y cuentan con componentes comunes los cuales son fáciles de utilizar por el usuario.
+	
+	Para el diseño de las páginas se seleccionaron tres colores principales, los cuales se utilizaron a lo largo de todas las pantallas para mantener la consistencia tanto de navegación como de apariencia.
+
+	En la figura~\ref{fig:entornoDeTrabajo} se muestran los elementos principales que conforman las pantallas del sistema, dichos elementos se describen a continuación:
+
+	\begin{figure}[ht!]
+		\begin{center}
+			\fbox{\includegraphics[width=.8\textwidth]{images/entornoDeTrabajo}}
+			\caption{Entorno de trabajo del sistema.}
+			\label{fig:entornoDeTrabajo}
+		\end{center}
+	\end{figure}
+	
+	%\begin{figure}[htbp!]
+	%	\begin{center}
+	%		\includegraphics[width=\textwidth]{images/pantallaPrincipal}
+	%		\caption{Pantalla principal del sistema.}
+	%		\label{fig:pantallaPrincipal}
+	%	\end{center}
+	%\end{figure}
+
+	\begin{enumerate}
+		\item {\bf Baner de la página:} Tiene la finalidad de mostrar la imagen institucional de la dependencia a la cual pertenece el sistema. Aquí se muestran los logotipos de la Secretaría del Medio Ambiente y del Gobierno del Estado de México.
+		
+		\item {\bf Menú horizontal:} Muestra las opciones generales de navegación para los diferentes tipos de actores.
+		
+		\item {\bf Menú vertical:} El área destinada al menú vertical contiene los vínculos necesarios para ingresar a las opciones que proporcione el sistema para cada uno de los distintos perfiles de actores. El menú vertical no se encontrará visible para los perfiles de actor que no requieran del mismo y este espacio será utilizado por el área de trabajo (ver siguiente punto).
+		
+		\item {\bf Área de trabajo:} En esta sección los actores visualizarán los elementos que el sistema proporciona para la realización de las tareas contempladas en el mismo. Aquí se desplegarán formularios para captura, tablas, imágenes, gráficas y demás elementos contenidos en el sistema. La documentación de las pantallas se explica a partir de esta sección.
+		
+		\item {\bf Pie de página:} En esta sección aparecen los datos de contacto de la  Unidad de Información, Programación y Evaluación de la Secretaría del Medio Ambiente del Gobierno del Estado de México y los del soporte técnico del sistema.
+		
+		\item {\bf Información legal:} Muestra una leyenda con información legal referente a la propiedad y uso del sistema.
+		
+		\item {\bf Datos de Sesión:} Esta sección será visible sólo cuando un actor ingrese al sistema. En ella se mostrarán los datos del actor que haya iniciado sesión, así como las opciones para el cierre de sesión y el cambio de contraseña.
+	\end{enumerate}
+
+
+	En la figura \ref{IUP} se muestra la Pantalla Principal, en ella se pueden ver todas las secciones antes mencionadas. \\
+	
+	
+	En la sección de ``Datos de sesión'' el texto que aparece corresponde a tres ligas cuyo comportamiento es el siguiente:
+	
+	
+\begin{Cdescription}
+	\item[Nombre de usuario:] Aparece el \cdtRef{Usuario:nombre}{nombre} y primer \cdtRef{Usuario:primerApellido}{apellido} del usuario que ingresó al sistema.
+	\item[Cerrar sesión:] Al activar esta liga se cerrará la sesión del usuario y se regresará a la pantalla \cdtIdRef{IUT 10}{Ingresar al sistema}.
+	\item[Cambiar contraseña:] Al activar esta liga se mostrará la pantalla que permite realizar el cambio de contraseña.
+\end{Cdescription}
+ 
+	\IUfig[1]{pantallas/principal.png}{IUP}{Pantalla principal}
+
+
+%----------------------------------------------------------
+\subsection{Iconografía}
+
+	En las pantallas se utilizan diversos íconos para denotar las operaciones que el actor puede realizar sobre el sistema. Los íconos se diseñaron con base en los perfiles de actor y en la operación que podrán realizar después del evento {\it click} sobre ellos. Se diseñaron dos tipos de íconos: cuadrados, suelen aparecer en las {\it tablas de resultados}\footnote{Mas adelante se describe la funcionalidad de estas tablas.} y redondos, suelen aparecer en aquellas pantallas que presentan listas de registros. A continuación se describe la la funcionalidad de cada uno de ellos:
+	
+	\begin{Citemize}
+		\item \botKo Permite eliminar un registro del sistema, por ejemplo: una actividad, un entregable, un financiamiento, un beneficio, etc. Al usar este ícono no se podrá recuperar la información eliminada.	
+		\item \botCalendarU Se utiliza para autorizar o denegar registros extemporáneos.		
+		\item \botDesbloquear Se utiliza para desbloquear una cuenta de usuario o autorizar el cierre de una tarea.
+		\item \botOk Se utiliza para activar una cuenta de usuario.
+		\item \botEdit Se utiliza para acceder a la pantalla Programar y presupuestar.
+		\item \botMenos Se utiliza para eliminar la alineación de una tarea.
+	\item \botBuscar Se utiliza para comprobar la disponibilidad de un nombre de usuario.
+	\item \botUnlock Se utiliza para solicitar el cierre de una tarea.	
+	\item \botVer Se utiliza para consultar un financiamiento.
+	\item \botBus Se utiliza para consultar una tarea.
+	\item \botBusc Se utiliza para consultar una tarea con el perfil de UIPPyE y Titular de la UIPPyE.
+	\item \botReg Se utiliza para revisar una tarea y definir si será enviada a revisión por parte de la UIPPyE o si deberán realizar ajustes.
+	\item \botEnviar Se utiliza para enviar una tarea a revisión.
+	\item \botAdjuntar Se utiliza para agregar una imagen al registrar una tarea o un texto descriptivo.
+	\item \botAyuda Muestra la ayuda de un campo en específico.
+	\item \botAutoElim Se utiliza para autorizar la eliminación de una tarea.
+	\item \botAutoAjus Se utiliza para autorizar realizar ajustes en la definición de la tarea.
+	\item \botDictTar Se utiliza para dictaminar si una tarea requiere ajustes, se eliminará o se le asignará un estatus de activa.	
+	
+	\item \botAtras Se utiliza para llegar a la pantalla anterior cuando se está revisando una tarea.
+	\item \botSig Se utiliza para avanzar a la pantalla siguiente cuando se está revisando una tarea.
+	\item \botDesbloq Se utiliza para restablecer la contraseña de un usuario.
+	\item \botDescargar Se utiliza para descargar en formato de excel los metadatos asociados a un beneficio.  
+	\item \botModEstFin Se utiliza para cambiar el estatus de un financiamiento.
+	\item \botAddClip Permite adjuntar un archivo con extensión .xls que incluya una estructura programática.
+	\end{Citemize}
+
+
+
+%----------------------------------------------------------
+\subsection{Organización}
+
+	Las funcionalidades del sistema se encuentran organizadas por menús. Cada actor accede a un menú diferente dependiendo de su perfil, ya que éste describe el ciclo de trabajo y las funciones que el actor puede realizar sobre el sistema.
+
+\subsubsection{Menú del Experto y Enlace financiero}
+
+En la figura~\ref{MN1} se muestran las opciones del menú superior que serán visibles para los actores \cdtRef{actor:Experto}{Experto} y \cdtRef{actor:Enlace financiero}{Enlace financiero}. Las opciones del menú se listan a continuación:
+
+\begin{Citemize}
+	\item Inicio.
+	\item Administrar tareas.
+	\item Ayuda.
+\end{Citemize}
+
+\IUfig[.5]{menus/MN1Enlace}{MN1}{Menú del Experto y Enlace financiero}
+
+
+\subsubsection{Menú del Enlace}
+
+En la figura~\ref{MN2} se muestran las opciones del menú superior que serán visibles para el actor \cdtRef{actor:Enlace}{Enlace}. Las opciones del menú se listan a continuación:
+
+\begin{Citemize}
+	\item Inicio.
+	\item Administrar tareas.
+	\item Reportes.
+	\item Ayuda.
+\end{Citemize}
+
+Al seleccionar la opción ``Reportes'' se desplegará un submenú con el nombre de los reportes que puede generar el actor, como se muestra en la figura \ref{MN2-2}.
+
+\IUfig[.6]{menus/MN2Enlace.png}{MN2}{Menú del Enlace}
+\IUfig[1]{menus/MN2Enlace2.png}{MN2-2}{Menú del Enlace con la opción ``Reportes'' desplegada}
+
+
+
+\subsubsection{Menú del Administrador}
+ 
+En la figura \ref{MN3} se muestran las opciones del menú superior que serán visibles para el actor \cdtRef{actor:Administrador}{Administrador}. Las opciones del menú se describen a continuación:
+
+\begin{Citemize}
+	\item Inicio.
+	\item Administrar tareas.
+	\item Administrar cuentas de usuario.
+	\item Administrar catálogos.
+	%\item Consultas.
+	\item Reportes.
+	\item Ayuda.
+\end{Citemize}
+
+Al seleccionar la opción ``Administrar tareas'' se desplegará un submenú con el nombre de las Unidades Administrativas para las cuales se puede consultar las tareas registradas, como se muestra en la figura~\ref{MN3-1}. \\
+
+Al seleccionar la opción ``Administrar catálogos'' se desplegará un submenú con el nombre de los catálogos que puede gestionar el actor, como se muestra en la figura~\ref{MN3-2}. \\
+
+Al seleccionar la opción ``Reportes'' se desplegará un submenú con el nombre de los reportes que puede generar el actor, como se muestra en la figura~\ref{MN3-3}.
+
+\IUfig[.9]{menus/MN3Admin}{MN3}{Menú del Administrador}
+\IUfig[1]{menus/MenuAdmin1}{MN3-1}{Menú del Administrador con la opción ``Administrar tareas'' desplegada}
+\IUfig[1]{menus/MenuAdmin2}{MN3-2}{Menú del Administrador con la opción ``Administrar catálogos'' desplegada}
+\IUfig[1]{ReportesDesplegados}{MN3-3}{Menú del Administrador con la opción ``Reportes'' desplegada}
+
+
+
+\subsubsection{Menú del Titular de la UIPPyE y Secretario}
+ 
+En la figura \ref{MN4} se muestran las opciones del menú superior que serán visibles para los actores \cdtRef{actor:Titular de la UIPPyE}{Titular de la UIPPyE} y \cdtRef{actor:Secretario}{Secretario}. Las opciones del menú se describen a continuación:
+
+\begin{Citemize}
+	\item Inicio.
+	\item Administrar tareas.
+	%\item Consultas.
+	\item Reportes.
+	\item Ayuda.
+\end{Citemize}
+
+Al seleccionar la opción ``Reportes'' se desplegará un submenú con el nombre de los reportes que puede generar el actor, como se muestra en la figura~\ref{MN4-1}.
+
+\IUfig[.6]{menus/MN2Enlace.png}{MN4}{Menú del Titular de la UIPPyE y Secretario}
+\IUfig[1]{menus/MN4Titular2.png}{MN4-1}{Menú del Titular de la UIPPyE y Secretario con la opción ``Reportes'' desplegada}
+
+
+
+\subsubsection{Menú de la UIPPyE}
+ 
+ 
+En la figura \ref{MN5} se muestran las opciones del menú superior que serán visibles para el actor \cdtRef{actor:UIPPyE}{UIPPyE}. Las opciones del menú se describen a continuación:
+
+\begin{Citemize}
+	\item Inicio.
+	\item Administrar tareas.
+	\item Administrar catálogos.
+	\item Reportes.
+	\item Ayuda.
+\end{Citemize}
+
+Al seleccionar la opción ``Administrar catálogos'' se desplegará un submenú con el nombre de los catálogos que puede gestionar el actor, como se muestra en la figura~\ref{MN5-1}. \\
+
+Al seleccionar la opción ``Reportes'' se desplegará un submenú con el nombre de los reportes que puede generar el actor, como se muestra en la figura~\ref{MN5-2}.
+
+\IUfig[.6]{menus/MN2UIPPyE.png}{MN5}{Menú de la UIPPyE}
+\IUfig[.6]{menus/MN2UIPPyE2.png}{MN5-1}{Menú de la UIPPyE con la opción ``Administrar catálogos'' desplegada}
+\IUfig[1]{menus/MN2UIPPyE3.png}{MN5-2}{Menú de la UIPPyE con la opción ``Reportes'' desplegada}
+
+
+
+%----------------------------------------------------------
+\subsection{Pantalla de bienvenida}
+\label{ch:Interaccion:PantallaBienvenida}
+ 
+En la figura \ref{fig:bienvenida} se muestra el mensaje que el actor podrá visualizar al iniciar su sesión en el sistema. El mensaje dependerá del género que presente el actor, es decir:
+
+\begin{itemize}
+	\item Si el género del actor es ``Femenino'', el mensaje comenzará con la palabra ``Bienvenida'' concatenando el ``Nombre del actor''.
+	\item Si el género del actor es ``Masculino'', el mensaje comenzará con la palabra ``Bienvenido'' concatenando el ``Nombre del actor''.
+\end{itemize}
+
+%El valor para ``Mensaje'' es: 
+%``estas ingresando al Sistema Estatal de Información Pública Ambiental.
+%
+%Esta es una herramienta que además de apoyarte en algunas de tus labores, te facilitará tu trabajo.
+%
+%Se sugiere leer los manuales de usuario que están a tu disposición en el menú de "Ayuda".
+%
+%Cualquier duda o comentario favor de comunicarte con el administrador del sistema.''
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=\textwidth]{images/Bienvenida.png}}
+		\caption{Pantalla de bienvenida.}
+		\label{fig:bienvenida}
+		\cdtLabel{fig:bienvenida}{}
+	\end{center}
+\end{figure}
+	
+%----------------------------------------------------------
+\subsection{Mapa de Navegación}
+
+	Las opciones y la forma de navegar desde los menús a las pantallas de muestran en el mapa de navegación de la figura~\ref{fig:mapaNavegacion}. 
+	%En esta figura se muestran en color naranja las pantallas que describe este documento. Las pantallas en gris son algunas de las que se sabe que existirán para otros casos de uso y que están relacionadas con los Centros de Trabajo.\\
+
+	\begin{figure}[htbp!]
+		\begin{center}
+			\fbox{\includegraphics[width=\textwidth]{images/MapaNavegacion}}
+			\caption{Mapa de navegación del SEIPA-E1 para los diferentes perfiles de actor.}
+			\label{fig:mapaNavegacion}
+		\end{center}
+	\end{figure}
+
+
+\subsection{Componentes utilizados}
+
+	En esta sección se explican los componentes que conforman las pantallas y que se utilizan para capturar, mostrar y organizar información en el sistema.
+
+
+\subsubsection{Componentes de entrada comunes}
+
+	Por usabilidad, el sistema utiliza componentes estandarizados de HTML para solicitar información. Sólo se utilizan componentes especiales, en aquellos casos donde puede mejorar la interacción con el actor y reducir errores de formato.
+	
+	Los componentes de entrada básicos: textos cortos, textos largos, radio botones, listas desplegables y botones, se muestran en la figura \ref{fig:componentesBasicos} y se describen a continuación:
+
+	\begin{enumerate}
+		\item {\bf Listas despegables:} Establecen una lista de opciones predefinidas de las cuales sólo se puede seleccionar una.
+		\item {\bf Textos cortos:} Permiten ingresar información por medio del teclado. Usualmente los textos cortos son campos pequeños con los cuales se puede visualizar aproximadamente 20 palabras.
+		\item {\bf Textos largos:} Permiten ingresar información por medio del teclado. Usualmente los textos largos son campos grandes con los cuales se pueden visualizar aproximandamente 200 palabras.
+		\item {\bf Radio botones:} Permiten seleccionar sólo una opción de las disponibles.
+		\item {\bf Calendarios:} Permiten selecionar una fecha por medio de un calendario gráfico. Suelen usarse para estandarizar el formato de fechas que utilizará el sistema.
+		\item {\bf Botones:} Es usado para enviar datos de un formulario a un servidor, para que éste ejecute una acción definida.
+	\end{enumerate}
+
+	\begin{figure}[ht!]
+		\begin{center}
+			\fbox{\includegraphics[width=\textwidth]{images/componentesBasicos}}
+			\caption{Componentes de entrada comunes.}
+			\label{fig:componentesBasicos}
+		\end{center}
+	\end{figure}
+
+ 
+\subsubsection{Separadores en formularios}
+
+	Los separadores en los formularios ayudan a organizar la información en las pantallas de tal manera que no se sobrecarguen con demasiada información.
+
+	Todas las pantallas tienen un título que describe la operación que se está realizando en el sistema. El estilo para los títulos se muestra en color rojo en la figura~\ref{fig:TituloSeccionSubseccion}. Si el formulario presenta mucha información o solicita muchos datos de entrada, estos se agrupan en secciones y subsecciones. El estilo para las secciones se muestra en color verde, mientras que las subsecciones se muestran en color gris en la figura~\ref{fig:TituloSeccionSubseccion}.
+
+	\begin{figure}[ht!]
+		\begin{center}
+			\fbox{\includegraphics[width=\textwidth]{images/TituloSeccionSubseccion}}
+			\caption{Estilo de los separadores en los formularios.}
+			\label{fig:TituloSeccionSubseccion}
+		\end{center}
+	\end{figure}
+
+
+\subsubsection{Datos obligatorios}
+ 
+	En el sistema aquellos datos que son requeridos para la ejecución de las operaciones se marcan con un asterisco rojo como se muestra en figura~\ref{fig:TituloSeccionSubseccion}.
+ 
+% \subsubsection{Tabuladores}
+% 
+% 	Cuando se debe visualizar mas información de la que se puede mostrar en la pantalla, esta se muestra agrupada por tabuladores. El diseño de los tabuladores es similar a un menú desplegable cuando el {\it apuntador} del {\it ratón} se posiciona sobre él. El diseño de los tabuladores se muestra en la figura\ref{fig:tabuladores}.
+% 
+% 	%\begin{figure}[htbp!]
+% 	%	\begin{center}
+% 	%		\fbox{\includegraphics[width=.85\textwidth]{images/tabuladores}}
+% 	%		\caption{Tabulador utilizado para mostrar registros.}
+% 	%		\label{fig:tabuladores}
+% 	%	\end{center}
+% 	%\end{figure}
+
+
+\subsubsection{Diagrama de Gantt} \label{sec:DiagramaDeGant}
+
+	Un diagrama de Gantt es una herramienta gráfica que permite visualizar el tiempo previsto para diferentes actividades en un período de tiempo determinado, en el sistema los registros que involucran periodos de tiempo (tareas y actividades) pueden visualizarse por medio de un diagrama de este tipo. 
+	
+	Si la tarea no cuenta con  fechas reales definidas se ejecuta la regla de negocio \cdtIdRef{RN-S19}{Mostrar fechas indefinidas} y no se pintará el diagrama de Gantt. Cuando sólo exista la fecha de inicio real y no exista la fecha de término real,se ejecutará la regla antes mencionada y el diagrama de Gantt se difuminará.
+	
+	El estilo para los diagramas de Gantt se muestra en la figura \ref{fig:diagramaGantt} y el significado es el siguiente:
+
+	\begin{description}		
+		\item[Control 1:] Indica la fecha de término programada para la tarea, definida por la siguiente nomenclatura: ``P\footnote{Se hace referencia a la fecha programada}:DD/MM/AA''.
+		\item[Control 2:] Indica la fecha de término real para ejecutar la tarea, definida por la siguiente nomenclatura: ``R\footnote{se hace referencia a la fecha real}:DD/MM/AA''.
+		\item[Control 3:] Indica la fecha de inicio programada para la tarea, definida por la siguiente nomenclatura: ``P:DD/MM/AA''.
+		\item[Control 4:] Indica la fecha de inicio real para ejecutar la tarea, definida por la siguiente nomenclatura: ``R:DD/MM/AA''.
+		\item[Control 5:] Muestra el nombre de la tarea o actividad.
+		\item[Control 6:] Es la representación gráfica de las tareas o actividades en un periodo de tiempo específico.
+	\end{description}
+
+	\begin{figure}[ht!]
+		\begin{center}
+			\fbox{\includegraphics[width=\textwidth]{images/diagramaGantt}}
+			\caption{Diagrama de Gantt.}
+			\label{fig:diagramaGantt}
+		\end{center}
+	\end{figure}
+
+\subsubsection{Tablas de Resultados}\label{sec:TablaResultados} 
+
+	Para mostrar de una manera general y organizada la información que se registra en el sistema, se utiliza un componente llamado {\it tabla de resultados} cuyo diseño se muestra en la figura~\ref{fig:componenteResultados}. 
+	
+	Las tablas de resultados también son conocidas como tablas de gestión de la información, ya que en ellas se muestra un resumen general de los datos registrados acerca de un área de conocimientos en particular. Además cada registro que se muestra en la tabla tiene una serie de controles asociados, los cuales permiten ejecutar determinadas operaciones sobre la información. Las tablas de resultados también incluyen controles para visualizar y navegar de mejor manera sobre la información. 
+	
+	Las operaciones de los controles sólo se realizarán sobre los registros visibles, si se requiere revisar un segundo conjunto de datos es necesario que el sistema los solicite al servidor para su consulta. No se pueden hacer operaciones sobre los registros no visibles. Para obtener el segundo conjunto de datos es necesario utilizar el ``Control 2'' que indica la página siguiente en la figura~\ref{fig:componenteResultados}.
+
+	La tabla de resultados tiene, por lo general, los siguientes controles:
+
+	\begin{description}
+		\item[Control 1:]  Indica el número de registros que se muestran por página. Puede incrementar o decrementar este número a su preferencia. \label{chp:modeloInteraccion:Control1}. 
+		\item[Control 2:] Permite navegar entre las páginas de los registros encontrados, se puede mostrar la página anterior, la página siguiente, así como la primera y última página. \label{chp:Control2}
+		\item[Control 3:] Indica el número de registros mostrados en la página y el total de registros existentes.		
+		\item[Control 4:] Ordena alfabéticamente de manera ascendente o descendente la información de la columna (dependiendo de la información que contenga). Para ordenar en base a un campo se debe presionar sobre el triángulo de la columna en la que aparece. Si el triángulo es de color gris, el ordenamiento está desactivado; si es de color azul, está activado. En la figura \ref{fig:componenteResultados} la información se encuentra ordenada en la columna empresa de forma ascendente.
+		\item[Control 5:] Permite realizar una búsqueda rápida entre los registros mostrados por medio de una palabra o frase clave.
+		\item[Control 6:] Muestra las operaciones que pueden realizarse sobre cada registro.
+		\item[Control 7:] Indica la fecha de término programada para la tarea, definida por la siguiente nomenclatura: ``P:DD/MM/AAAA''. En caso de no estar definida la fecha se ejecuta la regla de negocios \cdtIdRef{RN-S19}{Mostrar fechas indefinidas}. 
+		\item[Control 8:] Indica la fecha de término real para ejecutar la tarea, definida por la siguiente nomenclatura: ``R:DD/MM/AAAA''. En caso de no estar definida la fecha se ejecuta la regla de negocios \cdtIdRef{RN-S19}{Mostrar fechas indefinidas}.
+		\item[Control 9:] Indica la fecha de inicio programada para la tarea, definida por la siguiente nomenclatura: ``P:DD/MM/AAAA''. En caso de no estar definida la fecha se ejecuta la regla de negocios \cdtIdRef{RN-S19}{Mostrar fechas indefinidas}.
+		\item[Control 10:] Indica la fecha de inicio real para ejecutar la tarea, definida por la siguiente nomenclatura: ``R:DD/MM/AAAA''. En caso de no estar definida la fecha se ejecuta la regla de negocios \cdtIdRef{RN-S19}{Mostrar fechas indefinidas}.
+		
+	\end{description}
+
+	\begin{figure}[ht!]
+		\begin{center}
+			\fbox{\includegraphics[width=\textwidth]{images/componenteResultados}}
+			\caption{Tabla de resultados.}
+			\label{fig:componenteResultados}
+		\end{center}
+	\end{figure}
+
+
+\subsection{Modelo de privacidad}
+
+	Los actores podrán acceder a determinada información registrada en el \seipae\ dependiendo de la unidad a la que pertenezcan. El acceso a la información será la siguiente:
+	
+	\begin{itemize}
+		\item \cdtRef{actor:Enlace}{Enlace}: Sólo podrá consultar, registrar y modificar la información referente a la Unidad Administrativa a la que pertenece.
+		\item \cdtRef{actor:Experto}{Experto}: Sólo podrá consultar, registrar y modificar la información referente a  una tarea y avances de la misma.
+		\item \cdtRef{actor:Enlace financiero}{Enlace financiero}: Sólo podrá consultar, registrar y modificar la información referente a las tareas del ámbito financiero.
+		\item \cdtRef{actor:UIPPyE}{Unidad de Información, Planeación, Programación y Evaluación (UIPPyE)}: Podrá consultar, revisar y modificar determinada información de todas las Unidades Administrativas.
+		\item \cdtRef{actor:Titular de la UIPPyE}{Titular de la UIPPyE}: Podrá consultar toda la información de todas las Unidades Administrativas.
+		\item \cdtRef{actor:Administrador}{Administrador}: Podrá administrar la información registrada en el SEIPA con previa autorización del Titular de la UIPPyE.
+		\item \cdtRef{actor:Secretario}{Secretario}: Podrá consultar toda la información de la secretaría.
+	\end{itemize}

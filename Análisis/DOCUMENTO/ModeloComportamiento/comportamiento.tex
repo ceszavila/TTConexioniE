@@ -1,0 +1,89 @@
+\section{Actores del sistema}\label{sec:Comportamiento:ActoresSistema}
+
+Los actores son aquellos usuarios que van a interactuar con el sistema, los actores para el SREP se describen a continuación.
+
+%----------------------------------------------Alumno-----------------------------------------------
+\begin{actor}{Alumno}{Persona encargada de registrar el \cdtRef{gls:protocolo}{protocolo} en el sistema.} 
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Registrar el \cdtRef{gls:protocolo}{protocolo} en el sistema y sus correspondientes datos.
+		\item Invitar a otros alumnos a formar parte del \cdtRef{gls:protocolo}{protocolo}.
+		\item Registrar a los directores que formarán parte del \cdtRef{gls:protocolo}{protocolo}.
+		\item Realizar las modificaciones necesarias cuando el \cdtRef{gls:protocolo}{protocolo} sea mandado a reestructuración.
+	\end{itemize}
+\end{actor}
+
+
+%---------------------------------Director Externo------------------------------------------------
+\begin{actor}{Director Externo}{\cdtRef{actor:Persona}{Persona} ajena a la ESCOM encargada de dirigir un Trabajo Terminal.} 
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Aceptar o rechazar participar en un \cdtRef{gls:protocolo}{protocolo}.
+		\item Verificar en cuantos \cdtRef{gls:protocolo}{protocolos} tiene participación.
+		\item Verificar el \cdtRef{gls:estadoProtocolo}{estado de los protocolos} que dirige.
+	\end{itemize}
+\end{actor}
+
+
+%---------------------------------Secretario Ejecutivo------------------------------------------------
+\begin{actor}{Secretario Ejecutivo}{\cdtRef{actor:Profesor}{Profesor} de la ESCOM encargado de coordinar a los \cdtRef{actor:Gestor TT}{Gestor TT}} 
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Administrar a los \cdtRef{actor:Director Externo}{directores externos}.
+		\item Modificar correos electrónicos de los usuarios registrados.
+		\item Administrar el calendario de actividades.
+		\item Carga a los \cdtRef{actor:Alumno}{alumnos} en el sistema.
+		\item Carga a los \cdtRef{actor:Gestor TT}{Gestores TT} en el sistema.
+	\end{itemize}
+\end{actor}
+
+
+%---------------------------------Presidente de academia------------------------------------------------
+\begin{actor}{Presidente de Academia}{\cdtRef{actor:Profesor}{Profesor} que dirige una academia de la ESCOM} 
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item  Asignar Sinodales a un \cdtRef{gls:protocolo}{protocolo}.
+	\end{itemize}
+\end{actor}
+
+
+%---------------------------------Profesor------------------------------------------------
+\begin{actor}{Profesor}{Docente que imparte cátedra en la ESCOM. Las responsabilidades que puede tener un profesor dependen del perfil que tenga:} 
+	
+	\begin{enumerate}
+		\item \textbf{Director}{\cdtRef{actor:Profesor}{Profesor} de la ESCOM encargado de asesorar a los \cdtRef{actor:Alumno}{alumnos} en la creación del \cdtRef{gls:protocolo}{protocolo}.}\\
+		\textbf{Responsabilidades:} \hspace{1pt}
+		\begin{itemize}
+			\item Aceptar o rechazar participar en un \cdtRef{gls:protocolo}{protocolo}.
+			\item Verificar en cuantos \cdtRef{gls:protocolo}{protocolos} tiene participación.
+			\item Verificar el \cdtRef{gls:estadoProtocolo}{estado de los protocolos} que dirige.\\
+		\end{itemize}
+		
+		
+		\item \textbf{Sinodal:} {\cdtRef{actor:Profesor}{Profesor} de la ESCOM encargado de asesorar a los \cdtRef{actor:Alumno}{alumnos} en la creación del \cdtRef{gls:protocolo}{protocolo}}\\
+		\textbf{Responsabilidades:} \hspace{1pt}
+		\begin{itemize}
+			\item Emitir una evaluación a los protocolos que le fueron asignados.
+			\item Consultar los protocolos en los que participa como sinodal.
+		\end{itemize}
+	
+		\item \textbf{Presidente de academia:} {\cdtRef{actor:Profesor}{Profesor} de la ESCOM encargado de asignar Sinodales al \cdtRef{gls:protocolo}{protocolo}}\\
+		\textbf{Responsabilidades:} \hspace{1pt}
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{enumerate}
+\end{actor}
+
+%---------------------------------Gestor TT------------------------------------------------
+\begin{actor}{Gestor TT}{Personal administrativo que trabaja en la CATT de la ESCOM} 
+	\item[Responsabilidades:] \hspace{1pt}
+	\begin{itemize}
+		\item Modificar correos electrónicos de los usuarios registrados.
+	\end{itemize}
+	\item[Perfil:]
+	\begin{itemize}
+		\item Saber cómo usar una computadora.
+	\end{itemize}
+\end{actor}
