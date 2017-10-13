@@ -1,0 +1,88 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUI 4}{Consultar indicadores de energía}
+	{
+		Este caso de uso permitirá al actor consultar los indicadores ambientales y de sustentabilidad de la línea de acción ``Energía'', 
+		estos indicadores permitirán medir, monitorear, evaluar y comunicar el impacto del Programa de Acreditación de Escuelas Ambientalmente Responsables.
+	}
+	%\UCitem{\DONEUC}{Edición}
+	\UCitem{Versión}{1.0}
+	\UCccsection{Administración de Requerimientos}	
+	\UCitem{Autor}{Sergio Ramírez Camaho}	
+	\UCccitem{Evaluador}{}
+	\UCitem{Operación}{Consulta}
+	\UCccitem{Prioridad}{Alta}
+	\UCccitem{Complejidad}{Media}
+	\UCccitem{Volatilidad}{Alta}
+	\UCccitem{Madurez}{Baja}
+	\UCitem{Estatus}{Terminado}
+	\UCitem{Fecha del último estatus}{9 de diciembre de 2014}
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+	\UCitem{Propósito}{
+		Consultar los indicadores ambientales y de sustentabilidad de la línea de acción ``Energía''.
+	}
+	\UCitem{Entradas}{
+		Ninguna
+	}
+	\UCitem{Salidas}{
+ 		\begin{UClist}
+ 			\UCli \cdtRef{gls:consumoAnual}{Consumo anual de energía}: \ioCalcularIndicador \cdtIdRef{IE 1}{Consumo anual de energía eléctrica por año}.
+  			\UCli \cdtRef{gls:consumoAnualSuperficie}{Consumo anual de energía por unidad de superficie}: \ioCalcularIndicador \cdtIdRef{IE 2}{Consumo anual de energía eléctrica por unidad de superficie}.
+  			\UCli \cdtRef{gls:consumoAnualPersona}{Consumo anual de energía por persona}: \ioCalcularIndicador \cdtIdRef{IE 3}{Consumo anual de energía eléctrica por persona}.
+  			\UCli \cdtRef{gls:disminucionAnual}{Disminución anual en consumo de energía}: \ioCalcularIndicador \cdtIdRef{IE 4}{Disminución anual en consumo de energía eléctrica}.		
+  			\UCli \cdtRef{gls:ahorroEnergia}{Ahorro en el gasto por consumo de energía}: \ioCalcularIndicador \cdtIdRef{IE 5}{Ahorro económico por reducción en el consumo de energía eléctrica}.		
+  			\UCli \cdtRef{gls:disminucionEmisiones}{Disminución de emisiones de $CO_2$}: \ioCalcularIndicador \cdtIdRef{IE 6}{Disminución de emisiones a la atmósfera por reducción en consumo de energía por año}.		
+			\UCli \cdtIdRef{MSG42}{No puede calcularse el indicador}: Se muestra en la pantalla \cdtIdRef{IUI 4}{Consultar indicadores de energía} indicando que no se puede realizar el cálculo del valor del indicador
+				     debido a que no se cuenta con la información necesaria.
+		\end{UClist}		
+	}
+
+	\UCitem{Precondiciones}{
+	  	\begin{UClist}
+			\UCli {\bf Interna:} Que el estado de la escuela sea \cdtRef{estado:porAcreditar}{Por acreditar}.
+		\end{UClist}
+		
+	}
+	
+	\UCitem{Postcondiciones}{
+		Ninguna
+	}
+
+	\UCitem{Reglas de \hspace{1 cm} negocio}{
+		Ninguna
+	}
+
+	\UCitem{Errores}{
+		\begin{UClist}	
+			\UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla en que se encuentre navegando el actor cuando el estado de la escuela no es ``Por acreditar''.
+		\end{UClist}
+	}
+
+	
+	\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUI 1}{Consultar indicadores}}
+
+% 	\UCitem{Fuente}{
+% 		\begin{UClist}
+% 			\UCli %Minuta de la reunión \cdtIdRef{M-15TR}{Toma de Requerimientos}.
+% 		\end{UClist}
+% 	}
+	
+\end{UseCase}
+%-------------------------------------------------------%trayectoria Principal-----------------------------------------------
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita consultar los indicadores de energía seleccionando la pestaña ``Energía'' en la pantalla \cdtIdRef{IUI 1}{Consultar indicadores}.
+    \UCpaso[\UCsist] Verifica que el estado de la escuela sea ``Por acreditar''. \refTray{A}  
+    \UCpaso[\UCsist] Calcula el valor de los indicadores de energía tomando la información más reciente de la escuela.%, como lo indica la regla de negocio \cdtRef{RN-18}{Información para indicadores}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUI 4}{Consultar indicadores de energía} en la cual el actor podrá visualizar la información de los indicadores de energía.
+\end{UCtrayectoria}
+ 
+
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en el estado ``Por acreditar''.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla en que se encuentre navegando el
+    actor indicando que no puede consultar los indicadores debido a que la escuela no se encuentra en el estado ``Por acreditar''. 
+ \end{UCtrayectoriaA}
+

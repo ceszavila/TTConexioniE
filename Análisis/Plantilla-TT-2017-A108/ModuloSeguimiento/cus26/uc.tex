@@ -1,0 +1,139 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUS 26}{Administrar avances de residuos sólidos}
+    {
+	Las metas permiten conocer el resultado que se desea obtener al realizar el conjunto de acciones registradas para la línea de acción. Este caso de uso permite conocer las metas registradas para la línea de acción ``Residuos sólidos'', además sirve como punto de acceso para registrar el avance de acciones, de metas y actualizar la información registrada para esta línea de acción.
+    }
+    
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Administrar}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Media}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{8 de Diciembre del 2014}
+
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+% 	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+% 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+% 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+% 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+% 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+% 			\RCitem{PC1}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC2}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 		\end{UClist}		
+% 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Administrar las metas registradas para la línea de acción ``Residuos sólidos''.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli \cdtRef{meta}{Metas}: \ioTabla{\cdtRef{meta:meta}{Meta}, \cdtRef{meta:enfoqueMeta}{Capacitación}, \cdtRef{meta:fechaInicio}{Fecha de inicio}, \cdtRef{meta:fechaTermino}{Fecha de término} y \cdtRef{gls:avanceMeta}{Avance}}{que estén en el sistema}.
+	\end{UClist}
+    }
+    
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:avanceEdicion}{Avance en edición}.
+	    \UCli {\bf Interna:} Que el periodo de registros de avances se encuentre vigente.
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Se podrán registrar avances para las acciones de  la línea de acción ``Residuos sólidos'' a través del caso de uso \cdtIdRef{CUS 27}{Registrar avance de acciones de residuos sólidos}.
+	    \UCli {\bf Interna:} Se podrán registrar avances para las metas de  la línea de acción ``Residuos sólidos'' a través del caso de uso \cdtIdRef{CUS 28}{Registrar avance de metas de residuos sólidos}.
+	    \UCli {\bf Interna:} Se podrá actualizar la información base para la línea de acción ``Residuos sólidos'' a través del caso de uso \cdtIdRef{CUS 29}{ Actualizar información de residuos sólidos}.
+	\end{UClist}
+    }
+
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli \cdtIdRef{RN-N17}{Calcular avance de la meta}: Calcula el avance de la meta con base al número de acciones finalizadas.
+	\end{UClist}
+    }
+
+    \UCitem{Errores}{
+	\begin{UClist}
+	    \UCli \cdtIdRef{MSG2}{No existe información registrada por el momento}: Se muestra en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no existen registros de metas de residuos sólidos en el sistema por el momento.
+	    
+	    \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	    
+	    \UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+	\end{UClist}
+    }
+
+    
+    \UCitem{Tipo}{Primario.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+%    }
+
+\end{UseCase}
+
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita administrar las metas de residuos sólidos oprimiendo el botón \botAcciones de la línea de acción ``Residuos sólidos'' en la pantalla \cdtIdRef{IUS 1}{Administrar avances de objetivos}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Avance en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para realizar la operación. \refTray{B}.
+    \UCpaso[\UCsist] Verifica que existan registros de metas de residuos sólidos en el sistema. \refTray{C}.
+    \UCpaso[\UCsist] Calcula el avance de las metas de residuos sólidos con base en la regla de negocio \cdtIdRef{RN-N17}{Calcular avance de la meta}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} con los registros de metas de residuos sólidos.
+    \UCpaso[\UCactor] Administra las metas de residuos sólidos a través de los botones \botMetas, \botAutoAjus y \cdtButton{Actualizar}. \label{cus26:Administrar}
+ \end{UCtrayectoria}
+ 
+    \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita realizar la operación.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no puede realizar la operación debido a que la escuela no se encuentra en estado ``Avance en edición''. 
+ \end{UCtrayectoriaA}
+ 
+    \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la operación.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla. 
+ \end{UCtrayectoriaA}
+ 
+  \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{No hay registros de metas de residuos sólidos para mostrar.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG2}{No existe información registrada por el momento} en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que aún no hay metas de residuos sólidos registradas. 
+ \end{UCtrayectoriaA}
+ 
+
+
+
+\subsection{Puntos de extensión}
+
+\UCExtensionPoint
+{El actor desea registrar avances de acciones a las metas de residuos sólidos}
+{ Paso \ref{cus26:Administrar} de la trayectoria principal}
+{\cdtIdRef{CUS 27}{Registrar avance de acciones de residuos sólidos}}
+
+\UCExtensionPoint
+{El actor desea registrar avances de metas a las metas de residuos sólidos}
+{ Paso \ref{cus26:Administrar} de la trayectoria principal}
+{\cdtIdRef{CUS 28}{Registrar avance de metas de residuos sólidos}}
+
+\UCExtensionPoint
+{El actor desea actualizar la información base para indicadores de residuos sólidos}
+{ Paso \ref{cus26:Administrar} de la trayectoria principal}
+{\cdtIdRef{CUS 29}{ Actualizar información de residuos sólidos}}

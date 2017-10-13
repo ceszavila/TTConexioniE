@@ -1,0 +1,29 @@
+\subsection{IUS 18 Administrar avances de agua}
+
+\subsubsection{Objetivo}
+
+    Esta pantalla permite al \cdtRef{actor:usuarioEscuela}{Coordinador del programa} visualizar las metas registradas para la línea de acción de agua, además sirve como punto de acceso para registrar avances de las metas, las acciones y para actualizar la información del consumo de agua. 
+    
+\subsubsection{Diseño}
+
+        En la figura~\ref{IUS 18} se muestra la pantalla ``Administrar avances de agua'', por medio de la cual se podrá acceder a las metas registradas para la línea de acción ``Agua''. El actor tendrá la facultad de registrar avances en las metas, en las acciones y actualizar la información base para esta línea de acción a través de los botones \botAcciones, \botMetas y \cdtButton{Actualizar} respectivamente.  
+
+	\IUfig[.9]{pantallas/seguimiento/cus18/IUS18AdministrarAvances.png}{IUS 18}{Administrar avances de agua}
+
+
+\subsubsection{Comandos}
+    \begin{itemize}	
+	\item \botAutoAjus [Avance acciones]: Permite registrar avances para las acciones de la línea de acción de agua, dirige a la pantalla \cdtIdRef{IUS 19}{Registrar avance de acciones de agua}.
+	\item \botMetas [Avance metas]: Permite registrar avances para las metas de la línea de acción de agua, dirige a la pantalla \cdtIdRef{IUS 20}{Registrar avance de metas de agua}.	
+	\item \cdtButton{Actualizar}: Permite actualizar la información del consumo de agua, dirige a la pantalla \cdtIdRef{IUS 21}{Actualizar información del consumo de agua}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+	\item [\cdtIdRef{MSG2}{No existe información registrada por el momento}:] Se muestra en la pantalla \cdtIdRef{IUS 18}{Administrar avance de metas de agua} indicando al actor que no existen registros de metas de agua en el sistema por el momento.
+	
+	\item [\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUS 18}{Administrar avances de agua} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	
+	\item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla \cdtIdRef{IUS 18}{Administrar avances de agua} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+    \end{description}

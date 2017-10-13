@@ -1,0 +1,131 @@
+\begin{UseCase}{CUR 19}{Verificar correo electrónico}
+    {
+	El usuario accede al enlace enviado a través del correo electrónico para activar su \cdtRef{cuenta}{cuenta de usuario}. Este enlace contiene información relacionada al \cdtRef{}{token} y cuenta del usuario. En caso de que el usuario no valide la existencia del correo electrónico en el tiempo establecido, la cuenta será dada de baja del sistema.
+
+    }
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Victor Lozano Ortega}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Activación}
+    \UCccitem{Prioridad}{Baja}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{6 de Noviembre del 2014}
+
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+% 	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+% 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+% 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+% 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+% 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+% 			\RCitem{PC1}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC2}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 		\end{UClist}		
+% 	}
+% %--------------------------------------------------------
+
+	\UCccsection{Revisión Versión 0.1} % Anote la versión que se revisó.
+	% FECHA: Anote la fecha en que se terminó la revisión.
+	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+	\UCccitem{Resultado}{Corregir}
+	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+	\UCccitem{Observaciones}{
+		\begin{UClist}
+			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+			\RCitem{PC1}{\TODO{Agregar a la TP el paso donde se cambia el estado de la cuenta}}{}
+			\RCitem{PC2}{\TODO{Modificar redacción de la postcondición}}{}
+			\RCitem{PC3}{\TODO{Descripción del pendiente}}{}
+		\end{UClist}		
+	}
+%--------------------------------------------------------
+    \UCsection{Atributos}
+	\UCitem{Actor(es)}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+	\UCitem{Propósito}{Activar la cuenta del Coordinador del programa, a través del correo electrónico para poder validar la existencia del correo electrónico y así permitirle completar su información escolar.}
+
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Se selecciona el enlace enviado en el correo electrónico \cdtIdRef{MSG24}{Verificación de correo electrónico}.
+	\end{UClist}
+	}
+    \UCitem{Salidas}{
+	    \begin{UClist}	
+		    \UCli Se enviará al coordinador del programa un correo electrónico con el mensaje \cdtIdRef{MSG25}{Envío de usuario y contraseña}.
+		    \UCli \cdtIdRef{MSG21}{Confirmación de activación de cuenta}: Se muestra sobre la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} informando que la operación se ha realizado exitosamente.
+	    \end{UClist}
+    }
+	
+	\UCitem{Precondiciones}{
+	    \begin{UClist}
+		\UCli Que la cuenta de usuario se encuentre en estado \cdtRef{estado:inactiva}{inactiva}.
+		\UCli Que el token de activación continué siendo válido.
+	    \end{UClist}
+	}
+	\UCitem{Postcondiciones}{
+	    \begin{UClist}
+			\UCli La cuenta se encontrará en estado \cdtRef{estado:activa}{activa}.
+	    \end{UClist}
+	}
+
+	\UCitem{Reglas de negocio}{
+	    \begin{UClist}
+			\UCli \cdtIdRef{RN-S3}{Formato de la contraseña}: Indica el formato que debe tener una contraseña de usuario.
+			\UCli \cdtIdRef{RN-N1}{Nombre de usuario del Coordinador del programa}: Verifica que la clave de centro de trabajo sea asignada como el nombre de usuario de la cuenta. 
+			\UCli \cdtIdRef{RN-N7}{Tiempo para activar una cuenta recién creada}: Verifica que la cuenta esté dentro de su tiempo de activación.
+	    \end{UClist}
+	}
+		
+	\UCitem{Errores}{
+		\begin{UClist}	
+			\UCli \cdtIdRef{MSG26}{El enlace para activación de cuenta ya no es válido}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando al usuario la razón por la cual no puede proceder la operación.
+		\end{UClist}
+	}
+	\UCitem{Tipo}{Primario.}
+	\UCitem{Fuente}{
+	    \begin{UClist}
+			\UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+	    \end{UClist}
+	}
+
+\end{UseCase}
+
+ \begin{UCtrayectoria}
+   \UCpaso[\UCactor] Accede al mensaje \cdtIdRef{MSG24}{Verificación de correo electrónico} enviado a su cuenta de correo electrónico durante la inscripción de su escuela en el programa.
+    \UCpaso[\UCactor] Solicita activar su cuenta mediante el enlace de activación del mensaje \cdtIdRef{MSG24}{Verificación de correo electrónico} enviado a su correo electrónico.
+    \UCpaso[\UCsist] Recibe la solicitud del usuario para activar su cuenta.
+    \UCpaso[\UCsist] Verifica que el token exista y que el estado de la cuenta sea \cdtRef{estado:inactiva}{inactiva}. \refTray{A}
+    \UCpaso[\UCsist] Verifica que el token de la cuenta sea válido como lo indica la regla de negocio \cdtIdRef{RN-N7}{Tiempo para activar una cuenta recién creada}. \refTray{B}
+    \UCpaso[\UCsist] Asigna el identificador de usuario a la cuenta como lo indica la regla de negocio \cdtIdRef{RN-N1}{Nombre de usuario del Coordinador del programa}.
+    \UCpaso[\UCsist] Genera la contraseña de usuario a la cuenta con el formato que indica la regla de negocio \cdtIdRef{RN-S3}{Formato de la contraseña}.
+    \UCpaso[\UCsist] Asigna la contraseña de usuario a la cuenta.
+    \UCpaso[\UCsist] Elimina el token de activación de la cuenta.
+    \UCpaso[\UCsist] Cambia el estado de la cuenta a \cdtRef{estado:activa}{activa}.
+    \UCpaso[\UCsist] Envía el mensaje \cdtIdRef{MSG25}{Envío de usuario y contraseña} vía correo electrónico, con la información de la cuenta. 
+    \UCpaso[\UCsist] Muestra en una pantalla emergente el mensaje \cdtIdRef{MSG21}{Confirmación de activación de cuenta} en la pantalla \cdtIdRef{IUR 1} {Iniciar sesión} indicando que su cuenta ha sido activada exitosamente.
+ \end{UCtrayectoria}
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{El enlace solicitado no existe.}
+ 	\UCpaso[\UCsist] Muestra en una pantalla emergente el mensaje \cdtIdRef{MSG26}{El enlace para activación de cuenta ya no es válido} en la pantalla \cdtIdRef{IUR 1} {Iniciar sesión} indicando al usuario la razón por la cual no puede proceder la operación. 
+ \end{UCtrayectoriaA}
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{El usuario desea activar una cuenta cuyo token ya no es válido.}
+ 	\UCpaso[\UCsist] Muestra en una pantalla emergente el mensaje \cdtIdRef{MSG26}{El enlace para activación de cuenta ya no es válido} en la pantalla \cdtIdRef{IUR 1} {Iniciar sesión} indicando al usuario la razón por la cual no puede proceder la operación.
+ \end{UCtrayectoriaA}
+ 
+
+ 

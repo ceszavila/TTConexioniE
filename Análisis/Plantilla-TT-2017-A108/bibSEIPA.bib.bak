@@ -1,0 +1,226 @@
+% Ulizar la siguiente estructura para citar un artículo en específico:
+%
+% \cite[Artículo 19, fracciones I y II]{bibrepo:BasesRENIECYT}
+%
+% Ejemplo:
+% \textbf{Dirección Adjunta de Asuntos Jurídicos}. Es la encargada de administrar el sistema de recepción de solicitudes y coordinar la operación del sistema informático del RENIECYT \cite[Artículo 19, fracciones I y II]{bibrepo:BasesRENIECYT}.
+%
+@misc{bibsig:gisTerminology,
+  author        = {ESRI Press},
+  title         = {Dictionary of GIS Terminology},
+  type          = {documento electrónico},
+  month         = {Diciembre},
+  year          = {2000}
+};
+
+@misc{bibsig:manual-catastral,
+  title   = {Manual Catastral del Estado de México},
+  type    = {documento electrónico},
+  month   = {enero},
+  year    = {2009}
+};
+
+
+@manual{shp:ESRI,
+    author = {Esr, I.},
+    citeulike-article-id = {1806677},
+    citeulike-linkout-0 = {http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf},
+    keywords = {bibtex-import},
+    month = jul,
+    organization = {Environmental Systems Research Institute, Inc.},
+    posted-at = {2007-10-22 15:49:34},
+    priority = {0},
+    title = {{ESRI Shapefile Technical Description}},
+    url = {http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf},
+    year = {1998}
+};
+
+@misc{bibsig:arcgisdesktop,
+  author  = {Enviromental Systems Research Institute - ArcGis},
+  title   = {Check Geometry (Data Management)},
+  type    = {web page},
+  note    = {http://webhelp.esri.com/arcgisdesktop/9.3/index.cfm?TopicName=Check%20Geometry%20(Data%20Management)},
+  month	  = {Abril},
+  year    = {2009}
+};
+
+@misc{bibsig:gisdictionary,
+  author  = {Enviromental Systems Research Institute - ArcGis},
+  title   = {GIS Dictionary},
+  type    = {web page},
+  note    = {http://support.esri.com/en/knowledgebase/Gisdictionary/browse}
+};
+
+@misc{bibsig:opengc,
+  author  = {Open Geospatial Consortium (OGC)},
+  title   = {About OGC},
+  type    = {página web},
+  note    = {http://www.opengeospatial.org/},
+  year    = {2014}
+};
+
+@misc{bibsig:opengc-orm,
+  author  = {Open Geospatial Consortium (OGC)},
+  title   = {OGC Reference Model},
+  type    = {documento electrónico},
+  note    = {http://www.opengeospatial.org/},
+  year    = {2014}
+};
+
+@misc{bibsig:manual-anteproyecto,
+  author  = {Secretaria del Medio Ambiente del Estado de México},
+  title   = {Glosario, Manual para la formulación del anteproyecto de presupuesto de egresos para el ejercicio fiscal 2013},
+  type    = {documento electrónico},
+  month   = {Julio},
+  year    = {2012}
+};
+
+@misc{bibsig:conanp,
+  author  = {Comisión Nacional de Áreas Naturales Protegidas},
+  title   = {Áreas Protegidas Decretadas},
+  type    = {página web},
+  note    = {http://www.conanp.gob.mx/que\_hacemos/},
+  month = {noviembre},
+  year    = {2014}
+};
+
+@misc{lin:IGEDOMEX,
+  title   = {Lineamientos y especificaciones técnicas para la generación y actualización de información geográfica},
+  type    = {documento electrónico},
+  month = {diciembre},
+  year    = {2013}
+};
+
+
+@misc{codigo_biodiversidad,
+  title   = {Código para la Biodiversidad del Estado de México},
+  type    = {documento electrónico},
+  note    = {http://www.edomex.gob.mx/legistelfon/doc/pdf/cod/vig/codvig009.pdf},
+  year    = {2005}
+};
+
+
+
+
+
+@misc{bibange:war,
+	author	= {Wikipedia. La enciclopedia libre},
+	title		= {WAR (archivo)},
+	type		= {web page},
+	note		= {http:\/\/es.wikipedia.org/wiki/WAR\_(archivo)},
+	month	= {mayo},
+	year		= {2014}
+};
+
+
+
+@misc{bibrepo:SistematicoRAE,
+  author        = {Real Acedemia Española},
+  title         = {Diccionario de la Lengua Española},
+  edition       = {Vigésima segunda edición},
+  type          = {web page},
+  note          = {http://lema.rae.es/drae/?val=permanente},
+  month         = {Diciembre},
+  year          = {2012}
+};
+
+@conference{bibrepo:mnaRENIECYT,
+  author        = {López Rabadán José Jaime},
+  title         = {Registro Nacional de Instituciones y Empresas Científicas y Tecnológicas-Modelo de Negocios Actual},
+  booktitle	= {Sesión 1},
+  month         = {diciembre},
+  year          = {2012}
+};
+
+@misc{bibrepo:PeopleSoft,
+  author        = {IBM},
+  title         = {Solutions: Oracle\'s PeopleSoft Enterprise and IBM},
+  type          = {web page},
+  note          = {http://www.ibm.com/solutions/oracle/us/en/index/peoplesoftenterprise.html},
+  month         = {Enero},
+  year          = {2013}
+};
+
+@misc{bibrepo:IBM,
+  author        = {IBM},
+  title         = {IBM},
+  type          = {web page},
+  note          = {http://www.ibm.com/us/en/},
+  month         = {Enero},
+  year          = {2013}
+};
+
+%Se debe cambiar esta referencia por una más fidedigna
+@misc{bibrepo:definicionDe,
+  author        = {definicion.De},
+  title         = {Definición.DE},
+  type          = {web page},
+  note          = {http://definicion.de/clasificacion/},
+  month         = {Diciembre},
+  year          = {2012}
+};
+
+%==================================================
+@book{bibange:SecretariaFinanzas,
+  author 	= {Secretaría de Finanzas},
+  title 	= {Manual para la Formulación del Anteproyecto de Presupuesto de Egresos para el Ejercicio Fiscal 2013},
+  publisher 	= {Gobierno del Estado de México},
+  address 	= {},
+  year 		= {2013}
+};
+
+@book{bibange:SecretariaFinanzasCUM,
+  author 	= {Secretaría de Finanzas},
+  title 	= {Manual para la Formulación del Anteproyecto de Presupuesto de Egresos para el Ejercicio Fiscal 2013, Catálogo de unidades de medida (CUM)},
+  publisher 	= {Gobierno del Estado de México},
+  address 	= {},
+  year 		= {2013}
+};
+
+@book{bibange:SecretariaFinanzasEP,
+  author 	= {Secretaría de Finanzas},
+  title 	= {Manual para la Formulación del Anteproyecto de Presupuesto de Egresos para el Ejercicio Fiscal 2013, Estructura programática para el ejercicio fiscal 2013(EP)},
+  publisher 	= {Gobierno del Estado de México},
+  address 	= {},
+  year 		= {2013}
+};
+
+@book{bibange:SecretariaFinanzasGT,
+  author 	= {Secretaría de Finanzas},
+  title 	= {Manual para la Formulación del Anteproyecto de Presupuesto de Egresos para el Ejercicio Fiscal 2013, Glosario de términos (GT)},
+  publisher 	= {Gobierno del Estado de México},
+  address 	= {},
+  year 		= {2013}
+};
+
+@book{bibange:PlanDeDesarrollo,
+  author 	 = {Comité de Planeación para el Desarrollo del Estado de México (COPLADEM)},
+  title 	 = {Plan de Desarrollo 2011-2017},
+  publisher = {Gobierno del Estado de México},
+  address 	 = {},
+  year 	 = {2011}
+};
+
+@article{bibange:LOAPEM,
+	author 	= {Secretaría de Finanzas},
+	title 		= {Ley orgánica de la administración pública del estado de México},
+	journal	= {Gaceta del Gobierno},
+	volume 	= {},
+	number 	= {},
+	pages 	= {},
+	year 		= {5 de julio del 2006}
+};
+
+@misc{bibange:normaTecnica,
+	author		= {INEGI},
+	title		= {Norma Técnica sobre Domicilios Geográficos},
+	type		= {web page},
+	note		= {http://www.domicilioscct.sep.gob.mx/docs/},
+	month		= {Noviembre},
+	year		= {2010}
+};
+
+
+
+
+

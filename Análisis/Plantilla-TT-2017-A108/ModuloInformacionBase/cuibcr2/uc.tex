@@ -1,0 +1,190 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUIBCR 2}{Registrar información base para indicadores de consumo responsable}
+    {
+	  Este caso de uso permite al actor el registro o modificación de informacón base que contribuya como referencia para los indicadores de consumo responsable, proporcionando una visión general del tipo de alimentos que consume la comunidad escolar, así como también el número de adquisiciones de productos ambientalmente amigables. Una vez que los datos solicitados para el registro de la información base para indicadores de consumo responsable han sido ingresados, el sistema valida la información y esta queda registrada.
+    }
+    
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Registro}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Media}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{25 de Noviembre del 2014}
+
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+	\UCccsection{Revisión Versión 0.1} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ 			\RCitem{PC1}{\TOCHK{Resumen: Acento al fianl en la palabra ESTA:ÉSTA}}{Fecha de entrega}
+ 			\RCitem{PC2}{\TOCHK{Entradas: La liga de AÑO no es correcta}}{Fecha de entrega}
+ 			\RCitem{PC3}{\TOCHK{Salidas: La liga de AÑO no es correcta}}{Fecha de entrega}
+ 			\RCitem{PC4}{\TOCHK{Trayectoria principal: verificar estado de EDICIÓN}}{Fecha de entrega}
+
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Registrar o modificar la información base que permita conocer el estado en que se encuentra una escuela en cuestión de consumo responsable de alimentos y adquisiciones.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Información del consumo:
+	    \begin{itemize}
+	    \item \cdtRef{consumo:personasEncuestadas}{Número de personas encuestadas}: \ioEscribir.
+	    \item \cdtRef{consumo:consumoAlimentosFrescos}{Alimentos frescos/naturales}: \ioEscribir.
+	    \end{itemize}
+
+	    \UCli Información de las adquisiciones:
+	    \begin{itemize}
+	     \item \cdtRef{consumo:realizaCompras}{Compras de papelería, limpieza o cómputo}: \ioEscribir.
+	     \item \cdtRef{consumo:comprasAnioPapeleria}{Número de veces que se compran insumos de papelería al año}: \ioEscribir.
+	     \item \cdtRef{consumo:comprasReciclados}{Número de veces que se compran insumos de papelería de material reciclado}: \ioEscribir.
+	     \item \cdtRef{consumo:comprasAnioLimpieza}{Número de veces que se compran insumos para limpieza al año}: \ioEscribir.
+	     \item \cdtRef{consumo:comprasNoToxicos}{Número de veces que se compran insumos de limpieza no tóxicos}: \ioEscribir.
+	     \item \cdtRef{consumo:comprasAnioElectronicos}{Número de veces que se compran equipos eléctricos o electrónicos al año}: \ioEscribir.
+	     \item \cdtRef{consumo:comprasBajoConsumo}{Número de veces que se compran equipos eléctricos o electrónicos de bajo consumo de energía}: \ioEscribir.
+	    \end{itemize}
+
+	\end{UClist}
+    }
+
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli Información del consumo:
+	    \begin{itemize}
+	    \item \cdtRef{consumo:personasEncuestadas}{Número de personas encuestadas}: \ioObtener.
+	    \item \cdtRef{consumo:consumoAlimentosFrescos}{Alimentos frescos/naturales}: \ioObtener.
+	    \end{itemize}
+
+	    \UCli Información de las adquisiciones:
+	    \begin{itemize}
+	     \item \cdtRef{consumo:realizaCompras}{Compras de papelería, limpieza o cómputo}: \ioObtener.
+	     \item \cdtRef{consumo:comprasAnioPapeleria}{Número de veces que se compran insumos de papelería al año}: \ioObtener.
+	     \item \cdtRef{consumo:comprasReciclados}{Número de veces que se compran insumos de papelería de material reciclado}: \ioObtener.
+	     \item \cdtRef{consumo:comprasAnioLimpieza}{Número de veces que se compran insumos para limpieza al año}: \ioObtener.
+	     \item \cdtRef{consumo:comprasNoToxicos}{Número de veces que se compran insumos de limpieza no tóxicos}: \ioObtener.
+	     \item \cdtRef{consumo:comprasAnioElectronicos}{Número de veces que se compran equipos eléctricos o electrónicos al año}: \ioObtener.
+	     \item \cdtRef{consumo:comprasBajoConsumo}{Número de veces que se compran equipos eléctricos o electrónicos de bajo consumo de energía}: \ioObtener.
+	    \end{itemize}
+	    \UCli \cdtIdRef{MSG1}{Operación realizada exitosamente:} Se muestra en la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable} cuando el registro de la información base para indicadores de consumo responsable se ha realizado correctamente.
+	    
+	    \UCli \cdtIdRef{MSG30}{Confirmar la modificación de un registro}: Se muestra en la pantalla emergente \cdtIdRef{IUIBCR 2.1}{Registrar información base para indicadores de consumo responsable: Mensaje de confirmación} para indicar al actor que al guardar los cambios realizados la información previa se perderá.
+	    
+	\end{UClist}
+    }
+
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:infoBaseEdicion}{Información base en edición}.
+	    \UCli {\bf Interna:} Que el periodo de registro de información base se encuentre vigente. 
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Se podrá modificar la información base definida para los indicadores de consumo responsable a través del caso de uso \cdtIdRef{CUIBCR 2}{Registrar información base para indicadores de consumo responsable}.
+	\end{UClist}
+    }
+    
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+	\end{UClist}
+    }
+    
+    \UCitem{Errores}{
+	\begin{UClist}
+	    
+	    \UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable} cuando no se ha ingresado un dato marcado como requerido.
+	    
+	    \UCli \cdtIdRef{MSG6}{Formato incorrecto}: Se muestra en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+	    
+	    \UCli \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}: Se muestra en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable} cuando se ha excedido la longitud de alguno de los campos.	    
+	    
+	    \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	    
+	    \UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra sobre la pantalla en la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+	    
+	      
+	\end{UClist}
+    }
+
+    \UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUIBCR 1}{Administrar información base para indicadores de consumo responsable}.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+%    }
+\end{UseCase}
+
+\begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita registrar la información base para indicadores de consumo responsable oprimiendo el botón \botEdit de la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Información base en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para realizar la operación. \refTray{B}.
+    \UCpaso[\UCsist] Busca la información previamente registrada referente a la información base para indicadores de consumo responsable.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable} por medio de la cual se realizará el registro de información base para indicadores de consumo responsable.
+    \UCpaso[\UCactor] Ingresa la información referente a la información base para indicadores de consumo responsable en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable}. \label{cuibcr2:IngresarDatos}
+    \UCpaso[\UCactor] Oprime el botón \cdtButton{Aceptar} en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable} para confirmar el registro de la información base para indicadores de consumo responsable. \refTray{C}. \refTray{E}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Información base en edición''. \refTray{A}. \label{cuibcr2:VerificarRegistro} 
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para realizar la operación. \refTray{B}.
+    \UCpaso[\UCsist] Verifica que los datos ingresados proporcionen información correcta con base en la regla de negocio \cdtIdRef{RN-S1}{Información correcta}. \refTray{F}. \refTray{G}. \refTray{H}.    
+    \UCpaso[\UCsist] Registra la información base para indicadores de consumo responsable.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable} para indicar al actor que el registro de la información se ha realizado exitosamente.    
+ \end{UCtrayectoria}
+ 
+    \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita realizar la operación.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable} indicando al actor que no puede realizar la operación debido a que la escuela no se encuentra en estado ``Información base en edición''. 
+ \end{UCtrayectoriaA}
+
+   \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la operación.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable} indicando al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla. 
+ \end{UCtrayectoriaA}
+ 
+  \begin{UCtrayectoriaA}{C}{El actor desea modificar la información base para indicadores de consumo responsable.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG30}{Confirmar la modificación de un registro} en la pantalla emergente \cdtIdRef{IUIBCR 2.1}{Registrar información base para indicadores de consumo responsable: Mensaje de confirmación} para que el actor confirme la modificación de la información base para indicadores de consumo responsable.
+    \UCpaso[\UCactor] Oprime el botón \cdtButton{Aceptar} de la pantalla emergente \cdtIdRef{IUIBCR 2.1}{Registrar información base para indicadores de consumo responsable: Mensaje de confirmación} confirmando la modificación de la información. \refTray{D}.
+    \UCpaso[] Continúa con el paso \ref{cuibcr2:VerificarRegistro} de la trayectoria principal.    
+ \end{UCtrayectoriaA}
+ 
+   \begin{UCtrayectoriaA}{D}{El actor desea cancelar la modificación de la información base para indicadores de consumo responsable.}
+    \UCpaso[\UCactor] Solicita cancelar la modificación de la información oprimiendo el botón \cdtButton{Cancelar} de la pantalla emergente \cdtIdRef{IUIBCR 2.1}{Administrar información base para indicadores de consumo responsable: Mensaje de confirmación}.
+    \UCpaso[] Continúa con el paso \ref{cuibcr2:IngresarDatos} de la trayectoria principal.    
+ \end{UCtrayectoriaA}
+ 
+    \begin{UCtrayectoriaA}[Fin del caso de uso]{E}{El actor desea cancelar la operación.}
+    \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable}.
+    \UCpaso[] Regresa a la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable}. 
+    \end{UCtrayectoriaA}
+  
+    \begin{UCtrayectoriaA}{F}{El actor no ingresó un dato marcado como requerido.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable} indicando que el registro de información base para indicadores de consumo responsable no puede realizarse debido a la falta de información requerida.
+    \UCpaso[] Continúa con el paso \ref{cuibcr2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+ 
+        \begin{UCtrayectoriaA}{G}{El actor ingresó un tipo de dato incorrecto.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG6}{Formato incorrecto} en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable} indicando que el registro de información base para indicadores de consumo responsable no puede realizarse debido a que la información ingresada no es correcta.
+    \UCpaso[] Continúa con el paso \ref{cuibcr2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+    
+            \begin{UCtrayectoriaA}{H}{El actor ingresó un dato que excede la longitud máxima.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo} en la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable} indicando que el registro de información base para indicadores de consumo responsable no puede realizarse debido a que la longitud del campo excede la longitud máxima definida.
+    \UCpaso[] Continúa con el paso \ref{cuibcr2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}

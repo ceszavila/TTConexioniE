@@ -1,0 +1,141 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUS 22}{Administrar avances de energía}
+    {
+	Las metas permiten conocer el resultado que se desea obtener al realizar el conjunto de acciones registradas para la línea de acción. Este caso de uso permite conocer las metas registradas para la línea de acción ``Energía'', además sirve como punto de acceso para registrar el avance de acciones, de metas y actualizar la información base para esta línea de acción.
+    }
+    
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Administrar}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Media}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{5 de Diciembre del 2014}
+
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+ 	\UCccsection{Revisión Versión 0.1} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ 	\UCccitem{Fecha}{9-Dic} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{Nayeli Vega}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ 			\RCitem{PC1}{\TOCHK{Agregar precondiciones, mensajes, pasos a la trayectoria y trayectorias alternativas para verificación de estado y de fecha}}{Fecha de entrega}
+		
+ 			\RCitem{PC2}{\TOCHK{Interfaz: Agregar mensajes 28 y 41 a la interfaz que corresponden a la verificación del estado y a la fecha}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Administrar las metas registradas para la línea de acción ``Energía''.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli \cdtRef{meta}{Metas}: \ioTabla{\cdtRef{meta:meta}{Meta}, \cdtRef{meta:enfoqueMeta}{Capacitación}, \cdtRef{meta:fechaInicio}{Fecha de inicio}, \cdtRef{meta:fechaTermino}{Fecha de término} y \cdtRef{gls:avanceMeta}{Avance}}{que estén en el sistema}.
+	\end{UClist}
+    }
+    
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:avanceEdicion}{Avance en edición}.
+	    \UCli {\bf Interna:} Que el periodo de registros de avances se encuentre vigente.
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Se podrán registrar avances para las acciones de  la línea de acción ``Energía'' a través del caso de uso \cdtIdRef{CUS 23}{Registrar avance de acciones de energía}.
+	    \UCli {\bf Interna:} Se podrán registrar avances para las metas de  la línea de acción ``Energía'' a través del caso de uso \cdtIdRef{CUS 24}{Registrar avance de metas de energía}.
+	    \UCli {\bf Interna:} Se podrá actualizar la información base para la línea de acción ``Energía'' a través del caso de uso \cdtIdRef{CUS 25}{ Actualizar información del consumo de energía}.
+	\end{UClist}
+    }
+
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli \cdtIdRef{RN-N17}{Calcular avance de la meta}: Calcula el avance de la meta con base al número de acciones finalizadas.
+	\end{UClist}
+    }
+
+    \UCitem{Errores}{
+	\begin{UClist}
+	    \UCli \cdtIdRef{MSG2}{No existe información registrada por el momento}: Se muestra en la pantalla \cdtIdRef{IUS 22}{Administrar avances de energía} indicando al actor que no existen registros de metas de energía en el sistema por el momento.
+	    
+	    \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUS 22}{Administrar avances de energía} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	    
+	    \UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra en la pantalla \cdtIdRef{IUS 22}{Administrar avances de energía} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+	    
+	\end{UClist}
+    }
+
+    
+    \UCitem{Tipo}{Primario.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+%    }
+
+\end{UseCase}
+
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita administrar las metas de energía oprimiendo el botón \botAcciones de la línea de acción ``Energía'' en la pantalla \cdtIdRef{IUS 1}{Administrar avances de objetivos}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Avance en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para realizar la operación. \refTray{B}.
+    \UCpaso[\UCsist] Verifica que existan registros de metas de energía en el sistema. \refTray{C}.
+    \UCpaso[\UCsist] Calcula el avance de las metas de energía con base en la regla de negocio \cdtIdRef{RN-N17}{Calcular avance de la meta}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUS 22}{Administrar avances de energía} con los registros de metas de energía.
+    \UCpaso[\UCactor] Administra las metas de energía a través de los botones \botMetas, \botAutoAjus y \cdtButton{Actualizar}. \label{cus22:Administrar}
+ \end{UCtrayectoria}
+ 
+    \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita realizar la operación.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUS 22}{Administrar avances de energía}  indicando al actor que no puede realizar la operación debido a que la escuela no se encuentra en estado ``Avance en edición''. 
+ \end{UCtrayectoriaA}
+ 
+    \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la operación.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla \cdtIdRef{IUS 22}{Administrar avances de energía} indicando al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla. 
+ \end{UCtrayectoriaA}
+ 
+  \begin{UCtrayectoriaA}[Fin del caso de uso]{C}{No hay registros de metas de energía para mostrar.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG2}{No existe información registrada por el momento} en la pantalla \cdtIdRef{IUS 22}{Administrar avances de energía} indicando al actor que aún no hay metas de energía registradas. 
+ \end{UCtrayectoriaA}
+ 
+
+
+
+\subsection{Puntos de extensión}
+
+\UCExtensionPoint
+{El actor desea registrar avances de acciones a las metas de energía}
+{ Paso \ref{cus22:Administrar} de la trayectoria principal}
+{\cdtIdRef{CUS 23}{Registrar avance de acciones de energía}}
+
+\UCExtensionPoint
+{El actor desea registrar avances de metas a las metas de energía}
+{ Paso \ref{cus22:Administrar} de la trayectoria principal}
+{\cdtIdRef{CUS 24}{Registrar avance de metas de energía}}
+
+\UCExtensionPoint
+{El actor desea actualizar la información base para indicadores de energía}
+{ Paso \ref{cus22:Administrar} de la trayectoria principal}
+{\cdtIdRef{CUS 25}{ Actualizar información del consumo de energía}}

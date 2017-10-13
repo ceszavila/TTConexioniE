@@ -1,0 +1,52 @@
+% \begin{indicador}{ID}{Nombre del indicador}
+% 	{Fórmula}
+% 	{
+% 		Descripción del indicador.
+% 	} 	
+% 	\INitem{Variable 1}{Unidad 1}{Descripción de variable 1}
+% 	\INitem{Variable 2}{Unidad 2}{Descripción de variable 2}
+% \end{indicador}
+
+\subsection{Ambiente escolar}
+
+El propósito de incluir en el programa esta línea de acción, es abordar una serie de elementos sociales y naturales que conforman el ambiente escolar y pueden contribuir a mejorarlo. 
+Dado que los niños pasan mucho tiempo en la escuela y esa etapa es crucial para su información y formación; es de vital importancia que adquieran capacidades, habilidades y conocimientos para tener una buena calidad de vida en el futuro.\\
+
+En esta sección se muestran los indicadores para la línea de acción ``Ambiente escolar'' propuestos para el programa.
+
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IAE 1}{Número de campañas de limpieza y mantenimiento en el plantel por año}
+	{$CLM = (L_1 + L_2 + ... + L_n) + (M_1 + M_2 + ... + M_n)$} 
+	{
+		Este dato, indicará el nivel de participación y colaboración de los miembros de la comunidad para mejorar su entorno. Es un indicador de desarrollo sustentable, que se centra en la calidad de vida de las personas.
+	} 	
+	\INitem{$\cdtRef{gls:campanasLM}{CLM}$}{$campa\tilde{n}as$}{Número de \cdtRef{gls:campanasLM}{campañas de limpieza y mantenimiento}.}
+	\INitem{$L_1, L_2, ..., L_n$}{$campa\tilde{n}as$}{Cada una de las \cdtRef{mejoraEspacio}{mejoras de espacio} concretadas cuyo \cdtRef{mejoraEspacio:tipoMejora}{tipo} sea ``Limpieza''.}
+	\INitem{$M_1, M_2, ..., M_n$}{$campa\tilde{n}as$}{Cada una de las \cdtRef{mejoraEspacio}{mejoras de espacio} concretadas cuyo \cdtRef{mejoraEspacio:tipoMejora}{tipo} sea ``Mantenimiento''.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IAE 2}{Número de espacios dentro de la escuela mejorados para actividades colectivas por año}
+	{$TEM = EM_1 + EM_2 + ... + EM_n$}
+	{
+		Muy relacionado con el anterior, el indicador es un conteo simple que refleja el trabajo colectivo con el propósito de crear espacios para el propio uso y disfrute de la comunidad. También es un indicador de calidad de vida.\\
+		
+		*Un espacio es cualquier área de la escuela dentro o fuera de salones u oficinas, que sea apto para ser modificado, limpiado, mejorado, remodelado, rehabilitado o construido, 
+		para usarlo en actividades colectivas de estudio, recreación, etc. Ejemplos de ello son la limpieza de un área verde, la construcción de un comedor escolar, la remodelación de un patio con instalaciones deportivas, 
+		la habilitación de una biblioteca en el espacio de una bodega, la instalación de un huerto escolar, entre otros.\\
+		
+		Respecto a las campañas de limpieza o mantenimiento, espacios mejorados o personas participantes en las actividades anteriores, cabe señalar que se espera que formen parte del plan de acción que ejecutarán las 
+		escuelas para obtener la acreditación como escuelas ambientalmente responsables.
+	} 	
+	\INitem{$\cdtRef{gls:espaciosMejorados}{TEM}$}{$espacios$}{Total de \cdtRef{gls:espaciosMejorados}{espacios mejorados} en la escuela.}
+	\INitem{$EM_1, EM_2, ..., EM_n$}{$espacios$}{Cada \cdtRef{mejoraEspacio:numMejoras}{número de mejoras} de todos los \cdtRef{mejoraEspacio:tipoEspacio}{tipos de espacios} registrados.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IAE 3}{Número de personas que participan en las campañas o jornadas de limpieza, mantenimiento o mejoramiento de espacios escolares por año}
+	{$PP = NPP_1 + NPP_2 + ... + NPP_n$} 
+	{
+		Este indicador es una medida indirecta del interés de las personas por mantener espacios comunes en buenas condiciones. La participación puede considerarse como una medida indirecta de toma de conciencia y como consecuencia, cambio de conducta.\\
+		
+	} 	
+	\INitem{$\cdtRef{gls:personasPart}{PP}$}{$personas$}{Total de las \cdtRef{gls:personasPart}{personas que participan} en las actividades.}
+	\INitem{$NPP_1, NPP_2, ..., NPP_n$}{$personas$}{\cdtRef{avanceEspacio:personas}{Número de personas participantes} en todas las campañas o jornadas de limpieza, mantenimiento o mejoramiento de espacios escolares.}
+\end{indicador}

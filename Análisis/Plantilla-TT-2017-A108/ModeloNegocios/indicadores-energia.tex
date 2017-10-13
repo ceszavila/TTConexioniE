@@ -1,0 +1,89 @@
+% \begin{indicador}{ID}{Nombre del indicador}
+% 	{Fórmula}
+% 	{
+% 		Descripción del indicador.
+% 	} 	
+% 	\INitem{Variable 1}{Unidad 1}{Descripción de variable 1}
+% 	\INitem{Variable 2}{Unidad 2}{Descripción de variable 2}
+% \end{indicador}
+
+\subsection{Energía}
+
+La generación de energía eléctrica puede emitir contaminantes a la atmósfera, al agua, produce residuos y puede provocar impactos adversos sobre el paisaje y la biodiversidad. 
+Es por ello que la optimización en su consumo es parte fundamental de las acciones para mantener un ambiente propicio para la vida y para alcanzar un desarrollo  ambiental, social y económicamente sustentable.\\
+
+La información principal de este grupo de indicadores (al igual que los del agua), se basan en una sola medición: el consumo de energía. La fuente de información más sencilla para obtener el dato de consumo son los recibos o 
+facturas de pago por el servicio; sin embargo cabe decir que para el cálculo del consumo se requieren varios datos y varios cálculos.\\
+
+Por otro lado, es útil aclarar que todas las actividades que se realicen en el marco del programa, como campañas de concientización para el ahorro de energía, el cambio de lámparas incandescentes por focos ahorradores o 
+el apagado de luces y equipos eléctricos cuando no se usen, contribuirán en la disminución del consumo; misma que  deberán verse reflejados en los datos del recibo, en la medida en que estas acciones se realicen bien y se mantengan. \\
+
+Los indicadores para la línea de acción ``Energía'' propuestos para el programa se explican a continuación.
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IE 1}{Consumo anual de energía eléctrica por año}
+	{$CE_{anual} = CE_{p_1} + CE_{p_2} + ... + CE_{p_n}$} 
+	{
+		$KWh$ de energía eléctrica consumida al año. Este dato se puede obtener de los recibos de pago por el servicio.
+	} 	
+	\INitem{$\cdtRef{gls:consumoAnual}{CE_{anual}}$}{$\frac{kWh}{a\tilde{n}o}$}{\cdtRef{gls:consumoAnual}{Consumo anual de energía}.}
+	\INitem{$\cdtRef{periodo-consumo:consumo}{CA_{p_1}}$}{$\frac{kWh}{periodo}$}{\cdtRef{periodo-consumo:consumo}{Consumo} de energía en el primer periodo (mensual, bimestral, etc.).}
+	\INitem{$\cdtRef{periodo-consumo:consumo}{CA_{p_2}}$}{$\frac{kWh}{periodo}$}{\cdtRef{periodo-consumo:consumo}{Consumo} de energía en el segundo periodo (mensual, bimestral, etc.).}
+	\INitem{$\cdtRef{periodo-consumo:consumo}{CA_{p_n}}$}{$\frac{kWh}{periodo}$}{\cdtRef{periodo-consumo:consumo}{Consumo} de energía en el último periodo (mensual, bimestral, etc.).}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IE 2}{Consumo anual de energía eléctrica por unidad de superficie}
+	{$CE_{superficie} = \frac{CE_{anual}}{SC}$}
+	{
+		Se refiere a $kWh$ (kilowatt/hora) de energía eléctrica consumida al año dividida entre superficie construida en $m^2$.
+	} 	
+	\INitem{$\cdtRef{gls:consumoAnualSuperficie}{CE_{superficie}}$}{$\frac{kWh}{m^2-a\tilde{n}o}$}{\cdtRef{gls:consumoAnualSuperficie}{Consumo anual de energía por unidad de superficie}.}
+	\INitem{$\cdtRef{gls:consumoAnual}{CE_{anual}}$}{$\frac{kWh}{a\tilde{n}o}$}{\cdtRef{gls:consumoAnual}{Consumo anual de energía}, calculado con el indicador \cdtIdRef{IE 1}{Consumo anual de energía eléctrica por año}.}
+	\INitem{$\cdtRef{escuela:superficieConstruida}{SC}$}{$m^2$}{Se refiere a la \cdtRef{escuela:superficieConstruida}{superficie total construida} de la escuela.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IE 3}{Consumo anual de energía eléctrica por persona}
+	{$CE_{anual-persona} = \frac{CE_{anual}}{NP}$}
+	{
+		Se refiere a $kWh$ de energía eléctrica consumida al año, dividido por todas las personas que desarrollan actividades en la escuela. 
+		Este indicador puede ser una medida comparable con otras del mismo tipo que se efectúan a otros niveles de agregación: consumo por habitante por localidad, por estado, por país, etc.
+	} 	
+	\INitem{$\cdtRef{gls:consumoAnualPersona}{CE_{superficie}}$}{$\frac{kWh}{persona-a\tilde{n}o}$}{\cdtRef{gls:consumoAnualPersona}{Consumo anual de energía por persona}.}
+	\INitem{$\cdtRef{gls:consumoAnual}{CE_{anual}}$}{$\frac{kWh}{a\tilde{n}o}$}{\cdtRef{gls:consumoAnual}{Consumo anual de energía}.}
+	\INitem{$NP$}{$personas$}{Total de personas en la escuela, es la suma de \cdtRef{comunidad:docentesF}{docentes femeninos}, \cdtRef{comunidad:docentesM}{docentes masculinos},
+				\cdtRef{comunidad:adminF}{personal administrativo femenino}, \cdtRef{comunidad:adminM}{personal administrativo masculino}, 
+				\cdtRef{comunidad:alumnosF}{alumnos femeninos}, \cdtRef{comunidad:alumnosM}{alumnos masculinos},
+				\cdtRef{comunidad:limpiezaF}{personal de limpieza y mantenimiento femenino}, \cdtRef{comunidad:limpiezaM}{personal de limpieza y mantenimiento masculino}, 
+				\cdtRef{comunidad:apoyoF}{personal de apoyo femenino}, \cdtRef{comunidad:apoyoM}{personal de apoyo masculino}, 
+				\cdtRef{comunidad:visitantesF}{visitantes femeninos (promedio diario)} y \cdtRef{comunidad:visitantesM}{visitantes masculinos (promedio diario)}.} %PENDIENTE
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IE 4}{Disminución anual en consumo de energía eléctrica}
+	{$DA_{CEnerg\acute{i}a} = CE_{A\tilde{n}o 2} - CE_{A\tilde{n}o 1}$}
+	{
+		Reducción de $kWh$ de energía eléctrica consumida al año. Se calcula restando al consumo anual de un año, el consumo del año anterior, si el valor es negativo significa que hubo una disminución. Los resultados negativos indican que hubo una reducción.
+	} 	
+	\INitem{$\cdtRef{gls:disminucionAnual}{DA_{CEnerg\acute{i}a}}$}{$\frac{kWh}{a\tilde{n}o}$}{\cdtRef{gls:disminucionAnual}{Disminución anual en consumo de energía}.}
+	\INitem{$\cdtRef{gls:consumoAnual}{CE_{A\tilde{n}o 2}}$}{$\frac{kWh}{a\tilde{n}o}$}{\cdtRef{gls:consumoAnual}{Consumo anual de energía} en el segundo año, calculado con el indicador \cdtRef{IE 1}{Consumo anual de energía eléctrica por año}.}
+	\INitem{$\cdtRef{gls:consumoAnual}{CE_{A\tilde{n}o 1}}$}{$\frac{kWh}{a\tilde{n}o}$}{\cdtRef{gls:consumoAnual}{Consumo anual de energía} en el primer año, calculado con el indicador \cdtRef{IE 1}{Consumo anual de energía eléctrica por año}.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IE 5}{Ahorro económico por reducción en el consumo de energía eléctrica}
+	{$ACE_{energ\acute{i}a} = CCE_{A\tilde{n}o 2} - CCE_{A\tilde{n}o 1}$}
+	{
+		Se refiere a la disminución del gasto por consumo de energía eléctrica al año. El cálculo es muy simple, se resta el consumo del año en curso del valor del año anterior; 
+		igual que en el indicador anterior. El dato tanto de consumo, como de monto, se pueden encontrar en los recibos de pago, emitidos por la Comisión Federal de Electricidad. Los resultados negativos indican que hubo una reducción.
+	} 	
+	\INitem{$\cdtRef{gls:ahorroEnergia}{ACE_{energ\acute{i}a}}$}{$\frac{\$}{a\tilde{n}o}$}{\cdtRef{gls:ahorroEnergia}{Ahorro en el gasto por consumo de energía}.}
+	\INitem{$CCE_{A\tilde{n}o 2}$}{$\frac{\$}{a\tilde{n}o}$}{Suma de los \cdtRef{periodo-consumo:importe}{importes} de todos los periodos del primer año.}
+	\INitem{$CCE_{A\tilde{n}o 1}$}{$\frac{\$}{a\tilde{n}o}$}{Suma de los \cdtRef{periodo-consumo:importe}{importes} de todos los periodos del segundo año.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IE 6}{Disminución de emisiones a la atmósfera por reducción en consumo de energía por año} %Cambió el título
+	{$DE_{CO_2} = DA_{CEnerg\acute{i}a} * FEEE$}
+	{
+		Ahorro anual en consumo de energía eléctrica por factor de emisión, referido al combustible que se emplea para producir la energía eléctrica.
+	} 	
+	\INitem{$\cdtRef{gls:disminucionEmisiones}{DE_{CO_2}}$}{$\frac{ton CO_2}{a\tilde{n}o}$}{\cdtRef{gls:disminucionEmisiones}{Disminución de emisiones de $CO_2$}.}
+	\INitem{$\cdtRef{gls:disminucionAnual}{DA_{CEnerg\acute{i}a}}$}{$\frac{kWh}{a\tilde{n}o}$}{\cdtRef{gls:disminucionAnual}{Disminución anual en consumo de energía}.}
+	\INitem{$\cdtRef{gls:feee}{FEEE}$}{$\frac{kWh}{ton CO_2}$}{Factor de emisión de energía eléctrica, su valor es igual a $0.000667 \frac{kWh}{ton CO_2}$.}
+\end{indicador}

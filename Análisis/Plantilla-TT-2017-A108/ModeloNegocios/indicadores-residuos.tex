@@ -1,0 +1,88 @@
+% \begin{indicador}{ID}{Nombre del indicador}
+% 	{Fórmula}
+% 	{
+% 		Descripción del indicador.
+% 	} 	
+% 	\INitem{Variable 1}{Unidad 1}{Descripción de variable 1}
+% 	\INitem{Variable 2}{Unidad 2}{Descripción de variable 2}
+% \end{indicador}
+
+\subsection{Residuos sólidos}
+
+  La generación de residuos por persona es un indicador del modo de consumo, su reducción refleja el cambio de conducta de las personas. 
+  Por otro lado, los residuos que no se disponen de manera adecuada pueden contaminar el suelo, el agua y el aire.
+  En esta sección se muestran los indicadores para la línea de acción ``Residuos sólidos'' propuestos para el programa.
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IR 1}{Residuos generados por persona en la escuela por año}
+	{$RS_{persona} = \frac{RS_{generados}}{NP}$} 
+	{
+		Es la cantidad de residuos en kg que se genera en la escuela, dividido entre el número de  personas que 
+		ocupan diariamente el plantel en un periodo determinado de tiempo.
+
+	} 	
+	\INitem{$\cdtRef{gls:residuosAno}{RS_{persona}}$}{$\frac{kg}{persona-a\tilde{n}o}$}{Son los kg de \cdtRef{gls:residuosAno}{residuos sólidos generados al año por persona}.}
+	\INitem{$RS_{generados}$}{$\frac{kg}{a\tilde{n}o}$}{Es la suma de los kg de residuos sólidos generados a la semana multiplicado por el número de semanas del año: \hspace{3cm}
+   				  $RS_{generados} = (\cdtRef{residuoSolido:cantidadSemanal}{RS_{papel-semana}} + \cdtRef{residuoSolido:cantidadSemanal}{RS_{cart\acute{o}n-semana}} + ... + \cdtRef{residuoSolido:cantidadSemanal}{RS_{residuo_n-semana}}) * 52 semanas $} 
+	\INitem{$NP$}{$personas$}{Total de personas en la escuela, es la suma de \cdtRef{comunidad:docentesF}{docentes femeninos}, \cdtRef{comunidad:docentesM}{docentes masculinos},
+				\cdtRef{comunidad:adminF}{personal administrativo femenino}, \cdtRef{comunidad:adminM}{personal administrativo masculino}, 
+				\cdtRef{comunidad:alumnosF}{alumnos femeninos}, \cdtRef{comunidad:alumnosM}{alumnos masculinos},
+				\cdtRef{comunidad:limpiezaF}{personal de limpieza y mantenimiento femenino}, \cdtRef{comunidad:limpiezaM}{personal de limpieza y mantenimiento masculino}, 
+				\cdtRef{comunidad:apoyoF}{personal de apoyo femenino}, \cdtRef{comunidad:apoyoM}{personal de apoyo masculino}, 
+				\cdtRef{comunidad:visitantesF}{visitantes femeninos (promedio diario)} y \cdtRef{comunidad:visitantesM}{visitantes masculinos (promedio diario)}.} %PENDIENTE
+\end{indicador}
+% ------------------------------------------------------------------------------------------------
+\begin{indicador}{IR 2}{Disminución de residuos por persona al año} 
+	% Los años en el indicador están invertidos en la fórmula
+	{$DRS_{persona} = \frac{RS_{a\tilde{n}o 2}}{NP} - \frac{RS_{a\tilde{n}o 1}}{NP}$} 
+	{
+		Se refiere a los kg de residuos totales generados en la escuela, divididos entre el número de personas, este valor deberá restarse al volumen inicial de generación  por persona medido en el año anterior. Los resultados negativos indican que hubo una reducción.
+
+	} 	
+	\INitem{$DRS_{persona}$}{$\frac{kg}{persona-a\tilde{n}o}$}{\cdtRef{gls:disminucionRSAnoPersona}{Disminución de residuos sólidos generados al año por persona}.}
+	\INitem{$RS_{a\tilde{n}o 1}$}{$\frac{kg}{a\tilde{n}o}$}{Son los kg de \cdtRef{gls:residuosAno}{residuos sólidos generados al año por persona} del primer año, calculado con el indicador \cdtIdRef{IR 1}{Residuos generados por persona en la escuela por año}.}
+	\INitem{$RS_{a\tilde{n}o 2}$}{$\frac{kg}{a\tilde{n}o}$}{Son los kg de \cdtRef{gls:residuosAno}{residuos sólidos generados al año por persona} del segundo año, calculado con el indicador \cdtIdRef{IR 1}{Residuos generados por persona en la escuela por año}.}
+	\INitem{$NP$}{$personas$}{Total de personas en la escuela, es la suma de \cdtRef{comunidad:docentesF}{docentes femeninos}, \cdtRef{comunidad:docentesM}{docentes masculinos},
+				\cdtRef{comunidad:adminF}{personal administrativo femenino}, \cdtRef{comunidad:adminM}{personal administrativo masculino}, 
+				\cdtRef{comunidad:alumnosF}{alumnos femeninos}, \cdtRef{comunidad:alumnosM}{alumnos masculinos},
+				\cdtRef{comunidad:limpiezaF}{personal de limpieza y mantenimiento femenino}, \cdtRef{comunidad:limpiezaM}{personal de limpieza y mantenimiento masculino}, 
+				\cdtRef{comunidad:apoyoF}{personal de apoyo femenino}, \cdtRef{comunidad:apoyoM}{personal de apoyo masculino}, 
+				\cdtRef{comunidad:visitantesF}{visitantes femeninos (promedio diario)} y \cdtRef{comunidad:visitantesM}{visitantes masculinos (promedio diario)}.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IR 3}{Porcentaje de disminución de residuos por persona al año}
+	% La fórmula es confusa, se cambió 
+	{$\%DRS_{persona-a\tilde{n}o} = \frac{DRS_{persona}}{RS_{persona}} * 100$} 
+	{
+		Es similar al indicador anterior, este indicador representa el porcentaje de residuos sólidos reducidos por persona en un periodo anual. Los resultados negativos indican que hubo una reducción.
+
+	} 	
+ 	\INitem{$\%DRS_{persona}$}{$\%$}{Porcentaje de la \cdtRef{gls:disminucionRSAnoPersona}{disminución de residuos sólidos generados al año por persona}.}
+	\INitem{$DRS_{persona}$}{$\frac{kg}{persona-a\tilde{n}o}$}{\cdtRef{gls:disminucionRSAnoPersona}{Disminución de residuos sólidos generados al año por persona}, calculado con el indicador \cdtIdRef{IR 2}{Disminución de residuos por persona al año}.}
+	\INitem{$RS_{persona}$}{$\frac{kg}{persona-a\tilde{n}o}$}{Son los kg de \cdtRef{gls:residuosAno}{residuos sólidos generados el primer año por persona}, calculado con el indicador \cdtIdRef{IR 1}{Residuos generados por persona en la escuela por año}.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IR 4}{Cantidad de residuos en kg enviados a reciclaje}%Originalmente decía Volumen de residuos en kg...
+	{$ RR = VP_{papel} + VPL_{pl\acute{a}stico} + VM_{metal}$} 
+	{
+		Se refiere a la cantidad de residuos que se separaron adecuadamente en la escuela para ser reciclados.
+		Para fines de este indicador, se tomarán tres tipos de residuos: papel, plástico y metal enviados a reciclaje.
+
+	} 	
+	\INitem{$RR$}{$kg$}{\cdtRef{gls:residuosReciclaje}{Residuos enviados a reciclaje por año}.}
+	\INitem{$VP_{papel}$}{$kg$}{\cdtRef{residuoSolido:cantidadReciclaje}{Cantidad de papel separado para reciclaje} multiplicada por el número de semanas al año.}
+	\INitem{$VPL_{pl\acute{a}stico}$}{$kg$}{\cdtRef{residuoSolido:cantidadReciclaje}{Cantidad de plástico separado para reciclaje} multiplicada por el número de semanas al año.}
+	\INitem{$VM_{metal}$}{$kg$}{\cdtRef{residuoSolido:cantidadReciclaje}{Cantidad de metal separado para reciclaje} multiplicada por el número de semanas al año.}
+\end{indicador}
+------------------------------------------------------------------------------------------------
+\begin{indicador}{IR 5}{Disminución de emisiones por reciclaje de papel}
+	{$ DE_{CO_2} = \frac{Papel_{reciclaje} * FE_{papel}}{1000}$} 
+	{
+		La producción de papel emite $CO_2$ y mediante un factor de conversión se puede calcular este valor.
+		De tal manera que se puede medir la disminución de emisiones de este gas de efecto invernadero, con acciones relativas reciclaje de papel. Este es un indicador de acciones para el combate  al cambio climático.
+
+	} 	
+	\INitem{$\cdtRef{gls:disminucionEmisiones}{DE_{CO_2}}$}{$\frac{ton CO_2 eq}{a\tilde{n}o}$}{\cdtRef{gls:disminucionEmisiones}{Disminución de emisiones de $CO_2$}.}
+	\INitem{$Papel_{reciclaje}$}{$kg$}{\cdtRef{residuoSolido:cantidadReciclaje}{Papel enviado a reciclaje}.}
+	\INitem{$FE_{papel}$}{$\frac{kg}{ton CO_2}$}{Factor de emisión por reciclaje de papel, su valor es igual a $1.8 \frac{kg}{ton CO_2}$.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------

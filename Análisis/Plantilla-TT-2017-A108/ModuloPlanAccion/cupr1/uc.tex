@@ -1,0 +1,161 @@
+\begin{UseCase}{CUPR 1}{Registrar residuo sólido del plan de acción}
+    {
+	Los residuos sólidos del plan de acción son aquellos materiales que se planean reducir o reciclar una vez que ha finalizado su vida útil, son desechos procedentes de materiales utilizados en la fabricación, transformación o utilización de bienes de consumo. 
+	Este caso de uso permite al actor registrar un residuo sólido y la cantidad de este que se desea disminuir o reciclar.
+    }
+    
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Sergio Ramírez Camacho}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Registro}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Alta}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{2 de diciembre del 2014}
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+ 	\UCccsection{Revisión Versión 0.1} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ 	\UCccitem{Fecha}{3-Dic} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{Nayeli Vega}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ 			\RCitem{PC1}{\DONE{Entradas: Liga rota a Tipo}}{Fecha de entrega}
+ 			\RCitem{PC2}{\DONE{Entradas: Liga rota a Residuo sólid}}{Fecha de entrega} 			
+ 			\RCitem{PC3}{\DONE{Entradas: Liga rota a Total semanal}}{Fecha de entrega} 			
+ 			\RCitem{PC4}{\DONE{Precondiciones: Liga rota a tipo de residuo}}{Fecha de entrega} 			
+ 			\RCitem{PC5}{\DONE{Precondiciones: residuo sólido, en la entidad, la etiqueta sólo se llama residuo}}{Fecha de entrega} 			 			
+ 			\RCitem{PC6}{\DONE{Precondiciones: Liga rota a enfoque}}{Fecha de entrega} 			 			
+ 			\RCitem{PC7}{\DONE{Tipo: Liga rota a caso de uso}}{Fecha de entrega} 			 			
+ 			\RCitem{PC8}{\DONE{Trayectoria alternativa C: Es fin de caso de uso, no fin de trayectoria}}{Fecha de entrega} 			 			 					
+	 			
+% 			\RCitem{PC2}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Registrar la información referente a un residuo sólido y a la cantidad que se desea disminuir o reciclar de este.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	   \UCli {\bf Información del residuo sólido:}
+	   \begin{itemize}
+	    \item \cdtRef{gls:tipoDeResiduo}{Tipo}: \ioSeleccionar.
+	    \item \cdtRef{gls:residuo}{Residuo}{Residuo}{Residuo}: \ioSeleccionar.
+	    \item \cdtRef{residuoSolidoMeta:cantidad}{Total semanal (kg/semana)}: \ioEscribir.
+	    \end{itemize}
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist}
+	    \UCli Ninguna
+	\end{UClist}
+    }
+
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+\UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:planEdicion}{Plan de acción en edición}.
+			\UCli {\bf Interna:} Que el periodo de registro de plan de acción se encuentre vigente.	
+	  \UCli Que exista información referente al tipo de residuo.
+	  \UCli Que exista información referente al residuo.
+	  \UCli Que el \cdtRef{meta:enfoqueMeta}{enfoque de la meta} que se está registrando sea ``Reducción o reciclaje de residuos''.	
+	\end{UClist}eta
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Existirá un nuevo registro de residuo sólido del plan de acción en el sistema.
+	\end{UClist}
+    }
+    
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información ingresada sea correcta.
+	\end{UClist}
+    }
+    
+    \UCitem{Errores}{
+	\begin{UClist}
+	
+	    \UCli \cdtIdRef{MSG4}{No se encontró información sustantiva}: Se muestra en la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} o en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} cuando el sistema no cuenta con información en los catálogos de tipo y residuo.
+	    \UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción} cuando no se ha ingresado un dato marcado como requerido.	    
+	    \UCli \cdtIdRef{MSG6}{Formato incorrecto}: Se muestra en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+	    \UCli \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}: Se muestra en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción} cuando se ha excedido la longitud de alguno de los campos.
+\UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.
+\UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.	    	    	    
+	\end{UClist}
+    }
+
+    \UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUPRS 3}{Administrar residuos sólidos del plan de acción}.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+ %   }
+\end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita registrar un residuo sólido del plan de acción oprimiendo el botón \cdtButton{Registrar} en la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} o en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos}.
+
+	\UCpaso[\UCsist] Verifica que la escuela se encuentre en  estado ``Plan de acción en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para el registro del plan de acción. \refTray{B}.
+        
+    \UCpaso[\UCsist] Busca la información de tipo y residuo sólido registrada en el sistema. \refTray{C}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción}.
+    \UCpaso[\UCactor] Ingresa los datos del residuo sólido del plan de acción en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción}. \label{cupr1:ingresarInfo}
+    \UCpaso[\UCactor] Solicita guardar la información del residuo sólido del plan de acción oprimiendo el botón \cdtButton{Aceptar} en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción}. \refTray{D}.
+    	\UCpaso[\UCsist] Verifica que la escuela se encuentre en  estado ``Plan de acción en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que los datos ingresados por el actor sean correctos como lo indica la regla de negocio \cdtIdRef{RN-S1}{Información correcta}. \refTray{E}. \refTray{F}. \refTray{G}.
+    \UCpaso[\UCsist] Registra la información del residuo sólido del plan de acción en el sistema.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} o la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} con el nuevo registro del residuo sólido del plan de acción. 
+    
+ \end{UCtrayectoria}
+ 
+%  \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita registrar un residuo sólido.}
+%     \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} indicando al actor que no puede registrar un residuo sólido debido a que la escuela no se encuentra en estado ``Inscrita''. 
+%  \end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en el estado ``Plan de acción en edición''.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla en que se encuentre navegando el actor indicando que no puede administrar los objetivos del plan de acción debido a que la escuela no se encuentra en el estado ``Plan de acción en edición''. 
+ \end{UCtrayectoriaA}
+ 
+   \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro del plan de acción}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla en que se encuentre navegando el actor indicando que no puede administrar los objetivos del plan de acción debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro del plan de acción.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{C}{No existe información en el catálogo de tipo o residuo sólido.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG4}{No se encontró información sustantiva} en la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} o en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} indicando al actor que no puede registrar residuos sólidos debido a que no se cuenta con información sustantiva para el catálogo de tipo o residuo sólido.
+ \end{UCtrayectoriaA}
+ 
+    \begin{UCtrayectoriaA}[Fin del caso de uso]{D}{El actor desea cancelar la operación.}
+    \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción}.
+    \UCpaso[\UCsist] Regresa a la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} o a la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos}. 
+    \end{UCtrayectoriaA}
+ 
+    \begin{UCtrayectoriaA}{E}{El actor no ingresó un dato marcado como requerido.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción} indicando que el registro del residuo sólido no puede realizarse debido a la falta de información requerida.
+    \UCpaso[] Continúa con el paso \ref{cupr1:ingresarInfo} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+ 
+    \begin{UCtrayectoriaA}{F}{El actor ingresó un tipo de dato incorrecto.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG6}{Formato incorrecto} en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción} indicando que el registro del residuo sólido no puede realizarse debido a que la información ingresada no es correcta.
+    \UCpaso[] Continúa con el paso \ref{cupr1:ingresarInfo} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+    
+            \begin{UCtrayectoriaA}{G}{El actor ingresó un dato que excede la longitud máxima.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo} en la pantalla \cdtIdRef{IUPR 1}{Registrar residuo sólido del plan de acción} indicando que el registro del residuo sólido no puede realizarse debido a que la longitud del campo excede la longitud máxima definida.
+    \UCpaso[] Continúa con el paso \ref{cupr1:ingresarInfo} de la trayectoria principal.     
+    \end{UCtrayectoriaA}

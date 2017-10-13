@@ -1,0 +1,131 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUS 29}{Actualizar información de residuos sólidos}
+    {
+	Este caso de uso permite al actor actualizar la información referente a los residuos sólidos que produce la escuela. El actor podrá visualizar los registros de residuos sólidos registrados para la escuela, además tendrá la facultad para registrar nuevos residuos sólidos y modificar o eliminar los que ya se encuentran en el sistema.
+    }
+    
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Administración}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Alta}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{8 de Diciembre del 2014}
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+% 	\UCccsection{Revisión Versión 0.1} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ %	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+% 	\UCccitem{Evaluador}{}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	%\UCccitem{Resultado}{Corregir}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+ %		\begin{UClist}
+ 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ %			\RCitem{PC1}{\TOCHK{}}{Fecha de entrega} 			
+ %		\end{UClist}		
+ %	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Administrar el registro, modificación y eliminación de los residuos sólidos que genera la escuela.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli \cdtRef{residuoSolido}{Residuo sólido}: \ioTabla{\cdtRef{residuoSolido:tipoDeResiduo}{Tipo}, \cdtRef{residuoSolido:residuo}{Residuo}, \cdtRef{residuoSolido:cantidadSemanal}{Total semanal (Kg/semana)} y \cdtRef{residuoSolido:cantidadReciclaje}{Reciclado semanal (Kg/semana)}}{que estén en el sistema}.
+	\end{UClist}
+    }
+
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:avanceEdicion}{Avance en edición}.
+	    \UCli {\bf Interna:} Que el periodo de registros de avances se encuentre vigente.
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Se podrá registrar un residuo sólido a través del caso de uso \cdtIdRef{CUS 30}{Registrar residuo sólido}.
+	    \UCli {\bf Interna:} Se podrá modificar un residuo sólido a través del caso de uso \cdtIdRef{CUS 31}{Modificar residuo sólido}.
+	    \UCli {\bf Interna:} Se podrá eliminar un residuo sólido a través del caso de uso \cdtIdRef{CUS 32}{Eliminar residuo sólido}.
+	\end{UClist}
+    }
+    
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    
+    \UCitem{Errores}{
+	\begin{UClist}
+	    \UCli \cdtIdRef{MSG2}{No existe información registrada por el momento}: Se muestra en la pantalla \cdtIdRef{IUS 29}{Actualizar información de residuos sólidos} indicando al actor que no existen registros de residuos sólidos en el sistema por el momento.
+	    
+	    \UCli  \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	    
+	    \UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+	\end{UClist}
+    }
+
+    \UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUS 26}{Administrar avances de residuos sólidos}.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+ %   }
+\end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita actualizar la información de residuos sólidos oprimiendo el botón \cdtButton{Actualizar} de la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Avance en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para realizar la operación. \refTray{B}.
+    \UCpaso[\UCsist] Busca la información de los residuos sólidos registrados en el sistema. \refTray{C}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUS 29}{Actualizar información de residuos sólidos}.
+    \UCpaso[\UCactor] Administra los residuos sólidos a través de los botones \cdtButton{Registrar}, \botEdit y \botKo  . \label{cus29:Registrar}
+ \end{UCtrayectoria}
+ 
+
+      \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita realizar la operación.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no puede realizar la operación debido a que la escuela no se encuentra en estado ``Avance en edición''. 
+    \end{UCtrayectoriaA}
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la operación.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla. 
+ \end{UCtrayectoriaA}
+ 
+  \begin{UCtrayectoriaA}[Fin del caso de uso]{C}{No hay registros de residuos sólidos para mostrar.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG2}{No existe información registrada por el momento} en la pantalla \cdtIdRef{IUS 29}{Actualizar información de residuos sólidos} indicando al actor que aún no hay residuos sólidos registrados. 
+ \end{UCtrayectoriaA}
+
+
+\subsection{Puntos de extensión}
+
+\UCExtensionPoint
+{El actor desea registrar un residuo sólido}
+{ Paso \ref{cuS29:Registrar} de la trayectoria principal}
+{\cdtIdRef{CUS 30}{Registrar residuo sólido}}
+
+\UCExtensionPoint
+{El actor desea modificar un residuo sólido}
+{ Paso \ref{cus29:Registrar} de la trayectoria principal}
+{\cdtIdRef{CUS 31}{Modificar residuo sólido}}
+
+\UCExtensionPoint
+{El actor desea eliminar un residuo sólido}
+{ Paso \ref{cus29:Registrar} de la trayectoria principal}
+{\cdtIdRef{CUS 32}{Eliminar residuo sólido}}

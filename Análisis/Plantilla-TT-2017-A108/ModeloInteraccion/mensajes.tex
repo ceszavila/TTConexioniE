@@ -1,0 +1,526 @@
+%\DONE{} 
+	En esta sección se describen los mensajes utilizados en el prototipo actual del sistema. Los mensajes se refieren a todos
+	aquellos avisos que el sistema muestra al actor a través de la pantalla debido a diversas
+	razones, por ejemplo: informar acerca de algún fallo en el sistema o para notificar acerca de alguna operación importante sobre
+	la información.
+
+%===========================================================removiendo los puntos generados
+\subsection{Parámetros comunes}
+    Cuando un mensaje es recurrente se parametrizan sus elementos, por ejemplo los mensajes: ``Aún no existen registros de {\em escuelas} en el sistema.'', ``Aún no existen registros de {\em responsables del programa} en el sistema.'', 
+    ``Aún no existen registros de {\em integrantes de líneas de acción} en el sistema.'', tienen una estructura similar 
+    por lo que para definir el mensaje se utilizan parámentros, con el objetivo de que el mensaje sea genérico y  
+    pueda utilizarse en todos los casos que se considere necesario.\\
+    
+    Los parámetros también se utilizan cuando la redacción del mensaje tiene datos que son ingresados por el actor o que dependen del resultado de la operación, por ejemplo: 
+    ``La {\em escuela  15DPR2497K} ha sido {\em modificada} exitosamente.''. En este caso la redacción se presenta parametrizada de la forma: ``DETERMINADO ENTIDAD VALOR ha sido OPERACIÓN exitosamente.'' y los 
+    parámetros se describen de la siguiente forma:
+    
+    \begin{itemize}
+	\item DETERMINADO ENTIDAD: Es un artículo determinado más el nombre de la entidad sobre la cual se realizó la acción.
+	\item VALOR: Es el valor asignado al atributo de la entidad, generalmente es el nombre o la clave.
+	\item OPERACIÓN: Es la acción que el actor solicitó realizar.
+    \end{itemize}
+
+    En el ejemplo anterior se hace referencia a VALOR, es decir: {\em 15DPR2497K} es el {\bf valor}  de la entidad {\bf escuela}. Cada mensaje enlista los parámetros 
+    que utiliza, sin embargo aquí se definen los más comunes a fin de simplificar la descripción de los mensajes:
+
+    \begin{description}
+	\item [ARTÍCULO:] Se refiere a un {\em artículo} el cual puede ser DETERMINADO (El $\mid$ La $\mid$ Lo $\mid$ Los $\mid$ Las) o INDETERMINADO (Un $\mid$ Una $\mid$ 
+	Uno $\mid$ Unos $\mid$Unas) se aplica generalmente sobre una ENTIDAD, ATRIBUTO o VALOR.
+	\item [CAMPO:] Se refiere a un campo del formulario. Por lo regular es el nombre de un atributo en una entidad.
+	\item [CONDICIÓN:] Define una expresión booleana cuyo resultado deriva en {\em falso} o {\em verdadero} y suele ser la causa del mensaje.
+	\item [DATO:] Es un sustantivo y generalmente se refiere a un atributo de una entidad descrito en el modelo estructural del negocio, por ejemplo: número de incendio,
+	brigada de apoyo del incendio, uso de suelo autorizado del predio, etc. %ATRIBUTO
+	\item [ENTIDAD:] Es un sustantivo y generalmente se refiere a una entidad del modelo estructural del negocio, por ejemplo: incendio, pago por servicios ambientales hidrológicos, reforestación, etc.
+	\item [OPERACIÓN:] Se refiere a una acción que se debe realizar sobre los datos de una o varias entidades. Por ejemplo: registrar, eliminar, actualizar, etc. Comúnmente 
+	la OPERACIÓN va concatenada con el sustantivo, por ejemplo: Registro de un nuevo beneficio, registro de una actividad, eliminar una tarea, etc.
+	\item [VALOR:] Es un sustantivo concreto y generalmente se refiere a un valor en específico. Por ejemplo: ``2014-003'', que es un valor concreto del DATO de la 
+	ENTIDAD ``incendio''.
+	\item [TAMAÑO:] Es el tamaño del atributo de una entidad, el cual se encuentra definido en el diccionario de datos.
+	\item [MOTIVO:] Es una explicación acerca de la operación que se pretende realizar.
+    \end{description}
+
+
+\subsection{Mensajes a través de la pantalla}
+
+%===========================  MSG1 ==================================
+\begin{mensaje}{MSG1}{Operación realizada exitosamente}{Confirmación}
+    \item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Notificar al actor que la acción solicitada fue realizada exitosamente.
+    \item[Redacción:] DETERMINADO ENTIDAD VALOR ha sido OPERACIÓN exitosamente.
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	\item DETERMINADO ENTIDAD: Es un artículo determinado más el nombre de la entidad sobre la cual se realizó la acción.
+	\item VALOR: Es el valor asignado al atributo de la entidad, generalmente es el nombre o la clave.
+	\item OPERACIÓN: Es la acción que el actor solicitó realizar.
+    \end{Citemize}
+    \item[Ejemplo:] {\em La escuela 15DPR2497K} ha sido {\em registrada} exitosamente.
+\end{mensaje}
+
+%============================== MSG2 =================================
+\begin{mensaje}{MSG2}{No existe información registrada por el momento}{Notificación}
+    \item[Ubicación:] Formulario. Se muestra dentro de la tabla de gestión.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Notificar al actor que aún no existe información registrada en el sistema.
+    \item[Redacción:] Aún no existen registros de ENTIDAD en el sistema.
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	\item ENTIDAD: Especifica la entidad sobre la que se está realizando la consulta.
+    \end{Citemize}
+    \item[Ejemplo:] Aún no existen registros de {\em escuelas} en el sistema.
+\end{mensaje}
+
+%============================== MSG3 =================================
+\begin{mensaje}{MSG3}{Superficies del predio}{Notificación}
+    \item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al usuario que la \cdtRef{escuela:superficieConstruida}{superficie total construida} debe ser menor o igual a la \cdtRef{escuela:superficieTotal}{superficie total del predio}.
+    \item[Redacción:] La superficie total construida debe ser menor o igual a la superficie total del predio.
+\end{mensaje}
+
+%============================== MSG4 =================================
+\begin{mensaje}{MSG4}{No se encontró información sustantiva}{Error}
+    \item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Informar al actor que no se puede ejecutar la operación debido a que el sistema no tiene información base.
+    \item[Redacción:] Error, no se encontró información registrada en DETERMINADO-1 ENTIDAD-1, ..., DETERMINADO-N ENTIDAD-N. Favor de contactar al administrador del sistema.
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	\item DETERMINADO ENTIDAD: Es un artículo determinado más el(los) nombre(s) de la(s) entidad(es) que no tienen información.
+    \end{Citemize}
+    \item[Ejemplo:] Error, no se encontró información registrada en {\em el catálogo de escuelas}. Favor de contactar al administrador del sistema.
+\end{mensaje}
+
+%============================== MSG5 =================================
+\begin{mensaje}{MSG5}{Falta un dato requerido para efectuar la operación solicitada}{Error}
+    \item[Ubicación:] Campo. Se muestra debajo del campo.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al actor la omisión de algún \cdtRef{gls:requerido}{dato requerido} para realizar la operación solicitada.
+    \item[Redacción:] Este campo es obligatorio.
+\end{mensaje}
+
+%============================== MSG6 =================================
+\begin{mensaje}{MSG6}{Formato incorrecto}{Error}
+    \item[Ubicación:] Campo. Se muestra debajo del campo.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al actor que el dato ingresado en alguno de los campos del formulario no cumple con el tipo de dato definido en el diccionario de datos.
+    \item[Redacción:] El dato ingresado es incorrecto, favor de ingresar un dato válido.
+\end{mensaje}
+
+%============================== MSG7 =================================
+\begin{mensaje}{MSG7}{Se ha excedido la longitud máxima del campo}{Error}
+    \item[Ubicación:] Campo. Se muestra debajo del campo.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al actor que el dato ingresado en alguno de los campos del formulario rebasa la longitud especificada en el diccionario de datos.
+    \item[Redacción:] El dato ingresado ha excedido la longitud máxima permitida. La longitud debe debe ser menor o igual a TAMAÑO caracteres.  
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	\item TAMAÑO: Especifica la longitud del atributo definido en el diccionario de datos.
+    \end{Citemize}
+    \item[Ejemplo:] El dato ingresado ha excedido la longitud máxima permitida. La longitud debe ser menor o igual a {\em 30} caracteres.
+\end{mensaje}
+
+%============================== MSG8 =================================
+\begin{mensaje}{MSG8}{Registro repetido}{Error}
+    \item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Informar al actor que ya existe un registro con los mismos datos.
+    \item[Redacción:] Error, ya se OPERACIÓN INDETERMINADO ENTIDAD con el mismo ATRIBUTO, favor de verificar.
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	\item INDETERMINADO ENTIDAD: Es un artículo indeterminado más el nombre de la entidad sobre la cual se desea realizar la operación.
+	\item OPERACIÓN: Es la acción que el actor solicita realizar.
+    \end{Citemize}
+    \item[Ejemplo:] Error, ya se {\em inscribió una escuela} con la misma {\em clave de centro de trabajo}, favor de verificar.
+\end{mensaje}
+
+%============================== MSG9 ================================
+\begin{mensaje}{MSG9}{Error en la solicitud}{Notificación}
+	\item[Ubicación:] Correo. Es el contenido de un correo electrónico.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Informar al actor que ocurrió un error en los datos de la solicitud.
+	\item[Asunto:] Error en la solicitud de registro de SAEAR
+	\item[]{\bf Redacción:}\\
+			  Estimado(a) NOMBRE\\ \\
+			  Su solicitud ha presentado un error en: Coincidencia de datos, firma, sello o validez oficial.\\ \\
+			  Verifique sus datos y vuelva a registrarse.   \\ \\
+			  Atentamente\\
+			  Programa de Acreditación de Escuelas Ambientalmente Responsables\\
+			  Secretaría del Medio Ambiente\\
+			  Gobierno del Estado de México\\
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item NOMBRE: Es el nombre completo del \cdtRef{coordinador}{Coordinador del programa}.
+	\end{Citemize}
+\end{mensaje}
+
+%============================== MSG10 ================================
+\begin{mensaje}{MSG10}{Confirmar la eliminación de un integrante de línea de acción}{Confirmación}
+    \item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al actor que está a punto de eliminar un integrante de línea de acción y que se necesita su aprobación para ello.
+    \item[Redacción:] Se eliminará un integrante de la línea de acción \textit{LÍNEA}. ¿Está seguro de que desea continuar? Esta acción no podrá deshacerse.
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	\item LÍNEA: Es la línea de acción de la cual se elimirá el integrante.
+    \end{Citemize}
+    \item[Ejemplo:] Se eliminará un integrante de la línea de acción {\em ambiente escolar}. ¿Está seguro de que desea continuar? Esta acción no podrá deshacerse.
+\end{mensaje}
+
+%============================== MSG11 ================================
+\begin{mensaje}{MSG11}{Recuperar contraseña}{Notificación}
+	\item[Ubicación:] Correo. Es el contenido de un correo electrónico.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Informar al actor cuáles son los datos para iniciar sesión en el sistema, cuando se solicita recuperar la contraseña.
+	\item[Asunto:] Recuperación de contraseña de SAEAR
+	\item[]{\bf Redacción:}\\
+			  Estimado(a) NOMBRE\\ \\
+			  La operación de contraseña ha sido exitosa.\\ \\
+			  Nombre de usuario: USUARIO\\
+			  Contraseña: CONTRASEÑA \\ \\
+			  Atentamente\\
+			  Programa de Acreditación de Escuelas Ambientalmente Responsables\\
+			  Secretaría del Medio Ambiente\\
+			  Gobierno del Estado de México\\
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item NOMBRE: Es el nombre completo del \cdtRef{coordinador}{Coordinador del programa}.
+		\item USUARIO: Es el nombre de usuario para ingresar al sistema.
+		\item CONTRASEÑA: Es la clave para autenticarse en el sistema.
+	\end{Citemize}
+\end{mensaje}
+
+%============================== MSG12 ================================
+\begin{mensaje}{MSG12}{Entidad no encontrada}{Error}
+    \item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al usuario que no existe una entidad asociada al atributo que ha ingresado.
+    \item[Redacción:] No existe INDETERMINADO ENTIDAD asociada a DETERMINADO ATRIBUTO ingresado. Favor de verificar. 
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	    \item INDETERMINADO ENTIDAD: Es un artículo indeterminado más el nombre de la entidad sobre la cual se desea realizar la operación.
+	    \item DETERMINADO ATRIBUTO: Es un artículo determinado más el nombre del atributo de la entidad.
+    \end{Citemize}
+    \item[Ejemplo:] No existe {\em una cuenta} asociada a {\em el nombre de usuario} ingresado. Favor de verificar.
+    
+\end{mensaje}
+
+%============================== MSG13 ================================
+\begin{mensaje}{MSG13}{Error en formato de archivo}{Error} 
+	\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Indicar al actor que no se puede realizar la operación debido a que el archivo no cumple con el formato solicitado con base base en la regla de negocio \cdtIdRef{RN-N3}{Archivos permitidos en el sistema}.
+	\item[Redacción:] No se puede cargar el archivo. El formato del archivo debe ser \textbf{PDF} y tamaño máximo de \textbf{2 MB}.
+\end{mensaje}
+
+%============================== MSG14 ================================
+
+\begin{mensaje}{MSG14}{Error en formato de clave de centro de trabajo}{Error}
+	\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Indicar al actor que la clave de centro de trabajo ingresada no cumple con el formato especificado.
+	\item[Redacción:] La clave de centro de trabajo ingresada es incorrecta, favor de ingresar una clave con el siguiente formato: 
+	    número de dos dígitos, tres letras, número de cuatro dígitos y una letra. Por ejemplo 15DPR2497K.
+\end{mensaje}
+
+%============================== MSG15 ================================
+
+\begin{mensaje}{MSG15}{Acudir a la DGAIR en caso de inconsitencias en la información}{Notificación}
+	\item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Indicar al actor que si la información mostrada de la escuela es inconsistente, deberá acudir a la DGAIR.
+	\item[Redacción:] Si la información mostrada de la escuela cuenta con alguna inconsitencia, favor de referirse a la DGAIR 
+	      (Dirección General de Acreditación, Incorporación y Revalidación) para actualizar su información.
+\end{mensaje}
+
+%============================== MSG16 ================================
+\begin{mensaje}{MSG16}{Error en formato de correo electrónico}{Error}
+	\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Indicar al actor que el correo ingresado no cumple con el formato especificado.
+	\item[Redacción:] El correo electrónico ingresado es incorrecto, favor de introducir uno válido con el siguiente formato: correo@servidor.dominio
+\end{mensaje}
+
+%============================== MSG17 ================================
+\begin{mensaje}{MSG17}{Requisitos de inscripción}{Notificación}
+	\item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Indicar al actor los requisitos para inscribir su escuela.
+	\item[Redacción:] Para inscribir la escuela en el programa se requiere lo siguiente:
+	\begin{Citemize}
+		\item La escuela debe estar registrada ante la DGAIR (Dirección General de Acreditación,
+		      Incorporación y Revalidación).
+		\item Contar con el documento que avale el nombramiento del director en formato PDF.
+		\item Contar con la carta compromiso debidamente firmada y sellada en formato PDF.
+	\end{Citemize}
+ \end{mensaje}
+ 
+%============================== MSG18 ================================
+\begin{mensaje}{MSG18}{Error en la región}{Notificación}
+	\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Indicar al actor que la región seleccionada no está asociada con el municipio en el que se encuentra la escuela.
+	\item[Redacción:] La región seleccionada no está asociada con el municipio en el que se encuentra la escuela. Para actualizar
+		  su información, favor de referirse a la de DGAIR (Dirección General de Acreditación, Incorporación y Revalidación).
+\end{mensaje}
+
+%============================== MSG19 ================================
+\begin{mensaje}{MSG19}{Comité completo}{Notificación}
+    \item[Ubicación:] Formulario. Se muestra en la parte inferior del formulario, este mensaje es fijo.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al actor que ha registrado el máximo número de integrantes del comité.
+    \item[Redacción:] Ha registrado el máximo número de integrantes del comité.
+\end{mensaje}
+
+%============================== MSG20 ================================ PENDIENTE
+\begin{mensaje}{MSG20}{Registrar al menos un alumno}{Notificación}
+    \item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al actor que no es posible registrar al integrante en la línea de acción seleccionada debido a que esta
+	  requiere que el rol del integrante sea ``Alumno''.		      
+    \item[Redacción:] No es posible registrar al integrante en la línea de acción seleccionada debido a que esta requiere de al menos un integrante
+	  con rol de ``Alumno''.
+\end{mensaje}
+
+%============================== MSG21 ================================
+\begin{mensaje}{MSG21}{Confirmación de activación de cuenta}{Notificación}
+    \item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Informar al usuario que se ha activado su cuenta y que se le ha enviado al correo electrónico la información que necesita para iniciar sesión.
+    \item[Redacción:] Gracias por activar su cuenta. Se ha enviado a su correo electrónico la información necesaria para iniciar sesión.
+\end{mensaje}
+
+%============================== MSG22 ================================
+\begin{mensaje}{MSG22}{Nombre de usuario y/o contraseña incorrecto}{Error}
+    \item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al actor que el nombre de usuario y/o contraseña son incorrectos.
+    \item[Redacción:] El nombre de usuario y/o contraseña son incorrectos. Favor de verificarlo.
+\end{mensaje}
+%============================== MSG23 ================================
+\begin{mensaje}{MSG23}{Integrante de línea de acción repetido}{Error}
+    \item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Informar al actor que no puede registrar a este integrante debido a que ya pertenece al comité.
+    \item[Redacción:] No es posible registrar a este integrante debido a que ya es parte del comité.
+\end{mensaje}
+%============================== MSG24 ================================
+\begin{mensaje}{MSG24}{Verificación de correo electrónico}{Notificación}
+	\item[Ubicación:] Correo. Es el contenido de un correo electrónico.
+	\item[Estatus:] Terminado
+	\item[Objetivo:] Informar al actor que debe verificar su correo electrónico para completar el registro de su escuela en el Programa de Acreditación de Escuelas Ambientalmente Responsables.
+	\item[Asunto:] Verificación de correo electrónico de SAEAR
+	\item[]{\bf Redacción:}\\
+			  Estimado(a) NOMBRE\\ \\
+			  Para completar el registro de su escuela en el Programa de Acreditación de Escuelas Ambientalmente Responsables, verifique su correo electrónico mediante el siguiente enlace:\\ \\
+			  https://portal2.edomex.gob.mx/sma/paear/verificacion   \\ \\
+			  Cuenta con 5 días naturales para ratificar su correo, en caso de no verificarlo su registro será eliminado.\\ \\
+			  Atentamente\\
+			  Programa de Acreditación de Escuelas Ambientalmente Responsables\\
+			  Secretaría del Medio Ambiente\\
+			  Gobierno del Estado de México\\
+	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item NOMBRE: Es el nombre completo del \cdtRef{coordinador}{Coordinador del programa}.
+	\end{Citemize}
+\end{mensaje}
+%============================== MSG25 ================================
+\begin{mensaje}{MSG25}{Envío de usuario y contraseña}{Notificación}
+    \item[Ubicación:] Correo. Es el contenido de un correo electrónico.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Informar al actor cuáles son los datos para iniciar sesión en el sistema.
+    \item[Asunto:] Información de inicio de sesión de SAEAR
+    \item[]{\bf Redacción:}\\
+	  Correo electrónico verificado exitosamente.\\ \\
+	  Usted ha completado el prerregistro. Los siguientes son sus datos de ingreso al sistema:\\ \\
+	  Nombre de usuario: USUARIO   \\
+	  Contraseña: CONTRASEÑA \\ \\
+	  Puede iniciar sesión en el siguuiente enlace:\\ \\
+	  https://portal2.edomex.gob.mx/sma/paear/sesion \\ \\
+	  Atentamente\\
+	  Programa de Acreditación de Escuelas Ambientalmente Responsables\\
+	  Secretaría del Medio Ambiente\\
+	  Gobierno del Estado de México\\
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	    \item USUARIO: Es el nombre de usuario para ingresar al sistema.
+	    \item CONTRASEÑA: Es la clave para autenticarse en el sistema.
+    \end{Citemize}
+    \item[]{\bf Ejemplo:}\\
+	  Correo electrónico verificado exitosamente.\\ \\
+	  Usted ha completado el prerregistro. Los siguientes son sus datos de ingreso al sistema:\\ \\
+	  Nombre de usuario: {\em 15PPR35050}\\
+	  Contraseña: {\em $.C1V3K_+$}\\ \\
+	  Puede iniciar sesión en el siguuiente enlace:\\ \\
+	  https://portal2.edomex.gob.mx/sma/paear/sesion \\ \\
+	  Atentamente\\
+	  Programa de Acreditación de Escuelas Ambientalmente Responsables\\
+	  Secretaría del Medio Ambiente\\
+	  Gobierno del Estado de México\\
+\end{mensaje}
+%============================== MSG26 ================================
+\begin{mensaje}{MSG26}{El enlace para activación de cuenta ya no es válido}{Error}
+    \item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Informar al actor que no puede registrar a este integrante debido a que ya pertenece al comité.
+    \item[Redacción:] El enlace de activación no es válido debido a que no está vigente o ya ha sido activado.
+\end{mensaje}
+%============================== MSG27 ================================
+\begin{mensaje}{MSG27}{Cuenta no activada}{Error}
+    \item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Informar al actor que su cuenta no está activada.
+    \item[Redacción:] Su cuenta no está activada.
+\end{mensaje}
+
+%============================== MSG28 =================================
+\begin{mensaje}{MSG28}{Operación no permitida por estado de la entidad}{Error}
+\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que el estado de la entidad no permite realizar la operación.
+ 	\item[Redacción:] La operación OPERACIÓN no se puede realizar sobre DETERMINADO ENTIDAD ya que no se encuentra en estado LISTA DE ESTADOS.
+ 	\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+ 	\begin{Citemize}
+  		\item OPERACIÓN: Nombre de la acción que se desea realizar.
+		\item LISTA DE ESTADOS: Es la lista de los estatus separados por comillas.
+		\item DETERMINADO ENTIDAD: Es un artículo determinado más el nombre de la entidad sobre la cual se realiza la acción.
+ 	\end{Citemize}
+ 	\item[Ejemplo:] La operación {\em registrar información base para indicadores de agua} no se puede realizar sobre {\em la escuela} ya que no se encuentra en estado {\em Inscrita}.
+\end{mensaje}
+%============================== MSG29 =================================
+\begin{mensaje}{MSG29}{Registrar acciones}{Notificación}
+\item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que es necesario registrar acciones asociadas a la meta para que esta se pueda considerar completa.
+\item[Redacción:] Recuerde que se deben registrar acciones asociadas a esta meta para que se considere completa.
+\end{mensaje}
+%============================== MSG30 =================================
+\begin{mensaje}{MSG30}{Confirmar la modificación de un registro}{Notificación}
+\item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que está a punto de modificar un registro y se necesita su aprobación para ello.
+\item[Redacción:] Se modificará INDETERMINADO ENTIDAD. ¿Está seguro que desea continuar? Al modificar esta información se perderá la información previa.
+\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+	\begin{Citemize}
+		\item INDETERMINADO ENTIDAD: Es un artículo indeterminado más el nombre de la entidad sobre la cual se realiza la acción.
+	\end{Citemize}
+	\item[Ejemplo:] Se modificará {\em la información base para indicadores}. ¿Está seguro que desea continuar? Al modificar esta información se perderá la información previa.
+\end{mensaje}
+%============================== MSG31 =================================
+\begin{mensaje}{MSG31}{Confirmar eliminación}{Confirmación}
+    \item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+    \item[Estatus:] Terminado
+    \item[Objetivo:] Indicar al actor que está a punto de eliminar el elemento seleccionado y que se necesita su aprobación para ello.
+    \item[Redacción:] Se eliminará el elemento seleccionado. ¿Está seguro de que desea continuar? Esta acción no podrá deshacerse.
+\end{mensaje}
+%============================== MSG32 =================================
+\begin{mensaje}{MSG32}{Registro exitoso de avance de meta}{Notificación}
+\item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que el avance de la meta se ha registrado exitosamente y que es necesario registrar los avances de las acciones asociadas a esta.
+\item[Redacción:] El avance de la meta ha sido registrado exitosamente, recuerde que deben registrar avances de las acciones asociadas a esta meta.
+\end{mensaje}
+%============================== MSG33 =================================
+\begin{mensaje}{MSG33}{Unicidad de objetivos por línea de acción}{Notificación}
+\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que no es posible registrar el objetivo debido a que la línea de acción seleccionada ya tiene un objetivo asociado.
+\item[Redacción:] Ya existe un objetivo asociado a la línea de acción seleccionada, favor de verificar.
+\end{mensaje}
+%============================== MSG34 =================================
+\begin{mensaje}{MSG34}{Confirmación de envío de información}{Notificación}
+\item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que está a punto de enviar información y que se necesita su aprobación para ello.
+\item[Redacción:] ¿Está seguro de que desea enviar la información? Una vez que acepte, ya no podrá realizar cambios en ella.
+\end{mensaje}
+%============================== MSG35 =================================
+\begin{mensaje}{MSG35}{Registrar residuos sólidos}{Notificación}
+\item[Ubicación:] Formulario. Se muestra en la sección ``Información de los residuos sólidos'' debajo de la leyenda ``Administrar residuos sólidos''.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que para registrar la cantidad de residuos sólidos debe utilizar el botón ``Registrar''.
+\item[Redacción:] Registre la cantidad de residuos sólidos a OPERACIÓN, mediante el botón ``Registrar''.
+\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+\begin{Citemize}
+	\item OPERACIÓN: Es la operación que se realizará con los residuos sólidos.
+\end{Citemize}
+\item[]{\bf Ejemplo:}\\ 
+		Registre la cantidad de residuos sólidos a {\em reducir}, mediante el botón ``Registrar''.\\
+		Registre la cantidad de residuos sólidos a {\em reciclar}, mediante el botón ``Registrar''.
+\end{mensaje}
+%============================== MSG34 =================================
+\begin{mensaje}{MSG36}{Reducción de la generación o reciclaje de residuos}{Error}
+\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que es necesario registrar al menos un residuo sólido para concluir el registro.
+\item[Redacción:] Es necesario que registre al menos un residuo sólido para completar el registro de la meta.
+\end{mensaje}
+
+%============================== MSG37 =================================
+\begin{mensaje}{MSG37}{Falló el envío de la información base}{Error}
+\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que no puede enviar la información base porque no se ha completado el registro de ésta.
+\item[Redacción:] Es necesario que complete el registro de información base por cada una de las líneas de acción para enviar la información.
+\end{mensaje}
+%============================== MSG38 =================================
+\begin{mensaje}{MSG38}{Número de mejoras a realizar}{Error}
+\item[Ubicación:] Formulario. Es la etiqueta de uno de los campos.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor la información que debe de ingresar en el campo referente a la mejora seleccionada.
+\item[Redacción:] Indique el número de MEJORAS a realizar.
+\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+\begin{Citemize}
+	\item MEJORAS: Es la mejora en plural que el actor seleccionó como ``tipo de mejora''.
+\end{Citemize}
+\item[]{\bf Ejemplo:}\\ 
+		Indique el número de {\em construcciones} a realizar.\\
+		Indique el número de {\em limpiezas} a realizar.
+\end{mensaje}
+%============================== MSG39 =================================
+\begin{mensaje}{MSG39}{La información ya ha sido enviada}{Error}
+\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que no puede enviar la información base para indicadores porque ya ha sido enviada.
+\item[Redacción:] DETERMINADO ENTIDAD ya ha sido enviada anteriormente.
+\item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+\begin{Citemize}
+	\item DETERMINADO ENTIDAD: Es un artículo determinado más el nombre de la entidad sobre la cual se desea realizar la acción.
+\end{Citemize}
+\item[Ejemplo:] {\em La información base para indicadores} ya ha sido enviada anteriormente.
+\end{mensaje}
+%============================== MSG40 =================================
+\begin{mensaje}{MSG40}{Falló el envío del plan de acción}{Error}
+\item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que no puede enviar el plan de acción porque es necesario registrar al menos un objetivo, una meta y una acción.
+\item[Redacción:] Es necesario que registre al menos un objetivo, una meta y una acción.
+\end{mensaje}
+%============================== MSG41 =================================
+\begin{mensaje}{MSG41}{Acción fuera del periodo}{Error}
+\item[Ubicación:] Formulario. Se muestra en la parte superior del formulario.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que no puede realizar la acción debido a que esta se encuentra fuera del periodo definido por la SMAGEM.
+    \item[Redacción:] DETERMINADO ACCIÓN no puede realizarse debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la acción.
+    \item[Parámetros:] El mensaje se muestra con base en los siguientes parámetros:
+    \begin{Citemize}
+	\item DETERMINADO : Es un artículo determinado.
+	\item OPERACIÓN: Es la acción que el actor solicitó realizar.
+    \end{Citemize}
+    \item[Ejemplo:] {\em El registro de información base} no puede realizarse debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la acción.
+\end{mensaje}
+%============================== MSG42 =================================
+\begin{mensaje}{MSG42}{No puede calcularse el indicador}{Notificación}
+\item[Ubicación:] Formulario. Se muestra dentro de la tabla de gestión.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que el valor del indicador aún no puede calcularse debido a que no existe la información necesaria.
+    \item[Redacción:] Este valor aún no puede calcularse debido a que no se cuenta con la información necesaria.
+\end{mensaje}
+%============================== MSG43 =================================
+\begin{mensaje}{MSG43}{Falló el envío del seguimiento del plan de acción}{Error}
+\item[Ubicación:] Pantalla emergente. Se muestra en una pantalla emergente.
+\item[Estatus:] Terminado
+\item[Objetivo:] Indicar al actor que no puede enviar el seguimiento del plan de acción porque es necesario registrar al menos el avance de una meta y de una acción.
+\item[Redacción:] Es necesario que registre al menos el avance de una meta y de una acción.
+\end{mensaje}

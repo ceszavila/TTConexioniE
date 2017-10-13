@@ -1,0 +1,23 @@
+\subsection{IUR 19 Administrar solicitudes de inscripción}
+
+\subsubsection{Objetivo}
+
+    Esta pantalla permite al actor \cdtRef{actor:usuarioSMAGEM}{Director del programa} administrar las solicitudes de inscripción de las escuelas que se encuentran en estado Por aprobar.
+
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUR 19} se muestra la pantalla ``Administrar solicitudes de inscripción'', en la cual el actor  podrá seleccionar la solicitud que quiere aprobar o rechazar.
+    
+    \IUfig[.9]{pantallas/registro/IUR19}{IUR 19}{Administrar solicitudes de inscripción}
+
+	Una vez que llegan las solicitudes de inscripción el actor podrá administrar dichas solicitudes, presionando el botón \botOk en donde verificará la información y decidirá su aprobación o su rechazo.
+	
+\subsubsection{Comandos}
+    \begin{itemize}
+    \item \botOk [Aprobar]: Permite al actor administrar las solicitudes de inscripción redirigiendo a la pantalla \cdtIdRef{IUR 20}{Aprobar solicitudes de inscripción}
+    \end{itemize}
+
+\subsubsection{Mensajes}
+\begin{description}
+	\item[\cdtIdRef{MSG2}{No existe información registrada por el momento}:] Se muestra este mensaje de error en la pantalla \cdtIdRef{IUR 19}{Administrar solicitudes de inscripción } cuando ninguna escuela ha enviado una solicitud.
+\end{description}

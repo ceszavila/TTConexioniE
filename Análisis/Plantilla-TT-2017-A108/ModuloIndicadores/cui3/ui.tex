@@ -1,0 +1,21 @@
+\subsection{IUI 3 Consultar indicadores de residuos sólidos}
+\subsubsection{Objetivo}
+	
+	En esta pantalla el \cdtRef{actor:usuarioEscuela}{Coordinador del programa} puede conocer los valores de los indicadores
+	de la línea de acción ``Residuos sólidos''.	
+
+\subsubsection{Diseño}
+
+    En la figura ~\ref{IUI 3} se muestra la pantalla ``Consultar indicadores de residuos sólidos'', por medio de la cual 
+    se podrán consultar los valores de los indicadores de residuos sólidos.
+
+    \IUfig[.9]{pantallas/indicadores/cui3/iui3}{IUI 3}{Consultar indicadores de residuos sólidos}
+
+\subsubsection{Mensajes}
+
+	
+\begin{description}
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla en que se encuentre navegando el actor cuando el estado de la escuela no es ``Por acreditar''.
+	\item[\cdtRef{MSG42}{No puede calcularse el indicador}:] Se muestra en la pantalla \cdtIdRef{IUI 3}{Consultar indicadores de residuos sólidos} indicando que no se puede realizar el cálculo del valor del indicador
+				     debido a que no se cuenta con la información necesaria.
+\end{description}
