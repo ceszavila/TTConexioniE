@@ -1,0 +1,21 @@
+\subsection{IUI 2 Consultar indicadores de agua}
+\subsubsection{Objetivo}
+	
+	En esta pantalla el \cdtRef{actor:usuarioEscuela}{Coordinador del programa} puede conocer los valores de los indicadores
+	de la línea de acción ``Agua''.	
+
+\subsubsection{Diseño}
+
+    En la figura ~\ref{IUI 2} se muestra la pantalla ``Consultar indicadores de agua'', por medio de la cual 
+    se podrán consultar los valores de los indicadores de agua.
+
+    \IUfig[.9]{pantallas/indicadores/cui2/iui2}{IUI 2}{Consultar indicadores de agua}
+
+\subsubsection{Mensajes}
+
+	
+\begin{description}
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla en que se encuentre navegando el actor cuando el estado de la escuela no es ``Por acreditar''.
+	\item[\cdtRef{MSG42}{No puede calcularse el indicador}:] Se muestra en la pantalla \cdtIdRef{IUI 2}{Consultar indicadores de agua} indicando que no se puede realizar el cálculo del valor del indicador
+				     debido a que no se cuenta con la información necesaria.
+\end{description}

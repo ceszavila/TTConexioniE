@@ -1,0 +1,25 @@
+\subsection{IUIBCR 1 Administrar información base para indicadores de consumo responsable}
+
+\subsubsection{Objetivo}
+	
+    En esta pantalla el \cdtRef{actor:usuarioEscuela}{Coordinador del programa} puede acceder al registro o modificación de información base para indicadores de consumo responsable.
+
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUIBCR 1} se muestra la pantalla ``Administrar información base para indicadores de consumo responsable'', por medio de la cual se podrá acceder al registro de la información base para indicadores de consumo responsable. El actor tendrá la facultad de registrar o modificar la información que proporcione una visión general del tipo de alimentos que consume la comunidad escolar, así como también el número de adquisiciones de productos reciclados a través del botón \botEdit.  
+
+    \IUfig[.9]{pantallas/InformacionBase/cuibcr1/IUIBCR1AdministrarInformacion.png}{IUIBCR 1}{Administrar información base para indicadores de consumo responsable}
+
+
+\subsubsection{Comandos}
+    \begin{itemize}
+	\item \botEdit [Modificar información base]: Permite al actor registrar o modificar la información base para indicadores de consumo responsable, dirige a la pantalla \cdtIdRef{IUIBCR 2}{Registrar información base para indicadores de consumo responsable}. 
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	
+	\item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla \cdtIdRef{IUIBCR 1}{Administrar información base para indicadores de consumo responsable} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la acción.
+    \end{description}

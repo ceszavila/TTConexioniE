@@ -1,0 +1,64 @@
+\subsection{IUPRS 2 Modificar meta de residuos sólidos}
+                     
+\subsubsection{Objetivo}
+
+   Esta pantalla permite al actor modificar una \cdtRef{gls:meta}{meta} de la línea de acción ``Residuos sólidos'', cuando existen errores en la información o simplemente cuando esta se haya actualizado.
+
+	
+\subsubsection{Diseño}
+  En la figura ~\ref{IUPRS 2} se muestra la pantalla ``Modificar meta de residuos sólidos'', en la cual se mostrará la información de la meta en modo edición para que
+  de esta forma puedan ingresarse los nuevos datos.\\
+
+  El actor deberá modificar los datos referentes a la meta, así como definir si la meta está enfocada a la reducción de la generación o reciclaje de residuos, en este caso el sistema mostrará el mensaje \cdtIdRef{MSG35}{Registrar residuos sólidos}
+  indicando al actor cómo registrar los residuos sólidos, ya sea para reducir o reciclar, como se muestra en la figura ~\ref{IUPRS 2.1}.\\
+  
+  El actor deberá administrar los residuos por medio del caso de uso \cdtIdRef{CUPRS 3}{Administrar residuos sólidos del plan de acción}.\\
+  
+  Si el actor selecciona que la meta no está enfocada a la reducción de la generación o reciclaje de residuos, el sistema mostrará la sección ``Información de la capacitación y/o sensibilización'',
+  si el actor selecciona que la meta está enfocada a dar capacitación y/o sensibilización, el sistema mostrará los campos relacionados y
+  el actor deberá ingresar la información solicitada, como se muestra en la pantalla ~\ref{IUPRS 2.2}.\\
+  
+  Si el actor selecciona que la meta no está enfocada a una capacitación y/o sensibilización, se mostrará la sección ``Cuantificar meta'' como se muestra en la pantalla ~\ref{IUPRS 2.3}, el actor 
+  deberá ingresar los datos referentes al valor a alcanzar.\\
+ 	\newpage
+  \IUfig[.9]{pantallas/planAccion/cuprs2/iuprs2}{IUPRS 2}{Modificar meta de residuos sólidos}
+  	\newpage
+  	
+  \IUfig[.9]{pantallas/planAccion/cuprs2/iuprs2_1}{IUPRS 2.1}{Modificar meta de residuos sólidos: Reducción de la generación o reciclaje de residuos}
+  	\newpage
+  	
+  \IUfig[.9]{pantallas/planAccion/cuprs2/iuprs2_2}{IUPRS 2.2}{Modificar meta de residuos sólidos: Capacitación y/o sensibilización}
+  	\newpage
+  	
+  \IUfig[.9]{pantallas/planAccion/cuprs2/iuprs2_3}{IUPRS 2.3}{Modificar meta de residuos sólidos: Cuantificar meta}
+		\newpage
+		
+		  
+  El sistema buscará las unidades disponibles para colocarlas como opciones en la lista desplegable ``Unidad'', si el actor selecciona la opción ``Otra'' de la lista desplegable, el sistema mostrará
+  el campo ``Nueva unidad'' para que el actor defina la nueva unidad.\\
+  
+  Al oprimir el botón \cdtButton{Aceptar} el sistema validará la información ingresada y señalará los campos cuyos datos no cumplan con las reglas de negocio establecidas.\\
+  
+  Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUP 5}{Administrar metas}, para indicar que la información de la
+  meta se ha modificado correctamente.
+    
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor confirmar la modificación de la meta, dirige a la pantalla \cdtIdRef{IUP 5}{Administrar metas}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar la modificación de la meta, dirige a la pantalla \cdtIdRef{IUP 5}{Administrar metas}.
+\end{itemize}
+
+
+\subsubsection{Mensajes}
+
+\begin{description}
+	\item[\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUP 5}{Administrar metas} cuando la meta se ha modificado correctamente.
+	\item[\cdtIdRef{MSG4}{No se encontró información sustantiva}:] Se muestra en la pantalla \cdtIdRef{IUP 5}{Administrar metas} cuando hace falta información referente a la unidad.
+	\item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} cuando el actor no ingresó un dato requerido para realizar la operación.
+	\item[\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} cuando el formato de alguno de los datos ingresados es incorrecto.
+	\item[\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} cuando el actor escribió un dato que excede el tamaño especificado por el sistema.
+	\item[\cdtIdRef{MSG35}{Registrar residuos sólidos}:] Se muestra en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} cuando el actor seleccione que la meta está enfocada a la reducción de la generación o reciclaje de residuos indicando la operación de la que se trata.
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.	
+	\item[\cdtIdRef{MSG36}{Reducción de la generación o reciclaje de residuos}:] Se muestra en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} cuando hace falta registrar un residuo.
+	\item[\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.
+\end{description}

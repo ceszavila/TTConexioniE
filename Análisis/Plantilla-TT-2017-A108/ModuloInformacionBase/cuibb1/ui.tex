@@ -1,0 +1,28 @@
+\subsection{IUIBB 1 Administrar información base para indicadores de biodiversidad}
+
+\subsubsection{Objetivo}
+	
+    En esta pantalla el \cdtRef{actor:usuarioEscuela}{Coordinador del programa} puede acceder al registro o modificación de información base para indicadores de biodiversidad, así como también a la administración de los inventarios de flora y fauna.
+
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUIBB 1} se muestra la pantalla ``Administrar información base para indicadores de biodiversidad'', por medio de la cual se podrá acceder al registro de la información base para indicadores de biodiversidad y a la administración de los inventarios de flora y fauna. El actor tendrá la facultad de registrar o modificar la información que proporcione una visión general del nivel de conocimiento que tienen las personas encuestadas con respecto al concepto de biodiversidad, también podrá acceder al registro y modificación de flora y fauna.
+    
+    \IUfig[.9]{pantallas/InformacionBase/cuibb1/IUIBB1AdministrarInformacion.png}{IUIBB 1}{Administrar información base para indicadores de biodiversidad}
+    %\IUfig[.9]{pantallas/InformacionBase/cuibb1/IUIBB1Eliminar.png}{IUIBB 1.1}{Eliminar integrante de la línea de acción biodiversidad}
+
+
+\subsubsection{Comandos}
+    \begin{itemize}
+	\item \botEdit[Modificar información base]: Permite al actor registrar o modificar la información base para indicadores de biodiversidad, dirige a la pantalla \cdtIdRef{IUIBB 2}{Registrar información base para indicadores de biodiversidad}. 
+	\item \botReg[Registrar fauna]: Permite al actor acceder a la administración del inventario de fauna, dirige a la pantalla \cdtIdRef{IUIBB 3}{Administrar inventario de fauna}.
+	\item \botReg[Registrar flora]: Permite al actor acceder a la administración del inventario de flora, dirige a la pantalla \cdtIdRef{IUIBB 5}{Administrar inventario de flora}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUIBB 1}{Administrar información base para indicadores de biodiversidad} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	
+	\item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla \cdtIdRef{IUIBB 1}{Administrar información base para indicadores de biodiversidad} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+\end{description}

@@ -1,0 +1,117 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUIBB 1}{Administrar información base para indicadores de biodiversidad}
+    {
+	La información base para indicadores de biodiversidad proporciona una visión general del nivel de conocimiento que tienen las personas encuentadas con respecto al concepto de biodiversidad, además permite conocer la información referente a las áreas naturales y ecosistemas que se encuentran cerca de la escuela. Este caso de uso  sirve como punto de acceso para registrar o modificar la información base para indicadores de biodiversidad y para la administración del inventario de flora o fauna.  
+    }
+    
+    \UCitem{Versión}{0.1}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Administración}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Alta}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Edición.}
+    \UCitem{Fecha del último estatus}{20 de Noviembre del 2014}
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+% 	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+% 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+% 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+% 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+% 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+% 			\RCitem{PC1}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC2}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 		\end{UClist}		
+% 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Administrar el registro y modificación de la información base para indicadores de biodiversidad y  los inventarios de flora y fauna.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la información base para indicadores se encuentre en estado \cdtRef{estado:edicionInfoBase}{Edición}. 
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Se podrá registrar o modificar la información base para indicadores de biodiversidad a través del caso de uso \cdtIdRef{CUIBB 2}{Registrar información base para indicadores de biodiversidad}.
+	    \UCli {\bf Interna:} Se podrá administrar el inventario de fauna a través del caso de uso \cdtIdRef{CUIBB 3}{Administrar inventario de fauna}.
+	    \UCli {\bf Interna:} Se podrá administrar el inventario de flora a través del caso de uso \cdtIdRef{CUIBB 6}{Administrar inventario de flora}.
+	\end{UClist}
+    }
+    
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    
+    \UCitem{Errores}{
+	\begin{UClist}
+	    \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUIBB 1}{Administrar información base para indicadores de biodiversidad} indicando al actor que no se puede administrar la información base para indicadores debido al estado en que se encuentra esta.
+	\end{UClist}
+    }
+
+    \UCitem{Tipo}{Primario.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+ %   }
+\end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita administrar la información base para indicadores de biodiversidad, seleccionando en el menú \cdtIdRef{MN2}{Menú del Coordinador del programa} la opción ``Información base para indicadores'' y posteriormente la opción ``Biodiversidad''. 
+    \UCpaso[\UCsist] Verifica que la información base para indicadores se encuentre en estado ``Edición''. \refTray{A}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUIBB 1}{Administrar información base para indicadores de biodiversidad}.
+    \UCpaso[\UCactor] Administra la información base para indicadores de biodiversidad, el inventario de flora y el inventario de fauna a través de los botones \botEdit, \botReg y \botReg respectivamente . \label{cuibb1:RegistrarIA}
+ \end{UCtrayectoria}
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La informaión base para indicadores no se encuentra en un estado que permita administrarla.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} indicando al actor que no puede administrar la información base para indicadores debido a que esta no se encuentra en estado ``Edición''.
+ \end{UCtrayectoriaA}
+
+
+\subsection{Puntos de extensión}
+
+\UCExtensionPoint
+{El actor desea registrar o modificar la información base para los indicadores de biodiversidad}
+{ Paso \ref{cuibb1:RegistrarIA} de la trayectoria principal}
+{\cdtIdRef{CUIBB 2}{Registrar información base para indicadores de biodiversidad}}
+
+\UCExtensionPoint
+{El actor desea administrar el inventario de fauna}
+{ Paso \ref{cuibb1:RegistrarIA} de la trayectoria principal}
+{\cdtIdRef{CUIBB 3}{Administrar inventario de fauna}}
+
+\UCExtensionPoint
+{El actor desea administrar el inventario de flora}
+{ Paso \ref{cuibb1:RegistrarIA} de la trayectoria principal}
+{\cdtIdRef{CUIBB 6}{Administrar inventario de flora}}

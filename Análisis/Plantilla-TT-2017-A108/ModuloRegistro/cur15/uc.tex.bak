@@ -1,0 +1,183 @@
+
+\begin{UseCase}{CUR 15}{Modificar integrante de línea de acción}
+	{
+	 Después de registrar un integrante de línea de acción el actor puede haber detectado algún error en la información definida o puede requerir realizar una actualización del registro, por lo que este caso de uso tiene como objetivo permitir al actor visualizar los datos previamente registrados, modificarlos y guardar los cambios realizados. Una vez realizados los cambios en la información, el sistema valida y actualiza los datos. 
+
+	}
+	
+	\UCitem{Versión}{0.3}
+	\UCccsection{Administración de Requerimientos}
+	\UCitem{Autor}{Angélica Madrid Jiménez}
+	\UCccitem{Evaluador}{José David Ortega Pacheco}
+	\UCitem{Operación}{Modificar}
+	\UCccitem{Prioridad}{Media}
+	\UCccitem{Complejidad}{Media}
+	\UCccitem{Volatilidad}{Baja}
+	\UCccitem{Madurez}{Alta}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{5 de Noviembre del 2014}
+
+
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+% 	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+% 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+% 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+% 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+% 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+% 			\RCitem{PC1}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC2}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 		\end{UClist}		
+% 	}
+% %--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor(es)}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+	\UCitem{Propósito}{Realizar cambios sobre información específica del integrante de línea de acción si se ha identificado algún error o se requiere actualizar la información del mismo.}
+	\UCitem{Entradas}{
+		\begin{UClist}
+			\UCli \cdtRef{persona:nombre}{Nombre(s)}: \ioEscribir.
+			\UCli \cdtRef{persona:primerApellido}{Primer apellido}: \ioEscribir.
+			\UCli \cdtRef{persona:segundoApellido}{Segundo apellido}: \ioEscribir.
+			\UCli \cdtRef{integrante:fechaNac}{Fecha de nacimiento}: \ioCalendario.			
+			\UCli \cdtRef{integrante:lineaAccion}{Línea de acción}: \ioSeleccionar.
+			\UCli \cdtRef{integrante:rol}{Rol}: \ioSeleccionar.
+			\UCli \cdtRef{integrante:sexo}{Sexo}: \ioSeleccionar.
+			\UCli \cdtRef{integrante:grado}{Grado}: \ioSeleccionar.
+			\UCli \cdtRef{persona:correo}{Correo electrónico}: \ioEscribir.
+		\end{UClist}
+	}
+	\UCitem{Salidas}{
+		\begin{UClist} 
+		    \UCli \cdtRef{persona:nombre}{Nombre(s)}: \ioObtener.
+		    \UCli \cdtRef{persona:primerApellido}{Primer apellido}: \ioObtener.
+		    \UCli \cdtRef{persona:segundoApellido}{Segundo apellido}: \ioObtener.
+		    \UCli \cdtRef{integrante:fechaNac}{Fecha de nacimiento}: \ioObtener.			
+		    \UCli \cdtRef{integrante:lineaAccion}{Línea de acción}: \ioObtener.
+		    \UCli \cdtRef{integrante:rol}{Rol}: \ioObtener.
+		    \UCli \cdtRef{integrante:sexo}{Sexo}: \ioObtener.
+		    \UCli \cdtRef{integrante:grado}{Grado}: \ioObtener.
+		    \UCli \cdtRef{persona:correo}{Correo electrónico}: \ioObtener.
+		    \UCli \cdtIdRef{MSG1}{Operación realizada exitosamente}: Se muestra en la pantalla \cdtIdRef{IUR 13}{Administrar integrantes de líneas de acción} cuando el registro se realizó correctamente.
+		\end{UClist}
+	}
+	\UCitem{Precondiciones}{
+		\begin{UClist}
+			\UCli {\bf Interna:} Que exista integrante de línea de acción asociado a la escuela  registrado previamente.
+			\UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:inscrita}{inscrita}.	    
+			\UCli {\bf Interna:} Que el periodo de registro de escuelas se encuentre vigente.
+		\end{UClist}
+	}
+	
+	\UCitem{Postcondiciones}{
+		\begin{UClist}
+		    \UCli {\bf Interna:} Se podrá administrar la información del integrante de línea de acción por medio del caso de uso: \cdtIdRef{CUR 13}{Administrar integrantes de líneas de acción}.
+		 \end{UClist}
+	}
+	
+	\UCitem{Reglas de negocio}{
+		\begin{UClist}
+			\UCli \cdtIdRef{RN-S1}{Información correcta}. Verifica que la información introducida sea correcta.
+			\UCli \cdtIdRef{RN-S2}{Formato de correo electrónico}. Verifica que el correo electrónico proporcionado tenga un formato correcto de escritura.
+			\UCli \cdtIdRef{RN-N2}{Conformación del comité}. Verifica si la línea de acción para la cuál será registrado el integrante no se encuentre completa.
+			\UCli \cdtIdRef{RN-N5}{Unicidad de integrantes del comité}. Verifica que el integrante de línea de acción a registrar no se encuentre previamente registrado.									
+		\end{UClist}
+			
+	}
+	
+	
+	\UCitem{Errores}{
+		\begin{UClist}
+			\UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción} cuando no se haya proporcionado un dato requerido.
+			\UCli \cdtIdRef{MSG6}{Formato incorrecto}: Se muestra en la pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción} especificando el dato cuyo valor no cumple con el tipo de dato definido en el diccionario de datos.
+			\UCli \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}: Se muestra en la \cdtIdRef{IUR 15}{Modificar integrante de línea de acción} cuando el actor proporciona un dato que excede la longitud máxima.
+			\UCli \cdtIdRef{MSG16}{Error en formato de correo electrónico}: Se muestra en la pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción} indicando que el correo electrónico proporcionado no cumple con un formato válido.
+			\UCli \cdtIdRef{MSG23}{Integrante de línea de acción repetido}: Se muestra en la pantalla \cdtIdRef{IUR 14}{Registrar integrante de línea de acción} indicando que un integrante de línea de acción no puede pertenecer a mas de una línea de acción.	
+			
+     \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra sobre la pantalla \cdtIdRef{IUR 13}{Administrar integrantes de líneas de acción} indicando al actor que no puede modificar integrantes de línea de acción debido al estado en que se encuentra la escuela.
+		\UCli	\cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra sobre la pantalla \cdtIdRef{IUR 13}{Administrar integrantes de líneas de acción} para indicarle al actor que no puede modificar integrantes de línea de acción debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar el registro de escuelas.			
+					
+		\end{UClist}
+	}
+	\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUR 13}{Administrar integrantes de líneas de acción}.}
+	\UCitem{Fuente}{
+	    \begin{UClist}
+        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+	    \end{UClist}
+}
+
+ \end{UseCase}
+
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita modificar un integrante de línea de acción mediante el botón \botEdit, en la pantalla \cdtIdRef{IUR 13}{Administrar integrantes de líneas de acción}.
+
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre es estado ``Inscrita''. \refTray{A}
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por parte de la SMAGEM para el registro de escuelas. \refTray{B}    
+    
+   \UCpaso[\UCsist] Busca las líneas de acción para las cuáles se pueden registrar integrantes como lo índica la regla de negocio \cdtIdRef{RN-N2}{Conformación del comité}.       
+    \UCpaso[\UCsist] Busca los datos del integrante de línea de acción en el sistema para el cual se hizo la solicitud.   
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUR 14}{Registrar integrante de línea de acción}, en el campo ``Linea de acción'' se muestra el catálogo de las líneas de acción para las cuáles se puede registrar a un integrante.
+    \UCpaso[\UCactor] Actualiza los datos del integrante de línea de acción en la pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción}. \label{cur15:Acciones}
+    \UCpaso[\UCactor] Solicita guardar los datos del integrante de línea de acción oprimiendo el botón \cdtButton{Aceptar} de la pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción}. \refTray{C}
+
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre es estado ``Inscrita''. \refTray{A}
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por parte de la SMAGEM para el registro de escuelas. \refTray{B}    
+    
+    \UCpaso[\UCsist] Verifica que los datos introducidos por el actor sean correctos como lo indica la regla de negocio \cdtIdRef{RN-S1}{Información correcta}.  \refTray{D} \refTray{E} \refTray{F}
+   \UCpaso[\UCsist] Verifica el formato del correo electrónico como lo indica la regla de negocio \cdtIdRef{RN-S2}{Formato de correo electrónico} \refTray{G} 
+   \UCpaso[\UCsist] Verifica que el integrante de línea de acción no se encuentre previamente registrado en otra línea de acción, así como lo indica la regla de negocio \cdtIdRef{RN-N5}{Unicidad de integrantes del comité} \refTray{H}       
+    \UCpaso[\UCsist] Actualiza los datos del integrante de línea de acción en el sistema.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUR 13}{Administrar integrantes de líneas de acción} notificando que el integrante ha sido modificado exitosamente y actualiza la lista de integrantes que se muestra en la pantalla.
+ \end{UCtrayectoria}
+
+
+%%%%%%%%%%%%%%
+
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en el estado ``Inscrita''}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUR 13}{Administrar integrantes de líneas de acción} indicando al actor que no puede modificar integrantes de líneas de acción debido a que la escuela no se encuentra en estado ``Inscrita''.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro de escuelas}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla \cdtIdRef{IUR 13}{Administrar integrantes de líneas de acción} indicando al actor que no puede modificar intregrantes de líneas de acción debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la acción.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}[Fin de caso de uso]{C}{El actor desea cancelar la operación.}
+    \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} en la pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUR 13}{Administrar integrantes de líneas de acción}.
+ \end{UCtrayectoriaA}
+
+   \begin{UCtrayectoriaA}{D}{El actor ingresó un tipo de dato incorrecto.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG6}{Formato incorrecto} y señala el campo que presenta el dato inválido en la 
+    pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción} para indicar que se ha ingresado un tipo de dato inválido.
+    \UCpaso[] Continúa con el paso \ref{cur15:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{E}{El actor proporciona un dato que excede la longitud máxima.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo} en la pantalla \cdtIdRef{IUR 15}{ Modificar integrante de línea de acción} especificando el dato cuya longitud excede el tamaño máximo permitido.
+   \UCpaso[] Continúa en el paso \ref{cur15:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{F}{El actor no ingresó un dato marcado como requerido.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} y
+    señala el campo que presenta la omisión en la pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción}, para indicar que
+    no se puede efectuar la operación de registro debido a la falta de información requerida.
+   \UCpaso[] Continúa en el paso \ref{cur15:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+ 
+ \begin{UCtrayectoriaA}{G}{El actor no proporciona un correo válido.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG16}{Error en formato de correo electrónico} en la pantalla \cdtIdRef{IUR 15}{Modificar integrante de línea de acción} indicando que el correo electrónico proporcionado no cumple con un formato válido.
+    \UCpaso Continúa en el paso \ref{cur15:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+  \begin{UCtrayectoriaA}{H}{El integrante de línea de acción ya se encuentra registrado en otra línea de acción}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG23}{Integrante de línea de acción repetido} en la pantalla \cdtIdRef{IUR 14}{Registrar integrante de línea de acción} indicando que el integrante ya es parte del comité. 
+    \UCpaso Continúa en el paso \ref{cur14:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}

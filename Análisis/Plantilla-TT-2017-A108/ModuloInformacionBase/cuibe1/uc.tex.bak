@@ -1,0 +1,105 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUIBE 1}{Administrar información base para indicadores de energía}
+    {
+	La información base para los indicadores de energía proporciona una visión general del estado en que se encuentra la escuela en cuestión al consumo y ahorro de energía. Este caso de uso sirve como punto de acceso para registrar o modificar la información referente al consumo total que hace de este recurso la escuela.
+    }
+    
+    \UCitem{Versión}{0.1}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Administración}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Alta}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado.}
+    \UCitem{Fecha del último estatus}{25 de Noviembre del 2014}
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+	\UCccsection{Revisión Versión 0.1} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ 			\RCitem{PC1}{\TODO{Postcondiciones: El enlace lleva a registrar de la línea de acción de agua y debe ser al de energía}}{Fecha de entrega}
+ 			\RCitem{PC2}{\TODO{Precondiciones: estado de Edición}}{Fecha de entrega}
+ 			\RCitem{PC3}{\TODO{Trayectoria principal: verificar estado de EDICIÓN}}{Fecha de entrega}
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Administrar el registro de la información base para indicadores de energía.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:inscrita}{Inscrita}. 
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Se podrá registrar o modificar la información base para indicadores de energía a través del caso de uso \cdtIdRef{CUIBA 2}{Registrar información base para indicadores de energía}.
+	\end{UClist}
+    }
+    
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    
+    \UCitem{Errores}{
+	\begin{UClist}
+	    \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} indicando al actor que no se puede administrar la información base para indicadores de energía debido al estado en que se encuentra la escuela.
+	\end{UClist}
+    }
+
+    \UCitem{Tipo}{Primario.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+ %   }
+\end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita administrar la información base para indicadores de energía, seleccionando en el menú \cdtIdRef{MN2}{Menú del Coordinador del programa} la opción ``Información base para indicadores'' y posteriormente la opción ``Energía''. 
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Inscrita''. \refTray{A}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía}.
+    \UCpaso[\UCactor] Administra la información base para indicadores de energía a través del botón \botEdit. \label{cuibe1:RegistrarIA}
+ \end{UCtrayectoria}
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita administrar la información base.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} indicando al actor que no puede administrar la información base para indicadores de energía debido a que la escuela no se encuentra en estado ``Inscrita''. 
+ \end{UCtrayectoriaA}
+
+
+\subsection{Puntos de extensión}
+
+\UCExtensionPoint
+{El actor desea registrar o modificar la información base para indicadores de energía}
+{ Paso \ref{cuibe1:RegistrarIA} de la trayectoria principal}
+{\cdtIdRef{CUIBE 2}{Registrar información base para indicadores de energía}}

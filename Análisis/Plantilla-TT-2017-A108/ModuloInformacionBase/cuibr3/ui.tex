@@ -1,0 +1,45 @@
+\subsection{IUIBR 3 Modificar residuo sólido}
+
+\subsubsection{Objetivo}
+
+      En esta pantalla el \cdtRef{actor:usuarioEscuela}{Coordinador del programa} puede modificar en el sistema los registros de residuos sólidos que se generan en la escuela.
+
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUIBR 3} se muestra la pantalla ``Modificar residuo sólido'', por medio de la cual se podrán modificar los materiales desechados una vez que ha finalizado su vida útil en la escuela. La pantalla mostrará los datos previamente registrados referentes al residuo sólido.\\
+        
+    Una vez que se haya ingresado toda la información solicitada para la modificación del residuo sólido deberá oprimir el botón \cdtButton{Aceptar}, el sistema mostrará el mensaje \cdtIdRef{MSG30}{Confirmar la modificación de un registro} en una pantalla emergente como se muestra en la figura~\ref{IUIBR 3.1} para indicar al actor que al modificar la información se perderá la información prevía. Posteriormente el sistema validará y modificará la información sólo si se han cumplido todas las reglas de negocio establecidas.\\
+    
+    Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUIBR 1}{ Administrar información base para indicadores de residuos sólidos}, para indicar que la información del residuo sólido se ha modificado exitosamente.
+      
+    \IUfig[.9]{pantallas/InformacionBase/cuibr3/IUIBR3ModificarResiduo.png}{IUIBR 3}{Modificar residuo sólido}
+    \IUfig[.7]{pantallas/InformacionBase/cuibr3/IUIBR3Modificar.png}{IUIBR 3.1}{Modificar residuo sólido: Mensaje de confirmación}
+
+
+\subsubsection{Comandos}
+    \begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor confirmar la modificación del residuo sólido, dirige a la pantalla \cdtIdRef{IUIBR 1}{ Administrar información base para indicadores de residuos sólidos}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar la modificación del residuo sólido, dirige a la pantalla \cdtIdRef{IUIBR 1}{ Administrar información base para indicadores de residuos sólidos}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+      
+	    \item [\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUIBR 1}{Administrar información base para indicadores de residuos sólidos} cuando la modificación del residuo sólido se ha realizado correctamente.	    
+	    
+	    \item [\cdtIdRef{MSG4}{No se encontró información sustantiva}:] Se muestra en la pantalla \cdtIdRef{IUIBR 1}{Administrar información base para indicadores de residuos sólidos} cuando el sistema no cuenta con información en los catálogos de origen y tipo.
+	    
+	    \item [\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUIBR 3}{Modificar residuo sólido} cuando no se ha ingresado un dato marcado como requerido.
+	    
+	     \item [\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUIBR 3}{Modificar residuo sólido} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+	    
+	    \item [\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUIBR 3}{Modificar residuo sólido} cuando se ha excedido la longitud de alguno de los campos.
+
+	    \item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUIBR 1}{Administrar información base para indicadores de residuos sólidos} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	   
+	   \item [\cdtIdRef{MSG30}{Confirmar la modificación de un registro}:] Se muestra en la pantalla emergente \cdtIdRef{IUIBR 3.1}{Modificar residuo sólido: Mensaje de confirmación} para indicar al actor que al guardar los cambios realizados la información previa se perderá.
+	   
+	   \item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra sobre la pantalla en la pantalla \cdtIdRef{IUIBR 1}{Administrar información base para indicadores de residuos sólidos} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+	   
+    \end{description}

@@ -1,0 +1,30 @@
+\subsection{IUS 26 Administrar avances de residuos sólidos}
+
+\subsubsection{Objetivo}
+
+    Esta pantalla permite al \cdtRef{actor:usuarioEscuela}{Coordinador del programa} visualizar las metas registradas para la línea de acción de residuos sólidos, además sirve como punto de acceso para registrar avances de las metas, las acciones y para actualizar la información de residuos sólidos. 
+    
+\subsubsection{Diseño}
+
+        En la figura~\ref{IUS 26} se muestra la pantalla ``Administrar avances de residuos sólidos'', por medio de la cual se podrá acceder a las metas registradas para la línea de acción ``Residuos sólidos''. El actor tendrá la facultad de registrar avances en las metas, en las acciones y actualizar la información base para esta línea de acción a través de los botones \botAcciones, \botMetas y \cdtButton{Actualizar} respectivamente.  
+
+
+	\IUfig[.9]{pantallas/seguimiento/cus26/IUS26AdministrarAvancesResiduos.png}{IUS 26}{Administrar avances de residuos sólidos}
+
+
+\subsubsection{Comandos}
+    \begin{itemize}
+	\item \botAutoAjus [Avance acciones]: Permite registrar avances para las acciones de la línea de acción de residuos sólidos, dirige a la pantalla \cdtIdRef{IUS 27}{Registrar avance de acciones de residuos sólidos}.	
+	\item \botMetas [Avance metas]: Permite registrar avances para las metas de la línea de acción de residuos sólidos, dirige a la pantalla \cdtIdRef{IUS 28}{Registrar avance de metas de residuos sólidos}.	
+	\item \cdtButton{Actualizar}: Permite actualizar la información de residuos sólidos, dirige a la pantalla \cdtIdRef{IUS 29}{Actualizar información del consumo de residuos sólidos}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+	\item [\cdtIdRef{MSG2}{No existe información registrada por el momento}:] Se muestra en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no existen registros de metas de residuos sólidos en el sistema por el momento.
+	
+	\item [\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	
+	\item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla \cdtIdRef{IUS 26}{Administrar avances de residuos sólidos} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+    \end{description}
