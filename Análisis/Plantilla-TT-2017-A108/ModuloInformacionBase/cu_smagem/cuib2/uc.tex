@@ -1,0 +1,292 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUIB 2}{Aprobar la información base para indicadores}
+    {
+	La información base de una escuela para las diferentes líneas de acción permite obtener una visión general del estado en que esta se encuentra en cuanto a ciertos aspectos ambientales. Este caso de uso permite consultar la información base para las diferentes escuelas registradas en el sistema y aprobarla si cumple con todos los requisitos definidos o rechazarla en caso contrario.
+    }
+    
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Aprobar}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Alta}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{25 de Noviembre del 2014}
+
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+% 	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+% 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+% 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+% 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+% 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+% 			\RCitem{PC1}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC2}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 		\end{UClist}		
+% 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioSMAGEM}{Director del programa}}
+    \UCitem{Propósito}{Revisar la información base registrada para las diferentes escuelas para decidir si dicha información se aprueba o rechaza.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Aprobar la información base para indicadores:
+	    \begin{itemize}
+	    \item Aprobar registro: \ioRadioBoton.
+	    \item \cdtRef{}{Comentarios}: \ioSeleccionar.
+	    \end{itemize}
+	    
+	\end{UClist}
+    }
+
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli Información de la escuela:
+	    \begin{itemize}
+	     \item \cdtRef{escuela:cct}{Clave de centro de trabajo}: \ioObtener.
+	     \item \cdtRef{escuela:nombreEscuela}{Escuela}: \ioObtener.
+	     \item \cdtRef{escuela:municipio}{Municipio}: \ioObtener.
+	    \end{itemize}
+	\end{UClist}
+	}
+	\UCitem{Salidas}{
+	\begin{UClist}
+	    \UCli Información base:
+	    \begin{itemize}
+	     \item Agua:
+		  \begin{itemize}
+		   \item Información del consumo de agua:
+		   \begin{itemize}
+		   \item \cdtRef{gls:tipoAbastecimiento}{Tipos de abastecimiento de agua}: \ioObtener.
+		   \item \cdtRef{consumo-agua:consumoAnual}{Consumo anual promedio}: \ioObtener.		  		   
+		    \item \cdtRef{consumo-agua:consumoAnual}{Consumo anual}: \ioObtener.
+		    \item \cdtRef{consumo-agua:importeAnual}{Importe anual}: \ioObtener.
+		   \item \cdtRef{consumo-agua:recibos}{Recibos}: \ioTabla{\cdtRef{gls:bimestre}{Bimestre}, \cdtRef{periodo-agua:anio}{Año}, \cdtRef{periodo-agua:consumo}{Consumo bimestral} y  \cdtRef{periodo-agua:importe}{Importe bimestral}}{que estén en el sistema}.
+		   \item Consumo total: \ioCalcular \cdtIdRef{RN-N12}{Calcular consumo total}.
+		   \item Importe total: \ioCalcular \cdtIdRef{RN-N12}{Calcular consumo total}.
+		   \item \cdtRef{consumo-agua:consumoAnual}{Consumo anual promedio}: \ioObtener.
+		   \item \cdtRef{consumo-agua:importeAnual}{Importe anual promedio}: \ioObtener.		   
+		  \end{itemize}
+	     \end{itemize}
+
+  
+	    \item Residuo sólido:
+		  \begin{itemize}
+		  \item Información de los residuos sólidos:
+		  \begin{itemize}
+		  \item \cdtRef{residuoSolido}{Residuo sólido}: \ioTabla{\cdtRef{gls:origenDelResiduo}{Origen}, \cdtRef{gls:tipoDeResiduo}{Tipo} y  \cdtRef{residuoSolido:cantidadSemanal}{Total semanal (kg/semanas)}}{que estén en el sistema}.
+		  \end{itemize}
+		  
+		  \end{itemize}
+		  
+	    \item Energía:
+	    \begin{itemize}
+		   \item Infomación del consumo de electricidad;
+		   \begin{itemize}
+		   \item \cdtRef{consumo-agua:consumoAnual}{Consumo anual}: \ioObtener.
+		    \item \cdtRef{consumo-agua:importeAnual}{Importe anual}: \ioObtener.
+		   \item \cdtRef{energia:cuentaConRecibos}{Recibos}: \ioTabla{\cdtRef{gls:bimestre}{Bimestre}, \cdtRef{periodo-energia:anio}{Año}, \cdtRef{periodo-energia:consumo}{Consumo bimestral} y  \cdtRef{periodo-energia:importe}{Importe bimestral}}{que estén en el sistema}.
+		   \item Consumo total: \ioCalcular \cdtIdRef{RN-N12}{Calcular consumo total}.
+		   \item Importe total: \ioCalcular \cdtIdRef{RN-N12}{Calcular consumo total}.
+		   \item \cdtRef{energia:consumoAnual}{Consumo anual promedio}: \ioObtener.
+		   \item \cdtRef{energia:importeAnual}{Importe anual promedio}: \ioObtener.
+		   \end{itemize}
+		   
+	    \end{itemize}
+	    \end{itemize}
+	\end{UClist}
+	}
+	    \UCitem{Salidas}{
+	\begin{UClist}
+	   \begin{itemize}
+	    \item Biodiversidad
+	    \begin{itemize}
+	     \item Información de la biodiversidad:
+	     \begin{itemize}
+		\item \cdtRef{biodiversidad:encuestados}{Número de personas encuestadas}: \ioObtener.
+		\item \cdtRef{biodiversidad:siConocenConcepto}{Número de personas que conocen el concepto de biodiversidad}: \ioObtener. 
+	    \end{itemize}
+	    
+	     \item Información de los ecosistemas.
+	     \begin{itemize}
+	     \item \cdtRef{gls:tiposDeEcosistema}{Tipos de ecosistemas}: \ioObtener.
+	     \item \cdtRef{biodiversidad:distanciaRio}{Distancia desde la escuela al río}: \ioObtener.
+	     \item \cdtRef{biodiversidad:ubicacionRio}{Ubicación del río}: \ioObtener.
+	     \item \cdtRef{biodiversidad:distanciaBosque}{Distancia desde la escuela al bosque}: \ioObtener.
+	     \item \cdtRef{biodiversidad:ubicacionBosque}{Ubicación del bosque}: \ioObtener.
+	     \item \cdtRef{biodiversidad:distanciaSelva}{Distancia desde la escuela a la selva}: \ioObtener.
+	     \item \cdtRef{biodiversidad:ubicacionSelva}{Ubicación de la selva}: \ioObtener.
+	     \item \cdtRef{biodiversidad:distanciaMatorral}{Distancia desde la escuela al matorral}: \ioObtener.
+	     \item \cdtRef{biodiversidad:ubicacionMatorral}{Ubicación del matorral}: \ioObtener.
+	     \item \cdtRef{biodiversidad:distanciaEstanque}{Distancia desde la escuela al estanque}: \ioObtener.
+	     \item \cdtRef{biodiversidad:ubicacionEstanque}{Ubiación del estanque}: \ioObtener. 
+	     \end{itemize}
+
+	     \item Información de las áreas verdes:
+	     \begin{itemize}
+	      \item \cdtRef{escuela:superficieTotal}{Superficie del predio total}: \ioObtener.
+	     \item \cdtRef{escuela:superficieConstruida}{Superficie del predio construido}: \ioObtener.
+	     \item \cdtRef{biodiversidad:superficieAreasVerdes}{Superficie del predio de áreas verdes}: \ioObtener.
+	     \item \cdtRef{gls:tipoAreaVerde}{Tipos de áreas verdes}: \ioObtener. 
+	     \end{itemize}
+
+	     \item Información del inventario de flora y fauna:
+	     \begin{itemize}
+	     \item \cdtRef{inventario}{Biodiversidad}: \ioTabla{\cdtRef{inventario}{Flora/fauna}, \cdtRef{gls:categoriaFauna}{Categoría} o \cdtRef{gls:categoriaFlora}{Categoría}, \cdtRef{inventario:nombreComun}{Nombre común especie}, \cdtRef{inventario:nombreCientifico}{Nombre científico}, \cdtRef{gls:endemico}{Endémica}, \cdtRef{gls:riesgo}{En riesgo de desaparecer}, \cdtRef{inventario:cantidad}{Cantidad} y  \cdtRef{inventario:ubicación}{Ubicación}}{que estén en el sistema}. 
+	     \end{itemize}
+	     
+	    \end{itemize}
+
+	    \item Ambiente escolar:
+	    \begin{itemize}
+	    \item Información de los espacios con los que cuenta la escuela:
+	     \begin{itemize}
+	    \item \cdtRef{gls:tiposDeArea}{Tipo de espacios}: \ioObtener.
+	    \item \cdtRef{ambiente:uso}{Uso}: \ioObtener.    
+	    \end{itemize}
+	    \end{itemize}
+
+	    \item Consumo responsable:
+	    \begin{itemize}
+	      
+	      \item Información del consumo:
+	      \begin{itemize}
+	      \item \cdtRef{consumo:personasEncuestadas}{Número de personas encuestadas}: \ioObtener.
+	      \item \cdtRef{consumo:consumoAlimentosFrescos}{Alimentos frescos/naturales}: \ioObtener.
+	      \end{itemize}
+	      
+	    \end{itemize}
+	    \end{itemize}
+	    \end{UClist}
+	    }
+	    
+	     \UCitem{Salidas}{
+	    \begin{UClist}
+	      \begin{itemize}
+	      \item Consumo responsable:
+	    \begin{itemize}
+	      \item Información de las adquisiciones:
+	      \begin{itemize}
+	      \item \cdtRef{consumo:comprasAnioPapeleria}{Compras de insumos de papelería al año}: \ioObtener.
+	      \item \cdtRef{consumo:comprasReciclados}{Compras de insumos de papelería de material reciclado}: \ioObtener.
+	      \item \cdtRef{consumo:comprasAnioLimpieza}{Compras de insumos para limpieza al año}: \ioObtener.
+	      \item \cdtRef{consumo:comprasNoToxicos}{Compras de insumos de limpieza no tóxicos}: \ioObtener. 
+	      \item \cdtRef{consumo:comprasAnioElectronicos}{Compras de equipos eléctricos o electrónicos al año}: \ioObtener.
+	      \item \cdtRef{consumo:comprasBajoConsumo}{Compras de equipos eléctricos o electrónicos de bajo consumo de energía}: \ioObtener.	      
+	      \end{itemize}
+	      
+	    \end{itemize}
+
+	    \end{itemize}
+
+	    \UCli \cdtIdRef{MSG1}{Operación realizada exitosamente:} Se muestra en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} cuando el registro de aprobación o rechazo de la información base de la escuela se ha realizado correctamente.
+	\end{UClist}
+    }
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:inscrita}{Inscrita}.
+	    \UCli {\bf Interna:} Que la escuela cuente con información base registrada para cada una de sus líneas de acción en estado \cdtRef{estado:aprobarInfoBase}{Por aprobar}.
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} La información base para indicadores cambiará a estado \cdtRef{estado:aprobadaInfoBase}{Aprobada}.
+	    \UCli {\bf Interna:} La información base para indicadores cambiará a estado \cdtRef{estado:edicionInfoBase}{Edición}.
+	\end{UClist}
+    }
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+	    \UCli \cdtIdRef{RN-N12}{Calcular consumo total}: Calcula el consumo total de agua o energía eléctrica con base en la información ingresada de los recibos.
+	    \UCli \cdtIdRef{RN-N13}{Calcular importe total}: Calcula el importe total de agua o energía eléctrica con base en la información ingresada de los recibos.
+	\end{UClist}
+    }
+    
+    \UCitem{Errores}{
+	\begin{UClist}
+	    
+	    \UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} cuando no se ha ingresado un dato marcado como requerido.
+	    
+	     \UCli \cdtIdRef{MSG6}{Formato incorrecto}: Se muestra en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+	    
+	    \UCli \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}: Se muestra en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} cuando se ha excedido la longitud de alguno de los campos.
+	    
+	    \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} indicando al actor que no se puede aprobar o rechazar la información base de la escuela debido al estado en que se encuentra la escuela.  
+	\end{UClist}
+    }
+
+    \UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUIB 1}{Administrar registro de información base para escuelas}.}
+
+    %FUENTE: Especifique la fuente de información principal para la especificación del Caso de Uso: un documento, sistema existente, persona, minuta. Referencie dicho documento, sistema o persona.
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+%    }
+
+\end{UseCase}
+
+\begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita aprobar la información base de una escuela oprimiendo el botón \botOk del registro correspondiente, en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas}.
+    \UCpaso[\UCsist] Busca la información base previamente registrada para la escuela referente a cada una de las líneas de acción.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUIB 2}{Aprobar información base para indicadores} por medio de la cual se aprobará el registro de información base para la escuela.
+    \UCpaso[\UCactor] Revisa la información base registrada para cada una de las líneas de acción.
+    \UCpaso[\UCactor] Selecciona la opción {\bf Aprobar la información base para indicadores} de la sección ``Aprobar información base para indicadores'' de la pantalla \cdtIdRef{IUIB 2}{Aprobar información base para indicadores}. \refTray{B}.
+    \UCpaso[\UCsist] Habilita el botón \cdtButton{Aceptar} de la pantalla \cdtIdRef{IUIB 2.1}{Aprobar información base para indicadores: Aprobar información base para indicadores}.
+    \UCpaso[\UCactor] Solicita aprobar la información base registrada para la escuela oprimiendo el botón \cdtButton{Aceptar} de la pantalla \cdtIdRef{IUIB 2.1}{Aprobar información base para indicadores: Aprobar información base para indicadores}. \refTray{C}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Inscrita''. \refTray{A}. 
+    \UCpaso[\UCsist] Cambia el estado de la información base a ``Aprobada''.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} para indicar al actor que la aprobación de la información base se ha realizado exitosamente.    
+ \end{UCtrayectoria}
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita aprobar o rechazar la información base.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} indicando al actor que no puede aprobar o rechazar la información base para indicadores de agua debido a que la escuela no se encuentra en estado ``Inscrita''. 
+ \end{UCtrayectoriaA}
+ 
+  \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{El actor rechaza el registro de la información base.}
+    \UCpaso[\UCactor] Selecciona la opción {\bf Rechazar la información base para indicadores} de la sección ``Aprobar información base para indicadores'' de la pantalla \cdtIdRef{IUIB 2}{Aprobar información base para indicadores}.
+    \UCpaso[\UCsist] Habilita el botón \cdtButton{Aceptar} de la pantalla \cdtIdRef{IUIB 2.2}{Aprobar información base para indicadores: Rechazar información base}.
+    \UCpaso[\UCsist] Muestra el campo ``Comentarios'' en la pantalla \cdtIdRef{IUIB 2.2}{Aprobar información base para indicadores: Rechazar información base} para que el actor ingrese los comentarios que sustenten el rechazo de la información base.
+    \UCpaso[\UCactor] Ingresa los comentarios pertinentes en la pantalla \cdtIdRef{IUIB 2.2}{Aprobar información base para indicadores: Rechazar información base}. \label{cuib2:IngresarDatos}
+    \UCpaso[\UCactor] Solicita rechazar la información base registrada para la escuela oprimiendo el botón \cdtButton{Aceptar} de la pantalla \cdtIdRef{IUIB 2.2}{Aprobar información base para indicadores: Rechazar información base}. \refTray{C}.
+    \UCpaso[\UCsist] Verifica que los datos ingresados proporcionen información correcta con base en la regla de negocio \cdtIdRef{RN-S1}{Información correcta}. \refTray{D}. \refTray{E}. \refTray{F}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Inscrita''. \refTray{A}. 
+    \UCpaso[\UCsist] Cambia el estado de la información base a ``Rechazado''.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} para indicar al actor que el rechazo de la información base se ha realizado exitosamente.        
+ \end{UCtrayectoriaA}
+ 
+     \begin{UCtrayectoriaA}{C}{El actor desea cancelar la operación.}
+    \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} en la pantalla \cdtIdRef{IUIB 2}{Aprobar información base para indicadores}.
+    \UCpaso[\UCsist] Regresa a la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas}. 
+    \end{UCtrayectoriaA}
+    
+        \begin{UCtrayectoriaA}{D}{El actor no ingresó un dato marcado como requerido.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} en la pantalla \cdtIdRef{IUIB 2.2}{Aprobar información base para indicadores: Rechazar información base} indicando que el registro de los comentarios no puede realizarse debido a la falta de información requerida.
+    \UCpaso[] Continúa con el paso \ref{cuib2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+ 
+        \begin{UCtrayectoriaA}{E}{El actor ingresó un tipo de dato incorrecto.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG6}{Formato incorrecto} en la pantalla \cdtIdRef{IUIB 2.2}{Aprobar información base para indicadores: Rechazar información base} indicando que el registro de los comentarios no puede realizarse debido a que la información ingresada no es correcta.
+    \UCpaso[] Continúa con el paso \ref{cuib2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+    
+            \begin{UCtrayectoriaA}{F}{El actor ingresó un dato que excede la longitud máxima.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo} en la pantalla \cdtIdRef{IUIB 2.2}{Aprobar información base para indicadores: Rechazar información base} indicando que el registro de los comentarios no puede realizarse debido a que la longitud del campo excede la longitud máxima definida.
+    \UCpaso[] Continúa con el paso \ref{cuib2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+    

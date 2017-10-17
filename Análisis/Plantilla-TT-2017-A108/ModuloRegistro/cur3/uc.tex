@@ -1,0 +1,182 @@
+\begin{UseCase}{CUR 3}{Solicitar inscripción}
+    {
+    Este caso de uso permite al actor solicitar la inscripción de una escuela, el actor buscará la escuela por medio de su clave de centro de trabajo. Una vez encontrada la escuela deseada, se puede continuar con la inscripción.
+    }
+    
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Victor Lozano Ortega}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Registro}
+    \UCccitem{Prioridad}{Alta}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Alta}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{5 de Noviembre del 2014}
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+ 	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+ 	% FECHA: Anote la fecha en que se terminó la revisión.
+	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+ 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{Nombre de quien revisó}
+ 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir, terminar.}
+ 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+%	\begin{UClist}
+ 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+%			\RCitem{PC1}{\TOCHK{El título debe ser: CUR 3 Solicitar inscripción.}}{21 de octubre de 2014}
+%			\RCitem{PC2}{\TOCHK{En el resumen, debe usarse el término: inscripción, en todos los casos.}}{21 de octubre de 2014}
+%			\RCitem{PC3}{\TOCHK{En entradas, la región no es una entrada para el caso de uso.}}{21 de octubre de 2014} 			
+%			\RCitem{PC4}{\TOCHK{En el propósito, cambiar al inicio Realizar por solicitar, cambiar preinscripción por incripción}}{21 de octubre de 2014}
+%			\RCitem{PC5}{\TOCHK{En las precondiciones, cambiar preinscripción por inscripción}}{21 de octubre de 2014}
+%			\RCitem{PC6}{\TOCHK{En las postcondiciones, colocar entre paréntesis delante de donde dice: director de la escuela, que es el: coordinador del programa}}{21 de octubre de 2014}
+%			\RCitem{PC7}{\TOCHK{En fuente, la minuta de referencia es: minuta de la 3ra reunión de toma de requerimientos}}{21 de octubre de 2014}
+%			\RCitem{PC8}{\TOCHK{En la trayectoria alternativa A, regresar al paso 3}}{21 de octubre de 2014}
+%			\RCitem{PC9}{\TOCHK{Acomodar el orden de las trayectorias principales}}{21 de octubre de 2014}
+%			
+%			\RCitem{PC10}{\TOCHK{El título de la pantalla debe ser: IUR 3 Solicitar inscripción.}}{21 de octubre de 2014}
+%			\RCitem{PC11}{\TOCHK{Hacer que la descripción de la pantalla coincida con el caso de uso }}{21 de octubre de 2014}			
+%			\RCitem{PC12}{\TOCHK{Colocar el comando BUSQUEDA en la pantalla }}{21 de octubre de 2014}			
+%			\RCitem{PC13}{\TOCHK{Corregir pantalla, nota al pie de DATOS REQUERIDOS }}{21 de octubre de 2014}			
+%			\RCitem{PC14}{\TOCHK{Unificar redaccion de mensajes en pantalla }}{21 de octubre de 2014}			
+
+
+%			\RCitem{PC13}{\TOCHK{Liga y nombre de pantalla en la sección de salidas en MSG15 está mal  }}{27 de octubre de 2014}			
+%			\RCitem{PC13}{\TOCHK{Liga y nombre de pantalla en la sección de salidas en MSG17 está mal  }}{27 de octubre de 2014}						
+%			\RCitem{PC13}{\TOCHK{Trayectoria principal, paso 3, liga y nombre a la pantalla está mal  }}{27 de octubre de 2014}									
+%			\RCitem{PC13}{\TOCHK{Trayectoria principal, paso 11, liga y nombre a la pantalla está mal  }}{27 de octubre de 2014}								
+							
+ %		\end{UClist}		
+% }
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actores}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Solicitar la inscripción de una nueva escuela para integrarse al Programa de Escuelas Ambientalmente Responsables.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli \cdtRef{escuela:cct}{Clave de centro de trabajo}: \ioEscribir.
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist} 
+        \UCli \cdtRef{escuela:nombreEscuela}{Nombre de la escuela}: \ioObtener.
+        \UCli \cdtRef{escuela:nivelEscolar}{Nivel escolar}: \ioObtener.
+        \UCli \cdtRef{escuela:turno}{Turno}: \ioObtener.
+        \UCli \cdtRef{escuela:calle}{Calle}: \ioObtener.
+        \UCli \cdtRef{escuela:numero}{Número}: \ioObtener.
+        \UCli \cdtRef{escuela:localidad}{Localidad}: \ioObtener.
+        \UCli \cdtRef{escuela:municipio}{Municipio}: \ioObtener.
+        \UCli \cdtRef{escuela:codigoPostal}{Código postal}: \ioObtener.
+        \UCli \cdtRef{escuela:ambito}{Ámbito}: \ioObtener.
+        \UCli \cdtRef{escuela:control}{Control}: \ioObtener.
+        \UCli \cdtRef{escuela:servicio}{Servicio}: \ioObtener.
+        \UCli \cdtIdRef{MSG15}{Acudir a la DGAIR en caso de inconsitencias en la información}: Se muestra  como pantalla emergente en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} para notificar al actor que en caso de haber inconsistencias en la información debe referirse a la DGAIR (Dirección General de Acreditación, Incorporación y Revalidación).
+        \UCli \cdtIdRef{MSG17}{Requisitos de inscripción}: Se muestra como pantalla emergente en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} para notificar al actor sobre la información requerida para realizar la inscripción de la escuela al programa.
+	\end{UClist}
+    }
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la clave de centro de trabajo de la escuela a inscribir se encuentre en el catálogo de la DGAIR.
+	    \UCli {\bf Externa:} El actor solicita la inscripción de la escuela.
+	\end{UClist}
+    }
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+        \UCli {\bf Interna:} El actor podrá ingresar los datos del director (coordinador del programa) de la escuela.
+        \UCli {\bf Interna:} Se creará una escuela en estado de \cdtRef{estado:preinscripcion}{preinscripción}.
+	\end{UClist}
+    }
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+            \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+            \UCli \cdtIdRef{RN-S4}{Unicidad de identificadores}: Verifica que no exista una escuela con la misma clave de centro de trabajo registrada en el sistema.
+            \UCli \cdtIdRef{RN-N3}{Clave de centro de trabajo válida}: Verifica que la clave de centro de trabajo pertenezca a la entidad federativa del Estado de México.
+            \UCli \cdtIdRef{RN-N4}{Formato de clave de centro de trabajo}: Verifica que la clave de centro de trabajo cumpla con el formato especificando.
+	\end{UClist}
+    }
+    \UCitem{Errores}{
+	\begin{UClist}
+	  \UCli \cdtIdRef{MSG4}{No se encontró información sustantiva}: Se muestra en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} cuando no hay información referente a la escuela.
+	  \UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} cuando no se ha ingresado un dato marcado como requerido.
+	  \UCli \cdtIdRef{MSG6}{Formato incorrecto}: Se muestra en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} especificando el dato cuyo valor no cumple con el tipo de dato definido en el diccionario de datos.
+	  \UCli \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}: Se muestra en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} cuando el actor proporciona un dato que excede la longitud máxima.
+	  \UCli \cdtIdRef{MSG8}{Registro repetido}: Se muestra en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} cuando ya existe una escuela inscrita con la misma clave de centro de trabajo.
+	  \UCli \cdtIdRef{MSG14}{Error en formato de clave de centro de trabajo}: Se muestra en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} indicando que se ha ingresado una clave de centro de trabajo inválida.
+	\UCli \cdtIdRef{MSG12}{Entidad no encontrada}: Se muestra en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} indicando que no hay información asociada a la clave de centro de trabajo ingresada.	  
+	\end{UClist}
+    }
+    \UCitem{Tipo}{Primario.}
+    \UCitem{Fuente}{
+	\begin{UClist}
+	    \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+	\end{UClist}
+    }
+\end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita registrar una nueva escuela mediante el link ``Inscribirse al programa'' de la pantalla \cdtIdRef{IUR 1}{Iniciar de sesión}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} en la cual se realizará el registro de la escuela.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG17}{Requisitos de inscripción} como pantalla emergente en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} 
+		      para notificar al actor sobre la información requerida para realizar la inscripción de la escuela al programa.
+    \UCpaso[\UCactor] Acepta la notificación oprimiendo el botón \cdtButton{Aceptar} de la pantalla emergente.
+    \UCpaso[\UCactor] Ingresa la clave de centro de trabajo de la escuela en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción}. \label{cur3:Acciones}
+    \UCpaso[\UCactor] Presiona el botón \botBus de la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción}.
+    \UCpaso[\UCsist] Verifica que los datos proporcionados por el actor sean correctos como lo indica la regla de negocio \cdtIdRef{RN-S1}{Información correcta}. \refTray{A} \refTray{B} \refTray{C}
+    \UCpaso[\UCsist] Verifica que la clave de centro de trabajo sea válida como lo indica la regla de negocio \cdtIdRef{RN-N4}{Formato de clave de centro de trabajo}. \refTray{D}
+    \UCpaso[\UCsist] Verifica que existan datos en el catálogo de escuelas. \refTray{E}
+    \UCpaso[\UCsist] Busca los datos de la escuela registrados en el sistema. \refTray{F}
+    \UCpaso[\UCsist] Muestra los datos de la escuela registrados en el sistema en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción}.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG15}{Acudir a la DGAIR en caso de inconsitencias en la información} como pantalla emergente en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} para notificar al actor que en caso de haber inconsistencias en la información debe referirse a la DGAIR (Dirección General de Acreditación, Incorporación y Revalidación).
+    \UCpaso[\UCactor] Acepta la notificación oprimiendo el botón \cdtButton{Aceptar} de la pantalla emergente.
+    \UCpaso[\UCactor] Solicita registrar la escuela oprimiendo el botón \cdtButton{Aceptar} en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción}. \refTray{G}
+    \UCpaso[\UCsist] Verifica que no exista ninguna escuela registrada con la misma clave de centro de trabajo como lo indica la regla de negocio \cdtIdRef{RN-S4}{Unicidad de identificadores}. \refTray{H}
+    \UCpaso[\UCsist] Registra a la escuela en estado  de \cdtRef{estado:preinscripcion}{preinscripción}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUR 4}{Registrar datos del director} para que el actor pueda continuar con la inscripción de la escuela ingresando los datos del director.
+ \end{UCtrayectoria}
+ 
+ \begin{UCtrayectoriaA}{A}{El actor no ingresó un dato marcado como requerido.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} indicando que no se puede realizar el registro de la escuela debido a la falta de información requerida.
+   \UCpaso[] Continúa en el paso \ref{cur3:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{B}{El actor proporciona un dato que excede la longitud máxima.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo} en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} especificando el dato cuya longitud excede el tamaño máximo permitido.
+   \UCpaso[] Continúa en el paso \ref{cur3:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+ 
+ \begin{UCtrayectoriaA}{C}{El actor ingresó un tipo de dato incorrecto.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG6}{Formato incorrecto} y señala el campo que presenta el dato inválido en la 
+    pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} para indicar que se ha ingresado un tipo de dato inválido.
+    \UCpaso[] Continúa con el paso \ref{cur3:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{D}{El actor ingresó una clave de centro de trabajo inválida.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG14}{Error en formato de clave de centro de trabajo} en la 
+    pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} para indicar que se ha ingresado una clave de centro de trabajo inválida.
+    \UCpaso[] Continúa con el paso \ref{cur3:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}[Fin de caso de uso]{E}{No existe información registrada en el sistema.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG4}{No se encontró información sustantiva} en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} indicando que no hay información registrada en el catálogo.
+  \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{F}{La escuela no se encuentra registrada en el sistema.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG12}{Entidad no encontrada} en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} indicando que no existe información asociada a la clave de centro de trabajo ingresada.
+   \UCpaso[] Continúa en el paso \ref{cur3:Acciones} de la trayectoria principal.
+  \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}[Fin de caso de uso]{G}{El actor desea cancelar la operación.}
+    \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción}.
+    \UCpaso[\UCsist] Regresa a la pantalla \cdtIdRef{IUR 1}{Iniciar de sesión}.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{H}{El actor ingresó una clave de centro de trabajo que ya existe en el sistema.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG8}{Registro repetido} en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción} indicando que ya existe una escuela registrada con la misma clave de centro de trabajo.
+   \UCpaso[] Continúa en el paso \ref{cur3:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}

@@ -1,0 +1,34 @@
+\subsection{IUR 10 Registrar responsable del programa}
+
+\subsubsection{Objetivo}
+
+% Explicar el objetivo para el que se construyo la interfaz, generalmente es la descripción de la actividad a desarrollar, como Seleccionar grupos para inscribir materias de un alumno, controlar el acceso al sistema mediante la solicitud de un login y password de los usuarios, etc.
+	
+      Esta pantalla permite al actor \cdtRef{actor:usuarioEscuela}{Coordinador del programa} registrar al responsable del programa en el sistema en caso de no haber sido registrado previamente. 
+\subsubsection{Diseño}
+
+% Presente la figura de la interfaz y explique paso a paso ``a manera de manual de usuario'' como se debe utilizar la interfaz. No olvide detallar en la redacción los datos de entradas y salidas. Explique como utilizar cada botón y control de la pantalla, para que sirven y lo que hacen. Si el Botón lleva a otra pantalla, solo indique la pantalla y explique lo que pasará cuando se cierre dicha pantalla (la explicación sobre el funcionamiento de la otra pantalla estará en su archivo correspondiente).
+	En la figura~\ref{IUR 10} se muestra la pantalla ''Registrar responsable del programa'', en la cual se ingresan los datos solicitados para el responsable del programa. 
+
+
+	\IUfig[.5]{pantallas/registro/IUR10}{IUR 10}{Registrar responsable del programa}
+	
+	
+
+
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor registrar en el sistema del responsable de programa. 
+	\item \cdtButton{Cancelar}: Permite al actor cancelar el registro del responsable del programa.
+\end{itemize}
+
+\subsubsection{Mensajes}
+	
+\begin{description}
+	  \item[\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUR 9}{Administrar responsable del programa} cuando el registro se realizó correctamente.
+	  \item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUR 10}{Registrar responsable del programa} cuando no se haya proporcionado un dato requerido.
+	  \item[\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUR 10}{Registrar responsable del programa} especificando el dato cuyo valor no cumple con el tipo de dato definido en el diccionario de datos
+	  \item[\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la \cdtIdRef{IUR 10}{Registrar responsable del programa} cuando el actor proporciona un dato que excede la longitud máxima.
+	  \item[\cdtIdRef{MSG16}{Error en formato de correo electrónico}:] Se muestra en la pantalla \cdtIdRef{IUR 10}{Registrar responsable del programa} indicando que el correo electrónico proporcionado no cumple con un formato válido.
+
+\end{description}

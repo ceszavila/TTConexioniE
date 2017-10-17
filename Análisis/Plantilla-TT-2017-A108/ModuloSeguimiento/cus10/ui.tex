@@ -1,0 +1,39 @@
+\subsection{IUS 10 Registrar avance de meta de biodiversidad}
+
+\subsubsection{Objetivo}
+
+Esta pantalla permite al \cdtRef{actor:usuarioEscuela}{Coordinador del programa} visualizar la información de la meta de biodiversidad y especificar el avance de los valores asociados a esta.
+    
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUS 10} se muestra la pantalla ``Registrar avance de meta de biodiversidad'', por medio de la cual se podrá consultar la información de la meta de biodiversidad. El actor tendrá la facultad de registrar avances para los valores asociados a esta.\\
+        
+    Una vez que se haya ingresado toda la información solicitada para el registro de los avances deberá oprimir el botón \cdtButton{Aceptar}, el sistema validará y registrará la información sólo si se han cumplido todas las reglas de negocio establecidas.\\
+    
+    Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUS 8}{Administrar avances de biodiversidad}, para indicar que la información de los avances para la meta se han registrado exitosamente.
+        
+    \IUfig[.9]{pantallas/seguimiento/cus10/ius10_1}{IUS 10}{Registrar avance de meta de biodiversidad}
+    \IUfig[.9]{pantallas/seguimiento/cus10/ius10_2}{IUS 10.1}{Registrar avance de meta de biodiversidad (Tipo Capacitación o sensibilización)}
+    \IUfig[.9]{pantallas/seguimiento/cus10/ius10_3}{IUS 10.2}{Registrar avance de meta de biodiversidad (Tipo plantación)}
+
+\subsubsection{Comandos}
+    \begin{itemize} 
+    \item \cdtButton{Aceptar}: Permite confirmar el registro de los avances para la meta de biodiversidad, dirige a la pantalla \cdtIdRef{IUS 8}{Administrar avances de biodiversidad}.
+    \item \cdtButton{Cancelar}: Permite cancelar el registro de los avances para la meta de biodiversidad, dirige a la pantalla \cdtIdRef{IUS 8}{Administrar avances de biodiversidad}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+    
+        \item [\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUS 8}{Administrar avances de biodiversidad} cuando el registro del avance para la meta se ha realizado correctamente.
+        
+        \item [\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUS 10}{Registrar avance de meta de biodiversidad} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+        
+        \item [\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUS 10}{Registrar avance de meta de biodiversidad} cuando se ha excedido la longitud de alguno de los campos.  
+        
+        \item [\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUS 8}{Administrar avances de biodiversidad} indicando al actor que no se pueden registrar avances en la meta debido al estado en que se encuentra el seguimiento.
+
+        \item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla \cdtIdRef{IUS 8}{Administrar avances de biodiversidad} para indicarle al actor que no puede administrar los avances de agua debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la acción.
+
+    \end{description}

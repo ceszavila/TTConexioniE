@@ -1,0 +1,132 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUIB 1}{Enviar información base}
+    {
+	La información base permite tener una visión general del estado en que se encuentra la escuela con respecto a las diferentes líneas de acción. Este caso de uso permite enviar dicha información una vez que el actor ha ingresado los datos correspondientes para cada una de las líneas de acción.
+    }
+    
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{David Ortega Pacheco}
+    \UCitem{Operación}{Administración}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Alta}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{2 de Diciembre del 2014}
+    
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+ 	\UCccsection{Revisión Versión 0.1} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{David Ortega Pacheco}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ 			\RCitem{PC1}{\DONE{Resumen, Cambiar al final a: ... los datos correspondientes para cada una de las líneas de acción.}}{Fecha de entrega}
+ 			\RCitem{PC2}{\DONE{Propósito, al final agregar: ... por el Director del programa en la SMAGEM}}{Fecha de entrega}
+ 			\RCitem{PC3}{\DONE{Trayectoria principal: paso 1, la opción es: Información base para indicadores}}{Fecha de entrega}
+ 			\RCitem{PC4}{\DONE{Trayectoria principal: paso 5, esta rota el enlace}}{Fecha de entrega}{Fecha de entrega}
+ 			\RCitem{PC5}{\DONE{Trayectoria principal: paso 5, dejar solo la referencia al mensaje}}{Fecha de entrega}
+ 			\RCitem{PC6}{\DONE{Trayectoria alternativa A: especificar que aparece sobre la pantalla en que se encuentra navegando el actor}}{Fecha de entrega}
+ 			\RCitem{PC7}{\DONE{Precondiciones: tomar en cuenta el estado de EDICIÓN}}{Fecha de entrega}
+ 			\RCitem{PC8}{\TOCHK{Precondiciones: tomar en cuenta cuando la información se quiere enviar nuevemente, pero ya fue enviada}}{Fecha de entrega}
+% 			\RCitem{PC9}{\TODO{Precondiciones: tomar en cuenta cuando la información se quiere enviar nuevemente, pero ya fue enviada}}{Fecha de entrega}
+ 			
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Enviar la información base registrada para cada una de las líneas de acción para que sea revisada por el \cdtRef{actor:usuarioSMAGEM}{Director del programa} en la SMAGEM.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli \cdtIdRef{MSG34}{Confirmación de envío de información}: Se muestra en una pantalla emergente para que el actor confirme el envío de la información base.
+	\end{UClist}
+    }
+
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:infoBaseAprobar}{Información base por aprobar}.
+	    \UCli {\bf Interna:} Que el periodo de aprobación de información base se encuentre vigente.
+	    \UCli {\bf Interna:} Que existan registros de información base para indicadores de todas las líneas de acción.
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} La escuela estará en estado \cdtRef{estado:infoBaseAprobar}{Información base por aprobar}.
+	\end{UClist}
+    }
+    
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli Ninguna.
+	\end{UClist}
+    }
+    
+    \UCitem{Errores}{
+	\begin{UClist}
+	    \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUIB 3}{Enviar información base} indicando al actor que no se puede enviar la información base para indicadores debido al estado en que se encuentra la escuela.
+	    \UCli \cdtIdRef{MSG37}{Falló el envío de la información base}: Se muestra sobre la pantalla en que esté navegando el actor para indicarle que no puede enviar la información base debido a que falta registrar información base para indicadores de alguna línea de acción.
+	    \UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra sobre la pantalla en que esté navegando el actor para indicarle que no puede enviar la información base debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la acción.
+	\end{UClist}
+    }
+
+    \UCitem{Tipo}{Primario.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+ %   }
+\end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita enviar la información base, seleccionando en el menú \cdtIdRef{MN2}{Menú del Coordinador del programa} la opción ``Información base para indicadores'' y posteriormente la opción ``Enviar información base''. 
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Información base por aprobar''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para el envio de información base. \refTray{B}.
+    \UCpaso[\UCsist] Verifica que existan registros de información base para cada una de las líneas de acción. \refTray{C}.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG34}{Confirmación de envío de información} en una pantalla emergente.
+    \UCpaso[\UCactor] Solicita confirmar el envío de la información oprimiendo el botón \cdtButton{Aceptar} en una pantalla emergente. \refTray{D}. \refTray{E}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Información base por aprobar''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para el envio de información base. \refTray{B}.
+    \UCpaso[\UCsist] Envía la información para que sea revisada por el Director del programa.    
+    \UCpaso[\UCsist] Cambia el estado de la información base a ``Por aprobar''.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} sobre la pantalla en que se encuentre navegando el actor para indicar que la información ha sido enviada a revisión exitosamente.
+ \end{UCtrayectoria}
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita enviar la información base para indicadores.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} sobre la pantalla en que se encuentre navegando el actor indicando que no puede enviar la información base para indicadores debido a que la escuela no se encuentra en estado ``Información base por aprobar''. 
+ \end{UCtrayectoriaA}
+
+  \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para el envío de información base.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} sobre la pantalla en que se encuentre navegando el actor indicando que no puede enviar la información base para indicadores debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para el envío de información. 
+ \end{UCtrayectoriaA}
+ 
+  \begin{UCtrayectoriaA}[Fin del caso de uso]{C}{Existen líneas de acción sin registros de información base.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG37}{Falló el envío de la información base} sobre la pantalla en que se encuentre navegando el actor indicando que no puede enviar la información base debido a que falta registrar información base para alguna línea de acción. 
+ \end{UCtrayectoriaA}
+ 
+     \begin{UCtrayectoriaA}[Fin del caso de uso]{D}{El actor desea cancelar el envío de información.}
+    \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} en la pantalla emergente.
+    \end{UCtrayectoriaA}
+    
+     \begin{UCtrayectoriaA}[Fin del caso de uso]{E}{La información ya ha sido enviada.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG39}{La información ya ha sido enviada} sobre la pantalla en que se encuentre navegando el actor indicando que no puede enviar la información debido a que esta ya ha sido enviada anteriormente. 
+    \end{UCtrayectoriaA}
+

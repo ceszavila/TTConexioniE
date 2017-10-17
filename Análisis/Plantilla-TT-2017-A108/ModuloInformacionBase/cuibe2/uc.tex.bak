@@ -1,0 +1,183 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUIBE 2}{Registrar información base para indicadores de energía}
+    {
+	  Este caso de uso permite al actor el registro o modificación de informacón base que contribuya como referencia para los indicadores de energía, proporcionando una visión general del estado en que se encuentra una escuela con respecto al consumo y ahorro de energía en un periodo de tiempo definido. Una vez que los datos solicitados para el registro de la información base para indicadores de energía han sido ingresados, el sistema valida la información y esta queda registrada.
+    }
+    
+    \UCitem{Versión}{0.1}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Jessica Stephany Becerril Delgado}
+    \UCccitem{Evaluador}{}
+    \UCitem{Operación}{Registro}
+    \UCccitem{Prioridad}{Media}
+    \UCccitem{Complejidad}{Media}
+    \UCccitem{Volatilidad}{Media}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{25 de Noviembre del 2014}
+
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ 			\RCitem{PC1}{\TODO{Resumen: Acento al fianl en la palabra ESTA:ÉSTA}}{Fecha de entrega}
+ 			\RCitem{PC2}{\TODO{Entradas: La liga de AÑO no es correcta}}{Fecha de entrega}
+ 			\RCitem{PC3}{\TODO{Salidas: La liga de AÑO no es correcta}}{Fecha de entrega}
+ 			\RCitem{PC3}{\TODO{Trayectoria principal: se debe verificar también que este en el estado de EDICIÓN}}{Fecha de entrega}
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Registrar o modificar la información base que permita conocer el estado en que se encuentra una escuela en cuestión de consumo y ahorro de energía.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli Información del consumo de electricidad:
+	    \begin{itemize}
+	    \item \cdtRef{energia:cuentaConServicio}{Cuenta con servicio de energía}: \ioRadioBoton.
+	    \item \cdtRef{energia:cuentaConRecibos}{Recibos de energía}: \ioRadioBoton.
+	    \item \cdtRef{energia:tipoDePeriodo}{Tipo de periodo}: \ioSeleccionar.
+	    \item \cdtRef{mensual:mes}{Mes}: \ioSeleccionar.
+	    \item \cdtRef{bimestral:bimestre}{Bimestre}: \ioSeleccionar.
+	    \item \cdtRef{semestral:semestre}{Semestre}: \ioSeleccionar.
+	    \item \cdtRef{periodo-consumo:anual}{Año}: \ioSeleccionar.	    
+	    \item \cdtRef{periodo-consumo:consumo}{Consumo por tipo de periodo}: \ioEscribir.
+	    \item \cdtRef{periodo-consumo:importe}{Importe por tipo de periodo}: \ioEscribir.	    
+	    \end{itemize}
+
+	\end{UClist}
+    }
+
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli Información del consumo de electricidad:
+	    \begin{itemize}
+	    \item \cdtRef{energia:cuentaConServicio}{Cuenta con servicio de energía}: \ioObtener.
+	    \item \cdtRef{energia:cuentaConRecibos}{Recibos de energía}: \ioObtener.
+	    \item \cdtRef{energia:tipoDePeriodo}{Tipo de periodo}: \ioObtener.
+	    \item \cdtRef{mensual:mes}{Mes}: \ioObtener.
+	    \item \cdtRef{bimestral:bimestre}{Bimestre}: \ioObtener.
+	    \item \cdtRef{semestral:semestre}{Semestre}: \ioObtener.
+	    \item \cdtRef{periodo-consumo:anual}{Año}: \ioObtener.	    
+	    \item \cdtRef{periodo-consumo:consumo}{Consumo por tipo de periodo}: \ioObtener.
+	    \item \cdtRef{periodo-consumo:importe}{Importe por tipo de periodo}: \ioObtener.
+	    
+	    \item Consumo total: \ioCalcular \cdtIdRef{RN-N12}{Calcular consumo total}.
+	    \item Importe total: \ioCalcular \cdtIdRef{RN-N13}{Calcular importe total}.
+	    \end{itemize}
+	    
+	    \UCli \cdtIdRef{MSG1}{Operación realizada exitosamente:} Se muestra en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} cuando el registro de la información base para indicadores de energía se ha realizado correctamente.
+	\end{UClist}
+    }
+
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:inscrita}{Inscrita}. 
+	    \UCli {\bf Interna:} Que la información base para indicadores de energía esté en estado \cdtRef{estado:edicionInfoBase}{Edición}.
+	\end{UClist}
+    }
+    
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Se podrá modificar la información base definida para los indicadores de energía a través del caso de uso \cdtIdRef{CUIBE 2}{Registrar información base para indicadores de energía}.
+	    \UCli {\bf Interna:} La información base para indicadores de energía estará en estado \cdtRef{estado:edicionInfoBase}{Edición}.
+	\end{UClist}
+    }
+    
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+	    \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+	    \UCli \cdtIdRef{RN-N12}{Calcular consumo total}: Calcula el consumo total de energía eléctrica con base en la información ingresada de los recibos.
+	    \UCli \cdtIdRef{RN-N13}{Calcular importe total}: Calcula el importe total de energía eléctrica con base en la información ingresada de los recibos.
+	\end{UClist}
+    }
+    
+    \UCitem{Errores}{
+	\begin{UClist}
+	    \UCli \cdtIdRef{MSG4}{No se encontró información sustantiva}: Se muestra en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} cuando el sistema no cuenta con información en los catálogos de bimestre o año.
+	    
+	    \UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} cuando no se ha ingresado un dato marcado como requerido.
+	    
+	    \UCli \cdtIdRef{MSG6}{Formato incorrecto}: Se muestra en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+	    
+	    \UCli \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}: Se muestra en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} cuando se ha excedido la longitud de alguno de los campos.	    
+	    
+	    \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} indicando al actor que no se puede registrar la información base para indicadores de energía debido al estado en que se encuentra la escuela. 
+	    
+	    \UCli \cdtIdRef{MSG30}{Confirmar la modificación de un registro}: Se muestra en la pantalla emergente \cdtIdRef{IUIBE 2.1}{Registrar información base para indicadores de energía: Mensaje de confirmación} para indicar al actor que al guardar los cambios realizados la información previa se perderá.  
+	\end{UClist}
+    }
+
+    \UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUIBE 1}{Administrar información base para indicadores de energía}.}
+
+%    \UCitem{Fuente}{
+%	\begin{UClist}
+%	    \UCli Minuta de la reunión \cdtIdRef{M-17RT}{Reunión de trabajo}.
+%	\end{UClist}
+%    }
+\end{UseCase}
+
+\begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita registrar la información base para indicadores de energía oprimiendo el botón \botReg de la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Inscrita''. \refTray{A}.
+    \UCpaso[\UCsist] Busca la información referente a los catálogos de tipo de periodo, mes, bimestre, semestre y año. \refTray{B}.
+    \UCpaso[\UCsist] Busca la información previamente registrada referente a la información base para indicadores.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} por medio de la cual se realizará el registro de información base para indicadores de energía.
+    \UCpaso[\UCactor] Ingresa la información referente a la información base para indicadores de energía en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía}. \label{cuibe2:IngresarDatos}
+    \UCpaso[\UCactor] Oprime el botón \cdtButton{Aceptar} en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} para confirmar el registro de la información base para indicadores. \refTray{C}. \refTray{E}.
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Inscrita''. \refTray{A}. \label{cuibe2:VerificarRegistro}
+    \UCpaso[\UCsist] Verifica que los datos ingresados proporcionen información correcta con base en la regla de negocio \cdtIdRef{RN-S1}{Información correcta}. \refTray{F}. \refTray{G}. \refTray{H}.
+    \UCpaso[\UCsist] Registra la información base para indicadores de energía.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} para indicar al actor que el registro de la información se ha realizado exitosamente.    
+ \end{UCtrayectoria}
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en un estado que permita administrar la información base.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} indicando al actor que no puede registrar la información base para indicadores de energía debido a que la escuela no se encuentra en estado ``Inscrita''. 
+ \end{UCtrayectoriaA}
+ 
+  \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{No existe información base en los catálogos de bimestre inicial o año.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG4}{No se encontró información sustantiva} en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} indicando al actor que no puede registrar la información base para indicadores de energía debido a que no se cuenta con información sustantiva para los catálogos de bimestre actual o año.
+ \end{UCtrayectoriaA}
+ 
+  \begin{UCtrayectoriaA}{C}{El actor desea modificar la información base para indicadores de energía.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG30}{Confirmar la modificación de un registro} en la pantalla emergente \cdtIdRef{IUIBE 2.1}{Registrar información base para indicadores de energía: Mensaje de confirmación} para que el actor confirme la modificación de la información base para indicadores de energía.
+    \UCpaso[\UCactor] Oprime el botón \cdtButton{Aceptar} de la pantalla emergente \cdtIdRef{IUIBE 2.1}{Registrar información base para indicadores de energía: Mensaje de confirmación} confirmando la modificación de la información. \refTray{D}.
+    \UCpaso[] Continúa con el paso \ref{cuibe2:VerificarRegistro} de la trayectoria principal.    
+ \end{UCtrayectoriaA}
+ 
+   \begin{UCtrayectoriaA}{D}{El actor desea cancelar la modificación de la información base para indicadores de energía.}
+    \UCpaso[\UCactor] Solicita cancelar la modificación de la información oprimiendo el botón \cdtButton{Cancelar} de la pantalla emergente \cdtIdRef{IUIBE 2.1}{Registrar información base para indicadores de energía: Mensaje de confirmación}.
+    \UCpaso[] Continúa con el paso \ref{cuibe2:IngresarDatos} de la trayectoria principal.    
+ \end{UCtrayectoriaA}
+ 
+    \begin{UCtrayectoriaA}{E}{El actor desea cancelar la operación.}
+    \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía}.
+    \UCpaso[\UCsist] Regresa a la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía}. 
+    \end{UCtrayectoriaA}
+  
+    \begin{UCtrayectoriaA}{F}{El actor no ingresó un dato marcado como requerido.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} indicando que el registro de información base para indicadores de energía no puede realizarse debido a la falta de información requerida.
+    \UCpaso[] Continúa con el paso \ref{cuibe2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+ 
+        \begin{UCtrayectoriaA}{G}{El actor ingresó un tipo de dato incorrecto.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG6}{Formato incorrecto} en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} indicando que el registro de información base para indicadores de energía no puede realizarse debido a que la información ingresada no es correcta.
+    \UCpaso[] Continúa con el paso \ref{cuibe2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}
+    
+            \begin{UCtrayectoriaA}{H}{El actor ingresó un dato que excede la longitud máxima.}    
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo} en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} indicando que el registro de información base para indicadores de energía no puede realizarse debido a que la longitud del campo excede la longitud máxima definida.
+    \UCpaso[] Continúa con el paso \ref{cuibe2:IngresarDatos} de la trayectoria principal.     
+    \end{UCtrayectoriaA}

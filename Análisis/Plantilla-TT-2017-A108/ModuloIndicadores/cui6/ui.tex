@@ -1,0 +1,21 @@
+\subsection{IUI 6 Consultar indicadores de ambiente escolar}
+\subsubsection{Objetivo}
+	
+	En esta pantalla el \cdtRef{actor:usuarioEscuela}{Coordinador del programa} puede conocer los valores de los indicadores
+	de la línea de acción ``Ambiente escolar''.	
+
+\subsubsection{Diseño}
+
+    En la figura ~\ref{IUI 6} se muestra la pantalla ``Consultar indicadores de ambiente escolar'', por medio de la cual 
+    se podrán consultar los valores de los indicadores de ambiente escolar.
+
+    \IUfig[.9]{pantallas/indicadores/cui6/iui6}{IUI 6}{Consultar indicadores de ambiente escolar}
+
+\subsubsection{Mensajes}
+
+	
+\begin{description}
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla en que se encuentre navegando el actor cuando el estado de la escuela no es ``Por acreditar''.
+	\item[\cdtRef{MSG42}{No puede calcularse el indicador}:] Se muestra en la pantalla \cdtIdRef{IUI 6}{Consultar indicadores de agua} indicando que no se puede realizar el cálculo del valor del indicador
+				     debido a que no se cuenta con la información necesaria.
+\end{description}

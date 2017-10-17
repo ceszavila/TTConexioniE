@@ -1,0 +1,61 @@
+\subsection{IUIB 2 Aprobar información base para indicadores}
+
+\subsubsection{Objetivo}
+
+      En esta pantalla el \cdtRef{actor:usuarioSMAGEM}{Director del programa} puede aprobar o rechazar el registro de información base de las diferentes líneas de acción para una escuela después de revisar que esta sea correcta.
+
+\subsubsection{Diseño}
+
+    
+    En la figura~\ref{IUIB 2} se muestra la pantalla ``Aprobar información base para indicadores'', en la cual se visualiza la información base registrada para la escuela por cada una de las líneas de acción y se define si dicha información es correcta o requiere cambios.\\
+    
+      En la sección de ``Información de la escuela'' se visualizará la clave del centro de trabajo, el nombre de la escuela y el municipio al que esta pertenece, en sección de información base se mostrarán seis tabuladores, uno por cada línea de acción, al seleccionar cada uno se visualizará la información base referente a la línea de acción seleccionada.\\
+      
+      Para el tabulador referente a la línea de acción de ``Agua'' el actor visualizará los sistemas de abastecimiento registrados y una tabla con el consumo de agua e importe bimestral si se definió la frecuencia de llegada de recibos en forma bimestral como se muestra en la figura~\ref{IUIB 2.3}. Si definió la frecuencia de llegada de recibos de cobro por concepto de agua en forma anual únicamente se mostrará el consumo e importe anual. En el caso de que no haya registrado recibos se mostrará el consumo e importe anual promedio. Si definió que no tiene acceso al servicio de agua no se mostrará información.\\
+      
+      Para el tabulador referente a la línea de acción de ``Residuos sólidos'' el actor visualizará una tabla con los residuos sólidos registrados para la escuela, el tipo, residuo y total semanal producido de cada uno de ellos como se muestra en la figura~\ref{IUIB 2.4}.\\
+      
+      Para el tabulador referente a la línea de acción de ``Energía'' el actor visualizará una tabla con el consumo de energía eléctrica e importe bimestral si se definió la frecuencia de llegada de recibos en forma bimestral. Si definió la frecuencia de llegada de recibos de cobro por concepto de energía eléctrica en forma anual únicamente se mostrará el consumo e importe anual. En el caso de que no haya registrado recibos se mostrará el consumo e importe anual promedio como se muestra en la figura~\ref{IUIB 2.5}. Si definió que no tiene acceso al servicio de energía eléctrica no se mostrará información.\\
+    
+      Para el tabulador referente a la línea de acción de ``Biodiversidad'' el actor visualizará la información referente al número de personas que conocen el concepto de biodiversidad, la información referente a los ecosistemas y áreas verdes que se encuentran cerca de la escuela, así como también una tabla donde podrá visualizar las especies animales y vegetales registradas, como se muestra en la figura~\ref{IUIB 2.6}.\\
+      
+      Para el tabulador referente a la línea de acción de ``Ambiente escolar'' podrá consultar los espacios con los que cuenta la escuela, así como también el uso particular de cada uno de ellos como se muestra en la figura~\ref{IUIB 2.7}. En el tabulador ``Consumo responsable'' podrá consultar la información referente al consumo de alimentos frescos por parte de la comunidad escolar, así como tambien las adquisiciones que la escuela hace de materiales ambientalmente amigables como se muestra en la figura~\ref{IUIB 2.8}.\\
+      
+      En la sección ``Aprobar información base para indicadores'' el actor puede elegir entre dos opciones: {\bf Aprobar la información base para indicadores} y {\bf Rechazar la información base para indicadores}, el botón \cdtButton{Aceptar} permanecerá desactivado hasta que el actor seleccione alguna de las opciones anteriormente mencionadas.\\
+      
+      En el caso de que el actor seleccione la opción {\bf Rechazar la información base para indicadores}, se mostrará un campo para que el actor ingrese los comentarios que sustenten el rechazo de la información base como se muestra en la figura~\ref{IUIB 2.2}. Cuando el actor seleccione alguna de las dos opciones el botón \cdtButton{Aceptar} se activará como se muestra en la figura~\ref{IUIB 2.1}.\\
+      
+      Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUIB 1}{ Administrar registro de información base para escuelas}, para indicar que la información base se aprobó o rechazó exitosamente, según sea el caso.
+      
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2AprobarRegistro.png}{IUIB 2}{Aprobar información base para indicadores}
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2AprobarRegistroA.png}{IUIB 2.1}{Aprobar información base para indicadores: Aprobar la información base para indicadores}
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2RechazarRegistro.png}{IUIB 2.2}{Aprobar información base para indicadores: Rechazar la información base para indicadores}
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2Agua.png}{IUIB 2.3}{Aprobar información base para indicadores: Tabulador de agua}
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2Residuos.png}{IUIB 2.4}{Aprobar información base para indicadores: Tabulador de residuos sólidos}
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2Energia.png}{IUIB 2.5}{Aprobar información base para indicadores: Tabulador de energía}
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2Biodiversidad.png}{IUIB 2.6}{Aprobar información base para indicadores: Tabulador de biodiversidad}
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2Ambiente.png}{IUIB 2.7}{Aprobar información base para indicadores: Tabulador de ambiente escolar}
+      \IUfig[.9]{pantallas/InformacionBase/cuib2/IUIB2Consumo.png}{IUIB 2.8}{Aprobar información base para indicadores: Tabulador de consumo responsable}
+
+
+\subsubsection{Comandos}
+    \begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor aprobar o rechazar  la información base registrada para la escuela, dirige a la pantalla \cdtIdRef{IUIB 1}{ Administrar registro de información base para escuelas}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar la aprobación de la información base para la escuela, dirige a la pantalla \cdtIdRef{IUIB 1}{ Administrar registro de información base para escuelas}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+      
+	     \item [\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} cuando se ha aprobado o rechazado la información base de la escuela exitosamente.
+	     
+	     \item [\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUIB 2}{Registrar información base de escuelas} cuando no se ha ingresado un dato marcado como requerido.
+	    
+	     \item [\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUIB 2}{Registrar información base de escuelas} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+	    
+	    \item [\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUIB 2}{Registrar información base de escuelas} cuando se ha excedido la longitud de alguno de los campos.
+	    
+	    \item [\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUIB 1}{Administrar registro de información base para escuelas} indicando al actor que no se puede aprobar o rechazar la información base de la escuela debido al estado en que se encuentra la escuela. 
+	    
+    \end{description}

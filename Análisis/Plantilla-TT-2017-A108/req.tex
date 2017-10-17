@@ -1,0 +1,121 @@
+
+\subsection{Módulo de Rastreo}
+
+\begin{ReqUser}
+	\reqUserItem{RU-MR1}{Rastrear Dispositivo}{La \refStake{Víctima} requiere de un mecanismo que le permita rastrear los puntos de la ciudad por los que su dispositivo ha pasado.}{\media}{\begin{Titemize}
+	\Titem \refSistReq{RS-MR1}
+    \Titem \refSistReq{RS-MR2}
+    \Titem \refSistReq{RS-MR3}
+	\end{Titemize}}{\corregir}
+    
+    \reqUserItem{RU-MR2}{Bloquear Dispositivo}{La \refStake{Víctima} requiere de un mecanismo que evite que el asaltante pueda desbloquear su teléfono.}{\alta}{\refSistReq{RS-MR4}}{\corregir}
+\end{ReqUser}
+
+\begin{ReqSist}
+	\reqSistItem{RS-MR1}{Activar Dispositivo}{La aplicación debe activarse con la configuración propuesta del usuario si existe, deberá utilizar una configuración por defecto si nunca se ha configurado.}{\alta}{\refUserReq{RU-MR1}}{Funcional}
+    
+    \reqSistItem{RS-MR2}{Ubicar Dispositivo}{La aplicación deberá conectarse con el servidor de \textbf{Coffee Software} para actualizar su ubicación cada cierto tiempo definido por la \refStake{Víctima} o por la configuración por defecto.}{\media}{\refUserReq{RU-MR1}}{}
+    
+    \reqSistItem{RS-MR3}{Mostrar la ubicación del dispositivo}{La aplicación web deberá mostrar la ruta que el dispositivo tuvo hasta su última conexión.}{\media}{\refUserReq{RU-MR1}}{}
+    
+    \reqSistItem{RS-MR4}{Bloquear Dispositivo}{La aplicación móvil deberá bloquear el acceso al dispositivo una vez esta ha sido activada, haciendo parecer que se encuentra apagado.}{\alta}{\refUserReq{RU-MR2}}{}
+    
+\end{ReqSist}
+
+\subsection{Módulo de BackUp}
+
+\begin{ReqUser}
+	\reqUserItem{RU-MB1}{Seleccionar Contactos}{El usuario requiere de un mecanismo que le permita seleccionar aquellos contactos de los que quiere guardar su información.}{\alta}{\begin{Titemize}
+	\Titem \refSistReq{RS-MB2}
+    \Titem \refSistReq{RS-MB5}
+	\end{Titemize}}{\corregir}
+    
+    \reqUserItem{RU-MB2}{Seleccionar archivos}{El usuario requiere de un mecanismo que le permita seleccionar de entre las diferentes carpetas que tiene su dispositivo los archivos que desea que se guarden en su drive o en el servidor de \textbf{Coffee Software}.}{\alta}{\begin{Titemize}
+    \Titem \refSistReq{RS-MB3}
+    \Titem \refSistReq{RS-MB5}
+    \end{Titemize}}{\corregir}
+    
+    \reqUserItem{RU-MB3}{Seleccionar lugar de almacenaje}{El usuario requiere de un mecanismo que le permita elegir entre los dos servicios que estarán disponibles en la aplicación para guardar la información.}{\alta}{\refSistReq{RS-MB4}}{\corregir}
+    
+    \reqUserItem{RU-MB4}{Recuperar información}{El ususario requiere de un mecanismo que le permita descargar la información que seleccionó.}{\media}{\refSistReq{RS-MB6}}{\corregir}
+    
+    \reqUserItem{RU-MB5}{Borrar información}{El usuario requiere de un mecanismo que borre toda la información y aplicaciones de su dispositivo para evitar el mal uso de estos datos.}{\alta}{\refSistReq{RS-MB1}}{\corregir}
+\end{ReqUser}
+
+\begin{ReqSist}
+	\reqSistItem{RS-MB1}{Borrar información}{La aplicación móvil deberá borrar toda la información del dispositivo una vez esta ha sido guardada en el lugar seleccionado por el usuario.También deberá borrar todas las aplicaciones del dispositivo.}{\alta}{\refUserReq{RU-MB5}}{}
+    
+	\reqSistItem{RS-MB2}{Selección de Contactos}{La aplicación móvil deberá proporcionarle un mecanismo al usuario para que pueda visualizar a los contactos que tiene registrados en el dispositivo.}{\alta}{\refUserReq{RU-MB1}}{}
+
+	\reqSistItem{RS-MB3}{Selección de Archivos}{La aplicación móvil deberá proporcionar un mecanismo para que el usuario pueda visualizar y seleccionar las carpetas o archivos que desea qeus e almacenen en el drive o en el servidor de \textbf{Coffee Software}.}{\alta}{\refUserReq{RU-MB2}}{}
+    
+    \reqSistItem{RS-MB4}{Selección de lugar de almacenaje}{La aplicación móvil deberá proporcionar un mecanismo para que el usuario indique donde desea que se guarde su información.}{\alta}{\refUserReq{RU-MB3}}{}
+    
+    \reqSistItem{RS-MB5}{Mostrar límite de almacenaje}{La aplicación deberá indicarle al usuario el limite de capacidad que tiene para poder almacenar cierta información, dado que el dispositivo tiene pocos minutos para realizar esta operación.}{\alta}{\begin{Titemize}
+    	\Titem \refUserReq{RU-MB1}
+        \Titem \refUserReq{RU-MB2} 
+    \end{Titemize}}{}
+    
+    \reqSistItem{RS-MB6}{Generar token de seguridad}{La aplicación deberá generar un token y enviarla al correo del usuario para que pueda tener acceso a la descarga de la información.}{\media}{\refUserReq{RU-MB4}}{}
+\end{ReqSist}
+
+\subsection{Módulo de Configuración}
+\label{subs:Configuracion}
+
+\begin{ReqUser}
+	\reqUserItem{RU-MC1}{Configurar App}{El usuario requiere de un mecanismo que le ayude a configurar los diferentes módulos de la aplicación y como debe activarse.}{\alta}{\begin{Titemize}
+		\Titem \refSistReq{RS-MC1}
+        \Titem \refSistReq{RS-MC2}
+	\end{Titemize}}{\corregir}
+
+\end{ReqUser}
+
+\begin{ReqSist}
+	\reqSistItem{RS-MC1}{Configuración de Tiempo}{La aplicación móvil deberá proporcionarle un mecanismo al usuario para que seleccione el lapso de tiempo en que deberá conectarse con el servidor de \textbf{Coffee Software} para actualizar su posición.}{\alta}{\refUserReq{RU-MC1}}{}
+    
+    \reqSistItem{RS-MC2}{Configuración para activar}{La aplicación móvil deberá proporcionarle un mecanismo al usuario para que seleccione la combinación de teclas que más le guste para activar la aplicación una vez se encuentre en una situación donde su dispositivo se vea comprometido.}{\alta}{\refUserReq{RU-MC1}}{}
+
+\end{ReqSist}
+
+\subsection{Módulo de Encuesta}
+\label{subs:Encuesta}
+
+\begin{ReqUser}
+
+	\reqUserItem{RU-ME1}{Compartir Experiencia}{El usuario quisiera poder compartir la experiencia que ha tenido al vivir en la Ciudad de México.}{\media}{\begin{Titemize}
+	\Titem \refSistReq{RS-ME1}
+    \Titem \refSistReq{RS-ME2}
+	\end{Titemize}}{\corregir}
+    
+\end{ReqUser}
+
+\begin{ReqSist}
+	\reqSistItem{RS-ME1}{Realizar Encuesta de Experiencia}{El sistema deberá realizarle las preguntas al usuario acerca de que esperaría mejorar de los servicios de seguridad que ofrece el Gobierno de la República.}{\media}{\refUserReq{RU-ME1}}{}
+    
+    \reqSistItem{RS-ME2}{Realizar Mapeo de Zonas Delictivas}{Con base en las respuestas del usuario la aplicación web y móvil actualizarán los lugares de la ciudad que más han presentado delitos de acuerdo a las respuestas del usuario.}{\media}{\refUserReq{RU-ME1}}{}
+\end{ReqSist}
+
+\subsection{Módulo de Zonas con más actividad delictiva}
+
+\begin{ReqUser}
+	\reqUserItem{RU-MZ1}{Conocer zonas}{El usuario requiere de un mecanismo que le permita conocer aquellas zonas de la ciudad de méxico que tengan más incidencias delictivas.}{\media}{\begin{Titemize}
+	\Titem \refSistReq{RS-MZ1}
+    \Titem \refSistReq{RS-MZ2}
+	\end{Titemize}}{\corregir}
+\end{ReqUser}
+
+\begin{ReqSist}
+	\reqSistItem{RS-MZ1}{Actualizar zonas}{La aplicación web y móvil deberá actualizar las zonas con más incidencia delictiva de acuerdo a los datos proporcionados por la INEGI así como de los usuarios que han experimentado un delito.}{\media}{\refUserReq{RU-MZ1}}{Funcional}
+    
+    \reqSistItem{RS-MZ2}{Mostrar zonas}{La aplicación web y móvil deberán mostrar en un mapa las zonas con más incidencia delictiva.}{\media}{\refUserReq{RU-MZ1}}{}
+\end{ReqSist}
+
+\subsection{Módulo de Advertencias}
+
+\begin{ReqUser}
+	\reqUserItem{RU-MA1}{Aviso}{El usuario requiere de un mecanismo que le permita saber cuando otro usuario de la aplicación ha sido víctima de un atraco en la ciudad.}{\baja}{\refSistReq{RS-MA1}}{\corregir}
+\end{ReqUser}
+
+\begin{ReqSist}
+	\reqSistItem{RS-MA1}{Avisar a Usuarios}{El sistema debe proporcionar un mecanismo en el que notifique a los demás usuarios de la aplicación que se ha ejecutado un asalto indicando el lugar y la hora.}{\baja}{\refUserReq{RU-MA1}}{}
+\end{ReqSist}

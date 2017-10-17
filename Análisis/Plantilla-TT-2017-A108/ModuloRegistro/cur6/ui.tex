@@ -1,0 +1,43 @@
+\subsection{IUR 6 Completar información escolar}
+
+\subsubsection{Objetivo}
+
+     Esta pantalla permite al actor  \cdtRef{actor:usuarioEscuela}{Coordinador del programa} completar el registro de la información escolar en el sistema.
+
+\subsubsection{Diseño}
+
+   En la figura~\ref{IUR 6} se muestra la pantalla ``Completar información escolar'', en la cual el actor deberá ingresar los datos al sistema para completar el registro de la escuela.\\
+    
+    Una vez ingresada la información solicitada en la pantalla, deberá oprimir el botón \cdtButton{Aceptar}, posteriormente  el sistema validará %se mostrará el mensaje \cdtIdRef{MSG3}{Confirmación de envío de información} \TODO{poner el mensaje en la sección de mensajes si no está y colocar la liga adecuadamente} como pantalla emergente \TODO{liga a la pantalla emergente}, en la cual deberá confirmar el envío de la información sólo 
+    si se han cumplido todas las reglas de negocio establecidas.\\
+    
+    Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUR 5}{Adminstrar información escolar} para indicar que la información se ha registrado exitosamente.
+    
+	En caso de haber seleccionado una región que no pertenece al municipio de la escuela, se mostrará como pantalla emergente el mensaje \cdtIdRef{MSG18}{Error en la región}.
+    
+    \IUfig[.75]{pantallas/registro/IUR6}{IUR 6}{Completar información escolar}
+
+%    \IUfig[.6]{pantallas/registro/IUR6_1}{IUR 6.1}{Notificación de la región}
+
+\subsubsection{Comandos} 
+    \begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor completar la información de la escuela en el sistema, dirige a la pantalla \cdtIdRef{IUR 5}{Administrar información escolar}.
+    \item \cdtButton{Cancelar}: Permite al actor cancelar el completado de la información de la escuela, dirige a la pantalla \cdtIdRef{IUR 5}{Administrar información escolar}.
+    \end{itemize}
+
+
+\subsubsection{Mensajes} 
+
+    \begin{description}
+    \item[\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUR 5}{Administrar información escolar} cuando los datos de la escuela han sido registrados exitosamente.
+	\item [\cdtIdRef{MSG3}{Superficies del predio}:] Se muestra en la pantalla \cdtIdRef{IUR 6}{Completar información escolar} para notificar al actor que la superficie construida que ha ingresado supera la superficie total del predio.      
+	\item [\cdtIdRef{MSG4}{No se encontró información sustantiva}:] Se muestra en la pantalla \cdtIdRef{IUR 6}{Completar información escolar} cuando no hay información referente a la escuela.
+    \item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUR 6}{Completar información escolar} cuando al menos un dato requerido no ha sido ingresado.
+
+    \item[\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUR 6}{Completar información escolar} especificando el dato cuyo valor no cumple con el tipo de dato definido en el diccionario de datos.
+
+    \item[\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUR 6}{Completar información escolar} especificando el dato cuya longitud excede el tamaño máximo permitido.
+
+    \item[\cdtIdRef{MSG18}{Error en la región}:] Se muestra en la pantalla \cdtIdRef{IUR 6}{Completar información escolar} para notificar al actor que la escuela no se encuentra en un municipio asociado a la región seleccionada.
+
+    \end{description}
