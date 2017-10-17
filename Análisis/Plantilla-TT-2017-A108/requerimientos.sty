@@ -1,7 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{requerimientos}[2017/06/24 Paquete para la incorporación de entornos de trabajo para la toma de requerimientos]
 
-\RequirePackage{personal}
+\RequirePackage{cdt/cdtTheme}
+
 
 
 %----------------------------------------------------
@@ -10,25 +11,25 @@
 %Por Corregir
 %No aprobado
 %----------------------------------------------------
-\newcommand{\aprobado}{\raisebox{-1mm}{\includegraphics[height=10pt]{Plantilla/iconos/aproved}}\textcolor{ap}{\textit{Aprobado}}}
-\newcommand{\rechazado}{\raisebox{-1mm}{\includegraphics[height=10pt]{Plantilla/iconos/rejected}}\textcolor{rej}{\textit{Rechazado}}}
-\newcommand{\corregir}{\raisebox{-1mm}{\includegraphics[height=10pt]{Plantilla/iconos/todo}}\textcolor{to}{\textit{Corregir}}}
+\newcommand{\aprobado}{\textit{Aprobado}}
+\newcommand{\rechazado}{\textit{Rechazado}}
+\newcommand{\corregir}{\textit{Corregir}}
 %----------------------------------------------------
 %Comandos para asignarle prioridad a los Requerimientos
 %----------------------------------------------------
-\newcommand{\alta}{\raisebox{-1mm}{\includegraphics[height=11pt]{Plantilla/iconos/alta}}\textit{Alta}}
-\newcommand{\media}{\raisebox{-1mm}{\includegraphics[height=11pt]{Plantilla/iconos/media}}\textit{Media}}
-\newcommand{\baja}{\raisebox{-1mm}{\includegraphics[height=11pt]{Plantilla/iconos/baja}}\textit{Baja}}
+\newcommand{\alta}{\textit{Alta}}
+\newcommand{\media}{\textit{Media}}
+\newcommand{\baja}{\textit{Baja}}
 %----------------------------------------------------
 %Entorno para escribir los requerimientos del usuario
 %----------------------------------------------------
 \newenvironment{ReqUser}{%
     \begin{longtable}{| p{0.09\textwidth}| p{0.2\textwidth}| p{0.35\textwidth}| p{0.079\textwidth}| p{0.1\textwidth}| p{0.12\textwidth}|}
     \hline
-    \rowcolor{sectionColor}
+    \rowcolor{colorPrincipal}
     \multicolumn{6}{|c|}{\bf\color{white}{Requerimientos del Usuario}}\\\hline
     \endhead
-    \rowcolor{tabla}
+    \rowcolor{colorGris}
     \color{white}
     Id & \color{white}Nombre&\color{white}Descripción & \color{white}Prioridad & \color{white}Req. del Sistema & \color{white}Estado \\ \hline
 }{\end{longtable}}
@@ -46,10 +47,10 @@
 \newenvironment{ReqSist}{%
     \begin{longtable}{| p{0.09\textwidth}| p{0.2\textwidth}| p{0.35\textwidth}| p{0.079\textwidth}| p{0.1\textwidth}| p{0.12\textwidth}|}
     \hline
-    \rowcolor{sectionColor}
+    \rowcolor{colorPrincipal}
     \multicolumn{6}{|c|}{\bf\color{white}{Requerimientos del Sistema}}\\\hline
     \endhead
-    \rowcolor{tabla}
+    \rowcolor{colorGris}
     \color{white}
     Id & \color{white}Nombre&\color{white}Descripción & \color{white}Prioridad & \color{white}Req. del Usuario & \color{white}Tipo \\ \hline
 }{\end{longtable}}
@@ -78,4 +79,11 @@
 %Comando para referenciar a un stakeholder en cualquier parte del documento
 %----------------------------------------------------
 \newcommand{\refStake}[1]{\hyperlink{Actor:#1}{#1}}
+
+
+
+\newenvironment{Titemize}{\vspace{0.5em}}{\vspace{0em}}
+\newcommand{\Titem}[1][\textbullet]{
+	\par{\color{colorPrincipal}{#1}}
+}
 
