@@ -1,0 +1,127 @@
+\begin{UseCase}{CU-04}{Consultar Profesor}
+    {
+	Este caso de uso le permite al \textbf{Actor (Visitante y Alumno)} conocer la información básica de los profesores en forma de lista para ubicarlos de manera rápida en cubículos o salones y por medio de la foto proporcionada por ellos. Esto facilitará a los actores la tarea de buscar a profesores que no conocen en persona o cuando se requiera buscarlo para asesorias, trámites, etc.
+	
+    }
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Consulta}
+    \UCccitem{Prioridad}{Alta}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Por revisar}
+    \UCitem{Fecha del último estatus}{15 de Octubre del 2017}
+
+
+%--------------------------------------------------------
+%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+%	% FECHA: Anote la fecha en que se terminó la revisión.
+%	\UCccitem{Fecha}{11-11-14} 
+%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+%	\UCccitem{Resultado}{Corregir}
+%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+%	\UCccitem{Observaciones}{
+%		\begin{UClist}
+%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+%			
+%		\end{UClist}		
+%	}
+%--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{
+		\begin{UClist} 
+			\UCli \cdtRef{actor:usuarioEscuela}{Coordinador del programa}
+			\UCli \cdtRef{actor:usuarioSMAGEM}{Director del programa}
+	\end{UClist}
+}
+	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita con facilidad encontrar a un profesor de la Escuela Superior de Cómputo sin necesidad de consultar su ubicación con personas que pueden o no conocerlo.}
+	\UCitem{Entradas}{No aplica
+%        \begin{UClist} 
+%           \UCli
+%           \UCli
+%        \end{UClist}
+}
+	\UCitem{Salidas}{
+        \begin{UClist} 
+           \UCli Fotografía del profesor
+           \UCli Nombre del profesor
+           \UCli Número de salón o cubículo del profesor
+        \end{UClist}	
+}
+	\UCitem{Precondiciones}{
+		\begin{UClist}		
+			\UCli {\bf Interna:} El sistema debe tener cargados los profesores de la Escuela Superior de Cómputo.
+		\end{UClist}
+		}
+	\UCitem{Postcondiciones}{
+	    \begin{UClist}
+		\UCli {\bf Externa:} Los visitantes que deseen obtener asesorías de algún profesor conocido por su especialidad pordrán localizarlo.
+   	    \end{UClist}
+	}
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+%            \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+	\end{UClist}
+    }
+	\UCitem{Errores}{
+	    \begin{UClist}
+%		\UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} cuando el actor omitió un dato marcado como requerido.
+%		\UCli \cdtIdRef{MSG22}{Nombre de usuario y/o contraseña incorrecto}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que el nombre de usuario y/o contraseña son incorrectos.
+%		\UCli \cdtIdRef{MSG27}{Cuenta no activada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
+	    \end{UClist}
+	}
+	\UCitem{Tipo}{Primario.}
+	\UCitem{Fuente}{
+	    \begin{UClist}
+%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+	    \end{UClist}
+	}
+ \end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Requiere saber en que salón puede localizar a un profesor tocando la opción de \textbf{Agenda de profesores} en el menú principal \textbf{CIE-IU001}.
+    \UCpaso[\UCsist] Obtiene la lista de los profesores registrados en el catálogo y lo muestra en la pantalla \textbf{CIE-IU005}. \textbf{Error: No existen elementos}
+
+	\UCpaso[\UCactor] El actor presiona el botón de \cdtButton{Menú} y regresa al menú principal.
+ \end{UCtrayectoria}
+
+% \begin{UCtrayectoriaA}{A}{El actor alumno desea conocer el rostro de un profesor para buscarlo.}
+%   
+%    \UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+%    
+%   \UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+%   
+%   \UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+% \end{UCtrayectoriaA}
+% 
+%  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
+% 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+% 	
+% 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+% 	
+% 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+% \end{UCtrayectoriaA}
+
+ 
+%\subsection{Puntos de extensión}
+%
+%\UCExtensionPoint
+%{El actor requiere recuperar su contraseña}
+%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+%{\cdtIdRef{CUR 2}{Recuperar contraseña}}
+%
+%\UCExtensionPoint
+%{El actor requiere solicitar la inscripción de su escuela al programa}
+%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+%{\cdtIdRef{CUR 3}{Solicitar inscripción}}
+ 
