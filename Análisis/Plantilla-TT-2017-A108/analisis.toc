@@ -35,16 +35,16 @@
 \contentsline {section}{\numberline {5.1}CU-01 Consultar Edificio}{30}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Resumen}{30}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Descripci\IeC {\'o}n}{30}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Trayectorias del caso de uso}{31}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.3}Trayectorias del caso de uso}{30}{subsection.5.1.3}
 \contentsline {section}{\numberline {5.2}CU-02 Consultar Nivel}{32}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Resumen}{32}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Descripci\IeC {\'o}n}{32}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Trayectorias del caso de uso}{32}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}CU-03 Consultar sal\IeC {\'o}n}{34}{section.5.3}
+\contentsline {section}{\numberline {5.3}CU-01 Consultar Edificio}{34}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Resumen}{34}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Descripci\IeC {\'o}n}{34}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Trayectorias del caso de uso}{34}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Modelo de comportamiento del m\IeC {\'o}dulo: Consultar Salones asignados a grupo }{37}{chapter.6}
+\contentsline {chapter}{\numberline {6}Modelo de comportamiento del m\IeC {\'o}dulo: Consultar Profesores }{37}{chapter.6}
 \contentsline {section}{\numberline {6.1}CUIB 1 Enviar informaci\IeC {\'o}n base}{38}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Resumen}{38}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Descripci\IeC {\'o}n}{38}{subsection.6.1.2}

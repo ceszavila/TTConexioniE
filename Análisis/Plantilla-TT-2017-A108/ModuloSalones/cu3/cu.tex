@@ -1,4 +1,4 @@
-\begin{UseCase}{CU-03}{Consultar salón}
+\begin{UseCase}{CU-01}{Consultar Edificio}
     {
 	Este caso de uso le permite al \textbf{Actor (Visitante y Alumno)} localizar un espacio dentro de la Escuela Superior de Cómputo y obtener las vistas necesarias para llegar a su destino. 
 	Cuando el aspirante a nuevo ingreso es aceptado e inicia su primer periodo escolar, podrá consultar los espacios dentro de la escuela para asistir a sus primeras clases, laboratorios, conferencias etc. De la misma manera para los alumnos de semestres más avanzados y visitantes en general, podrán consultar y ubicar los espacios que no conocían para realización de trámites, búsqueda de profesores, investigadores, etc.
@@ -100,6 +100,13 @@
    \UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
  \end{UCtrayectoriaA}
  
+  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
+ 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+ 	
+ 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+ 	
+ 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+ \end{UCtrayectoriaA}
 
  
 %\subsection{Puntos de extensión}
