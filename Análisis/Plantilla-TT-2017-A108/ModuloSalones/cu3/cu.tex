@@ -1,4 +1,4 @@
-\begin{UseCase}{CU-01}{Consultar Edificio}
+\begin{UseCase}{CU-03}{Consultar Salón}
     {
 	Este caso de uso le permite al \textbf{Actor (Visitante y Alumno)} localizar un espacio dentro de la Escuela Superior de Cómputo y obtener las vistas necesarias para llegar a su destino. 
 	Cuando el aspirante a nuevo ingreso es aceptado e inicia su primer periodo escolar, podrá consultar los espacios dentro de la escuela para asistir a sus primeras clases, laboratorios, conferencias etc. De la misma manera para los alumnos de semestres más avanzados y visitantes en general, podrán consultar y ubicar los espacios que no conocían para realización de trámites, búsqueda de profesores, investigadores, etc.
@@ -41,8 +41,10 @@
 	\UCsection{Atributos}
 	\UCitem{Actor}{
 		\begin{UClist} 
-			\UCli \cdtRef{actor:usuarioEscuela}{Coordinador del programa}
-			\UCli \cdtRef{actor:usuarioSMAGEM}{Director del programa}
+%			\UCli \cdtRef{actor:usuarioEscuela}{Coordinador del programa} 
+\textbf{Alumno}
+\textbf{Visitante}
+%			\UCli \cdtRef{actor:usuarioSMAGEM}{Director del programa}
 	\end{UClist}
 }
 	\UCitem{Propósito}{}
@@ -51,7 +53,14 @@
            \UCli
            \UCli
         \end{UClist}}
-	\UCitem{Salidas}{Ninguna.}
+	\UCitem{Salidas}{
+		\begin{UClist} 
+			\UCli Mapa de la Escuela Superior de Cómputo separada por edificios
+			\UCli Marcador con el nombre de los edificios
+			\UCli Vista por niveles
+			\UCli Vista de salones por nivel
+		\end{UClist}	
+	}
 	\UCitem{Precondiciones}{
 		\begin{UClist}		
 			\UCli {\bf Interna:} El sistema debe tener cargados los espacios de la Escuela Superior de Cómputo.
