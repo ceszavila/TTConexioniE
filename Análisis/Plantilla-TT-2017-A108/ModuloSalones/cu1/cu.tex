@@ -1,7 +1,12 @@
 \begin{UseCase}{CU-01}{Consultar Edificio}
     {
+<<<<<<< HEAD
 	Este caso de uso le permite al \textbf{Actor (Visitante y Alumno)} localizar un edificio dentro de la Escuela Superior de Cómputo y obtener las vistas necesarias para llegar a él. 
 	Cuando el actor recibe instrucciones para ubicar algún espacio es posible que le proporcionen como dato de ayuda el número de edificio e incluso el número de salón o espacio, cuya nomenclatura con el formato correspondiente puede indicar en su primer dígito el número de edificio. De esta manera los alumnos podrán ubicar el edificio al que deben dirigirse por medio de una vista dinámica. 
+=======
+	Este caso de uso le permite al actor localizar un edificio dentro de la Escuela Superior de Cómputo y obtener las vistas necesarias para llegar a su destino. 
+	Cuando el alumno o visitante recibe instrucciones para ubicar algún espacio es posible que le proporcionen como dato de ayuda el número de edificio e incluso el número de salón o espacio, cuya nomenclatura indica en su primer dígito el número de edificio. De esta manera los alumnos podrán ubicar el edificio al que deben dirigirse por medio de una vista dinámica. 
+>>>>>>> 6bebb6c4e3d222cb20c1423b1032871a78b0a482
 	
     }
     \UCitem{Versión}{1.0}
@@ -43,9 +48,8 @@
 		\begin{UClist} 
 %			\UCli \cdtRef{actor:usuarioEscuela}{Coordinador del programa}%Cambiar con nuestros actores
 %			\UCli \cdtRef{actor:usuarioSMAGEM}{Director del programa}%Cambiar con nuestros actores
-\UCli \textbf{Alumno}
-\UCli \textbf{Visitante}
-
+\UCli \cdtRef{actor:CIEAlumno}{Alumno}
+\UCli \cdtRef{actor:CIEVisitante}{Visitante}
 	\end{UClist}
 }
 	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita ubicar geográficamente la posición del edificio al que quiera dirigirse}
