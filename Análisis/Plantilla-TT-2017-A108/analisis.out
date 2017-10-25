@@ -23,8 +23,8 @@
 \BOOKMARK [0][-]{chapter.4}{Modelo de comportamiento}{}% 23
 \BOOKMARK [1][-]{section.4.1}{M\363dulos del sistema}{chapter.4}% 24
 \BOOKMARK [1][-]{section.4.2}{Actores del sistema}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.2.1}{Coordinador del programa}{section.4.2}% 26
-\BOOKMARK [2][-]{subsection.4.2.2}{Director del programa}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.1}{Alumno}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.2}{Visitante}{section.4.2}% 27
 \BOOKMARK [1][-]{section.4.3}{Casos de Uso del m\363dulo de Registro de Escuelas}{chapter.4}% 28
 \BOOKMARK [1][-]{section.4.4}{Casos de Uso del m\363dulo de Informaci\363n base para indicadores}{chapter.4}% 29
 \BOOKMARK [1][-]{section.4.5}{Casos de Uso del m\363dulo de Plan de acci\363n}{chapter.4}% 30

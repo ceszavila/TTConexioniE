@@ -24,12 +24,12 @@
 \contentsline {chapter}{\numberline {4}Modelo de comportamiento}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}M\IeC {\'o}dulos del sistema}{19}{section.4.1}
 \contentsline {section}{\numberline {4.2}Actores del sistema}{19}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Coordinador del programa}{20}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Director del programa}{22}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Casos de Uso del m\IeC {\'o}dulo de Registro de Escuelas}{22}{section.4.3}
-\contentsline {section}{\numberline {4.4}Casos de Uso del m\IeC {\'o}dulo de Informaci\IeC {\'o}n base para indicadores}{23}{section.4.4}
-\contentsline {section}{\numberline {4.5}Casos de Uso del m\IeC {\'o}dulo de Plan de acci\IeC {\'o}n}{25}{section.4.5}
-\contentsline {section}{\numberline {4.6}Casos de Uso del m\IeC {\'o}dulo de Seguimiento y acreditaci\IeC {\'o}n}{25}{section.4.6}
+\contentsline {subsection}{\numberline {4.2.1}Alumno}{20}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Visitante}{21}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Casos de Uso del m\IeC {\'o}dulo de Registro de Escuelas}{21}{section.4.3}
+\contentsline {section}{\numberline {4.4}Casos de Uso del m\IeC {\'o}dulo de Informaci\IeC {\'o}n base para indicadores}{21}{section.4.4}
+\contentsline {section}{\numberline {4.5}Casos de Uso del m\IeC {\'o}dulo de Plan de acci\IeC {\'o}n}{22}{section.4.5}
+\contentsline {section}{\numberline {4.6}Casos de Uso del m\IeC {\'o}dulo de Seguimiento y acreditaci\IeC {\'o}n}{22}{section.4.6}
 \contentsline {section}{\numberline {4.7}Casos de Uso del m\IeC {\'o}dulo de Indicadores}{25}{section.4.7}
 \contentsline {chapter}{\numberline {5}Modelo de comportamiento del m\IeC {\'o}dulo: Consulta de Salones }{29}{chapter.5}
 \contentsline {section}{\numberline {5.1}CU-01 Consultar Edificio}{30}{section.5.1}

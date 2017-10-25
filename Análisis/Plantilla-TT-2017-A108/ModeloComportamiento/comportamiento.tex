@@ -4,7 +4,7 @@
 
     El sistema se encuentra organizado por módulos con la finalidad de agrupar y administrar de mejor manera los requerimientos funcionales del sistema. Dividir el sistema en módulos permite visualizar e identificar rápidamente aquellos aspectos funcionales que pueden tratarse conjuntamente. \\
 
-    La figura \ref{fig:ModulosPAEAR} muestra los módulos propuestos de manera inicial para el \saear. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
+    La figura \ref{fig:ModulosPAEAR} muestra los módulos propuestos de manera inicial para la aplicación \textbf{Conexión IE}. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
 
 %    La figura \ref{fig:ModulosPAEAR} muestra los módulos que conforman el \saear. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
 
@@ -17,15 +17,11 @@
     \end{figure}
 
     \begin{itemize}
-	\item {\bf Registro de escuelas:} Agrupa los casos de uso que tienen que ver con el registro de la información de las escuelas y de su comité asociado. % así como los casos de uso que permiten a la SMAGEM la aprobación de la inscripción de las escuelas al programa.
+	\item {\bf Consulta de grupos:} Agrupa los casos de uso que se relacionan con los salones asociados a los grupos al incio de cada periodo escolar. 
 
-	\item {\bf Información base para los indicadores:} Agrupa los casos de uso que proporcionan información ambiental base para los indicadores respecto a cada una de las líneas de acción. %También incluye los casos de uso que permiten a la SMAGEM la revisión, aprobación o rechazo de la información base para los indicadores.
+	\item {\bf Profesores:} Agrupa los casos de uso que proporcionan información sobre la consulta de profesores. 
 
-	\item {\bf Plan de acción:} Agrupa los casos de uso que tienen que ver con la definición del plan de acción respecto a cada una de las líneas de acción por parte de las escuelas.% así como los casos de uso que permiten a la SMAGEM la revisión, aprobación o rechazo de un plan de acción ambiental.
-
-	\item {\bf Seguimiento y Acreditación ambiental:} Contiene los casos de uso correspondientes al seguimiento de la ejecución del plan de acción de cada una de las escuelas registradas en el programa.%, así como de la acreditación de las mismas de acuerdo al informe final de actividades revisado por SMAGEM.
-
-	\item {\bf indicadores:} Integra los casos de uso referentes a los indicadores ambientales y de sustentabilidad de la escuela.
+	\item {\bf Ubicación de espacios:} Agrupa los casos de uso que se relacionan con la ubicación e indicaciones pertinentes para la consulta de salones, salas y espacios en general de las escuelas.
 
 %	\item {\bf Administración de usuarios:} Integra los casos de uso referentes a la administración de los usuarios y al control de acceso al sistema.
 
@@ -36,7 +32,7 @@
 %=========================================================
 \section{Actores del sistema}\label{sec:Comportamiento:ActoresSistema}
 
-Los actores son los perfiles asociados a las diversas áreas y/u organizaciones que intervienen en el proceso. Se han identificado los actores de acuerdo a las actividades y responsabilidades dentro del \paear, los cuales se muestran en la figura \ref{fig:perfilesPAEAR} y se describen a continuación.
+Los actores son los perfiles asociados a las diversas áreas que intervienen en el proceso. Se han identificado los actores de acuerdo a las actividades y responsabilidades dentro de la aplicación \textbf{Conexión IE}, los cuales se muestran en la figura \ref{fig:perfilesPAEAR} y se describen a continuación.
 
 %    Los actores son los perfiles asociados a las diversas áreas y/u organizaciones que intervienen en el proceso. Se han identificado los actores de acuerdo a las actividades y responsabilidades dentro del \paear respecto al módulo de \textbf{Registro de escuelas}, los cuales se muestran en la figura \ref{fig:perfilesPAEAR} y se describen a continuación. 
     %y responsabilidades dentro del \paear - \saear, los cuales se describen a continuación.
@@ -50,7 +46,7 @@ Los actores son los perfiles asociados a las diversas áreas y/u organizaciones 
     \end{figure}
 
 %--------------------------------------------------------------------------------------------------
-    \begin{actor}{Coordinador del programa}{usuarioEscuela}{Persona designada por la escuela para operar todo lo referente a la participación de la escuela y de su comité en el PAEAR.}
+    \begin{actor}{Alumno}{usuarioEscuela}{Persona inscrita dentro del Instituto Politécnico Nacional que solicitará las consultas de espacios, salones asignados a grupos, información sobre los trámites de la escuela y sobre el material de apoyo de las unidades de aprendizaje.}
 
 	\item[Área:] Escuela participante.
 
@@ -60,17 +56,20 @@ Los actores son los perfiles asociados a las diversas áreas y/u organizaciones 
 
 		    %%%%%%%%%%%% REGISTRO %%%%%%%%%%%%
 		    %Escuela
-		    \item Solicitar la inscripción de su escuela en el programa.
-		    \item Registrar y modificar la información de su escuela en el programa durante el periodo de registro.
-		    %Coordinador del programa
-		    \item Registrar al coordinador y al responsable del programa dentro del periodo de registro.
-		    % Responsable del programa
-		    \item Modificar la información del responsable del programa dentro del periodo de registro.	
-		    %Integrantes de las líneas de acción
-		    \item Registrar o dar de baja a los integrantes de las líneas de acción dentro del periodo de registro.
-		    \item Modificar la información de los integrantes de las líneas de acción dentro del periodo de registro.
-		    %General: información escolar, coordinador, responsable e integrantes de líneas de acción
-		    \item Visualizar la información de registro de su escuela y de los miembros del comité asociado.
+		    \item Solicitar la consulta de espacios.
+		    \item Solicitar la consulta de salones asignados a grupos.
+		    \item Solicitar la consulta de trámites.
+		    \item Solicitar la consulta de material de apoyo.
+%		    \item Registrar y modificar la información de su escuela en el programa durante el periodo de registro.
+%		    %Coordinador del programa
+%		    \item Registrar al coordinador y al responsable del programa dentro del periodo de registro.
+%		    % Responsable del programa
+%		    \item Modificar la información del responsable del programa dentro del periodo de registro.	
+%		    %Integrantes de las líneas de acción
+%		    \item Registrar o dar de baja a los integrantes de las líneas de acción dentro del periodo de registro.
+%		    \item Modificar la información de los integrantes de las líneas de acción dentro del periodo de registro.
+%		    %General: información escolar, coordinador, responsable e integrantes de líneas de acción
+%		    \item Visualizar la información de registro de su escuela y de los miembros del comité asociado.
 
 		    %%%%%%%%%%%% DIAGNÓSTICO %%%%%%%%%%%%
 		    %Descargar fotmatos y cuestionarios			
@@ -83,88 +82,87 @@ Los actores son los perfiles asociados a las diversas áreas y/u organizaciones 
 %			\item Enviar su diagnóstico para su aprobación.
 
 			%%%%%%%%%%%% INFORMACIÓN BASE PARA INDICADORES %%%%%%%%%%%%
-			\item Registrar y modificar la información base para indicadores de agua dentro del periodo de registro de información base.
-			\item Registrar y modificar la información base para indicadores de residuos sólidos dentro del periodo de registro de información base.
-			\item Registrar y modificar la información base para indicadores de energía dentro del periodo de registro de información base.
-			\item Registrar y modificar la información base para indicadores de biodiversidad dentro del periodo de registro de información base.
-			\item Registrar y modificar la información base para indicadores de ambiente escolar dentro del periodo de registro de información base.
-			\item Registrar y modificar la información base para indicadores de consumo responsable	dentro del periodo de registro de información base.
+%			\item Registrar y modificar la información base para indicadores de agua dentro del periodo de registro de información base.
+%			\item Registrar y modificar la información base para indicadores de residuos sólidos dentro del periodo de registro de información base.
+%			\item Registrar y modificar la información base para indicadores de energía dentro del periodo de registro de información base.
+%			\item Registrar y modificar la información base para indicadores de biodiversidad dentro del periodo de registro de información base.
+%			\item Registrar y modificar la información base para indicadores de ambiente escolar dentro del periodo de registro de información base.
+%			\item Registrar y modificar la información base para indicadores de consumo responsable	dentro del periodo de registro de información base.
 
 			
 		    %%%%%%%%%%%% PLAN DE ACCIÓN %%%%%%%%%%%%
-			\item Registrar, modificar y eliminar los objetivos asociados a las líneas de acción dentro del periodo de registro del plan de acción.
-			\item Registrar, modificar y eliminar las metas asociadas a cada línea de acción dentro del periodo de registro del plan de acción.
-			\item Registrar, modificar y eliminar las acciones asociadas a las metas de cada línea de acción dentro del periodo de registro del plan de acción.
-
-		    %%%%%%%% SEGUIMIENTO Y ACREDITACIÓN %%%%%%%%
-			\item Registrar, modificar y eliminar el avance de las metas asociadas a cada línea de acción dentro del periodo de registro de informe de avance.
-			\item Registrar, modificar y eliminar las acciones asociadas a las metas de cada línea de acción  dentro del periodo de registro de informe de avance.
-			\item Actualizar la información para el cálculo de los indicadores.
-
-			\item Enviar la información base para indicadores, el plan de acción y los informes de avances del plan de acción para su revisión por parte de SMAGEM.
-			\item Consultar los indicadores ambientales y de sustentabilidad.
+%			\item Registrar, modificar y eliminar los objetivos asociados a las líneas de acción dentro del periodo de registro del plan de acción.
+%			\item Registrar, modificar y eliminar las metas asociadas a cada línea de acción dentro del periodo de registro del plan de acción.
+%			\item Registrar, modificar y eliminar las acciones asociadas a las metas de cada línea de acción dentro del periodo de registro del plan de acción.
+%
+%		    %%%%%%%% SEGUIMIENTO Y ACREDITACIÓN %%%%%%%%
+%			\item Registrar, modificar y eliminar el avance de las metas asociadas a cada línea de acción dentro del periodo de registro de informe de avance.
+%			\item Registrar, modificar y eliminar las acciones asociadas a las metas de cada línea de acción  dentro del periodo de registro de informe de avance.
+%			\item Actualizar la información para el cálculo de los indicadores.
+%
+%			\item Enviar la información base para indicadores, el plan de acción y los informes de avances del plan de acción para su revisión por parte de SMAGEM.
+%			\item Consultar los indicadores ambientales y de sustentabilidad.
 		\end{itemize}
 
 
 	\item[Perfil:] \hspace{1pt}
 		\begin{itemize}
-		    \item Conocer el objetivo del PAEAR.
-		    \item Conocimientos básicos en materia ambiental.
-		    \item Conocimientos en el uso de computadora.
-		    \item Contar con una cuenta de correo electrónico.
+		    \item Ser una persona inscrita en alguna escuela del Instituto.
+		    \item Tener conocimiento de las últimas tecnologías.
+		    \item Conocer la disponibilidad de descarga de la aplicación.
+		    \item Contar con un dispositivo iOS.
 	    \end{itemize}
 
-	\item[Cantidad:] Uno por escuela participante.
+	\item[Cantidad:] \textit{N} personas por escuela participante.
 
 \end{actor}
 
 %--------------------------------------------------------------------------------------------------
-\begin{actor}{Director del programa}{usuarioSMAGEM}{Director del programa de Acreditación de Escuelas Ambientalmente Responsables en SMAGEM.}
+\begin{actor}{Visitante}{usuarioSMAGEM}{Persona externa al Instituto que desee localizar algún espacio o profesor para asesorías de investigación, consultas de especialidad para tésis, trámites, etc.}
 
-    \item[Área:] SMAGEM.
+    \item[Área:] Escuela participante.
     \item[Responsabilidades:] \hspace{1pt}
 
 	\begin{itemize}
 	      %%%%%%%% REGISTRO %%%%%%%%
-	      \item Visualizar la información de las escuelas que solicitan su inscripción al programa.
-	      \item Aceptar o rechazar la solicitud de inscripción de las escuelas en el programa.
+%	      \item Visualizar la información de las escuelas que solicitan su inscripción al programa.
+%	      \item Aceptar o rechazar la solicitud de inscripción de las escuelas en el programa.
 	      %%%%%%%% DIAGNÓSTICO %%%%%%%%
 %			\item Visualizar la información de las escuelas que solicitan su aprobación de diagnóstico ambiental.
 %			\item Aceptar o rechazar la solicitud de aprobación de diagnóstico ambiental.
 
 	      %%%%%%%% INFORMACIÓN BASE PARA INDICADORES %%%%%%%%
-		  \item Visualizar la información de las escuelas que enviaron su información base para indicadores.
-		  \item Aceptar o rechazar la solicitud de aprobación de la información base para indicaadores.
+%		  \item Visualizar la información de las escuelas que enviaron su información base para indicadores.
+%		  \item Aceptar o rechazar la solicitud de aprobación de la información base para indicaadores.
 %			\item Visualizar la información de las escuelas que solicitan su aprobación de plan de acción ambiental.
 %			\item Aceptar o rechazar la solicitud de aprobación de plan de acción ambiental.
 
 	      %%%%%%%% PLAN DE ACCIÓN %%%%%%%%
-		  \item Visualizar la información de las escuelas que enviaron su plan de acción.
-		  \item Aceptar o rechazar la solicitud de aprobación del plan de acción.
+%		  \item Visualizar la información de las escuelas que enviaron su plan de acción.
+%		  \item Aceptar o rechazar la solicitud de aprobación del plan de acción.
 		  
 		  %%%%%%%% SEGUIMIENTO Y ACREDITACIÓN %%%%%%%%%
-		  \item Visualizar la información de las escuelas que enviaron su informe de avance de plan de acción.
-		  \item Aceptar o rechazar la solicitud de aprobación del avance del plan de acción.
-		  \item Aceptar o rechazar la acreditación de la escuela.
+%		  \item Visualizar la información de las escuelas que enviaron su informe de avance de plan de acción.
+%		  \item Aceptar o rechazar la solicitud de aprobación del avance del plan de acción.
+%		  \item Aceptar o rechazar la acreditación de la escuela.
 		  
 		  %%%%%%%%% INDICADORES %%%%%%%%%%%%%
-		  \item Consultar los indicadores de eficacia y eficiencia del programa.
-		  \item Consultar los indicadores de educación ambiental.
-		  \item Consultar los indicadores ambientales y de sustentabilidad.		  
+		  \item Consultar los distintos espacios disponibles en la escuela.
+		  \item Consultar la disponibilidad de horario y ubicación de la plantilla docente.
+	  
     \end{itemize}
 
     \item[Perfil:] \hspace{1pt}
 
 	\begin{itemize}
 
-	    \item Conocimientos sobre la operación del sistema.
-	    \item Contar con un amplio conocimiento sobre el PAEAR.
-	    \item Conocimientos en el uso de computadora.
-	    \item Contar con una cuenta de correo electrónico.
+	    \item Conocimientos sobre los temas de interés en investigación de la escuela en cuestión.
+	    \item Contar de las tecnologías móviles actuales.
+	    \item Conocimientos de la aplicación disponible.
 
 	\end{itemize}
 
-    \item[Cantidad:] Uno para la SMAGEM.
+    \item[Cantidad:] \textit{N} por escuela.
 
 \end{actor}
 
