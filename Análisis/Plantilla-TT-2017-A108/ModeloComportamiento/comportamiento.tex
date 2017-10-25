@@ -46,7 +46,7 @@ Los actores son los perfiles asociados a las diversas áreas que intervienen en 
     \end{figure}
 
 %--------------------------------------------------------------------------------------------------
-    \begin{actor}{Alumno}{usuarioEscuela}{Persona inscrita dentro del Instituto Politécnico Nacional que solicitará las consultas de espacios, salones asignados a grupos, información sobre los trámites de la escuela y sobre el material de apoyo de las unidades de aprendizaje.}
+    \begin{actor}{Alumno}{CIEAlumno}{Persona inscrita dentro del Instituto Politécnico Nacional que solicitará las consultas de espacios, salones asignados a grupos, información sobre los trámites de la escuela y sobre el material de apoyo de las unidades de aprendizaje.}
 
 	\item[Área:] Escuela participante.
 
@@ -118,7 +118,7 @@ Los actores son los perfiles asociados a las diversas áreas que intervienen en 
 \end{actor}
 
 %--------------------------------------------------------------------------------------------------
-\begin{actor}{Visitante}{usuarioSMAGEM}{Persona externa al Instituto que desee localizar algún espacio o profesor para asesorías de investigación, consultas de especialidad para tésis, trámites, etc.}
+\begin{actor}{Visitante}{CIEVisitante}{Persona externa al Instituto que desee localizar algún espacio o profesor para asesorías de investigación, consultas de especialidad para tésis, trámites, etc.}
 
     \item[Área:] Escuela participante.
     \item[Responsabilidades:] \hspace{1pt}
@@ -197,9 +197,9 @@ Los actores son los perfiles asociados a las diversas áreas que intervienen en 
 
 
 %====================================================================================
-\section{Casos de Uso del módulo de Registro de Escuelas}
+\section{Casos de Uso del módulo de Salones}
 
-    La figura \ref{fig:casosUso:registro} muestra los casos de uso que integran la funcionalidad del módulo de Registro de escuelas, que se refieren al registro, modificación y visualización de la información escolar y del comité asociado a cada escuela.
+    La figura \ref{fig:casosUso:registro} muestra los casos de uso que integran la funcionalidad del módulo de Salones, que se refieren a la consulta de edificios, niveles y salones de una ecuela.
 
     \begin{figure}[h!]
 	\begin{center}
@@ -208,8 +208,8 @@ Los actores son los perfiles asociados a las diversas áreas que intervienen en 
 	\end{center}
     \end{figure}
 
-\section{Casos de Uso del módulo de Información base para indicadores}
-La figura \ref{fig:casosUso:comite} muestra los casos de uso que integran la funcionalidad necesaria para la obtención de la información base para los indicadores ambientales y de sustenteabilidad de la escuela y que se refieren al registro y modificación de su información.
+\section{Casos de Uso del módulo de Profesores}
+La figura \ref{fig:casosUso:comite} muestra los casos de uso que integran la funcionalidad necesaria para la obtención de la información para la ubicación física del cubículo y oficina de un profesor así como la información de contacto institucional y si lo desea, personal.
 
  \begin{figure}[h!]
      \begin{center}
@@ -219,35 +219,35 @@ La figura \ref{fig:casosUso:comite} muestra los casos de uso que integran la fun
      \end{center}
  \end{figure}
 
-\section{Casos de Uso del módulo de Plan de acción}
-La figura \ref{fig:casosUso:plan} muestra los casos de uso que integran la funcionalidad del módulo de Plan de acción, los cuales permiten el registro y modificación del plan de acción de la escuela. 
-
-\begin{figure}[h!]
-    \begin{center}
-        \fbox{\includegraphics[width=\textwidth]{images/CasosUso/plan.jpg}}
-    \caption{Diagrama de casos de uso para el módulo de Plan de acción.}
-    \label{fig:casosUso:plan}
-    \end{center}
-\end{figure}
-
-\section{Casos de Uso del módulo de Seguimiento y acreditación}
-La figura \ref{fig:casosUso:seguimiento} muestra los casos de uso que integran la funcionalidad del módulo de Seguimiento y acreditación, los cuales permiten el registro y modificación de los avances realizados en el plan de acción de la escuela. 
-
-\begin{figure}[h!]
-    \begin{center}
-        \fbox{\includegraphics[width=\textwidth]{images/CasosUso/Seguimiento.jpg}}
-    \caption{Diagrama de casos de uso para el módulo de Seguimiento y acreditación.}
-    \label{fig:casosUso:seguimiento}
-    \end{center}
-\end{figure}
-
-\section{Casos de Uso del módulo de Indicadores}
-La figura \ref{fig:casosUso:indicadores} muestra los casos de uso que integran la funcionalidad del módulo de Indicadores, los cuales permiten la visualización de los resultado obtenidos en los indicadores ambientales y de sustententabilidad de la escuela. 
-
-\begin{figure}[h!]
-    \begin{center}
-        \fbox{\includegraphics[width=\textwidth]{images/CasosUso/Indicadores.png}}
-    \caption{Diagrama de casos de uso para el módulo de Indicadores.}
-    \label{fig:casosUso:indicadores}
-    \end{center}
-\end{figure}
+%\section{Casos de Uso del módulo de Plan de acción}
+%La figura \ref{fig:casosUso:plan} muestra los casos de uso que integran la funcionalidad del módulo de Plan de acción, los cuales permiten el registro y modificación del plan de acción de la escuela. 
+%
+%\begin{figure}[h!]
+%    \begin{center}
+%        \fbox{\includegraphics[width=\textwidth]{images/CasosUso/plan.jpg}}
+%    \caption{Diagrama de casos de uso para el módulo de Plan de acción.}
+%    \label{fig:casosUso:plan}
+%    \end{center}
+%\end{figure}
+%
+%\section{Casos de Uso del módulo de Seguimiento y acreditación}
+%La figura \ref{fig:casosUso:seguimiento} muestra los casos de uso que integran la funcionalidad del módulo de Seguimiento y acreditación, los cuales permiten el registro y modificación de los avances realizados en el plan de acción de la escuela. 
+%
+%\begin{figure}[h!]
+%    \begin{center}
+%        \fbox{\includegraphics[width=\textwidth]{images/CasosUso/Seguimiento.jpg}}
+%    \caption{Diagrama de casos de uso para el módulo de Seguimiento y acreditación.}
+%    \label{fig:casosUso:seguimiento}
+%    \end{center}
+%\end{figure}
+%
+%\section{Casos de Uso del módulo de Indicadores}
+%La figura \ref{fig:casosUso:indicadores} muestra los casos de uso que integran la funcionalidad del módulo de Indicadores, los cuales permiten la visualización de los resultado obtenidos en los indicadores ambientales y de sustententabilidad de la escuela. 
+%
+%\begin{figure}[h!]
+%    \begin{center} 
+%        \fbox{\includegraphics[width=\textwidth]{images/CasosUso/Indicadores.png}}
+%    \caption{Diagrama de casos de uso para el módulo de Indicadores.}
+%    \label{fig:casosUso:indicadores}
+%    \end{center}
+%\end{figure}
