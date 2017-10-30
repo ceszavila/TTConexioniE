@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2949,13 +2949,13 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 102.
  [24 <./cdt/uc/rules/UCRule.png>]
-<cdt/uc/actor.png, id=501, 96.36pt x 74.2775pt>
+<cdt/uc/actor.png, id=498, 96.36pt x 74.2775pt>
 File: cdt/uc/actor.png Graphic file (type png)
  <use cdt/uc/actor.png>
 Package pdftex.def Info: cdt/uc/actor.png used on input line 102.
 (pdftex.def)             Requested size: 14.26958pt x 11.0pt.
 
-<cdt/uc/usecase.png, id=502, 91.34125pt x 61.22874pt>
+<cdt/uc/usecase.png, id=499, 91.34125pt x 61.22874pt>
 File: cdt/uc/usecase.png Graphic file (type png)
  <use cdt/uc/usecase.png>
 Package pdftex.def Info: cdt/uc/usecase.png used on input line 104.
@@ -4012,15 +4012,9 @@ LaTeX Info: Redefining \% on input line 23.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 323.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 323.
+Package rerunfilecheck Info: File `analisis.out' has not changed.
+(rerunfilecheck)             Checksum: 9B04D8DAA0DE61477F160F7C7ABBBE1B;4057.
 
-
-Package rerunfilecheck Warning: File `analisis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `analisis.out':
-(rerunfilecheck)             Before: 70CEC7D5613384070D583FBAFAE8E04E;4095
-(rerunfilecheck)             After:  9B04D8DAA0DE61477F160F7C7ABBBE1B;4057.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -4033,10 +4027,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 323.
  ) 
 Here is how much of TeX's memory you used:
- 9536 strings out of 492995
- 133505 string characters out of 6132704
- 257992 words of memory out of 5000000
- 12639 multiletter control sequences out of 15000+600000
+ 9514 strings out of 492995
+ 133155 string characters out of 6132704
+ 257036 words of memory out of 5000000
+ 12640 multiletter control sequences out of 15000+600000
  15295 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,15n,51p,1166b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4048,75 +4042,6 @@ ot exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{actor:usuarioEscuela} has been referenced but does 
 not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.11.3} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.11.2} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.11.1} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.11} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.10.4} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.10.3} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.10.2} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.10.1} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.10} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.9} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.8.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.8.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.8.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.7.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.7.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.7.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.7} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.6.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.6.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.6.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.6} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.5} has been referenced but does not exist
-, replaced by a fixed one
 
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/hfbright/hfbr17.pfb></usr/lo
@@ -4130,10 +4055,10 @@ mf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/hfbright/hftl10.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on analisis.pdf (47 pages, 1296300 bytes).
+Output written on analisis.pdf (47 pages, 1295948 bytes).
 PDF statistics:
- 758 PDF objects out of 1000 (max. 8388607)
- 659 compressed objects within 7 object streams
- 197 named destinations out of 1000 (max. 500000)
+ 730 PDF objects out of 1000 (max. 8388607)
+ 631 compressed objects within 7 object streams
+ 174 named destinations out of 1000 (max. 500000)
  567 words of extra memory for PDF output out of 10000 (max. 10000000)
 
