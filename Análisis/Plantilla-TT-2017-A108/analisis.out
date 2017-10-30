@@ -13,79 +13,63 @@
 \BOOKMARK [2][-]{subsection.2.2.2}{Sistema operativo iOS}{section.2.2}% 13
 \BOOKMARK [2][-]{subsection.2.2.3}{Caracter\355sticas}{section.2.2}% 14
 \BOOKMARK [0][-]{chapter.3}{Planteamiento del Problema}{}% 15
-\BOOKMARK [1][-]{section.3.1}{Definici\363n de conceptos}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.1.1}{TICS}{section.3.1}% 17
-\BOOKMARK [2][-]{subsection.3.1.2}{Smartphone}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.3}{Estilo de vida}{section.3.1}% 19
-\BOOKMARK [2][-]{subsection.3.1.4}{Comunicaci\363n}{section.3.1}% 20
-\BOOKMARK [2][-]{subsection.3.1.5}{Aplicaciones M\363viles}{section.3.1}% 21
-\BOOKMARK [1][-]{section.3.2}{Ventajas de usar iOS}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.2.1}{Sistema operativo iOS}{section.3.2}% 23
-\BOOKMARK [2][-]{subsection.3.2.2}{Caracter\355sticas}{section.3.2}% 24
-\BOOKMARK [1][-]{section.3.3}{La comunicaci\363n en conjunto con los dispositivos m\363viles}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.1}{Comportamiento de los usuarios de Smartphones}{section.3.3}% 26
-\BOOKMARK [1][-]{section.3.4}{Problem\341tica y soluci\363n propuesta}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.4.1}{Propuesta de Soluci\363n}{section.3.4}% 28
-\BOOKMARK [0][-]{chapter.4}{Alcance del Proyecto}{}% 29
-\BOOKMARK [1][-]{section.4.1}{Objetivo General}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.2}{Objetivos Particulares}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.3}{Requerimientos}{chapter.4}% 32
-\BOOKMARK [2][-]{subsection.4.3.1}{Requerimientos funcionales}{section.4.3}% 33
-\BOOKMARK [2][-]{subsection.4.3.2}{M\363dulo de BackUp}{section.4.3}% 34
-\BOOKMARK [2][-]{subsection.4.3.3}{M\363dulo de Configuraci\363n}{section.4.3}% 35
-\BOOKMARK [2][-]{subsection.4.3.4}{M\363dulo de Encuesta}{section.4.3}% 36
-\BOOKMARK [2][-]{subsection.4.3.5}{M\363dulo de Zonas con m\341s actividad delictiva}{section.4.3}% 37
-\BOOKMARK [2][-]{subsection.4.3.6}{M\363dulo de Advertencias}{section.4.3}% 38
-\BOOKMARK [2][-]{subsection.4.3.7}{Requerimientos no funcionales}{section.4.3}% 39
-\BOOKMARK [0][-]{chapter.5}{Trabajo realizado}{}% 40
-\BOOKMARK [1][-]{section.5.1}{M\363dulos del sistema}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.2}{Actores del sistema}{chapter.5}% 42
-\BOOKMARK [2][-]{subsection.5.2.1}{Alumno}{section.5.2}% 43
-\BOOKMARK [2][-]{subsection.5.2.2}{Visitante}{section.5.2}% 44
-\BOOKMARK [1][-]{section.5.3}{Casos de Uso del m\363dulo de Salones}{chapter.5}% 45
-\BOOKMARK [1][-]{section.5.4}{Casos de Uso del m\363dulo de Profesores}{chapter.5}% 46
-\BOOKMARK [0][-]{chapter.6}{Modelo de comportamiento del m\363dulo: Consulta de Salones }{}% 47
-\BOOKMARK [1][-]{section.6.1}{CU-01 Consultar Edificio}{chapter.6}% 48
-\BOOKMARK [2][-]{subsection.6.1.1}{Resumen}{section.6.1}% 49
-\BOOKMARK [2][-]{subsection.6.1.2}{Descripci\363n}{section.6.1}% 50
-\BOOKMARK [2][-]{subsection.6.1.3}{Trayectorias del caso de uso}{section.6.1}% 51
-\BOOKMARK [1][-]{section.6.2}{CU-02 Consultar Nivel}{chapter.6}% 52
-\BOOKMARK [2][-]{subsection.6.2.1}{Resumen}{section.6.2}% 53
-\BOOKMARK [2][-]{subsection.6.2.2}{Descripci\363n}{section.6.2}% 54
-\BOOKMARK [2][-]{subsection.6.2.3}{Trayectorias del caso de uso}{section.6.2}% 55
-\BOOKMARK [1][-]{section.6.3}{CU-03 Consultar Sal\363n}{chapter.6}% 56
-\BOOKMARK [2][-]{subsection.6.3.1}{Resumen}{section.6.3}% 57
-\BOOKMARK [2][-]{subsection.6.3.2}{Descripci\363n}{section.6.3}% 58
-\BOOKMARK [2][-]{subsection.6.3.3}{Trayectorias del caso de uso}{section.6.3}% 59
-\BOOKMARK [0][-]{chapter.7}{Modelo de comportamiento del m\363dulo: Consultar Profesores }{}% 60
-\BOOKMARK [1][-]{section.7.1}{CU-04 Consultar Profesor}{chapter.7}% 61
-\BOOKMARK [2][-]{subsection.7.1.1}{Resumen}{section.7.1}% 62
-\BOOKMARK [2][-]{subsection.7.1.2}{Descripci\363n}{section.7.1}% 63
-\BOOKMARK [2][-]{subsection.7.1.3}{Trayectorias del caso de uso}{section.7.1}% 64
-\BOOKMARK [2][-]{subsection.7.1.4}{Puntos de extensi\363n}{section.7.1}% 65
-\BOOKMARK [1][-]{section.7.2}{CU-05 Consultar Detalle de Profesor}{chapter.7}% 66
-\BOOKMARK [2][-]{subsection.7.2.1}{Resumen}{section.7.2}% 67
-\BOOKMARK [2][-]{subsection.7.2.2}{Descripci\363n}{section.7.2}% 68
-\BOOKMARK [2][-]{subsection.7.2.3}{Trayectorias del caso de uso}{section.7.2}% 69
-\BOOKMARK [0][-]{chapter.8}{Modelo de interacci\363n con el usuario}{}% 70
-\BOOKMARK [1][-]{section.8.1}{Entorno de trabajo}{chapter.8}% 71
-\BOOKMARK [2][-]{subsection.8.1.1}{Dise\361o}{section.8.1}% 72
-\BOOKMARK [2][-]{subsection.8.1.2}{Pantalla de bienvenida}{section.8.1}% 73
-\BOOKMARK [2][-]{subsection.8.1.3}{Componentes utilizados}{section.8.1}% 74
-\BOOKMARK [2][-]{subsection.8.1.4}{Datos de sesi\363n}{section.8.1}% 75
-\BOOKMARK [2][-]{subsection.8.1.5}{Iconograf\355a}{section.8.1}% 76
-\BOOKMARK [2][-]{subsection.8.1.6}{Componentes utilizados}{section.8.1}% 77
-\BOOKMARK [2][-]{subsection.8.1.7}{Organizaci\363n}{section.8.1}% 78
-\BOOKMARK [1][-]{section.8.2}{Interfaces del subsistema: Registro de escuelas}{chapter.8}% 79
-\BOOKMARK [2][-]{subsection.8.2.1}{IUR 1 Iniciar sesi\363n}{section.8.2}% 80
-\BOOKMARK [1][-]{section.8.3}{Interfaces del subsistema: Informaci\363n base para los indicadores}{chapter.8}% 81
-\BOOKMARK [2][-]{subsection.8.3.1}{IUIBA 1 Administrar informaci\363n base para indicadores de agua}{section.8.3}% 82
-\BOOKMARK [1][-]{section.8.4}{Interfaces del subsistema: Plan de acci\363n}{chapter.8}% 83
-\BOOKMARK [2][-]{subsection.8.4.1}{IUP 1 Administrar objetivos}{section.8.4}% 84
-\BOOKMARK [1][-]{section.8.5}{Interfaces del subsistema: Seguimiento y acreditaci\363n}{chapter.8}% 85
-\BOOKMARK [2][-]{subsection.8.5.1}{IUS 1 Administrar avances de objetivos}{section.8.5}% 86
-\BOOKMARK [1][-]{section.8.6}{Interfaces del subsistema: Indicadores}{chapter.8}% 87
-\BOOKMARK [2][-]{subsection.8.6.1}{IUI 2 Consultar indicadores de agua}{section.8.6}% 88
-\BOOKMARK [1][-]{section.8.7}{Dise\361o de mensajes}{chapter.8}% 89
-\BOOKMARK [2][-]{subsection.8.7.1}{Par\341metros comunes}{section.8.7}% 90
-\BOOKMARK [2][-]{subsection.8.7.2}{Mensajes a trav\351s de la pantalla}{section.8.7}% 91
+\BOOKMARK [1][-]{section.3.1}{Problem\341ticas Identificadas}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.1.1}{Propuesta de Soluci\363n}{section.3.1}% 17
+\BOOKMARK [0][-]{chapter.4}{Alcance del Proyecto}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Objetivo General}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Objetivos Particulares}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{Requerimientos}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.3.1}{Requerimientos funcionales}{section.4.3}% 22
+\BOOKMARK [2][-]{subsection.4.3.2}{Requerimientos no funcionales}{section.4.3}% 23
+\BOOKMARK [0][-]{chapter.5}{Trabajo realizado}{}% 24
+\BOOKMARK [1][-]{section.5.1}{M\363dulos del sistema}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Actores del sistema}{chapter.5}% 26
+\BOOKMARK [2][-]{subsection.5.2.1}{Alumno}{section.5.2}% 27
+\BOOKMARK [2][-]{subsection.5.2.2}{Visitante}{section.5.2}% 28
+\BOOKMARK [1][-]{section.5.3}{Casos de Uso del m\363dulo de Salones}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.4}{Casos de Uso del m\363dulo de Profesores}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter.6}{Modelo de comportamiento del m\363dulo: Consulta de Salones }{}% 31
+\BOOKMARK [1][-]{section.6.1}{CU-01 Consultar Edificio}{chapter.6}% 32
+\BOOKMARK [2][-]{subsection.6.1.1}{Resumen}{section.6.1}% 33
+\BOOKMARK [2][-]{subsection.6.1.2}{Descripci\363n}{section.6.1}% 34
+\BOOKMARK [2][-]{subsection.6.1.3}{Trayectorias del caso de uso}{section.6.1}% 35
+\BOOKMARK [1][-]{section.6.2}{CU-02 Consultar Nivel}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.2.1}{Resumen}{section.6.2}% 37
+\BOOKMARK [2][-]{subsection.6.2.2}{Descripci\363n}{section.6.2}% 38
+\BOOKMARK [2][-]{subsection.6.2.3}{Trayectorias del caso de uso}{section.6.2}% 39
+\BOOKMARK [1][-]{section.6.3}{CU-03 Consultar Sal\363n}{chapter.6}% 40
+\BOOKMARK [2][-]{subsection.6.3.1}{Resumen}{section.6.3}% 41
+\BOOKMARK [2][-]{subsection.6.3.2}{Descripci\363n}{section.6.3}% 42
+\BOOKMARK [2][-]{subsection.6.3.3}{Trayectorias del caso de uso}{section.6.3}% 43
+\BOOKMARK [0][-]{chapter.7}{Modelo de comportamiento del m\363dulo: Consultar Profesores }{}% 44
+\BOOKMARK [1][-]{section.7.1}{CU-04 Consultar Profesor}{chapter.7}% 45
+\BOOKMARK [2][-]{subsection.7.1.1}{Resumen}{section.7.1}% 46
+\BOOKMARK [2][-]{subsection.7.1.2}{Descripci\363n}{section.7.1}% 47
+\BOOKMARK [2][-]{subsection.7.1.3}{Trayectorias del caso de uso}{section.7.1}% 48
+\BOOKMARK [2][-]{subsection.7.1.4}{Puntos de extensi\363n}{section.7.1}% 49
+\BOOKMARK [1][-]{section.7.2}{CU-05 Consultar Detalle de Profesor}{chapter.7}% 50
+\BOOKMARK [2][-]{subsection.7.2.1}{Resumen}{section.7.2}% 51
+\BOOKMARK [2][-]{subsection.7.2.2}{Descripci\363n}{section.7.2}% 52
+\BOOKMARK [2][-]{subsection.7.2.3}{Trayectorias del caso de uso}{section.7.2}% 53
+\BOOKMARK [0][-]{chapter.8}{Modelo de interacci\363n con el usuario}{}% 54
+\BOOKMARK [1][-]{section.8.1}{Entorno de trabajo}{chapter.8}% 55
+\BOOKMARK [2][-]{subsection.8.1.1}{Dise\361o}{section.8.1}% 56
+\BOOKMARK [2][-]{subsection.8.1.2}{Pantalla de bienvenida}{section.8.1}% 57
+\BOOKMARK [2][-]{subsection.8.1.3}{Componentes utilizados}{section.8.1}% 58
+\BOOKMARK [2][-]{subsection.8.1.4}{Datos de sesi\363n}{section.8.1}% 59
+\BOOKMARK [2][-]{subsection.8.1.5}{Iconograf\355a}{section.8.1}% 60
+\BOOKMARK [2][-]{subsection.8.1.6}{Componentes utilizados}{section.8.1}% 61
+\BOOKMARK [2][-]{subsection.8.1.7}{Organizaci\363n}{section.8.1}% 62
+\BOOKMARK [1][-]{section.8.2}{Interfaces del subsistema: Registro de escuelas}{chapter.8}% 63
+\BOOKMARK [2][-]{subsection.8.2.1}{IUR 1 Iniciar sesi\363n}{section.8.2}% 64
+\BOOKMARK [1][-]{section.8.3}{Interfaces del subsistema: Informaci\363n base para los indicadores}{chapter.8}% 65
+\BOOKMARK [2][-]{subsection.8.3.1}{IUIBA 1 Administrar informaci\363n base para indicadores de agua}{section.8.3}% 66
+\BOOKMARK [1][-]{section.8.4}{Interfaces del subsistema: Plan de acci\363n}{chapter.8}% 67
+\BOOKMARK [2][-]{subsection.8.4.1}{IUP 1 Administrar objetivos}{section.8.4}% 68
+\BOOKMARK [1][-]{section.8.5}{Interfaces del subsistema: Seguimiento y acreditaci\363n}{chapter.8}% 69
+\BOOKMARK [2][-]{subsection.8.5.1}{IUS 1 Administrar avances de objetivos}{section.8.5}% 70
+\BOOKMARK [1][-]{section.8.6}{Interfaces del subsistema: Indicadores}{chapter.8}% 71
+\BOOKMARK [2][-]{subsection.8.6.1}{IUI 2 Consultar indicadores de agua}{section.8.6}% 72
+\BOOKMARK [1][-]{section.8.7}{Dise\361o de mensajes}{chapter.8}% 73
+\BOOKMARK [2][-]{subsection.8.7.1}{Par\341metros comunes}{section.8.7}% 74
+\BOOKMARK [2][-]{subsection.8.7.2}{Mensajes a trav\351s de la pantalla}{section.8.7}% 75
