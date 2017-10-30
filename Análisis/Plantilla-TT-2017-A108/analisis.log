@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 17:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4004,48 +4004,63 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 22.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 22.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 26.
-)
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+
+ []
+
 File: cdt/theme/pleca.png Graphic file (type png)
- <use cdt/theme/pleca.png>
-Package pdftex.def Info: cdt/theme/pleca.png used on input line 281.
+<use cdt/theme/pleca.png>
+Package pdftex.def Info: cdt/theme/pleca.png used on input line 36.
 (pdftex.def)             Requested size: 614.29454pt x 133.69939pt.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 36.
  [39]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 37.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 37.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 37.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 37.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 37.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 37.
+)
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
  <use cdt/theme/headerIpn.jpg>
 Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 281.
@@ -4083,9 +4098,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 281.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 281.
- [40
-
-]
+ [40]
 Cap\'{\i }tulo 9.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 281.
@@ -4141,7 +4154,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 326.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 326.
- [41]
+ [41
+
+]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
 
 <use cdt/theme/headerIpn.jpg>
@@ -4270,7 +4285,7 @@ mf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/hfbright/hftl10.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on analisis.pdf (51 pages, 1304886 bytes).
+Output written on analisis.pdf (51 pages, 1305533 bytes).
 PDF statistics:
  791 PDF objects out of 1000 (max. 8388607)
  688 compressed objects within 7 object streams

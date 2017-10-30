@@ -57,6 +57,6 @@
 \contentsline {subsection}{\numberline {8.1.1}M\IeC {\'o}dulo de Salones}{39}{subsection.8.1.1}
 \contentsline {subsection}{\numberline {8.1.2}M\IeC {\'o}dulo de Profesores}{39}{subsection.8.1.2}
 \contentsline {section}{\numberline {8.2}Trabajo a Futuro}{39}{section.8.2}
-\contentsline {section}{\numberline {8.3}Conclusiones}{39}{section.8.3}
+\contentsline {section}{\numberline {8.3}Conclusiones}{40}{section.8.3}
 \contentsline {chapter}{\numberline {9}Anexos}{41}{chapter.9}
 \contentsline {section}{\numberline {9.1}Estudio de Factibilidad}{41}{section.9.1}
