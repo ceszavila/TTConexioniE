@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,7 +948,7 @@ LaTeX Font Info:    Try loading font information for U+wasy on input line 63.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<cdt/theme/agua.png, id=244, 1154.3125pt x 625.33624pt>
+<cdt/theme/agua.png, id=252, 1154.3125pt x 625.33624pt>
 File: cdt/theme/agua.png Graphic file (type png)
 
 <use cdt/theme/agua.png>
@@ -983,14 +983,14 @@ Package babel Info: Redefining spanish shorthand "?
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./cdt/t
 heme/agua.png>]
-<cdt/theme/headerIpn.jpg, id=255, 426.59375pt x 632.3625pt>
+<cdt/theme/headerIpn.jpg, id=263, 426.59375pt x 632.3625pt>
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
 
 <use cdt/theme/headerIpn.jpg>
 Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 66.
 (pdftex.def)             Requested size: 23.60918pt x 35.0pt.
 
-<cdt/theme/logoEscom.jpg, id=256, 131.03902pt x 89.34479pt>
+<cdt/theme/logoEscom.jpg, id=264, 131.03902pt x 89.34479pt>
 File: cdt/theme/logoEscom.jpg Graphic file (type jpg)
 
 <use cdt/theme/logoEscom.jpg>
@@ -1081,14 +1081,14 @@ Overfull \hbox (5.36551pt too wide) in paragraph at lines 72--73
 [] 
  []
 
-<cdt/theme/logoIpn.jpg, id=264, 426.59375pt x 632.3625pt>
+<cdt/theme/logoIpn.jpg, id=272, 426.59375pt x 632.3625pt>
 File: cdt/theme/logoIpn.jpg Graphic file (type jpg)
 
 <use cdt/theme/logoIpn.jpg>
 Package pdftex.def Info: cdt/theme/logoIpn.jpg used on input line 76.
 (pdftex.def)             Requested size: 23.60918pt x 35.0pt.
 
-<cdt/theme/headerEscom.jpg, id=265, 131.03902pt x 89.34479pt>
+<cdt/theme/headerEscom.jpg, id=273, 131.03902pt x 89.34479pt>
 File: cdt/theme/headerEscom.jpg Graphic file (type jpg)
 
 <use cdt/theme/headerEscom.jpg>
@@ -1166,7 +1166,7 @@ LaTeX Font Warning: Font shape `OT1/cmbr/m/sc' undefined
 Package spanish Warning: Replacing `OT1/cmbr/m/sc' by 
 (spanish)                faked small caps on input line 30.
 
-<cdt/theme/pleca.png, id=306, 1706.375pt x 371.3875pt>
+<cdt/theme/pleca.png, id=314, 1706.375pt x 371.3875pt>
 File: cdt/theme/pleca.png Graphic file (type png)
 
 <use cdt/theme/pleca.png>
@@ -1641,7 +1641,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 41.
 
-<MarcoTeorico/usuariosusaninternet.png, id=391, 1099.10625pt x 808.01875pt>
+<MarcoTeorico/usuariosusaninternet.png, id=401, 1099.10625pt x 808.01875pt>
 File: MarcoTeorico/usuariosusaninternet.png Graphic file (type png)
 
 <use MarcoTeorico/usuariosusaninternet.png>
@@ -1649,14 +1649,14 @@ Package pdftex.def Info: MarcoTeorico/usuariosusaninternet.png used on input li
 ne 47.
 (pdftex.def)             Requested size: 221.78923pt x 163.04341pt.
 
-<MarcoTeorico/usodeinterte.png, id=392, 682.55pt x 501.875pt>
+<MarcoTeorico/usodeinterte.png, id=402, 682.55pt x 501.875pt>
 File: MarcoTeorico/usodeinterte.png Graphic file (type png)
 
 <use MarcoTeorico/usodeinterte.png>
 Package pdftex.def Info: MarcoTeorico/usodeinterte.png used on input line 50.
 (pdftex.def)             Requested size: 221.78923pt x 163.0768pt.
 
-<MarcoTeorico/usoencasa.png, id=394, 682.55pt x 501.875pt>
+<MarcoTeorico/usoencasa.png, id=404, 682.55pt x 501.875pt>
 File: MarcoTeorico/usoencasa.png Graphic file (type png)
 
 <use MarcoTeorico/usoencasa.png>
@@ -1857,14 +1857,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
-<MarcoTeorico/iosgrafica.png, id=409, 319.1925pt x 229.85875pt>
+<MarcoTeorico/iosgrafica.png, id=419, 319.1925pt x 229.85875pt>
 File: MarcoTeorico/iosgrafica.png Graphic file (type png)
 
 <use MarcoTeorico/iosgrafica.png>
 Package pdftex.def Info: MarcoTeorico/iosgrafica.png used on input line 115.
 (pdftex.def)             Requested size: 221.78923pt x 159.71803pt.
 
-<MarcoTeorico/androidgrafica.png, id=410, 324.21124pt x 229.85875pt>
+<MarcoTeorico/androidgrafica.png, id=420, 324.21124pt x 229.85875pt>
 File: MarcoTeorico/androidgrafica.png Graphic file (type png)
 
 <use MarcoTeorico/androidgrafica.png>
@@ -2346,57 +2346,110 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 20.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 20.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 26.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 26.
+ (./reqfun.tex
+Underfull \hbox (badness 1400) in paragraph at lines 3--3
+\OT1/cmbr/m/sc/10 m^^Sulti-ples, etc., se cuen-ta con el
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmbr/m/sc/10 Material dis-po-ni-ble
+ []
+
 File: cdt/theme/pleca.png Graphic file (type png)
- <use cdt/theme/pleca.png>
-Package pdftex.def Info: cdt/theme/pleca.png used on input line 29.
+<use cdt/theme/pleca.png>
+Package pdftex.def Info: cdt/theme/pleca.png used on input line 26.
 (pdftex.def)             Requested size: 614.29454pt x 133.69939pt.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 26.
  [15
 
-])
+]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
-
-<use cdt/theme/headerIpn.jpg>
-Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 126.
+ <use cdt/theme/headerIpn.jpg>
+Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 26.
 (pdftex.def)             Requested size: 23.60918pt x 35.0pt.
 File: cdt/theme/logoEscom.jpg Graphic file (type jpg)
- <use cdt/theme/logoEscom.jpg>
-Package pdftex.def Info: cdt/theme/logoEscom.jpg used on input line 126.
+
+<use cdt/theme/logoEscom.jpg>
+Package pdftex.def Info: cdt/theme/logoEscom.jpg used on input line 26.
+(pdftex.def)             Requested size: 51.33295pt x 35.0pt.
+File: cdt/theme/pleca.png Graphic file (type png)
+ <use cdt/theme/pleca.png>
+Package pdftex.def Info: cdt/theme/pleca.png used on input line 26.
+(pdftex.def)             Requested size: 614.29454pt x 133.69939pt.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 26.
+ [16])
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 26.
+ (./reqnofun.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\OT1/cmbr/m/sc/10 Compatibilidad de
+ []
+
+))
+File: cdt/theme/logoIpn.jpg Graphic file (type jpg)
+ <use cdt/theme/logoIpn.jpg>
+Package pdftex.def Info: cdt/theme/logoIpn.jpg used on input line 126.
+(pdftex.def)             Requested size: 23.60918pt x 35.0pt.
+File: cdt/theme/headerEscom.jpg Graphic file (type jpg)
+ <use cdt/theme/headerEscom.jpg>
+Package pdftex.def Info: cdt/theme/headerEscom.jpg used on input line 126.
 (pdftex.def)             Requested size: 51.33295pt x 35.0pt.
 File: cdt/theme/pleca.png Graphic file (type png)
 
@@ -2427,7 +2480,47 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 126.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 126.
- [16]
+ [17]
+File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
+ <use cdt/theme/headerIpn.jpg>
+Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 126.
+(pdftex.def)             Requested size: 23.60918pt x 35.0pt.
+File: cdt/theme/logoEscom.jpg Graphic file (type jpg)
+
+<use cdt/theme/logoEscom.jpg>
+Package pdftex.def Info: cdt/theme/logoEscom.jpg used on input line 126.
+(pdftex.def)             Requested size: 51.33295pt x 35.0pt.
+File: cdt/theme/pleca.png Graphic file (type png)
+ <use cdt/theme/pleca.png>
+Package pdftex.def Info: cdt/theme/pleca.png used on input line 126.
+(pdftex.def)             Requested size: 614.29454pt x 133.69939pt.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 126.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 126.
+ [18
+
+]
 Cap\'{\i }tulo 5.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 126.
@@ -2459,7 +2552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<images/modulos.jpg, id=455, 900.36375pt x 467.7475pt>
+<images/modulos.jpg, id=493, 900.36375pt x 467.7475pt>
 File: images/modulos.jpg Graphic file (type jpg)
 
 <use images/modulos.jpg>
@@ -2485,7 +2578,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 31.
-<images/actores/Actores.png, id=457, 3226.0525pt x 1067.99pt>
+<images/actores/Actores.png, id=495, 3226.0525pt x 1067.99pt>
 File: images/actores/Actores.png Graphic file (type png)
 
 <use images/actores/Actores.png>
@@ -2507,7 +2600,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 47.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 47.
-<cdt/uc/rules/ActorRule.png, id=458, 890.32625pt x 55.20625pt>
+<cdt/uc/rules/ActorRule.png, id=496, 890.32625pt x 55.20625pt>
 File: cdt/uc/rules/ActorRule.png Graphic file (type png)
 
 <use cdt/uc/rules/ActorRule.png>
@@ -2541,9 +2634,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 49.
- [17
-
- <./cdt/uc/rules/ActorRule.png>]
+ [19 <./cdt/uc/rules/ActorRule.png>]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
  <use cdt/theme/headerIpn.jpg>
 Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 109.
@@ -2581,7 +2672,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 109.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 109.
- [18 <./images/modulos.jpg> <./images/actores/Actores.png>]
+ [20 <./images/modulos.jpg> <./images/actores/Actores.png>]
 LaTeX Font Info:    Font shape `OT1/cmbr/m/it' in size <10> not available
 (Font)              Font shape `OT1/cmbr/m/sl' tried instead on input line 114.
 
@@ -2614,7 +2705,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 198.
 
-<images/CasosUso/Registro.png, id=472, 1197.47375pt x 1240.635pt>
+<images/CasosUso/Registro.png, id=508, 1197.47375pt x 1240.635pt>
 File: images/CasosUso/Registro.png Graphic file (type png)
 
 <use images/CasosUso/Registro.png>
@@ -2636,7 +2727,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 209.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 209.
-<images/CasosUso/informacionBase.jpg, id=474, 1256.695pt x 1170.3725pt>
+<images/CasosUso/informacionBase.jpg, id=510, 1256.695pt x 1170.3725pt>
 File: images/CasosUso/informacionBase.jpg Graphic file (type jpg)
 
 <use images/CasosUso/informacionBase.jpg>
@@ -2689,7 +2780,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 130.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 130.
- [19]
+ [21]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
  <use cdt/theme/headerIpn.jpg>
 Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 130.
@@ -2727,7 +2818,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 130.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 130.
- [20 <./images/CasosUso/Registro.png>]
+ [22 <./images/CasosUso/Registro.png>]
 File: cdt/theme/logoIpn.jpg Graphic file (type jpg)
  <use cdt/theme/logoIpn.jpg>
 Package pdftex.def Info: cdt/theme/logoIpn.jpg used on input line 130.
@@ -2765,7 +2856,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 130.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 130.
- [21 <./images/CasosUso/informacionBase.jpg>]
+ [23 <./images/CasosUso/informacionBase.jpg>]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
 
 <use cdt/theme/headerIpn.jpg>
@@ -2804,7 +2895,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 130.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 130.
- [22
+ [24
 
 ]
 Cap\'{\i }tulo 6.
@@ -2849,7 +2940,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 11.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 11.
- [23]
+ [25]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 11.
 Package babel Info: Redefining spanish shorthand >>
@@ -2917,7 +3008,7 @@ File: cdt/theme/pleca.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/pleca.png used on input line 102.
 (pdftex.def)             Requested size: 614.29454pt x 133.69939pt.
 
-<cdt/uc/rules/UCRule.png, id=500, 931.48pt x 973.6375pt>
+<cdt/uc/rules/UCRule.png, id=536, 931.48pt x 973.6375pt>
 File: cdt/uc/rules/UCRule.png Graphic file (type png)
 
 <use cdt/uc/rules/UCRule.png>
@@ -2947,14 +3038,14 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 102.
- [24 <./cdt/uc/rules/UCRule.png>]
-<cdt/uc/actor.png, id=508, 96.36pt x 74.2775pt>
+ [26 <./cdt/uc/rules/UCRule.png>]
+<cdt/uc/actor.png, id=544, 96.36pt x 74.2775pt>
 File: cdt/uc/actor.png Graphic file (type png)
  <use cdt/uc/actor.png>
 Package pdftex.def Info: cdt/uc/actor.png used on input line 102.
 (pdftex.def)             Requested size: 14.26958pt x 11.0pt.
 
-<cdt/uc/usecase.png, id=509, 91.34125pt x 61.22874pt>
+<cdt/uc/usecase.png, id=545, 91.34125pt x 61.22874pt>
 File: cdt/uc/usecase.png Graphic file (type png)
  <use cdt/uc/usecase.png>
 Package pdftex.def Info: cdt/uc/usecase.png used on input line 104.
@@ -3011,7 +3102,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 6.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 6.
- [25 <./cdt/uc/actor.png> <./cdt/uc/usecase.png> </usr/local/texlive/2017/texmf
+ [27 <./cdt/uc/actor.png> <./cdt/uc/usecase.png> </usr/local/texlive/2017/texmf
 -dist/tex/latex/keystroke/keystroke_left.pdf> </usr/local/texlive/2017/texmf-di
 st/tex/latex/keystroke/keystroke_middle.pdf> </usr/local/texlive/2017/texmf-dis
 t/tex/latex/keystroke/keystroke_right.pdf>]
@@ -3114,7 +3205,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 94.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 94.
- [26]
+ [28]
 File: cdt/uc/usecase.png Graphic file (type png)
  <use cdt/uc/usecase.png>
 Package pdftex.def Info: cdt/uc/usecase.png used on input line 95.
@@ -3180,7 +3271,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 6.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 6.
- [27]
+ [29]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 6.
 Package babel Info: Redefining spanish shorthand >>
@@ -3275,7 +3366,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 93.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 93.
- [28]
+ [30]
 File: cdt/uc/actor.png Graphic file (type png)
 
 <use cdt/uc/actor.png>
@@ -3370,7 +3461,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 151.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 151.
- [29]
+ [31]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
  <use cdt/theme/headerIpn.jpg>
 Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 151.
@@ -3408,7 +3499,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 151.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 151.
- [30
+ [32
 
 ]
 Cap\'{\i }tulo 7.
@@ -3453,7 +3544,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 5.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 5.
- [31]
+ [33]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 5.
 Package babel Info: Redefining spanish shorthand >>
@@ -3557,7 +3648,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 95.
- [32]
+ [34]
 File: cdt/uc/actor.png Graphic file (type png)
  <use cdt/uc/actor.png>
 Package pdftex.def Info: cdt/uc/actor.png used on input line 95.
@@ -3576,7 +3667,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 116.
 
 
-LaTeX Warning: Reference `cur1:Acciones' on page 33 undefined on input line 121
+LaTeX Warning: Reference `cur1:Acciones' on page 35 undefined on input line 121
 .
 
 ) (./ModuloProfesores/cu2/cu.tex
@@ -3617,7 +3708,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 5.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 5.
- [33]
+ [35]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 5.
 Package babel Info: Redefining spanish shorthand >>
@@ -3717,7 +3808,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 87.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 87.
- [34]
+ [36]
 File: cdt/uc/usecase.png Graphic file (type png)
  <use cdt/uc/usecase.png>
 Package pdftex.def Info: cdt/uc/usecase.png used on input line 87.
@@ -3804,7 +3895,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 278.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 278.
- [35]
+ [37]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
 
 <use cdt/theme/headerIpn.jpg>
@@ -3843,7 +3934,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 278.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 278.
- [36
+ [38
 
 ]
 Cap\'{\i }tulo 8.
@@ -3872,30 +3963,59 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 16.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 22.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 22.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 22.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 22.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 22.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 22.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 26.
 )
 File: cdt/theme/pleca.png Graphic file (type png)
  <use cdt/theme/pleca.png>
@@ -3925,19 +4045,18 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 281.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 281.
- [37]
+ [39]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
-
-<use cdt/theme/headerIpn.jpg>
+ <use cdt/theme/headerIpn.jpg>
 Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 281.
 (pdftex.def)             Requested size: 23.60918pt x 35.0pt.
 File: cdt/theme/logoEscom.jpg Graphic file (type jpg)
- <use cdt/theme/logoEscom.jpg>
+
+<use cdt/theme/logoEscom.jpg>
 Package pdftex.def Info: cdt/theme/logoEscom.jpg used on input line 281.
 (pdftex.def)             Requested size: 51.33295pt x 35.0pt.
 File: cdt/theme/pleca.png Graphic file (type png)
-
-<use cdt/theme/pleca.png>
+ <use cdt/theme/pleca.png>
 Package pdftex.def Info: cdt/theme/pleca.png used on input line 281.
 (pdftex.def)             Requested size: 614.29454pt x 133.69939pt.
 Package babel Info: Redefining spanish shorthand <<
@@ -3964,7 +4083,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 281.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 281.
- [38
+ [40
 
 ]
 Cap\'{\i }tulo 9.
@@ -4022,7 +4141,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 326.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 326.
- [39]
+ [41]
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
 
 <use cdt/theme/headerIpn.jpg>
@@ -4061,7 +4180,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 326.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 326.
- [40
+ [42
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+cmtl on input line 326
@@ -4100,7 +4219,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 327.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 327.
- [41]
+ [43]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 327.
  (./analisis.aux
 LaTeX Info: Redefining \. on input line 23.
@@ -4109,7 +4228,7 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
 Package rerunfilecheck Info: File `analisis.out' has not changed.
-(rerunfilecheck)             Checksum: 39E6F9001B073B44A1E25D44D87ED51E;4169.
+(rerunfilecheck)             Checksum: 104704DA963E32F3F4B4EC66E4EAFAD1;4320.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4123,10 +4242,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 327.
  ) 
 Here is how much of TeX's memory you used:
- 9524 strings out of 492995
- 133308 string characters out of 6132704
- 257014 words of memory out of 5000000
- 12642 multiletter control sequences out of 15000+600000
+ 9557 strings out of 492995
+ 133718 string characters out of 6132704
+ 263138 words of memory out of 5000000
+ 12647 multiletter control sequences out of 15000+600000
  15295 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,15n,51p,1166b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4151,10 +4270,10 @@ mf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/hfbright/hftl10.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on analisis.pdf (49 pages, 1298151 bytes).
+Output written on analisis.pdf (51 pages, 1304886 bytes).
 PDF statistics:
- 750 PDF objects out of 1000 (max. 8388607)
- 649 compressed objects within 7 object streams
- 178 named destinations out of 1000 (max. 500000)
- 583 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 791 PDF objects out of 1000 (max. 8388607)
+ 688 compressed objects within 7 object streams
+ 200 named destinations out of 1000 (max. 500000)
+ 599 words of extra memory for PDF output out of 10000 (max. 10000000)
 

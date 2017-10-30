@@ -40,7 +40,7 @@
 %%----------------------------------------------------
 %%Comando para referenciar a un requerimiento de usuario
 %%----------------------------------------------------
-%\newcommand{\refUserReq}[1]{\hyperlink{ReqUser:#1}{#1}}
+\newcommand{\refUserReq}[1]{\hyperlink{ReqUser:#1}{#1}}
 %----------------------------------------------------
 %Entorno para escribir los requerimientos del sistema
 %----------------------------------------------------
@@ -49,11 +49,11 @@
     \hline
     \rowcolor{colorPrincipal}
     \multicolumn{3}{|c|}{\bf\color{white}{Requerimientos del Sistema}}\\\hline
-    \endhead
     \rowcolor{colorGris}
-    \color{white}
-    Id & \color{white}Nombre & \color{white}Descripción  \\ \hline
-\end{longtable}}
+    \bf \color{white}
+    Id & \bf\color{white}Nombre & \bf \color{white}Descripción  \\ \hline
+    \endhead}
+{\end{longtable}}
 
 %----------------------------------------------------
 %Comando para agregar un renglón a la tabla de requerimientos del sistema
