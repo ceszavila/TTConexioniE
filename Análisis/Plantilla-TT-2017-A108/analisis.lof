@@ -1,32 +1,39 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Gr\IeC {\'a}fica de uso de internet}}{7}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Gr\IeC {\'a}fica de uso de internet}}{7}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Usuarios Android}}{8}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Usuarios iOS}}{8}{figure.2.4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Usuarios Android}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Usuarios iOS}}{6}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Gr\IeC {\'a}fica de uso de internet}}{6}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Gr\IeC {\'a}fica de uso de internet}}{9}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Gr\IeC {\'a}fica de uso de internet}}{9}{figure.2.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces M\IeC {\'o}dulos del Sistema de Acreditaci\IeC {\'o}n de Escuelas Ambientalmente Responsables.}}{14}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Perfiles identificados.}}{14}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de casos de uso para el m\IeC {\'o}dulo de Registro de escuelas. }}{16}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de casos de uso para el m\IeC {\'o}dulo de Informaci\IeC {\'o}n base para indicadores.}}{17}{figure.3.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Gr\IeC {\'a}fica de uso de internet}}{15}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Gr\IeC {\'a}fica de uso de internet}}{15}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Usuarios Android}}{16}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Usuarios iOS}}{16}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Gr\IeC {\'a}fica de uso de internet}}{17}{figure.3.5}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces M\IeC {\'o}dulos del Sistema de Acreditaci\IeC {\'o}n de Escuelas Ambientalmente Responsables.}}{28}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Perfiles identificados.}}{28}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Diagrama de casos de uso para el m\IeC {\'o}dulo de Registro de escuelas. }}{30}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Diagrama de casos de uso para el m\IeC {\'o}dulo de Informaci\IeC {\'o}n base para indicadores.}}{31}{figure.5.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Entorno de trabajo del sistema.}}{34}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Pantalla de bienvenida.}}{36}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Pantalla emergente}}{36}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Datos de sesi\IeC {\'o}n}}{37}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Pantalla emergente.}}{38}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Captcha}}{38}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces MN2 Men\IeC {\'u} del Coordinador del programa}}{39}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces MN2.1 Men\IeC {\'u} del Coordinador del programa. Submen\IeC {\'u} de ``Informaci\IeC {\'o}n general''.}}{39}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces MN2.2 Men\IeC {\'u} del Coordinador del programa. Submen\IeC {\'u} de ``Informaci\IeC {\'o}n para indicadores''.}}{40}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces MN2.3 Men\IeC {\'u} del Coordinador del programa. Submen\IeC {\'u} de ``Plan de acci\IeC {\'o}n''.}}{40}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces MN2.4 Men\IeC {\'u} del Coordinador del programa. Submen\IeC {\'u} de ``Seguimiento y acreditaci\IeC {\'o}n''.}}{40}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces IUR 1 Iniciar sesi\IeC {\'o}n}}{41}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces IUIBA 1 Administrar informaci\IeC {\'o}n base para indicadores de agua}}{42}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces IUP 1 Administrar objetivos}}{43}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces IUS 1 Administrar avances de objetivos}}{44}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces IUI 2 Consultar indicadores de agua}}{45}{figure.6.16}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Entorno de trabajo del sistema.}}{48}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Pantalla de bienvenida.}}{50}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Pantalla emergente}}{50}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Datos de sesi\IeC {\'o}n}}{51}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Pantalla emergente.}}{52}{figure.8.5}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Captcha}}{52}{figure.8.6}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces MN2 Men\IeC {\'u} del Coordinador del programa}}{53}{figure.8.7}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces MN2.1 Men\IeC {\'u} del Coordinador del programa. Submen\IeC {\'u} de ``Informaci\IeC {\'o}n general''.}}{53}{figure.8.8}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces MN2.2 Men\IeC {\'u} del Coordinador del programa. Submen\IeC {\'u} de ``Informaci\IeC {\'o}n para indicadores''.}}{54}{figure.8.9}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces MN2.3 Men\IeC {\'u} del Coordinador del programa. Submen\IeC {\'u} de ``Plan de acci\IeC {\'o}n''.}}{54}{figure.8.10}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces MN2.4 Men\IeC {\'u} del Coordinador del programa. Submen\IeC {\'u} de ``Seguimiento y acreditaci\IeC {\'o}n''.}}{54}{figure.8.11}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces IUR 1 Iniciar sesi\IeC {\'o}n}}{55}{figure.8.12}
+\contentsline {figure}{\numberline {8.13}{\ignorespaces IUIBA 1 Administrar informaci\IeC {\'o}n base para indicadores de agua}}{56}{figure.8.13}
+\contentsline {figure}{\numberline {8.14}{\ignorespaces IUP 1 Administrar objetivos}}{57}{figure.8.14}
+\contentsline {figure}{\numberline {8.15}{\ignorespaces IUS 1 Administrar avances de objetivos}}{58}{figure.8.15}
+\contentsline {figure}{\numberline {8.16}{\ignorespaces IUI 2 Consultar indicadores de agua}}{59}{figure.8.16}
