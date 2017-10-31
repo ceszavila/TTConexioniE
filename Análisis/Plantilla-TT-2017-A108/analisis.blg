@@ -10,45 +10,46 @@ Warning--to sort, need author or key in 11
 Warning--to sort, need author or key in 12
 Warning--empty school in 14
 Warning--empty journal in 05
-You've used 14 entries,
+Warning--there's a number but no volume in 16
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            565 strings with 6314 characters,
-and the built_in function-call counts, 3235 in all, are:
-= -- 311
-> -- 129
+            572 strings with 6501 characters,
+and the built_in function-call counts, 3483 in all, are:
+= -- 335
+> -- 142
 < -- 0
-+ -- 55
-- -- 40
-* -- 174
-:= -- 537
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 59
++ -- 60
+- -- 44
+* -- 190
+:= -- 583
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 130
-empty$ -- 291
-format.name$ -- 40
-if$ -- 684
+cite$ -- 23
+duplicate$ -- 140
+empty$ -- 309
+format.name$ -- 44
+if$ -- 734
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 10
-newline$ -- 73
-num.names$ -- 18
-pop$ -- 99
+int.to.str$ -- 15
+missing$ -- 11
+newline$ -- 78
+num.names$ -- 20
+pop$ -- 102
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 51
 quote$ -- 0
-skip$ -- 89
+skip$ -- 97
 stack$ -- 0
-substring$ -- 106
-swap$ -- 13
+substring$ -- 111
+swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
-warning$ -- 7
-while$ -- 22
-width$ -- 16
-write$ -- 140
-(There were 7 warnings)
+type$ -- 56
+warning$ -- 8
+while$ -- 24
+width$ -- 17
+write$ -- 151
+(There were 8 warnings)
