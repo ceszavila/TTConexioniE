@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: analisis.aux
+The style file: plain.bst
+Database file #1: bibfile.bib
+Warning--to sort, need author or key in 07
+Warning--to sort, need author or key in 09
+Warning--to sort, need author or key in 10
+Warning--to sort, need author or key in 11
+Warning--to sort, need author or key in 12
+Warning--empty school in 14
+Warning--empty journal in 05
+You've used 14 entries,
+            2118 wiz_defined-function locations,
+            565 strings with 6314 characters,
+and the built_in function-call counts, 3235 in all, are:
+= -- 311
+> -- 129
+< -- 0
++ -- 55
+- -- 40
+* -- 174
+:= -- 537
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 59
+chr.to.int$ -- 0
+cite$ -- 21
+duplicate$ -- 130
+empty$ -- 291
+format.name$ -- 40
+if$ -- 684
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 10
+newline$ -- 73
+num.names$ -- 18
+pop$ -- 99
+preamble$ -- 1
+purify$ -- 48
+quote$ -- 0
+skip$ -- 89
+stack$ -- 0
+substring$ -- 106
+swap$ -- 13
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 7
+while$ -- 22
+width$ -- 16
+write$ -- 140
+(There were 7 warnings)
