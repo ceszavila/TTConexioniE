@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 OCT 2017 08:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 OCT 2017 10:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4080,73 +4080,92 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 7.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 7.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 9.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 9.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 9.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 9.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 9.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 9.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 11.
-) (./analisis.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
 File: cdt/theme/pleca.png Graphic file (type png)
- <use cdt/theme/pleca.png>
-Package pdftex.def Info: cdt/theme/pleca.png used on input line 1.
+<use cdt/theme/pleca.png>
+Package pdftex.def Info: cdt/theme/pleca.png used on input line 18.
 (pdftex.def)             Requested size: 614.29454pt x 133.69939pt.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 18.
  [39
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 39.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 39.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 39.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 39.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 39.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 39.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 46.
+) (./analisis.bbl
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
  <use cdt/theme/headerIpn.jpg>
 Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 1.
 (pdftex.def)             Requested size: 23.60918pt x 35.0pt.
 File: cdt/theme/logoEscom.jpg Graphic file (type jpg)
-
-<use cdt/theme/logoEscom.jpg>
+ <use cdt/theme/logoEscom.jpg>
 Package pdftex.def Info: cdt/theme/logoEscom.jpg used on input line 1.
 (pdftex.def)             Requested size: 51.33295pt x 35.0pt.
 File: cdt/theme/pleca.png Graphic file (type png)
- <use cdt/theme/pleca.png>
+
+<use cdt/theme/pleca.png>
 Package pdftex.def Info: cdt/theme/pleca.png used on input line 1.
 (pdftex.def)             Requested size: 614.29454pt x 133.69939pt.
 Package babel Info: Redefining spanish shorthand <<
@@ -4173,9 +4192,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
- [40
-
-]
+ [40]
 LaTeX Font Info:    Try loading font information for OT1+cmtl on input line 7.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/cmbright/ot1cmtl.fd
@@ -4218,6 +4235,18 @@ Underfull \hbox (badness 1953) in paragraph at lines 28--31
 -les.  [][]$\OT1/cmtl/m/n/10 http : / / www . webespacio . com /
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
+[]\OT1/cmbr/m/sc/10 Mi sa-la-rio (ana-lis-ta de sis-te-mas).  [][]$\OT1/cmtl/m/
+n/10 https : / / misalario . org / main / tu-[]salario /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--43
+[]\OT1/cmbr/m/sc/10 Mi sa-la-rio (desa-rro-lla-dor de soft-wa-re).  [][]$\OT1/c
+mtl/m/n/10 https : / / misalario . org / main / tu-[]salario /
+ []
+
 File: cdt/theme/pleca.png Graphic file (type png)
 <use cdt/theme/pleca.png>
 Package pdftex.def Info: cdt/theme/pleca.png used on input line 78.
@@ -4246,7 +4275,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 78.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 78.
- [41])
+ [41
+
+])
 File: cdt/theme/headerIpn.jpg Graphic file (type jpg)
  <use cdt/theme/headerIpn.jpg>
 Package pdftex.def Info: cdt/theme/headerIpn.jpg used on input line 327.
@@ -4337,10 +4368,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 328.
  ) 
 Here is how much of TeX's memory you used:
- 10604 strings out of 492995
- 145805 string characters out of 6132704
- 271440 words of memory out of 5000000
- 13653 multiletter control sequences out of 15000+600000
+ 10608 strings out of 492995
+ 145827 string characters out of 6132704
+ 271490 words of memory out of 5000000
+ 13655 multiletter control sequences out of 15000+600000
  15295 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,16n,51p,1166b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4365,10 +4396,10 @@ mf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/hfbright/hftl10.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on analisis.pdf (51 pages, 1322387 bytes).
+Output written on analisis.pdf (51 pages, 1325248 bytes).
 PDF statistics:
- 863 PDF objects out of 1000 (max. 8388607)
- 759 compressed objects within 8 object streams
- 223 named destinations out of 1000 (max. 500000)
+ 871 PDF objects out of 1000 (max. 8388607)
+ 767 compressed objects within 8 object streams
+ 225 named destinations out of 1000 (max. 500000)
  623 words of extra memory for PDF output out of 10000 (max. 10000000)
 
