@@ -5,6 +5,7 @@
 \usepackage{subfigure}
 \usepackage{cite}
 \usepackage[spanish]{babel}
+\usepackage{tipa}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,13 +64,13 @@
  
 %=========================================================
 % Hoja de revisión
-\makeDocInfo
+%\makeDocInfo
 \vspace{0.5cm}
-\makeElemRefs
-\makeDocRefs
-\makeObservaciones[3cm]
-\vspace{0.5cm}
-\makeFirmas
+%\makeElemRefs
+%\makeDocRefs
+%\makeObservaciones[3cm]
+%\vspace{0.5cm}
+%\makeFirmas
 
 %=========================================================
 % Indices del documento
@@ -91,11 +92,20 @@
 \chapter{Marco Teórico}\label{chp:marcoTeorico}
     \cfinput{marcoteorico}
     
+%=========================================================    
+\chapter{Planteamiento del Problema}\label{chp:planteamientoProblema}
+  \cfinput{PlanteamientoProblema/planteamientoProblema}
+  
+%=========================================================
+\chapter{Alcance del Proyecto}\label{chp:alcanceProyecto}
+\cfinput{AlcanceProyecto/alcanceProyecto}
+
+
 %=========================================================
 %\chapter{Glosario de términos}\label{chp:glosarioTerminos}
 %    \cfinput{ModeloNegocios/glosario}
-\chapter{Requerimientos}\label{chp:requerimientos}
-\input{req}
+%\chapter{Requerimientos}\label{chp:requerimientos}
+%\input{req}
 
 %=========================================================
 %\chapter{Modelo de negocio}\label{chp:modeloNegocios}
@@ -114,7 +124,7 @@
 %%    \cfinput{ModeloNegocios/indicadores-consumoResponsable}
 %    
 %===========================================================
-\chapter{Modelo de comportamiento}\label{chp:modeloComportamiento}
+\chapter{Trabajo realizado}\label{chp:modeloComportamiento}
   \cfinput{ModeloComportamiento/comportamiento}
 
 %===========================================================
@@ -266,48 +276,52 @@ En este capítulo se describen los casos de uso referentes a la consulta de espa
 %	%\cfinput{seleccionEstudiantes/cuse4/uc}
 %
 %%---------------------------------------------------------------------
+\chapter{Resultados}\label{chp:Resultados}
+\cfinput{Resultados/resultados}
 
-    	
-\chapter{Modelo de interacción con el usuario}\label{chp:modeloInteraccionUsuario}
-\cfinput{ModeloInteraccion/interaccion}
+\chapter{Anexos}\label{chp:Anexos}
+\cfinput{Anexos/estudioFactibilidad}
 
-%---------------------------------------------------------------------
-\section{Interfaces del subsistema: Registro de escuelas}
-      \cfinput{ModuloRegistro/cur1/ui} 
-
-
-%---------------------------------------------------------------------
-\section{Interfaces del subsistema: Información base para los indicadores}
-%       \cfinput{ModuloInformacionBase/cuib1/ui}
-%       \cfinput{ModuloInformacionBase/cuib2/ui}
-      \cfinput{ModuloInformacionBase/cuiba1/ui}
- %---------------------------------------------------------------------
-\section{Interfaces del subsistema: Plan de acción}
-	\cfinput{ModuloPlanAccion/cup1/ui}
-
-
-
-%---------------------------------------------------------------------
-
-\section{Interfaces del subsistema: Seguimiento y acreditación}
-      \cfinput{ModuloSeguimiento/cus1/ui}
-
-%---------------------------------------------------------------------
-
-\section{Interfaces del subsistema: Indicadores}
-      \cfinput{ModuloIndicadores/cui2/ui}
-
-%---------------------------------------------------------------------
-
-
-%---------------------------------------------------------------------
-
-\section{Diseño de mensajes}
- \cfinput{ModeloInteraccion/mensajes}
+%\chapter{Modelo de interacción con el usuario}\label{chp:modeloInteraccionUsuario}
+%\cfinput{ModeloInteraccion/interaccion}
+%
+%%---------------------------------------------------------------------
+%\section{Interfaces del subsistema: Registro de escuelas}
+%      \cfinput{ModuloRegistro/cur1/ui} 
+%
+%
+%%---------------------------------------------------------------------
+%\section{Interfaces del subsistema: Información base para los indicadores}
+%%       \cfinput{ModuloInformacionBase/cuib1/ui}
+%%       \cfinput{ModuloInformacionBase/cuib2/ui}
+%      \cfinput{ModuloInformacionBase/cuiba1/ui}
+% %---------------------------------------------------------------------
+%\section{Interfaces del subsistema: Plan de acción}
+%	\cfinput{ModuloPlanAccion/cup1/ui}
+%
+%
+%
+%%---------------------------------------------------------------------
+%
+%\section{Interfaces del subsistema: Seguimiento y acreditación}
+%      \cfinput{ModuloSeguimiento/cus1/ui}
+%
+%%---------------------------------------------------------------------
+%
+%\section{Interfaces del subsistema: Indicadores}
+%      \cfinput{ModuloIndicadores/cui2/ui}
+%
+%%---------------------------------------------------------------------
+%
+%
+%%---------------------------------------------------------------------
+%
+%\section{Diseño de mensajes}
+% \cfinput{ModeloInteraccion/mensajes}
 
 % Bibliografía
-% \bibliographystyle{plain}
-% \bibliography{bibSEIPA}
+ \bibliographystyle{plain}
+ \bibliography{bibfile}
 %\addcontentsline{toc}{chapter}{Bibliografía}
 
 \clossing
