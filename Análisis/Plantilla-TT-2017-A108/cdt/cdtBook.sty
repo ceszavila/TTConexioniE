@@ -35,6 +35,14 @@
 	\renewcommand{\varOrganizacion}{{#2}}%
 }
 
+\newcommand{\varProfesores}{Definir Profesores}
+\newcommand{\varProfesorUno}{Primer Profesor}
+\newcommand{\varProfesorDos}{Segundo Profesor}
+\newcommand{\directores}[2]{
+	\renewcommand{\varProfesorUno}{{#1}}
+	\renewcommand{\varProfesorDos}{{#2}}
+}
+
 %=====================================================
 % Comando: \author{Nombre del autor}
 % Propósito: Definir el nombre del autor.
@@ -50,7 +58,7 @@
 \newcommand{\autor}[2][IPN]{%
 	\renewcommand{\varAutor}{{#2}}
 	\renewcommand{\varCveAutor}{{#1}}
-	\varAuthor{\color{colorSecundario}{{#2}}\\ {\color{colorGris}{\varOrganizacion}}}%
+	\varAuthor{\color{colorSecundario}{{#2}}\\ {\color{colorGris}\varProfesorUno}\\\color{colorGris}\varProfesorDos}%
 }
 %\newcommand{\varAuthor}[1]{Escuela Superior de Cómputo, IPN}
 %	\let\varAuthor=\author
@@ -132,19 +140,16 @@
 \renewcommand{\title}[1]{%	
 	\varTitle{%
 		{\Huge\color{colorPrincipal}{#1}}%
-		\\\bigskip {\LARGE \color{colorSecundario}\varSubTitle~{}%
-			\bigskip\\%
+		\\\bigskip{\large \color{colorSecundario}\varSubTitle~{}%
+			%\bigskip
 			%
-		}
-		%\rule{\textwidth}{1mm}%
-		\color{colorSecundario}\fbox{\color{colorPrincipal}%
-		\small \varCveProyecto--\varCveSistema--\varCveDocumento\varCveEntregable \varDocVersion
+			%
 		}
 	}%
 }
 
 % Valor por defecto para el documento.
-\title{\varDocumento\\\bigskip \varEntregable}
+\title{\varDocumento\\ \varEntregable}
 
 %=====================================================
 % Comando: \subtitle{Subtitulo del documento}
