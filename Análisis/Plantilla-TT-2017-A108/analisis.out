@@ -23,48 +23,6 @@
 \BOOKMARK [2][-]{subsection.4.3.2}{Requerimientos no funcionales}{section.4.3}% 23
 \BOOKMARK [0][-]{chapter.5}{Trabajo Realizado}{}% 24
 \BOOKMARK [1][-]{section.5.1}{M\363dulos del sistema}{chapter.5}% 25
-<<<<<<< HEAD
-\BOOKMARK [1][-]{section.5.2}{Actores del sistema}{chapter.5}% 26
-\BOOKMARK [2][-]{subsection.5.2.1}{Alumno}{section.5.2}% 27
-\BOOKMARK [2][-]{subsection.5.2.2}{Visitante}{section.5.2}% 28
-\BOOKMARK [1][-]{section.5.3}{Casos de Uso del m\363dulo de Salones}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.4}{Casos de Uso del m\363dulo de Profesores}{chapter.5}% 30
-\BOOKMARK [0][-]{chapter.6}{Resultados}{}% 31
-\BOOKMARK [1][-]{section.6.1}{Resultados}{chapter.6}% 32
-\BOOKMARK [2][-]{subsection.6.1.1}{M\363dulo de Salones}{section.6.1}% 33
-\BOOKMARK [2][-]{subsection.6.1.2}{M\363dulo de Profesores}{section.6.1}% 34
-\BOOKMARK [1][-]{section.6.2}{Trabajo a Futuro}{chapter.6}% 35
-\BOOKMARK [1][-]{section.6.3}{Conclusiones}{chapter.6}% 36
-\BOOKMARK [0][-]{chapter.7}{Anexos}{}% 37
-\BOOKMARK [1][-]{section.7.1}{Casos de Uso}{chapter.7}% 38
-\BOOKMARK [2][-]{subsection.7.1.1}{Modelo de comportamiento del m\363dulo: Consulta de Salones }{section.7.1}% 39
-\BOOKMARK [1][-]{section.7.2}{CU-01 Consultar Edificio}{chapter.7}% 40
-\BOOKMARK [2][-]{subsection.7.2.1}{Resumen}{section.7.2}% 41
-\BOOKMARK [2][-]{subsection.7.2.2}{Descripci\363n}{section.7.2}% 42
-\BOOKMARK [2][-]{subsection.7.2.3}{Trayectorias del caso de uso}{section.7.2}% 43
-\BOOKMARK [1][-]{section.7.3}{CU-02 Consultar Nivel}{chapter.7}% 44
-\BOOKMARK [2][-]{subsection.7.3.1}{Resumen}{section.7.3}% 45
-\BOOKMARK [2][-]{subsection.7.3.2}{Descripci\363n}{section.7.3}% 46
-\BOOKMARK [2][-]{subsection.7.3.3}{Trayectorias del caso de uso}{section.7.3}% 47
-\BOOKMARK [1][-]{section.7.4}{CU-03 Consultar Sal\363n}{chapter.7}% 48
-\BOOKMARK [2][-]{subsection.7.4.1}{Resumen}{section.7.4}% 49
-\BOOKMARK [2][-]{subsection.7.4.2}{Descripci\363n}{section.7.4}% 50
-\BOOKMARK [2][-]{subsection.7.4.3}{Trayectorias del caso de uso}{section.7.4}% 51
-\BOOKMARK [2][-]{subsection.7.4.4}{Modelo de comportamiento del m\363dulo: Consultar Profesores }{section.7.4}% 52
-\BOOKMARK [1][-]{section.7.5}{CU-04 Consultar Profesor}{chapter.7}% 53
-\BOOKMARK [2][-]{subsection.7.5.1}{Resumen}{section.7.5}% 54
-\BOOKMARK [2][-]{subsection.7.5.2}{Descripci\363n}{section.7.5}% 55
-\BOOKMARK [2][-]{subsection.7.5.3}{Trayectorias del caso de uso}{section.7.5}% 56
-\BOOKMARK [2][-]{subsection.7.5.4}{Puntos de extensi\363n}{section.7.5}% 57
-\BOOKMARK [1][-]{section.7.6}{CU-05 Consultar Detalle de Profesor}{chapter.7}% 58
-\BOOKMARK [2][-]{subsection.7.6.1}{Resumen}{section.7.6}% 59
-\BOOKMARK [2][-]{subsection.7.6.2}{Descripci\363n}{section.7.6}% 60
-\BOOKMARK [2][-]{subsection.7.6.3}{Trayectorias del caso de uso}{section.7.6}% 61
-\BOOKMARK [1][-]{section.7.7}{Estudio de Factibilidad}{chapter.7}% 62
-\BOOKMARK [2][-]{subsection.7.7.1}{Econ\363mica}{section.7.7}% 63
-\BOOKMARK [2][-]{subsection.7.7.2}{Tecnol\363gica}{section.7.7}% 64
-\BOOKMARK [2][-]{subsection.7.7.3}{Operativa}{section.7.7}% 65
-=======
 \BOOKMARK [1][-]{section.5.2}{Modulo de Profesores}{chapter.5}% 26
 \BOOKMARK [2][-]{subsection.5.2.1}{Etapa de An\341lisis}{section.5.2}% 27
 \BOOKMARK [2][-]{subsection.5.2.2}{Etapa de Desarrollo }{section.5.2}% 28
@@ -77,38 +35,38 @@
 \BOOKMARK [2][-]{subsection.6.1.2}{Visitante}{section.6.1}% 35
 \BOOKMARK [1][-]{section.6.2}{Casos de Uso del m\363dulo de Salones}{chapter.6}% 36
 \BOOKMARK [1][-]{section.6.3}{Casos de Uso del m\363dulo de Profesores}{chapter.6}% 37
-\BOOKMARK [0][-]{chapter.7}{Modelo de comportamiento del m\363dulo: Consulta de Salones }{}% 38
-\BOOKMARK [1][-]{section.7.1}{CU-01 Consultar Edificio}{chapter.7}% 39
-\BOOKMARK [2][-]{subsection.7.1.1}{Resumen}{section.7.1}% 40
-\BOOKMARK [2][-]{subsection.7.1.2}{Descripci\363n}{section.7.1}% 41
-\BOOKMARK [2][-]{subsection.7.1.3}{Trayectorias del caso de uso}{section.7.1}% 42
-\BOOKMARK [1][-]{section.7.2}{CU-02 Consultar Nivel}{chapter.7}% 43
-\BOOKMARK [2][-]{subsection.7.2.1}{Resumen}{section.7.2}% 44
-\BOOKMARK [2][-]{subsection.7.2.2}{Descripci\363n}{section.7.2}% 45
-\BOOKMARK [2][-]{subsection.7.2.3}{Trayectorias del caso de uso}{section.7.2}% 46
-\BOOKMARK [1][-]{section.7.3}{CU-03 Consultar Sal\363n}{chapter.7}% 47
-\BOOKMARK [2][-]{subsection.7.3.1}{Resumen}{section.7.3}% 48
-\BOOKMARK [2][-]{subsection.7.3.2}{Descripci\363n}{section.7.3}% 49
-\BOOKMARK [2][-]{subsection.7.3.3}{Trayectorias del caso de uso}{section.7.3}% 50
-\BOOKMARK [0][-]{chapter.8}{Modelo de comportamiento del m\363dulo: Consultar Profesores }{}% 51
-\BOOKMARK [1][-]{section.8.1}{CU-04 Consultar Profesor}{chapter.8}% 52
-\BOOKMARK [2][-]{subsection.8.1.1}{Resumen}{section.8.1}% 53
-\BOOKMARK [2][-]{subsection.8.1.2}{Descripci\363n}{section.8.1}% 54
-\BOOKMARK [2][-]{subsection.8.1.3}{Trayectorias del caso de uso}{section.8.1}% 55
-\BOOKMARK [2][-]{subsection.8.1.4}{Puntos de extensi\363n}{section.8.1}% 56
-\BOOKMARK [1][-]{section.8.2}{CU-05 Consultar Detalle de Profesor}{chapter.8}% 57
-\BOOKMARK [2][-]{subsection.8.2.1}{Resumen}{section.8.2}% 58
-\BOOKMARK [2][-]{subsection.8.2.2}{Descripci\363n}{section.8.2}% 59
-\BOOKMARK [2][-]{subsection.8.2.3}{Trayectorias del caso de uso}{section.8.2}% 60
-\BOOKMARK [0][-]{chapter.9}{Resultados}{}% 61
-\BOOKMARK [1][-]{section.9.1}{Resultados}{chapter.9}% 62
-\BOOKMARK [2][-]{subsection.9.1.1}{M\363dulo de Salones}{section.9.1}% 63
-\BOOKMARK [2][-]{subsection.9.1.2}{M\363dulo de Profesores}{section.9.1}% 64
-\BOOKMARK [1][-]{section.9.2}{Trabajo a Futuro}{chapter.9}% 65
-\BOOKMARK [1][-]{section.9.3}{Conclusiones}{chapter.9}% 66
-\BOOKMARK [0][-]{chapter.10}{Anexos}{}% 67
-\BOOKMARK [1][-]{section.10.1}{Estudio de Factibilidad}{chapter.10}% 68
-\BOOKMARK [2][-]{subsection.10.1.1}{Econ\363mica}{section.10.1}% 69
-\BOOKMARK [2][-]{subsection.10.1.2}{Tecnol\363gica}{section.10.1}% 70
-\BOOKMARK [2][-]{subsection.10.1.3}{Operativa}{section.10.1}% 71
->>>>>>> 7001a051e3e88910e349461949e29481aac66cbe
+\BOOKMARK [0][-]{chapter.7}{Resultados}{}% 38
+\BOOKMARK [1][-]{section.7.1}{Conclusiones}{chapter.7}% 39
+\BOOKMARK [1][-]{section.7.2}{Resultados}{chapter.7}% 40
+\BOOKMARK [2][-]{subsection.7.2.1}{M\363dulo de Salones}{section.7.2}% 41
+\BOOKMARK [2][-]{subsection.7.2.2}{M\363dulo de Profesores}{section.7.2}% 42
+\BOOKMARK [1][-]{section.7.3}{Trabajo a Futuro}{chapter.7}% 43
+\BOOKMARK [0][-]{chapter.8}{Anexos}{}% 44
+\BOOKMARK [1][-]{section.8.1}{Casos de Uso}{chapter.8}% 45
+\BOOKMARK [2][-]{subsection.8.1.1}{Modelo de comportamiento del m\363dulo: Consulta de Salones }{section.8.1}% 46
+\BOOKMARK [1][-]{section.8.2}{CU-01 Consultar Edificio}{chapter.8}% 47
+\BOOKMARK [2][-]{subsection.8.2.1}{Resumen}{section.8.2}% 48
+\BOOKMARK [2][-]{subsection.8.2.2}{Descripci\363n}{section.8.2}% 49
+\BOOKMARK [2][-]{subsection.8.2.3}{Trayectorias del caso de uso}{section.8.2}% 50
+\BOOKMARK [1][-]{section.8.3}{CU-02 Consultar Nivel}{chapter.8}% 51
+\BOOKMARK [2][-]{subsection.8.3.1}{Resumen}{section.8.3}% 52
+\BOOKMARK [2][-]{subsection.8.3.2}{Descripci\363n}{section.8.3}% 53
+\BOOKMARK [2][-]{subsection.8.3.3}{Trayectorias del caso de uso}{section.8.3}% 54
+\BOOKMARK [1][-]{section.8.4}{CU-03 Consultar Sal\363n}{chapter.8}% 55
+\BOOKMARK [2][-]{subsection.8.4.1}{Resumen}{section.8.4}% 56
+\BOOKMARK [2][-]{subsection.8.4.2}{Descripci\363n}{section.8.4}% 57
+\BOOKMARK [2][-]{subsection.8.4.3}{Trayectorias del caso de uso}{section.8.4}% 58
+\BOOKMARK [2][-]{subsection.8.4.4}{Modelo de comportamiento del m\363dulo: Consultar Profesores }{section.8.4}% 59
+\BOOKMARK [1][-]{section.8.5}{CU-04 Consultar Profesor}{chapter.8}% 60
+\BOOKMARK [2][-]{subsection.8.5.1}{Resumen}{section.8.5}% 61
+\BOOKMARK [2][-]{subsection.8.5.2}{Descripci\363n}{section.8.5}% 62
+\BOOKMARK [2][-]{subsection.8.5.3}{Trayectorias del caso de uso}{section.8.5}% 63
+\BOOKMARK [2][-]{subsection.8.5.4}{Puntos de extensi\363n}{section.8.5}% 64
+\BOOKMARK [1][-]{section.8.6}{CU-05 Consultar Detalle de Profesor}{chapter.8}% 65
+\BOOKMARK [2][-]{subsection.8.6.1}{Resumen}{section.8.6}% 66
+\BOOKMARK [2][-]{subsection.8.6.2}{Descripci\363n}{section.8.6}% 67
+\BOOKMARK [2][-]{subsection.8.6.3}{Trayectorias del caso de uso}{section.8.6}% 68
+\BOOKMARK [1][-]{section.8.7}{Estudio de Factibilidad}{chapter.8}% 69
+\BOOKMARK [2][-]{subsection.8.7.1}{Econ\363mica}{section.8.7}% 70
+\BOOKMARK [2][-]{subsection.8.7.2}{Tecnol\363gica}{section.8.7}% 71
+\BOOKMARK [2][-]{subsection.8.7.3}{Operativa}{section.8.7}% 72
