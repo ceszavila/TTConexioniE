@@ -1,20 +1,27 @@
 
 %=========================================================
-\section{Módulos del sistema}
+	El sistema se encuentra organizado por módulos con la finalidad de agrupar y administrar de mejor manera los requerimientos funcionales del sistema. Dividir el sistema en módulos permite visualizar e identificar rápidamente aquellos aspectos funcionales que pueden tratarse conjuntamente. \\
 
-    El sistema se encuentra organizado por módulos con la finalidad de agrupar y administrar de mejor manera los requerimientos funcionales del sistema. Dividir el sistema en módulos permite visualizar e identificar rápidamente aquellos aspectos funcionales que pueden tratarse conjuntamente. \\
-
-    La figura \ref{fig:ModulosPAEAR} muestra los módulos propuestos de manera inicial para la aplicación \textbf{Conexión iE}. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
+    La figura \ref{fig:ModulosWeb} muestra los módulos propuestos de manera inicial para la aplicación \textbf{Conexión iE}. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
 
 %    La figura \ref{fig:ModulosPAEAR} muestra los módulos que conforman el \saear. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
 
     \begin{figure}[h!]
 	\begin{center}
-	      \fbox{\includegraphics[width=\textwidth]{images/modulos.jpg}}
-	\caption{Módulos del \saear.}
-	\label{fig:ModulosPAEAR}
+	      \fbox{\includegraphics[width=\textwidth]{images/modulos.png}}
+	\caption{Módulos Web de la Aplicación Conexión iE.}
+	\label{fig:ModulosWeb}
 	\end{center}
     \end{figure}
+
+    \begin{figure}[h!]
+	\begin{center}
+		\fbox{\includegraphics[width=\textwidth]{images/modulosmovil.png}}
+		\caption{Módulos Móvil de la Aplicación Conexión iE.}
+		\label{fig:ModulosMovil}
+	\end{center}
+\end{figure}
+
 
     \begin{itemize}
 	\item {\bf Ubicación de espacios:} Agrupa los casos de uso que se relacionan con la ubicación e indicaciones pertinentes para la consulta de salones, salas y espacios en general de las escuelas.
@@ -30,7 +37,7 @@
 %=========================================================
 \section{Actores del sistema}\label{sec:Comportamiento:ActoresSistema}
 
-Los actores son los perfiles asociados a las diversas áreas que intervienen en el proceso. Se han identificado los actores de acuerdo a las actividades y responsabilidades dentro de la aplicación \textbf{Conexión iE}, los cuales se muestran en la figura \ref{fig:perfilesPAEAR} y se describen a continuación.
+Los actores son los perfiles asociados a las diversas áreas que intervienen en el proceso. Se han identificado los actores de acuerdo a las actividades y responsabilidades dentro de la aplicación \textbf{Conexión iE}, los cuales se muestran en la figura \ref{fig:perfilesWeb} y se describen a continuación.
 
 %    Los actores son los perfiles asociados a las diversas áreas y/u organizaciones que intervienen en el proceso. Se han identificado los actores de acuerdo a las actividades y responsabilidades dentro del \paear respecto al módulo de \textbf{Registro de escuelas}, los cuales se muestran en la figura \ref{fig:perfilesPAEAR} y se describen a continuación. 
     %y responsabilidades dentro del \paear - \saear, los cuales se describen a continuación.
@@ -39,10 +46,17 @@ Los actores son los perfiles asociados a las diversas áreas que intervienen en 
       \begin{center}
 	  \includegraphics[width=0.6\textwidth]{images/actores/Actores.png}
       \caption{Perfiles identificados.}
-      \label{fig:perfilesPAEAR}
+      \label{fig:perfilesWeb}
       \end{center}
     \end{figure}
 
+    \begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{images/actores/Actoresmovil.png}
+		\caption{Perfiles identificados.}
+		\label{fig:perfilesMovil}
+	\end{center}
+\end{figure}
 %--------------------------------------------------------------------------------------------------
     \begin{actor}{Alumno}{CIEAlumno}{Persona inscrita dentro del Instituto Politécnico Nacional que solicitará las consultas de espacios, salones asignados a grupos, información sobre los trámites de la escuela y sobre el material de apoyo de las unidades de aprendizaje.}
 
@@ -197,23 +211,23 @@ Los actores son los perfiles asociados a las diversas áreas que intervienen en 
 %====================================================================================
 \section{Casos de Uso del módulo de Salones}
 
-    La figura \ref{fig:casosUso:registro} muestra los casos de uso que integran la funcionalidad del módulo de Salones, que se refieren a la consulta de edificios, niveles y salones de una ecuela.
+    La figura \ref{fig:casosUso:web} muestra los casos de uso que integran la funcionalidad del módulo de Salones, que se refieren a la consulta de edificios, niveles y salones de una ecuela.
 
     \begin{figure}[h!]
 	\begin{center}
-	    \fbox{\includegraphics[width=.9\textwidth]{images/CasosUso/Registro.png}}
-	\caption{Diagrama de casos de uso para el módulo de Registro de escuelas. \label{fig:casosUso:registro}}
+	    \fbox{\includegraphics[width=.9\textwidth]{images/CasosUso/cuweb.png}}
+	\caption{Diagrama de casos de uso de la aplicación conexión iE Web. \label{fig:casosUso:web}}
 	\end{center}
     \end{figure}
 
 \section{Casos de Uso del módulo de Profesores}
-La figura \ref{fig:casosUso:comite} muestra los casos de uso que integran la funcionalidad necesaria para la obtención de la información para la ubicación física del cubículo y oficina de un profesor así como la información de contacto institucional y si lo desea, personal.
+La figura \ref{fig:casosUso:movil} muestra los casos de uso que integran la funcionalidad necesaria para la obtención de la información para la ubicación física del cubículo y oficina de un profesor así como la información de contacto institucional y si lo desea, personal.
 
  \begin{figure}[h!]
      \begin{center}
-         \fbox{\includegraphics[angle=90, height=0.9\textheight]{images/CasosUso/informacionBase.jpg}}
+         \fbox{\includegraphics[angle=90, height=0.9\textheight]{images/CasosUso/cumovil.png}}
      \caption{Diagrama de casos de uso para el módulo de Información base para indicadores.}
-     \label{fig:casosUso:comite}
+     \label{fig:casosUso:movil}
      \end{center}
  \end{figure}
 
