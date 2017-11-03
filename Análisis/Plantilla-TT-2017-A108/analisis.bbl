@@ -1,12 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{07}
-Apps con impacto social: Cambiando paradigmas en la provision de servicios
-  publicos y la participacion ciudadana.
-\newblock
-  \url{http://www.impactosocialconsultores.com/blog/2013/8/23/apps-con-impacto-social-cambiando-paradigmas-en-la-provisin-de-servicios-pblicos-y-la-participacin-ciudadana}.
-\newblock Accessed: 2017-09-25.
-
 \bibitem{12}
 Historia de ios.
 \newblock \url{https://es.wikipedia.org/wiki/IOS}.
@@ -23,11 +16,6 @@ La {\'u}ltima versi{\'o}n de android est{\'a} fuera del podio de los sistemas
 \newblock
   \url{http://www.iprofesional.com/notas/254149-android-smartphone-telefonia-movil-telefonia-celular-La-ultima-version-de-Android-esta-fuera-del-podio-de-los-sistemas-operativos-mas-utilizados}.
 \newblock Accessed: 2017-08-11.
-
-\bibitem{09}
-Los medios de comunicaci{\'o}n en la era de los m{\'o}viles.
-\newblock \url{http://www.webespacio.com/medios-comunicacion-moviles/}.
-\newblock Accessed: 2017-09-26.
 
 \bibitem{17}
 Mi salario (analista de sistemas).
@@ -70,11 +58,28 @@ Scott Lash and John Urry.
 \newblock {\em The end of organized capitalism}.
 \newblock Univ of Wisconsin Press, 1987.
 
+\bibitem{07}
+Eduardo Lastra.
+\newblock Apps con impacto social: Cambiando paradigmas en la provisi{\'o}n de
+  servicios p{\'u}blicos y la participaci{\'o}n ciudadana.
+\newblock
+  \url{http://www.impactosocialconsultores.com/blog/2013/8/23/apps-con-impacto-social-cambiando-paradigmas-en-la-provisin-de-servicios-pblicos-y-la-participacin-ciudadana},
+  2013.
+\newblock Accessed: 2017-09-25.
+
 \bibitem{04}
 David Loudon and Albert Della~Bitta.
 \newblock Comportamiento del consumidor.
 \newblock {\em Conceptos y aplicaciones. Cuarta edici{\'o}n. M{\'e}xico. McGraw
   Hill}, 1995.
+
+\bibitem{19}
+Redacción.
+\newblock Google lanza un nuevo estudio sobre smartphones y publicidad
+  m{\'o}vil.
+\newblock
+  \url{http://www.puromarketing.com/21/9689/lanza-nuevo-estudio-sobre-smartphones-publicidad-movil.html}.
+\newblock Accessed: 2017-09-30.
 
 \bibitem{16}
 T~Santos et~al.
@@ -100,5 +105,11 @@ Carmen~Cantillo Valero, Margarita~Roura Redondo, and Ana~S{\'a}nchez
 \newblock Tendencias actuales en el uso de dispositivos m{\'o}viles en
   educaci{\'o}n.
 \newblock {\em La educaci{\'o}n digital magazine}, 147:1--21, 2012.
+
+\bibitem{09}
+Junny Villugas.
+\newblock Los medios de comunicaci{\'o}n en la era de los m{\'o}viles.
+\newblock \url{http://www.webespacio.com/medios-comunicacion-moviles/}.
+\newblock Accessed: 2017-09-26.
 
 \end{thebibliography}
