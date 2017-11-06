@@ -1,8 +1,6 @@
-\begin{UseCase}{CU-03}{Consultar Salón}
+\begin{UseCase}{CUSM-01}{Consultar Asignación de Grupo}
     {
-	Este caso de uso le permite al actor localizar un espacio dentro de la Escuela Superior de Cómputo y obtener las vistas necesarias para llegar a su destino. 
-	Cuando el aspirante a nuevo ingreso es aceptado e inicia su primer periodo escolar, podrá consultar los espacios dentro de la escuela para asistir a sus primeras clases, laboratorios, conferencias etc. De la misma manera para los alumnos de semestres más avanzados y visitantes en general, podrán consultar y ubicar los espacios que no conocían para realización de trámites, búsqueda de profesores, investigadores, etc.
-	
+	Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} conocer el salón al que fue asignado el grupo en donde esta inscrito.
     }
     \UCitem{Versión}{1.0}
     \UCccsection{Administración de Requerimientos}
@@ -42,27 +40,21 @@
 	\UCitem{Actor}{
 		\begin{UClist} 
 \UCli \cdtRef{actor:CIEAlumno}{Alumno}
-\UCli \cdtRef{actor:CIEVisitante}{Visitante}
 	\end{UClist}
 }
-	\UCitem{Propósito}{}
+	\UCitem{Propósito}{Informar al alumno el salón al que fue asignado su grupo}
 	\UCitem{Entradas}{
         \begin{UClist} 
-           \UCli
-           \UCli
+           \UCli Ninguna
         \end{UClist}}
 	\UCitem{Salidas}{
 		\begin{UClist} 
-			\UCli Mapa de la Escuela Superior de Cómputo separada por edificios
-			\UCli Marcador con el nombre de los edificios
-			\UCli Vista por niveles
-			\UCli Vista de salones por nivel
+			\UCli Tabla que muestra el listado de asignaciones de grupos
 		\end{UClist}	
 	}
 	\UCitem{Precondiciones}{
 		\begin{UClist}		
-			\UCli {\bf Interna:} El sistema debe tener cargados los espacios de la Escuela Superior de Cómputo.
-			\UCli {\bf Interna:} El sistema debe tener asociados los espacios a los grupos por periodo escolar.
+			\UCli {\bf Interna:} El sistema debe tener cargados las asignaciones de los grupos.
 		\end{UClist}
 		}
 	\UCitem{Postcondiciones}{
@@ -83,38 +75,28 @@
 	    \end{UClist}
 	}
 	\UCitem{Tipo}{Primario.}
-	\UCitem{Fuente}{
-	    \begin{UClist}
-%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
-	    \end{UClist}
-	}
+%	\UCitem{Fuente}{
  \end{UseCase}
 
  \begin{UCtrayectoria}
-    \UCpaso[\UCactor] El actor Alumno requiere consultar el salón que se le asignó al grupo al que pertenece presionando el botón \cdtButton{Asignación de salones} del menú principal \textbf{CIE-IU001}. \refTray{A} \refTray{B}
-    \UCpaso[\UCsist] Obtiene las asignaciones de salones por grupos y las muestra en forma de lista ordenada ascendentemente y por turno como se muestra en la pantalla \textbf{CIE-IU002}. 
-    \UCpaso[\UCactor] Ubica el grupo al que está inscrito y selecciona el número de salón para saber cómo llegar.
-    \UCpaso[\UCsist] Obtiene las vistas que el actor requiere para llegar a su destino (aérea, lateral y de salón). \label{cur1:consultar}
-    \UCpaso[\UCsist] Le muestra las opciones de navegación entre las vistas disponibles del salón de destino.
-	\UCpaso[\UCactor] El actor presiona el botón de \cdtButton{Menú} y regresa al menú principal.
+    \UCpaso[\UCactor] Desea conocer el salón ha donde fue asginado su grupo tocando el botón \botSalones de la pantalla \cdtIdRef{IUPP}{Pantalla Principal}
+    
+     \UCpaso[\UCsist] Obtiene la información de la asignación de grupos.
+    
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{UISM-01}{Consultar Asignación de Grupos}
+    
+    \UCpaso[\UCsist] Muestra la tabla con los grupos y el nombre del salón al que fue asignado.
+    
+    \UCpaso[\UCactor] Desea conocer la ubicación deel nivel y salón al que fue asignado su grupo.
+    
+    \UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUSM-02}{Consultar Nivel de Salón}
+    
  \end{UCtrayectoria}
 
- \begin{UCtrayectoriaA}{A}{El actor alumno desea consultar las áreas de ESCOM.}
-    \UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
-    
-   \UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
-   
-   \UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
- \end{UCtrayectoriaA}
- 
-  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
- 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
- 	
- 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
- 	
- 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
- \end{UCtrayectoriaA}
-
+\begin{UCtrayectoriaA}{A}{El alumno no desea conocer el nivel y salón.}
+	\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás} de la pantalla .
+	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPP}{Pantalla Principal}.
+\end{UCtrayectoriaA}
  
 %\subsection{Puntos de extensión}
 %

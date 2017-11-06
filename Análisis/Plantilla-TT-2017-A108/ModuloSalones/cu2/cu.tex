@@ -1,6 +1,6 @@
-\begin{UseCase}{CU-02}{Consultar Nivel}
+\begin{UseCase}{CUSM-02}{Consultar Nivel de Salón}
     {
-	Este caso de uso le permite al actor localizar el nivel en el que se encuentra el espacio que solicite ubicar. Cuando al alumno o visitante se le indique el nivel de cierto edificio para buscar un salón, laboratorio o cubículo sin concoer con exatitud que número de salón es, podrá consultar, con la información que tenga al respecto, en que nivel de determinado edificio puede localizar su destino. 
+	Para que el \cdtRef{actor:CIEAlumno}{Alumno} pueda conocer la ubicación de un salón en especifico es necesario saber en que nivel de un edificio se encuetra. Es por eso que este caso de uso permite al \cdtRef{actor:CIEAlumno}{Alumno} localizar el nivel de un edificio en particular.
 
 	
     }
@@ -13,7 +13,7 @@
     \UCccitem{Complejidad}{Baja}
     \UCccitem{Volatilidad}{Baja}
     \UCccitem{Madurez}{Media}
-    \UCitem{Estatus}{Por revisar}
+    \UCitem{Estatus}{Terminado}
     \UCitem{Fecha del último estatus}{15 de Octubre del 2017}
 
 
@@ -42,26 +42,26 @@
 	\UCitem{Actor}{
 		\begin{UClist} 
 \UCli \cdtRef{actor:CIEAlumno}{Alumno}
-\UCli \cdtRef{actor:CIEVisitante}{Visitante}
 	\end{UClist}
 }
 	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le facilite la ubicación de los niveles a los que puede dirigirse por edificio}
 	\UCitem{Entradas}{
         \begin{UClist} 
-           \UCli
-           \UCli
+           \UCli Ninguna
         \end{UClist}}
 	\UCitem{Salidas}{
 		\begin{UClist} 
-			\UCli Mapa de la Escuela Superior de Cómputo separada por edificios
-			\UCli Marcador con el nombre de los edificios
-			\UCli Mapa de niveles de un edificio
+			\UCli Mapa de la Escuela Superior de Cómputo.
+			\UCli Polígono del edificio perteneciente al grupo seleccionado.
+			\UCli Marcador con el nombre del edificio perteneciente al grupo seleccionado.
+			\UCli Vista lateral 3D de los niveles del edificio del grupo seleccionado.
 		\end{UClist}	
 }
 	\UCitem{Precondiciones}{
 		\begin{UClist}		
 			\UCli {\bf Interna:} El sistema debe tener cargados los edificios de la ESCOM.
 			\UCli {\bf Interna:} El sistema debe tener cargados los niveles por edificio.
+			\UCli {\bf Interna:} El sistema debe tener cargados los salones por edificio.
 		\end{UClist}
 		}
 	\UCitem{Postcondiciones}{
@@ -71,39 +71,41 @@
 	}
     \UCitem{Reglas de negocio}{
     	\begin{UClist}
-%            \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+            \UCli No Aplica
+%\cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
 	\end{UClist}
     }
 	\UCitem{Errores}{
 	    \begin{UClist}
-%		\UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} cuando el actor omitió un dato marcado como requerido.
+		\UCli No Aplica
 %		\UCli \cdtIdRef{MSG22}{Nombre de usuario y/o contraseña incorrecto}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que el nombre de usuario y/o contraseña son incorrectos.
 %		\UCli \cdtIdRef{MSG27}{Cuenta no activada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
 	    \end{UClist}
 	}
 	\UCitem{Tipo}{Primario.}
-	\UCitem{Fuente}{
-	    \begin{UClist}
-%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
-	    \end{UClist}
-	}
  \end{UseCase}
 
  \begin{UCtrayectoria}
-    \UCpaso[\UCactor] Desea conocer la ubicación de un \textbf{Nivel} en ESCOM tocando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+ \UCpaso[\UCactor] Seleciona un grupo tocando la fila de la tabla donde se encuentra el grupo de la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos}.
 
-\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla \textbf{CIE-IU003}
+\UCpaso[\UCsist] Obtiene el mapa  de la Escuela Superior de cómputo, el polígono del edificio, salón y niveles del edificio del grupo seleccionado.  
 
-\UCpaso[\UCactor] Toca el edificio del que desea obtener información sobre sus niveles. 
+\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-02}{Consultar Nivel de Salón}
 
-\UCpaso[\UCsist] Obtiene los niveles del edificio seleccionado y muestra una vista lateral del edificio para la consulta de sus niveles como se puede ver en la pantalla \textbf{CIE-IU003}.
+\UCpaso[\UCactor] Toca la opción \cdtButton{Niveles} de la pantalla \cdtIdRef{IUSM-02}{Consultar Nivel de Salón}. \refTray{A} 
 
-\UCpaso[\UCactor] Toca el nivel al que desea dirigirse.
+\UCpaso[\UCsist] Muestra la vista lateral 3D marcando de color amarillo el nivel  en donde se encuentra el salón del grupo.
 
-\UCpaso[\UCsist] Le muestra las opciones de navegación para llegar del edificio de destino y posteriormente al nivel deseado.
-
-\UCpaso[\UCactor] El actor presiona el botón de \cdtButton{Menú} y regresa al menú principal.
+\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}. \label{CUSM-02:atras}
  \end{UCtrayectoria}
+
+ \begin{UCtrayectoriaA}{A}{El alumno desea conocer el salón.}
+	\UCpaso[\UCactor] Toca la opción \cdtButton{Salones} de la pantalla  \cdtIdRef{IUSM-02}{Consultar nivel de salón}.
+	
+	\UCpaso[\UCsist] Muestra el salón del grupo seleccionado en una vista aérea del nivel al que pertenece el grupo de la pantalla \cdtIdRef{IUSM-02.1}{Consultar Salón}.
+	\UCpaso[] Regresa al paso \ref{CUSM-02:atras} de la trayectoria principal.
+\end{UCtrayectoriaA}
+
 
 % \begin{UCtrayectoriaA}{A}{El actor alumno desea consultar las áreas de ESCOM.}
 %    \UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}

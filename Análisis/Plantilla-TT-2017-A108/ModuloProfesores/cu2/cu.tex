@@ -1,6 +1,8 @@
-\begin{UseCase}{CU-05}{Consultar Detalle de Profesor}
+\begin{UseCase}{CUPM-02}{Consultar Detalle de Profesor}
     {
-	Este caso de uso le permite al actor conocer la información que el profesor debe tener disponible para su consulta pública. Cuando el actor desea saber los horarios del profesor, su correo institucional, donde encontrarlo, etc., podrá hacerlo mediante el detalle de la consulta
+	Este caso de uso le permite al actor conocer la información que el profesor debe tener disponible para su consulta pública. Cuando el \cdtRef{actor:CIEAlumno}{Alumno} desea saber los horarios del profesor, su correo institucional, donde encontrarlo, podrá hacerlo mediante el detalle de la consulta.\\
+	
+	Tambien podrá consultar la información personal del profesor, si y solo si, el profesor lo autoriza.
 	
     }
     \UCitem{Versión}{1.0}
@@ -41,71 +43,61 @@
 	\UCitem{Actor}{
 		\begin{UClist} 
 \UCli \cdtRef{actor:CIEAlumno}{Alumno}
-\UCli \cdtRef{actor:CIEVisitante}{Visitante}
 	\end{UClist}
 }
 	\UCitem{Propósito}{}
 	\UCitem{Entradas}{
         \begin{UClist} 
-           \UCli
-           \UCli
+			\UCli No Aplica
         \end{UClist}}
-	\UCitem{Salidas}{Ninguna.}
+	\UCitem{Salidas}{
+		\UCli Fotografía del profesor
+		\UCli Nombre del profesor
+		\UCli Número de salón o cubículo del profesor
+		\UCli Academía a la que pertenece el profesor
+		\UCli Tabla que muestra los datos de: 
+			\begin{itemize}
+				\item Cubículo
+				\item Horario de Atención
+				\item E-mail
+				\item Teléfono
+				\item Página Web
+				\item Materias Impartidas
+				\item Trabajos Terminales Dirigidos
+			\end{itemize}
+	}
 	\UCitem{Precondiciones}{
 		\begin{UClist}		
-			\UCli {\bf Interna:} El sistema debe tener cargados los espacios de la Escuela Superior de Cómputo.
-			\UCli {\bf Interna:} El sistema debe tener asociados los espacios a los grupos por periodo escolar.
+			\UCli {\bf Interna:} Para que la fotografía y número de teléfono aparezcan el profesor deberá aceptar los términos y condiciones de la aplicación.
 		\end{UClist}
 		}
 	\UCitem{Postcondiciones}{
 	    \begin{UClist}
-		\UCli {\bf Externa:} Los alumnos podrán saber en el momento que lo necesiten, el salón que fue asignado a su grupo sin tener que buscar las hojas de asignación de salones.
+		\UCli {\bf Externa:} Los alumnos podrán visualizar información mas detallada de un profesor en especifico.
    	    \end{UClist}
 	}
     \UCitem{Reglas de negocio}{
     	\begin{UClist}
-%            \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+            \UCli No Aplica
 	\end{UClist}
     }
 	\UCitem{Errores}{
 	    \begin{UClist}
-%		\UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} cuando el actor omitió un dato marcado como requerido.
+		\UCli No Aplica
 %		\UCli \cdtIdRef{MSG22}{Nombre de usuario y/o contraseña incorrecto}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que el nombre de usuario y/o contraseña son incorrectos.
 %		\UCli \cdtIdRef{MSG27}{Cuenta no activada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
 	    \end{UClist}
 	}
-	\UCitem{Tipo}{Primario.}
-	\UCitem{Fuente}{
-	    \begin{UClist}
-%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
-	    \end{UClist}
-	}
+	\UCitem{Tipo}{Secundario, incluye del caso de uso \cdtIdRef{CUPM-01}{Consultar Profesor}.}
  \end{UseCase}
 
  \begin{UCtrayectoria}
-    \UCpaso[\UCactor] El actor Alumno requiere consultar el salón que se le asignó al grupo al que pertenece presionando el botón \cdtButton{Asignación de salones} del menú principal \textbf{CIE-IU001}. \refTray{A} \refTray{B}
-    \UCpaso[\UCsist] Obtiene las asignaciones de salones por grupos y las muestra en forma de lista ordenada ascendentemente y por turno como se muestra en la pantalla \textbf{CIE-IU002}. 
-    \UCpaso[\UCactor] Ubica el grupo al que está inscrito y selecciona el número de salón para saber cómo llegar.
-    \UCpaso[\UCsist] Obtiene las vistas que el actor requiere para llegar a su destino (aérea, lateral y de salón). \label{cur1:consultar}
-    \UCpaso[\UCsist] Le muestra las opciones de navegación entre las vistas disponibles del salón de destino.
-	\UCpaso[\UCactor] El actor presiona el botón de \cdtButton{Menú} y regresa al menú principal.
+    \UCpaso[\UCactor] El alumno desea obtener información detallada del profesor tocando el nombre del profesor en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor}.
+      \UCpaso[\UCsist] Obtiene la información del profesor.
+      \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPM-02}{Consultar Detalle de Profesor}.
+       \UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}.
+        \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor}
  \end{UCtrayectoria}
-
- \begin{UCtrayectoriaA}{A}{El actor alumno desea consultar las áreas de ESCOM.}
-    \UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
-    
-   \UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
-   
-   \UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
- \end{UCtrayectoriaA}
- 
-  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
- 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
- 	
- 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
- 	
- 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
- \end{UCtrayectoriaA}
 
  
 %\subsection{Puntos de extensión}

@@ -1,11 +1,6 @@
-\begin{UseCase}{CU-01}{Consultar Edificio}
+\begin{UseCase}{CUMS-03}{Consultar Edificio de Salón}
     {
-	Este caso de uso le permite al actor localizar un edificio dentro de la Escuela Superior de Cómputo y obtener las vistas necesarias para llegar a él. 
-	Cuando el actor recibe instrucciones para ubicar algún espacio es posible que le proporcionen como dato de ayuda el número de edificio e incluso el número de salón o espacio, cuya nomenclatura con el formato correspondiente puede indicar en su primer dígito el número de edificio. De esta manera los alumnos podrán ubicar el edificio al que deben dirigirse por medio de una vista dinámica. 
-	Este caso de uso le permite al actor localizar un edificio dentro de la Escuela Superior de Cómputo y obtener las vistas necesarias para llegar a su destino. 
-	Cuando el alumno o visitante recibe instrucciones para ubicar algún espacio es posible que le proporcionen como dato de ayuda el número de edificio e incluso el número de salón o espacio, cuya nomenclatura indica en su primer dígito el número de edificio. De esta manera los alumnos podrán ubicar el edificio al que deben dirigirse por medio de una vista dinámica. 
-
-	
+	Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} consultar la información del edificio dentro de la Escuela Superior de Cómputo en donde se encuentra ubicado su grupo.
     }
     \UCitem{Versión}{1.0}
     \UCccsection{Administración de Requerimientos}
@@ -15,8 +10,8 @@
     \UCccitem{Prioridad}{Alta}
     \UCccitem{Complejidad}{Baja}
     \UCccitem{Volatilidad}{Baja}
-    \UCccitem{Madurez}{Media}
-    \UCitem{Estatus}{Por revisar}
+    \UCccitem{Madurez}{Alta}
+    \UCitem{Estatus}{Terminado}
     \UCitem{Fecha del último estatus}{15 de Octubre del 2017}
 
 
@@ -47,7 +42,6 @@
 %			\UCli \cdtRef{actor:usuarioEscuela}{Coordinador del programa}%Cambiar con nuestros actores
 %			\UCli \cdtRef{actor:usuarioSMAGEM}{Director del programa}%Cambiar con nuestros actores
 \UCli \cdtRef{actor:CIEAlumno}{Alumno}
-\UCli \cdtRef{actor:CIEVisitante}{Visitante}
 	\end{UClist}
 }
 	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita ubicar geográficamente la posición del edificio al que quiera dirigirse}
@@ -61,8 +55,7 @@
 		\begin{UClist} 
 				\UCli Marcador con la información del Edifico
 		        \UCli Mapa de la Escuela Superior de Cómputo separada por edificios
-		        \UCli Indicaciones para llegar al edificio
-		        \UCli 
+		        \UCli Indicaciones para llegar al edificio 
 		\end{UClist}
 	   }
 	\UCitem{Precondiciones}{
@@ -73,22 +66,20 @@
 		}
 	\UCitem{Postcondiciones}{
 	    \begin{UClist}
-		\UCli {\bf Externa:} Los alumnos podrán saber en el momento que lo necesiten, el edificio en donde se encuentre el salón que fue asignado a su grupo sin tener que buscar las hojas de asignación de salones.
+		\UCli {\bf Externa:} Los alumnos podrán saber los servicios que ofrece el edificio en él cual ha sido asignado su grupo
    	    \end{UClist}
 	}
     \UCitem{Reglas de negocio}{
     	\begin{UClist}
-%            \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+           \UCli No Aplica
 	\end{UClist}
     }
 	\UCitem{Errores}{
 	    \begin{UClist}
-%		\UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} cuando el actor omitió un dato marcado como requerido.
-%		\UCli \cdtIdRef{MSG22}{Nombre de usuario y/o contraseña incorrecto}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que el nombre de usuario y/o contraseña son incorrectos.
-%		\UCli \cdtIdRef{MSG27}{Cuenta no activada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
+			\UCli No Aplica
 	    \end{UClist}
 	}
-	\UCitem{Tipo}{Primario.}
+	\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUSM-02}{Consultar Nivel de Salón} .}
 %	\UCitem{Fuente}{
 %	    \begin{UClist}
 %%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
@@ -97,15 +88,16 @@
  \end{UseCase}
 
  \begin{UCtrayectoria}
-    \UCpaso[\UCactor] Desea conocer la ubicación de un \textbf{Edificio} en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+    \UCpaso[\UCactor] Desea conocer la información de un \textbf{Edificio} en ESCOM tocando el icono \botInformacion del mapa que se encuentra en la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos}
 
-	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla \textbf{CIE-IU003}
+	\UCpaso[\UCsist] Obtiene la información del edificio seleccionado.
 
-	\UCpaso[\UCactor] Desea saber como llegar a un edificio específico presionando su marcador. 
+	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-03}{Consultar Edificio de Salón} 
 
-	\UCpaso[\UCsist] Le muestra las opciones de navegación para llegar del edificio de destino.
-
-	\UCpaso[\UCactor] El actor presiona el botón de \cdtButton{Menú} y regresa al menú principal.
+	\UCpaso[\UCactor] El actor presiona el botón \cdtButton{Atrás}.
+	
+	\UCpaso[\UCsist] Muestra la pantalla  \cdtIdRef{IUSM-01}{Consultar Asignación de Salones}.
+	
  \end{UCtrayectoria}
 
 % \begin{UCtrayectoriaA}{A}{El actor alumno desea consultar las áreas de ESCOM.}
