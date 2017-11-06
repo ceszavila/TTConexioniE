@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 NOV 2017 08:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 NOV 2017 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6167,7 +6167,7 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
 Package rerunfilecheck Info: File `analisis.out' has not changed.
-(rerunfilecheck)             Checksum: 2E4CB96D98C334B03A47AD72809C15E7;6143.
+(rerunfilecheck)             Checksum: 74860C9991DD26DF8016AF74DBC2B251;6185.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -6176,7 +6176,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
  ) 
 Here is how much of TeX's memory you used:
  10933 strings out of 492995
- 153793 string characters out of 6132704
+ 153791 string characters out of 6132704
  274558 words of memory out of 5000000
  13800 multiletter control sequences out of 15000+600000
  14575 words of font info for 52 fonts, out of 8000000 for 9000
@@ -6196,7 +6196,7 @@ ve/2017/texmf-dist/fonts/type1/public/hfbright/hfbrsl8.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/hfbright/hftl10.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on analisis.pdf (80 pages, 11749552 bytes).
+Output written on analisis.pdf (80 pages, 11749616 bytes).
 PDF statistics:
  1350 PDF objects out of 1440 (max. 8388607)
  1149 compressed objects within 12 object streams
