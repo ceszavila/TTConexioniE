@@ -2,7 +2,7 @@
 %=========================================================
 	El sistema se encuentra organizado por módulos con la finalidad de agrupar y administrar de mejor manera los requerimientos funcionales del sistema. Dividir el sistema en módulos permite visualizar e identificar rápidamente aquellos aspectos funcionales que pueden tratarse conjuntamente. \\
 
-    La figura \ref{fig:ModulosWeb} muestra los módulos propuestos de manera inicial para la aplicación \textbf{Conexión iE}. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
+    Las figuras \ref{fig:ModulosWeb} y {fig:ModulosMovil} muestran los módulos propuestos de manera inicial para la aplicación \textbf{Conexión iE}. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
 
 %    La figura \ref{fig:ModulosPAEAR} muestra los módulos que conforman el \saear. Cada uno de estos módulos agrupan los casos de uso que poseen funcionalidad similar o que trabajan en conjunto para alcanzar un aspecto funcional del sistema. Cada uno de los módulos que se muestran en la figura se describen a continuación:
 
@@ -24,10 +24,98 @@
 
 
     \begin{itemize}
-	\item {\bf Ubicación de espacios:} Agrupa los casos de uso que se relacionan con la ubicación e indicaciones pertinentes para la consulta de salones, salas y espacios en general de las escuelas.
+	\item {\bf Salones:} Este módulo agrupa los casos de plataforma web  que se relacionan con los salones que pertenecen a la Escuela Superior de Cómputo y al encargado de prefectura, es decir:
+	\begin{itemize}
+		\item Gestionar Salón.
+		\item Registrar de Salón.
+		\item Editar Salón.
+		\item Eliminar Salón.
+		\item Consultar Salón.
+	\end{itemize}
 
-	\item {\bf Profesores:} Agrupa los casos de uso que proporcionan información sobre la consulta de profesores. 
+  
+	\item {\bf Áreas:} Este módulo agrupa los casos de plataforma web  que se relacionan con las áreas que pertenecen a la Escuela Superior de Cómputo, es decir:
+	\begin{itemize}
+		\item Gestionar Áreas.
+		\item Registrar de Áreas.
+		\item Editar Áreas.
+		\item Eliminar Áreas.
+		\item Consultar Áreas.
+	\end{itemize}
 
+	\item {\bf Salones Móvil:} Este módulo agrupa los caso de uso de plataforma móvil que se realcionan con los salones pertenecientes a la Escuela Superior de Cómputo y al alumno, es decir:
+		\begin{itemize}
+			\item Consultar Asignación de Grupos.
+			\item Consultar Nivel de Salón.
+			\item Consultar Edifcio de Salón.
+		\end{itemize}
+
+	\item {\bf Áreas Móvil:} Este módulo agrupa el caso de uso de plataforma móvil que se realcionan con lass principales áreas pertenecientes a la Escuela Superior de Cómputo y al alumno, es decir:
+	\begin{itemize}
+		\item Consultar Área.
+	\end{itemize}
+
+	\item {\bf Profesores:} Este móduulo agrupa los casos de uso de plataforma web que proporcionan información sobre la consulta de profesores que pertenecen a la Escuela Superior de Cómputo, tales como:
+	\begin{itemize}
+		\item Registrar Profesor.
+		\item Editar Profesor.
+		\item Eliminar Profesor.
+		\item Consultar Profesor.
+	\end{itemize} 
+
+	\item {\bf Profesores Móvil:} Este móduulo agrupa los casos de uso de plataforma móvil que proporcionan información sobre la consulta de profesores que pertenecen a la Escuela Superior de Cómputo, tales como:
+\begin{itemize}
+	\item Consultar Profesor.
+	\item Consultar Detalle de Profesor.
+\end{itemize} 
+
+\item {\bf Material de Apoyo:} Este módulo agrupa los casos de plataforma web  que se relacionan con el material de apoyo las unidades de aprendizaje que imparten los profesoresen la Escuela Superior de Cómputo y al encargado de prefectura, es decir:
+\begin{itemize}
+	\item Gestionar Material de Apoyo.
+	\item Registrar Material de Apoyo.
+	\item Editar Material de Apoyo.
+	\item Eliminar Material de Apoyo.
+	\item Consultar Material de Apoyo.
+\end{itemize}
+
+	\item {\bf Unidades de Aprendizaje Móvil:} Este módulo agrupa los caso de uso de plataforma móvil que se realcionan con los salones pertenecientes a la Escuela Superior de Cómputo y al alumno, es decir:
+\begin{itemize}
+	\item Consultar Unidades de Aprendizaje.
+	\item Consultar Material de Apoyo
+	\item Consultar Detalle de Unidades de Aprendizaje.
+	\item Consultar Programa Académico de Unidad de Aprendizaje.
+\end{itemize}
+
+	\item {\bf Unidades de Aprendizaje:} Este módulo agrupa los casos de plataforma web  que se relacionan con las unidades de aprendizaje que se imparten por semesntre en la Escuela Superior de Cómputo y al encargado de prefectura, es decir:
+\begin{itemize}
+	\item Gestionar Unidad de Aprendizaje.
+	\item Registrar Unidad de Aprendizaje.
+	\item Editar Unidad de Aprendizaje.
+	\item Eliminar Unidad de Aprendizaje.
+	\item Consultar Unidad de Aprendizaje.
+\end{itemize}
+
+\item {\bf Convocatorias:} Este módulo agrupa los casos de plataforma web  que se relacionan con las las convocatorias que se ofertan por semesntre en la Escuela Superior de Cómputo, es decir:
+\begin{itemize}
+	\item Gestionar Convocatoria.
+	\item Registrar Convocatoria Cursos.
+	\item Editar Convocatoria Cursos.
+	\item Eliminar Convocatoria Cursos.
+	\item Consultar Convocatoria Cursos.
+	\item Registrar Convocatoria Movilidad.
+	\item Editar Convocatoria Movilidad.
+	\item Eliminar Convocatoria Movilidad.
+	\item Consultar Convocatoria Movilidad.
+\end{itemize}
+
+	\item {\bf Convocatoria Móvil:} Este móduulo agrupa los casos de uso de plataforma móvil que proporcionan información sobre las convocatorias ofrecidas en la Escuela Superior de Cómputo, tales como:
+\begin{itemize}
+	\item Consultar Convocatoria.
+	\item Consultar Convocatoria Cursos.
+	\item Consultar Convocatoria Movilidad.
+		\item Consultar Convocatoria Nacional.
+			\item Consultar Convocatoria Internacional.
+\end{itemize}
 %	\item {\bf Administración de usuarios:} Integra los casos de uso referentes a la administración de los usuarios y al control de acceso al sistema.
 
 	%El presente documento expone en detalle la información correspondiente al módulo de \textbf{Registro de escuelas}.
