@@ -18,6 +18,7 @@
 		D5F584521F8ACAD600329D4C /* ProfesorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F584511F8ACAD600329D4C /* ProfesorTableViewController.swift */; };
 		D5F584541F8ACD4300329D4C /* ProfesorDetalleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F584531F8ACD4300329D4C /* ProfesorDetalleTableViewController.swift */; };
 		D5F584561F8AD63C00329D4C /* ProfesorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F584551F8AD63C00329D4C /* ProfesorCell.swift */; };
+		FC11FD0B20124DB20086EC7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC11FD0A20124DB20086EC7D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D5F584511F8ACAD600329D4C /* ProfesorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesorTableViewController.swift; sourceTree = "<group>"; };
 		D5F584531F8ACD4300329D4C /* ProfesorDetalleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesorDetalleTableViewController.swift; sourceTree = "<group>"; };
 		D5F584551F8AD63C00329D4C /* ProfesorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesorCell.swift; sourceTree = "<group>"; };
+		FC11FD0A20124DB20086EC7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				D5F5843F1F89262100329D4C /* LaunchScreen.storyboard */,
 				D5F584421F89262100329D4C /* Info.plist */,
 				D5F584511F8ACAD600329D4C /* ProfesorTableViewController.swift */,
+				FC11FD0A20124DB20086EC7D /* GoogleService-Info.plist */,
 				D5F584531F8ACD4300329D4C /* ProfesorDetalleTableViewController.swift */,
 				D5F584551F8AD63C00329D4C /* ProfesorCell.swift */,
 			);
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F584411F89262100329D4C /* LaunchScreen.storyboard in Resources */,
+				FC11FD0B20124DB20086EC7D /* GoogleService-Info.plist in Resources */,
 				D5F5843E1F89262100329D4C /* Assets.xcassets in Resources */,
 				D5F5843C1F89262100329D4C /* Main.storyboard in Resources */,
 			);

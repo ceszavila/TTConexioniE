@@ -33,6 +33,57 @@
 \BOOKMARK [1][-]{section.6.1}{Actores del sistema}{chapter.6}% 33
 \BOOKMARK [2][-]{subsection.6.1.1}{Alumno}{section.6.1}% 34
 \BOOKMARK [2][-]{subsection.6.1.2}{Visitante}{section.6.1}% 35
+<<<<<<< HEAD
+\BOOKMARK [2][-]{subsection.6.1.3}{Profesor}{section.6.1}% 36
+\BOOKMARK [2][-]{subsection.6.1.4}{Responsable UTEC}{section.6.1}% 37
+\BOOKMARK [2][-]{subsection.6.1.5}{Responsable Coordinaci\363n de Cooperaci\363n Acad\351mica }{section.6.1}% 38
+\BOOKMARK [2][-]{subsection.6.1.6}{Responsable EE}{section.6.1}% 39
+\BOOKMARK [2][-]{subsection.6.1.7}{Responsable Prefectura}{section.6.1}% 40
+\BOOKMARK [2][-]{subsection.6.1.8}{Responsable Recursos Materiales}{section.6.1}% 41
+\BOOKMARK [1][-]{section.6.2}{Casos de Uso del m\363dulo de Salones}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.3}{Casos de Uso del m\363dulo de Profesores}{chapter.6}% 43
+\BOOKMARK [0][-]{chapter.7}{Resultados}{}% 44
+\BOOKMARK [1][-]{section.7.1}{Conclusiones}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.2}{Resultados}{chapter.7}% 46
+\BOOKMARK [1][-]{section.7.3}{Trabajo a Futuro}{chapter.7}% 47
+\BOOKMARK [0][-]{chapter.8}{Anexos}{}% 48
+\BOOKMARK [1][-]{section.8.1}{Casos de Uso}{chapter.8}% 49
+\BOOKMARK [2][-]{subsection.8.1.1}{Modelo de comportamiento del m\363dulo: Consulta de Salones }{section.8.1}% 50
+\BOOKMARK [1][-]{section.8.2}{CUSM-01 Consultar Asignaci\363n de Grupo}{chapter.8}% 51
+\BOOKMARK [2][-]{subsection.8.2.1}{Resumen}{section.8.2}% 52
+\BOOKMARK [2][-]{subsection.8.2.2}{Descripci\363n}{section.8.2}% 53
+\BOOKMARK [2][-]{subsection.8.2.3}{Trayectorias del caso de uso}{section.8.2}% 54
+\BOOKMARK [1][-]{section.8.3}{CUSM-02 Consultar Nivel de Sal\363n}{chapter.8}% 55
+\BOOKMARK [2][-]{subsection.8.3.1}{Resumen}{section.8.3}% 56
+\BOOKMARK [2][-]{subsection.8.3.2}{Descripci\363n}{section.8.3}% 57
+\BOOKMARK [2][-]{subsection.8.3.3}{Trayectorias del caso de uso}{section.8.3}% 58
+\BOOKMARK [1][-]{section.8.4}{CUMS-03 Consultar Edificio de Sal\363n}{chapter.8}% 59
+\BOOKMARK [2][-]{subsection.8.4.1}{Resumen}{section.8.4}% 60
+\BOOKMARK [2][-]{subsection.8.4.2}{Descripci\363n}{section.8.4}% 61
+\BOOKMARK [2][-]{subsection.8.4.3}{Trayectorias del caso de uso}{section.8.4}% 62
+\BOOKMARK [2][-]{subsection.8.4.4}{Modelo de comportamiento del m\363dulo: Consultar Profesores }{section.8.4}% 63
+\BOOKMARK [1][-]{section.8.5}{CUPM-01 Consultar Profesor}{chapter.8}% 64
+\BOOKMARK [2][-]{subsection.8.5.1}{Resumen}{section.8.5}% 65
+\BOOKMARK [2][-]{subsection.8.5.2}{Descripci\363n}{section.8.5}% 66
+\BOOKMARK [2][-]{subsection.8.5.3}{Trayectorias del caso de uso}{section.8.5}% 67
+\BOOKMARK [1][-]{section.8.6}{CUPM-02 Consultar Detalle de Profesor}{chapter.8}% 68
+\BOOKMARK [2][-]{subsection.8.6.1}{Resumen}{section.8.6}% 69
+\BOOKMARK [2][-]{subsection.8.6.2}{Descripci\363n}{section.8.6}% 70
+\BOOKMARK [2][-]{subsection.8.6.3}{Trayectorias del caso de uso}{section.8.6}% 71
+\BOOKMARK [1][-]{section.8.7}{Modelo de Interacci\363n del M\363dulo Salones}{chapter.8}% 72
+\BOOKMARK [2][-]{subsection.8.7.1}{IUPP Pantalla Principal}{section.8.7}% 73
+\BOOKMARK [2][-]{subsection.8.7.2}{IUSM-01 Consultar Asignaci\363n de Grupos}{section.8.7}% 74
+\BOOKMARK [2][-]{subsection.8.7.3}{IUSM-02 Consultar Nivel de Sal\363n}{section.8.7}% 75
+\BOOKMARK [2][-]{subsection.8.7.4}{IUSM-02.1 Consultar Sal\363n}{section.8.7}% 76
+\BOOKMARK [2][-]{subsection.8.7.5}{IUSM-03 Consultar Edificio de Sal\363n}{section.8.7}% 77
+\BOOKMARK [1][-]{section.8.8}{Modelo de Interacci\363n del M\363dulo Profesores}{chapter.8}% 78
+\BOOKMARK [2][-]{subsection.8.8.1}{IUPM-01 Consultar Profesor}{section.8.8}% 79
+\BOOKMARK [2][-]{subsection.8.8.2}{IUPM-02 Consultar Detalle de Profesor}{section.8.8}% 80
+\BOOKMARK [1][-]{section.8.9}{Estudio de Factibilidad}{chapter.8}% 81
+\BOOKMARK [2][-]{subsection.8.9.1}{Econ\363mica}{section.8.9}% 82
+\BOOKMARK [2][-]{subsection.8.9.2}{Tecnol\363gica}{section.8.9}% 83
+\BOOKMARK [2][-]{subsection.8.9.3}{Operativa}{section.8.9}% 84
+=======
 \BOOKMARK [1][-]{section.6.2}{Casos de Uso del m\363dulo Conexi\363n iE Web }{chapter.6}% 36
 \BOOKMARK [1][-]{section.6.3}{Casos de Uso del m\363dulo de Conexi\363n iE M\363vil}{chapter.6}% 37
 \BOOKMARK [0][-]{chapter.7}{Resultados}{}% 38
@@ -76,3 +127,4 @@
 \BOOKMARK [2][-]{subsection.8.9.1}{Econ\363mica}{section.8.9}% 76
 \BOOKMARK [2][-]{subsection.8.9.2}{Tecnol\363gica}{section.8.9}% 77
 \BOOKMARK [2][-]{subsection.8.9.3}{Operativa}{section.8.9}% 78
+>>>>>>> b421467deca106256310cecc78cdaad9a9d9d3fa

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 NOV 2017 11:03
+=======
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 NOV 2017 11:45
+>>>>>>> b421467deca106256310cecc78cdaad9a9d9d3fa
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5900,7 +5904,11 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
 Package rerunfilecheck Info: File `analisis.out' has not changed.
+<<<<<<< HEAD
+(rerunfilecheck)             Checksum: 74860C9991DD26DF8016AF74DBC2B251;6185.
+=======
 (rerunfilecheck)             Checksum: DB64B66B99142BEF38A1E4371AD8EC7B;5733.
+>>>>>>> b421467deca106256310cecc78cdaad9a9d9d3fa
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -5908,10 +5916,17 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
+ 10933 strings out of 492995
+ 153791 string characters out of 6132704
+ 274558 words of memory out of 5000000
+ 13800 multiletter control sequences out of 15000+600000
+=======
  10811 strings out of 493014
  152121 string characters out of 6133351
  271054 words of memory out of 5000000
  13684 multiletter control sequences out of 15000+600000
+>>>>>>> b421467deca106256310cecc78cdaad9a9d9d3fa
  14575 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,16n,51p,1166b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5929,7 +5944,11 @@ ve/2016/texmf-dist/fonts/type1/public/hfbright/hfbrsl8.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/hfbright/hftl10.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texlive/2016
 /texmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
+<<<<<<< HEAD
+Output written on analisis.pdf (80 pages, 11749616 bytes).
+=======
 Output written on analisis.pdf (76 pages, 11922569 bytes).
+>>>>>>> b421467deca106256310cecc78cdaad9a9d9d3fa
 PDF statistics:
  1292 PDF objects out of 1440 (max. 8388607)
  1096 compressed objects within 11 object streams
