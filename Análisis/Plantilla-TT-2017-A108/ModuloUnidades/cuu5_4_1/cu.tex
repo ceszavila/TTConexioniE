@@ -1,0 +1,114 @@
+\begin{UseCase}{CUU5.4.1}{Consultar Detalle de Unidad de Aprendizaje}
+	{
+		Cuando un \cdtRef{actor:CIEAlumno}{Alumno} desea conocer de manera toda la información de una unidad de aprendizaje es necesario realizar una consulta del detalle de dicha unidad. Es por eso que este caso de uso permite al \cdtRef{actor:CIEAlumno}{Alumno} conocer de manera detallada  la información de una unidad de aprendizaje como lo son: nombre de la unidad, academia a la que pertenece, el tipo de unidad de aprendizaje así como el programa académico de dicha unidad de aprendizaje. 
+			
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Cesar Raúl Avila Padilla}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{09 de Abril del 2018}
+		
+		
+		
+		%--------------------------------------------------------
+		%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+		%	% FECHA: Anote la fecha en que se terminó la revisión.
+		%	\UCccitem{Fecha}{11-11-14} 
+		%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+		%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+		%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+		%	\UCccitem{Resultado}{Corregir}
+		%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+		%	\UCccitem{Observaciones}{
+		%		\begin{UClist}
+		%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+		%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+		%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+		%			
+		%		\end{UClist}		
+		%	}
+		%--------------------------------------------------------
+			\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEAlumno}{Alumno}
+			\end{UClist}
+		}
+	\UCitem{Propósito}{Conocer la información de manera detalla de una unidad de aprendizaje seleccionada.}
+	\UCitem{Entradas}{No Aplica
+			%        \begin{UClist} 
+			%           \UCli
+			%           \UCli
+			%        \end{UClist}
+		}
+	\UCitem{Salidas}{
+		\begin{UClist} 
+			\UCli Nombre de la unidad de aprendizaje.
+			\UCli Academia a la que pertenece la unidad de aprendizaje.
+			\UCli Tipo de unidad de aprendizaje.
+			\UCli Programa académico de la unidad de aprendizaje.
+		\end{UClist}	
+	}
+		\UCitem{Precondiciones}{
+			\begin{UClist}		
+				\UCli {\bf Interna:} Que exista al menos una unidad de aprendizaje registrada en el sistema.
+			\end{UClist}
+		}
+		\UCitem{Postcondiciones}{
+			\begin{UClist}
+				\UCli {\bf Externa:} El actor conocerá las unidades de aprendizaje que serán impartidas en el periodo escolar.
+			\end{UClist}
+		}
+		\UCitem{Reglas de negocio}{
+			\begin{UClist}
+				\UCli No Aplica
+			\end{UClist}
+		}
+		\UCitem{Errores}{
+			\begin{UClist}
+				\UCli No Aplica
+			\end{UClist}
+		}
+		\UCitem{Tipo}{Primario.}
+		%	\UCitem{Fuente}{
+		%	    \begin{UClist}
+		%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+		%	    \end{UClist}
+		%	}
+	\end{UseCase}
+	
+	
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Toca el nombre de la unidad de aprendizaje deseada de la pantalla \cdtIdRef{IUUM-5.4}{Consultar Unidades de Aprendizaje}
+		\UCpaso[\UCsist] Obtiene el nombre, academia, tipo y programa académico de la unidad de aprendizaje seleccionada.
+		\UCpaso[\UCsist] Construye la pantalla \cdtIdRef{IUUM-5.4.1}{Consultar Detalle de Unidad de Aprendizaje}.
+		\UCpaso[\UCsist] Muestra en la pantalla \cdtIdRef{IUPM-5.4.1}{Consultar Detalle de Unidad de Aprendizaje}.
+		\UCpaso[\UCsist] Carga el programa académico de la unidad de aprendizaje en la pantalla \cdtIdRef{IUPM-5.4.1}{Consultar Detalle de Unidad de Aprendizaje}.
+		
+	\end{UCtrayectoria}
+	
+	
+	% 
+	%  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
+	% 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+	% 	
+	% 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+	% 	
+	% 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+	% \end{UCtrayectoriaA}
+	
+	
+	
+	%\UCExtensionPoint
+	%{El actor requiere solicitar la inscripción de su escuela al programa}
+	%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+	%{\cdtIdRef{CUR 3}{Solicitar inscripción}}
