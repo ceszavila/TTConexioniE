@@ -95,12 +95,14 @@
  \end{UseCase}
 
  \begin{UCtrayectoria}
-    \UCpaso[\UCactor] El alumno desea obtener información detallada del profesor tocando el nombre del profesor en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor}.
-    \UCpaso[\UCsist] Obtiene la información del profesor.
-    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPM-02}{Consultar Detalle de Profesor}.
-    \UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}.
+    \UCpaso[\UCactor] El alumno desea obtener información detallada del profesor tocando ls celda del profesor en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor}.
+    \UCpaso[\UCsist] Obtiene la información del profesor. \label{CUPM-02:detalleProfesor}
+    \UCpaso[\UCsist] Construye la tabla de la pantalla \cdtIdRef{IUPM-02}{Consultar Detalle de Profesor} con la información obtenida en el paso \ref{CUPM-02:detalleProfesor}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPM-02}{Consultar Detalle de Profesor} con la información obtenida.
+    \UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}. \footnote{La funcionalidad del botón \textbf{Atrás} es un componente precargado del entorno de desarrollo XCode y puede variar dependiendo del idioma configurado por el usuario.}
     \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor}
  \end{UCtrayectoria}
+
 
  
 %\subsection{Puntos de extensión}

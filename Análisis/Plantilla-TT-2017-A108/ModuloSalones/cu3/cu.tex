@@ -1,6 +1,7 @@
 \begin{UseCase}{CUSM-01}{Consultar Asignación de Grupo}
     {
-	Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} conocer el salón al que fue asignado el grupo en donde esta inscrito.
+	Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} conocer el salón que fue asignado al grupo en donde esta inscrito.
+	Cuando el alumno desea saber en que espacio se impartirá la unidad o unidades de aprendizaje a las cuales se inscribió, el caso de uso le permite conocer el nombre de espacio y si el alumno lo solicita la ubicación del mismo.
     }
     \UCitem{Versión}{1.0}
     \UCccsection{Administración de Requerimientos}
@@ -12,28 +13,28 @@
     \UCccitem{Volatilidad}{Baja}
     \UCccitem{Madurez}{Media}
     \UCitem{Estatus}{Por revisar}
-    \UCitem{Fecha del último estatus}{15 de Octubre del 2017}
+    \UCitem{Fecha del último estatus}{10 de Abril del 2017}
 
 
 %--------------------------------------------------------
-	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
-	% FECHA: Anote la fecha en que se terminó la revisión.
-	\UCccitem{Fecha}{11-11-14} 
-	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
-	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
-	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
-	\UCccitem{Resultado}{Corregir}
-	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
-	\UCccitem{Observaciones}{
-		\begin{UClist}
-			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
-			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
-			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
-			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
-			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
-			
-		\end{UClist}		
-	}
+%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+%	% FECHA: Anote la fecha en que se terminó la revisión.
+%	\UCccitem{Fecha}{11-11-14} 
+%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+%	\UCccitem{Resultado}{Corregir}
+%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+%	\UCccitem{Observaciones}{
+%		\begin{UClist}
+%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+%			
+%		\end{UClist}		
+%	}
 %--------------------------------------------------------
 
 	\UCsection{Atributos}
@@ -42,24 +43,25 @@
 \UCli \cdtRef{actor:CIEAlumno}{Alumno}
 	\end{UClist}
 }
-	\UCitem{Propósito}{Informar al alumno el salón al que fue asignado su grupo}
+	\UCitem{Propósito}{Proporcionale al alumno una herramienta que le permita conocer el salón al que fue asignado su grupo o grupos dependiendo de las unidades de aprendizaje que inscribió.}
 	\UCitem{Entradas}{
         \begin{UClist} 
            \UCli Ninguna
         \end{UClist}}
 	\UCitem{Salidas}{
 		\begin{UClist} 
-			\UCli Tabla que muestra el listado de asignaciones de grupos
+			\UCli Tabla que muestra el listado de los grupos del periodo escolar actual y la asignación de espacios con los que contarán los grupos.
 		\end{UClist}	
 	}
 	\UCitem{Precondiciones}{
 		\begin{UClist}		
-			\UCli {\bf Interna:} El sistema debe tener cargados las asignaciones de los grupos.
+			\UCli {\bf Interna:} El sistema debe tener cargados los grupos del periodo escolar.
+			\UCli {\bf Interna:} El sistema debe tener cargadas las asignaciones de espacio por grupo.
 		\end{UClist}
 		}
 	\UCitem{Postcondiciones}{
 	    \begin{UClist}
-		\UCli {\bf Externa:} Los alumnos podrán saber en el momento que lo necesiten, el salón que fue asignado a su grupo sin tener que buscar las hojas de asignación de salones.
+		\UCli {\bf Externa:} Los alumnos podrán saber en el momento que lo necesiten, el salón que fue asignado a su grupo sin tener que buscar las hojas de asignación de salones pegadas en distintos puntos de la escuela.
    	    \end{UClist}
 	}
     \UCitem{Reglas de negocio}{
@@ -79,31 +81,35 @@
  \end{UseCase}
 
  \begin{UCtrayectoria}
-    \UCpaso[\UCactor] Desea conocer el salón ha donde fue asginado su grupo tocando el botón \botSalones de la pantalla \cdtIdRef{IUPP}{Pantalla Principal}
+    \UCpaso[\UCactor] Desea conocer el salón al que fue asignado su grupo tocando el botón \botSalones de la pantalla \cdtIdRef{IUPP}{Pantalla Principal}
     
-     \UCpaso[\UCsist] Obtiene la información de la asignación de grupos.
+     \UCpaso[\UCsist] Obtiene la información de la asignación de grupos. \label{CUMS-01:info}
     
-    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{UISM-01}{Consultar Asignación de Grupos}
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos} con la información obtenida en el paso \ref{CUMS-01:info}. \label{CUMS-01:salon}
     
-    \UCpaso[\UCsist] Muestra la tabla con los grupos y el nombre del salón al que fue asignado.
+    \UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}. \footnote{La funcionalidad del botón \textbf{Atrás} es un componente precargado del entorno de desarrollo XCode y puede variar dependiendo del idioma configurado por el usuario.}
     
-    \UCpaso[\UCactor] Desea conocer la ubicación deel nivel y salón al que fue asignado su grupo.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPP}{Pantalla Principal}.
     
-    \UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUSM-02}{Consultar Nivel de Salón}
-    
- \end{UCtrayectoria}
-
-\begin{UCtrayectoriaA}{A}{El alumno no desea conocer el nivel y salón.}
-	\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás} de la pantalla .
-	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPP}{Pantalla Principal}.
-\end{UCtrayectoriaA}
- 
-%\subsection{Puntos de extensión}
+%    \UCpaso[\UCactor] Desea conocer la ubicación del nivel y salón al que fue asignado su grupo.
+%    
+%    \UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUSM-02}{Consultar Nivel de Salón}
+%    
+\end{UCtrayectoria}
 %
-%\UCExtensionPoint
-%{El actor requiere recuperar su contraseña}
-%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
-%{\cdtIdRef{CUR 2}{Recuperar contraseña}}
+%\begin{UCtrayectoriaA}{A}{El alumno no desea conocer el nivel y salón.}
+%	\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás} de la pantalla .
+%	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPP}{Pantalla Principal}.
+%\end{UCtrayectoriaA}
+% 
+
+\subsection{Puntos de extensión}
+%
+\UCExtensionPoint
+{El actor requiere conocer la ubicación del salón}
+{ Paso \ref{CUMS-01:salon} de la trayectoria principal}
+{\cdtIdRef{CUSM-02}{Consultar Nivel de Salón}}
+
 %
 %\UCExtensionPoint
 %{El actor requiere solicitar la inscripción de su escuela al programa}

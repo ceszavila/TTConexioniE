@@ -1,6 +1,7 @@
 \begin{UseCase}{CUMS-03}{Consultar Edificio de Salón}
     {
-	Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} consultar la información del edificio dentro de la Escuela Superior de Cómputo en donde se encuentra ubicado su grupo.
+	Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} consultar la información del edificio dentro de la Escuela Superior de Cómputo..
+	Cuando el alumno requiera saber el número de niveles de un edificio, sus características de accesibilidad y el tipo de espacios con los que cuenta dicho edificio, el caso de uso le permite conocer esta información desde la aplicación móvil.
     }
     \UCitem{Versión}{1.0}
     \UCccsection{Administración de Requerimientos}
@@ -11,8 +12,8 @@
     \UCccitem{Complejidad}{Baja}
     \UCccitem{Volatilidad}{Baja}
     \UCccitem{Madurez}{Alta}
-    \UCitem{Estatus}{Terminado}
-    \UCitem{Fecha del último estatus}{15 de Octubre del 2017}
+    \UCitem{Estatus}{Por revisar}
+    \UCitem{Fecha del último estatus}{10 de Abril del 2018}
 
 
 %--------------------------------------------------------
@@ -44,7 +45,7 @@
 \UCli \cdtRef{actor:CIEAlumno}{Alumno}
 	\end{UClist}
 }
-	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita ubicar geográficamente la posición del edificio al que quiera dirigirse}
+	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita ubicar geográficamente la posición del edificio al que quiera dirigirse y las características de éste.}
 	\UCitem{Entradas}{No Aplica
 %        \begin{UClist} 
 %           \UCli 
@@ -53,20 +54,24 @@
 }
 	\UCitem{Salidas}{
 		\begin{UClist} 
-				\UCli Marcador con la información del Edifico
-		        \UCli Mapa de la Escuela Superior de Cómputo separada por edificios
-		        \UCli Indicaciones para llegar al edificio 
+				\UCli Nombre del Edifcio
+		        \UCli ID de Edificio
+		        \UCli Número de niveles del Edificio 
+		        \UCli Indicadores visuales de accesibilidad
+		        \UCli Indicadores visuales del tipo de espacio
 		\end{UClist}
 	   }
 	\UCitem{Precondiciones}{
 		\begin{UClist}		
 			\UCli {\bf Interna:} El sistema debe tener cargados los edificios de la ESCOM.
+			\UCli {\bf Interna:} El sistema debe tener cargada la información de los edificios de la ESCOM.
 %			\UCli {\bf Interna:} El sistema debe tener asociados los espacios a los grupos por periodo escolar.
 		\end{UClist}
 		}
 	\UCitem{Postcondiciones}{
 	    \begin{UClist}
-		\UCli {\bf Externa:} Los alumnos podrán saber los servicios que ofrece el edificio en él cual ha sido asignado su grupo
+		\UCli {\bf Externa:} Los alumnos podrán saber el tipo de espacio que ofrece el edificio en él cual ha sido asignado su grupo.
+		\UCli {\bf Externa:} Los alumnos sabrán la estructura de accesibilidad con la que cuenta determinado edificio.
    	    \end{UClist}
 	}
     \UCitem{Reglas de negocio}{
@@ -90,11 +95,11 @@
  \begin{UCtrayectoria}
     \UCpaso[\UCactor] Desea conocer la información de un \textbf{Edificio} en ESCOM tocando el icono \botInformacion del mapa que se encuentra en la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos}
 
-	\UCpaso[\UCsist] Obtiene la información del edificio seleccionado.
+	\UCpaso[\UCsist] Obtiene la información del edificio seleccionado. \label{CUSM-03:info}
 
-	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-03}{Consultar Edificio de Salón} 
+	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-03}{Consultar Edificio de Salón} con la información obtenida en el paso \ref{CUSM-03:info}
 
-	\UCpaso[\UCactor] El actor presiona el botón \cdtButton{Atrás}.
+	\UCpaso[\UCactor] El actor toca el icono \botCerrar en la pantalla \cdtIdRef{IUSM-03}{Consultar Edificio de Salón}.
 	
 	\UCpaso[\UCsist] Muestra la pantalla  \cdtIdRef{IUSM-01}{Consultar Asignación de Salones}.
 	

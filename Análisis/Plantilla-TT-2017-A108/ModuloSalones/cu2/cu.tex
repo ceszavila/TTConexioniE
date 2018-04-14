@@ -1,6 +1,6 @@
 \begin{UseCase}{CUSM-02}{Consultar Nivel de Salón}
     {
-	Para que el \cdtRef{actor:CIEAlumno}{Alumno} pueda conocer la ubicación de un salón en especifico es necesario saber en que nivel de un edificio se encuetra. Es por eso que este caso de uso permite al \cdtRef{actor:CIEAlumno}{Alumno} localizar el nivel de un edificio en particular.
+	Para que el \cdtRef{actor:CIEAlumno}{Alumno} pueda conocer la ubicación de un salón en especifico es necesario saber en que nivel de un edificio se encuentra. Es por eso que este caso de uso permite al \cdtRef{actor:CIEAlumno}{Alumno} localizar el nivel de un edificio en particular.
 
 	
     }
@@ -13,8 +13,8 @@
     \UCccitem{Complejidad}{Baja}
     \UCccitem{Volatilidad}{Baja}
     \UCccitem{Madurez}{Media}
-    \UCitem{Estatus}{Terminado}
-    \UCitem{Fecha del último estatus}{15 de Octubre del 2017}
+    \UCitem{Estatus}{Por revisar}
+    \UCitem{Fecha del último estatus}{10 de Abril del 2018}
 
 
 %--------------------------------------------------------
@@ -44,7 +44,7 @@
 \UCli \cdtRef{actor:CIEAlumno}{Alumno}
 	\end{UClist}
 }
-	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le facilite la ubicación de los niveles a los que puede dirigirse por edificio}
+	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le facilite la ubicación de los niveles y consecuentemente salones a los que puede dirigirse por edificio.}
 	\UCitem{Entradas}{
         \begin{UClist} 
            \UCli Ninguna
@@ -82,29 +82,32 @@
 %		\UCli \cdtIdRef{MSG27}{Cuenta no activada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
 	    \end{UClist}
 	}
-	\UCitem{Tipo}{Primario.}
+	\UCitem{Tipo}{Secundarios, extiende del caso de uso \cdtIdRef{CUSM-01}{Consultar Asignación de Grupo}.}
  \end{UseCase}
 
  \begin{UCtrayectoria}
- \UCpaso[\UCactor] Seleciona un grupo tocando la fila de la tabla donde se encuentra el grupo de la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos}.
+ \UCpaso[\UCactor] Seleciona un grupo tocando la celda de la tabla donde se encuentra el grupo a consulta de la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos}.
 
-\UCpaso[\UCsist] Obtiene el mapa  de la Escuela Superior de cómputo, el polígono del edificio, salón y niveles del edificio del grupo seleccionado.  
+\UCpaso[\UCsist] Obtiene el mapa  de la Escuela Superior de cómputo, el polígono del edificio, salón y niveles del edificio del grupo seleccionado. \label{CUSM-02:info}
 
-\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-02}{Consultar Nivel de Salón}
+\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-02}{Consultar Nivel de Salón} con la información obtenida en el paso \ref{CUSM-02:info} \label{CUSM-02:infoEdif}
 
 \UCpaso[\UCactor] Toca la opción \cdtButton{Niveles} de la pantalla \cdtIdRef{IUSM-02}{Consultar Nivel de Salón}. \refTray{A} 
 
 \UCpaso[\UCsist] Muestra la vista lateral 3D marcando de color amarillo el nivel  en donde se encuentra el salón del grupo.
 
-\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}. \label{CUSM-02:atras}
+\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}. \label{CUSM-02:atras} \footnote{La funcionalidad del botón \textbf{Atrás} es un componente precargado del entorno de desarrollo XCode y puede variar dependiendo del idioma configurado por el usuario.}
+
  \end{UCtrayectoria}
 
  \begin{UCtrayectoriaA}{A}{El alumno desea conocer el salón.}
 	\UCpaso[\UCactor] Toca la opción \cdtButton{Salones} de la pantalla  \cdtIdRef{IUSM-02}{Consultar nivel de salón}.
 	
 	\UCpaso[\UCsist] Muestra el salón del grupo seleccionado en una vista aérea del nivel al que pertenece el grupo de la pantalla \cdtIdRef{IUSM-02.1}{Consultar Salón}.
-	\UCpaso[] Regresa al paso \ref{CUSM-02:atras} de la trayectoria principal.
+	\UCpaso[\UCsist] Regresa al paso \ref{CUSM-02:atras} de la trayectoria principal.
 \end{UCtrayectoriaA}
+
+
 
 
 % \begin{UCtrayectoriaA}{A}{El actor alumno desea consultar las áreas de ESCOM.}
@@ -117,13 +120,12 @@
 % 
 
  
-%\subsection{Puntos de extensión}
+\subsection{Puntos de extensión}
 %
-%\UCExtensionPoint
-%{El actor requiere recuperar su contraseña}
-%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
-%{\cdtIdRef{CUR 2}{Recuperar contraseña}}
-%
+\UCExtensionPoint
+{El actor requiere conocer la información de un edificio}
+{ Paso \ref{CUSM-02:infoEdif} de la trayectoria principal}
+{\cdtIdRef{CUSM-03}{Consultar Edificio de Salón}}
 %\UCExtensionPoint
 %{El actor requiere solicitar la inscripción de su escuela al programa}
 %{ Paso \ref{cur1:Acciones} de la trayectoria principal}
