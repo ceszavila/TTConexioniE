@@ -61,36 +61,37 @@
 \BOOKMARK [2][-]{subsection.8.4.2}{Descripci\363n}{section.8.4}% 61
 \BOOKMARK [2][-]{subsection.8.4.3}{Trayectorias del caso de uso}{section.8.4}% 62
 \BOOKMARK [2][-]{subsection.8.4.4}{Modelo de comportamiento del m\363dulo: Profesores }{section.8.4}% 63
-\BOOKMARK [1][-]{section.8.5}{CUPM-01 Consultar Profesor}{chapter.8}% 64
+\BOOKMARK [1][-]{section.8.5}{CUPM-01 Consultar Profesores}{chapter.8}% 64
 \BOOKMARK [2][-]{subsection.8.5.1}{Resumen}{section.8.5}% 65
 \BOOKMARK [2][-]{subsection.8.5.2}{Descripci\363n}{section.8.5}% 66
 \BOOKMARK [2][-]{subsection.8.5.3}{Trayectorias del caso de uso}{section.8.5}% 67
-\BOOKMARK [1][-]{section.8.6}{CUPM-02 Consultar Detalle de Profesor}{chapter.8}% 68
-\BOOKMARK [2][-]{subsection.8.6.1}{Resumen}{section.8.6}% 69
-\BOOKMARK [2][-]{subsection.8.6.2}{Descripci\363n}{section.8.6}% 70
-\BOOKMARK [2][-]{subsection.8.6.3}{Trayectorias del caso de uso}{section.8.6}% 71
-\BOOKMARK [2][-]{subsection.8.6.4}{Modelo de comportamiento del m\363dulo: Unidades de Aprendizaje }{section.8.6}% 72
-\BOOKMARK [1][-]{section.8.7}{CUU5.4 Consultar Unidades de Aprendizaje}{chapter.8}% 73
-\BOOKMARK [2][-]{subsection.8.7.1}{Resumen}{section.8.7}% 74
-\BOOKMARK [2][-]{subsection.8.7.2}{Descripci\363n}{section.8.7}% 75
-\BOOKMARK [2][-]{subsection.8.7.3}{Trayectorias del caso de uso}{section.8.7}% 76
-\BOOKMARK [1][-]{section.8.8}{CUU5.4.1 Consultar Detalle de Unidad de Aprendizaje}{chapter.8}% 77
-\BOOKMARK [2][-]{subsection.8.8.1}{Resumen}{section.8.8}% 78
-\BOOKMARK [2][-]{subsection.8.8.2}{Descripci\363n}{section.8.8}% 79
-\BOOKMARK [2][-]{subsection.8.8.3}{Trayectorias del caso de uso}{section.8.8}% 80
-\BOOKMARK [1][-]{section.8.9}{Modelo de Interacci\363n del M\363dulo Salones}{chapter.8}% 81
-\BOOKMARK [2][-]{subsection.8.9.1}{IUPP Pantalla Principal}{section.8.9}% 82
-\BOOKMARK [2][-]{subsection.8.9.2}{IUSM-01 Consultar Asignaci\363n de Grupos}{section.8.9}% 83
-\BOOKMARK [2][-]{subsection.8.9.3}{IUSM-02 Consultar Nivel de Sal\363n}{section.8.9}% 84
-\BOOKMARK [2][-]{subsection.8.9.4}{IUSM-02.1 Consultar Sal\363n}{section.8.9}% 85
-\BOOKMARK [2][-]{subsection.8.9.5}{IUSM-03 Consultar Edificio de Sal\363n}{section.8.9}% 86
-\BOOKMARK [1][-]{section.8.10}{Modelo de Interacci\363n del M\363dulo Profesores}{chapter.8}% 87
-\BOOKMARK [2][-]{subsection.8.10.1}{IUPM-01 Consultar Profesor}{section.8.10}% 88
-\BOOKMARK [2][-]{subsection.8.10.2}{IUPM-02 Consultar Detalle de Profesor}{section.8.10}% 89
-\BOOKMARK [1][-]{section.8.11}{Modelo de Interacci\363n del M\363dulo Unidades de Aprendizaje}{chapter.8}% 90
-\BOOKMARK [2][-]{subsection.8.11.1}{IUUM-5.4 Consultar Unidades de Aprendizaje}{section.8.11}% 91
-\BOOKMARK [2][-]{subsection.8.11.2}{IUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{section.8.11}% 92
-\BOOKMARK [1][-]{section.8.12}{Estudio de Factibilidad}{chapter.8}% 93
-\BOOKMARK [2][-]{subsection.8.12.1}{Econ\363mica}{section.8.12}% 94
-\BOOKMARK [2][-]{subsection.8.12.2}{Tecnol\363gica}{section.8.12}% 95
-\BOOKMARK [2][-]{subsection.8.12.3}{Operativa}{section.8.12}% 96
+\BOOKMARK [2][-]{subsection.8.5.4}{Puntos de extensi\363n}{section.8.5}% 68
+\BOOKMARK [1][-]{section.8.6}{CUPM-02 Consultar Detalle de Profesor}{chapter.8}% 69
+\BOOKMARK [2][-]{subsection.8.6.1}{Resumen}{section.8.6}% 70
+\BOOKMARK [2][-]{subsection.8.6.2}{Descripci\363n}{section.8.6}% 71
+\BOOKMARK [2][-]{subsection.8.6.3}{Trayectorias del caso de uso}{section.8.6}% 72
+\BOOKMARK [2][-]{subsection.8.6.4}{Modelo de comportamiento del m\363dulo: Unidades de Aprendizaje }{section.8.6}% 73
+\BOOKMARK [1][-]{section.8.7}{CUU5.4 Consultar Unidades de Aprendizaje}{chapter.8}% 74
+\BOOKMARK [2][-]{subsection.8.7.1}{Resumen}{section.8.7}% 75
+\BOOKMARK [2][-]{subsection.8.7.2}{Descripci\363n}{section.8.7}% 76
+\BOOKMARK [2][-]{subsection.8.7.3}{Trayectorias del caso de uso}{section.8.7}% 77
+\BOOKMARK [1][-]{section.8.8}{CUU5.4.1 Consultar Detalle de Unidad de Aprendizaje}{chapter.8}% 78
+\BOOKMARK [2][-]{subsection.8.8.1}{Resumen}{section.8.8}% 79
+\BOOKMARK [2][-]{subsection.8.8.2}{Descripci\363n}{section.8.8}% 80
+\BOOKMARK [2][-]{subsection.8.8.3}{Trayectorias del caso de uso}{section.8.8}% 81
+\BOOKMARK [1][-]{section.8.9}{Modelo de Interacci\363n del M\363dulo Salones}{chapter.8}% 82
+\BOOKMARK [2][-]{subsection.8.9.1}{IUPP Pantalla Principal}{section.8.9}% 83
+\BOOKMARK [2][-]{subsection.8.9.2}{IUSM-01 Consultar Asignaci\363n de Grupos}{section.8.9}% 84
+\BOOKMARK [2][-]{subsection.8.9.3}{IUSM-02 Consultar Nivel de Sal\363n}{section.8.9}% 85
+\BOOKMARK [2][-]{subsection.8.9.4}{IUSM-02.1 Consultar Sal\363n}{section.8.9}% 86
+\BOOKMARK [2][-]{subsection.8.9.5}{IUSM-03 Consultar Edificio de Sal\363n}{section.8.9}% 87
+\BOOKMARK [1][-]{section.8.10}{Modelo de Interacci\363n del M\363dulo Profesores}{chapter.8}% 88
+\BOOKMARK [2][-]{subsection.8.10.1}{IUPM-01 Consultar Profesor}{section.8.10}% 89
+\BOOKMARK [2][-]{subsection.8.10.2}{IUPM-02 Consultar Detalle de Profesor}{section.8.10}% 90
+\BOOKMARK [1][-]{section.8.11}{Modelo de Interacci\363n del M\363dulo Unidades de Aprendizaje}{chapter.8}% 91
+\BOOKMARK [2][-]{subsection.8.11.1}{IUUM-5.4 Consultar Unidades de Aprendizaje}{section.8.11}% 92
+\BOOKMARK [2][-]{subsection.8.11.2}{IUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{section.8.11}% 93
+\BOOKMARK [1][-]{section.8.12}{Estudio de Factibilidad}{chapter.8}% 94
+\BOOKMARK [2][-]{subsection.8.12.1}{Econ\363mica}{section.8.12}% 95
+\BOOKMARK [2][-]{subsection.8.12.2}{Tecnol\363gica}{section.8.12}% 96
+\BOOKMARK [2][-]{subsection.8.12.3}{Operativa}{section.8.12}% 97

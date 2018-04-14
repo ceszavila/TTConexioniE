@@ -1,6 +1,7 @@
-\begin{UseCase}{CUPM-01}{Consultar Profesor}
+\begin{UseCase}{CUPM-01}{Consultar Profesores}
 	{
-		Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} conocer el listado de la plantilla los profesores que están impartiendo clases en la ESCOM
+		Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} conocer el listado de los profesores adscritos a la Escuela Superior de Cómputo y que están impartiendo clases en ella o que se encuentren cubriendo algún puesto administrativo.
+		Cuando el alumno requiera conocer la plantilla docente de la escuela con la finalidad de consultar posteriormente el medio de contacto o ubicación de algún profesor en partícular, este caso de uso le mostrará una lista ordenada de los profesores que podrá consultar. 
 			
 		}
 		\UCitem{Versión}{1.0}
@@ -13,7 +14,7 @@
 		\UCccitem{Volatilidad}{Baja}
 		\UCccitem{Madurez}{Media}
 		\UCitem{Estatus}{Por revisar}
-		\UCitem{Fecha del último estatus}{15 de Octubre del 2017}
+		\UCitem{Fecha del último estatus}{10 de abril del 2018}
 		
 		
 		%--------------------------------------------------------
@@ -43,7 +44,7 @@
 				\UCli \cdtRef{actor:CIEAlumno}{Alumno}
 			\end{UClist}
 		}
-		\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita con facilidad encontrar a un profesor de la Escuela Superior de Cómputo.}
+		\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita encontrar a un profesor de la Escuela Superior de Cómputo en el listado de los docentes para consultar el detalle de su información si así lo desea.}
 		\UCitem{Entradas}{No Aplica
 			%        \begin{UClist} 
 			%           \UCli
@@ -59,12 +60,12 @@
 		}
 		\UCitem{Precondiciones}{
 			\begin{UClist}		
-				\UCli {\bf Interna:} El sistema debe tener cargados los profesores de la Escuela Superior de Cómputo.
+				\UCli {\bf Interna:} El sistema debe tener cargados los profesores adcritos a la Escuela Superior de Cómputo.
 			\end{UClist}
 		}
 		\UCitem{Postcondiciones}{
 			\begin{UClist}
-				\UCli {\bf Externa:} Los alumnos que deseen obtener asesorías de algún profesor conocido por su especialidad pordrán localizarlo.
+				\UCli {\bf Externa:} Los alumnos que deseen conocer la plantilla docente de la ESCOM podrán ver una lista de ellos.
 			\end{UClist}
 		}
 		\UCitem{Reglas de negocio}{
@@ -86,23 +87,23 @@
 	\end{UseCase}
 	
 	\begin{UCtrayectoria}
-		\UCpaso[\UCactor] Desea conocer a los profesores que estan impartiendo clases tocando el botón \botProfesores de la pantalla \cdtIdRef{IUPP}{Pantalla Principal}
+		\UCpaso[\UCactor] Desea conocer a los profesores que están impartiendo clases o cuentan con algún puesto administrativo en la Escuela Superior de Cómputo tocando el botón \botProfesores de la pantalla \cdtIdRef{IUPP}{Pantalla Principal}
 		
 		\UCpaso[\UCsist] Obtiene la lista de los profesores registrados.
 		
-		\UCpaso[\UCsist] Muestra en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor}
-		
-		\UCpaso[\UCactor] Desea conocer mas detalles de un profesor tocando el nombre del profesor seleccionado. \refTray{A}
-		
-		\UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUPM-02}{Consultar Detalles de Profesor}
+		\UCpaso[\UCsist] Muestra en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor} la lista de los profesores adscritos a la ESCOM de los que podrá consultar el detalle de su información si así lo desea. \label{CUPM-01:detalles}
+				
+%		\UCpaso[\UCactor] Desea conocer mas detalles de un profesor tocando el nombre del profesor seleccionado. \refTray{A}
+%		
+%		\UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUPM-02}{Consultar Detalles de Profesor}
 		
 	\end{UCtrayectoria}
 	
 	
-	\begin{UCtrayectoriaA}{A}{El alumno no desea conocer el nivel y salón.}
-		\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás} de la pantalla .
-		\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPP}{Pantalla Principal}.
-	\end{UCtrayectoriaA}
+%	\begin{UCtrayectoriaA}{A}{El alumno no desea conocer el nivel y salón.}
+%		\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás} de la pantalla .
+%		\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPP}{Pantalla Principal}.
+%	\end{UCtrayectoriaA}
 	
 	% 
 	%  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
@@ -113,9 +114,9 @@
 	% 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
 	% \end{UCtrayectoriaA}
 	
+	\subsection{Puntos de extensión}
 	
-	
-	%\UCExtensionPoint
-	%{El actor requiere solicitar la inscripción de su escuela al programa}
-	%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
-	%{\cdtIdRef{CUR 3}{Solicitar inscripción}}
+	\UCExtensionPoint
+	{El actor requiere consultar el detalle de algún profesor en particular}
+	{ Paso \ref{CUPM-01:detalles} de la trayectoria principal}
+	{\cdtIdRef{CUPM-02}{Consultar Detalle de Profeso}}

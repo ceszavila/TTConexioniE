@@ -1,8 +1,9 @@
 \begin{UseCase}{CUPM-02}{Consultar Detalle de Profesor}
     {
-	Este caso de uso le permite al actor conocer la información que el profesor debe tener disponible para su consulta pública. Cuando el \cdtRef{actor:CIEAlumno}{Alumno} desea saber los horarios del profesor, su correo institucional, donde encontrarlo, podrá hacerlo mediante el detalle de la consulta.\\
+	Este caso de uso le permite al actor conocer la información del profesor relacionada con su actividad académica, tal como sus medios de contacto institucionales, horarios de atención a alumnos y ubicación del espacio donde labora. 
+	Cuando el \cdtRef{actor:CIEAlumno}{Alumno} desea buscar a un profesor por asesorias, consultas relacionadas a los temas de interés del profesor, trámites o citas en el proceso de titulación, etc. Este caso de uso le ofrecerá una herramienta que le ayude a conocer esta información.\\
 	
-	Tambien podrá consultar la información personal del profesor, si y solo si, el profesor lo autoriza.
+	Tambien podrá consultar la información no institucional del profesor, únicamente si éste lo autoriza.
 	
     }
     \UCitem{Versión}{1.0}
@@ -15,28 +16,28 @@
     \UCccitem{Volatilidad}{Baja}
     \UCccitem{Madurez}{Media}
     \UCitem{Estatus}{Por revisar}
-    \UCitem{Fecha del último estatus}{15 de Octubre del 2017}
+    \UCitem{Fecha del último estatus}{10 de Abril del 2018}
 
 
 %--------------------------------------------------------
-	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
-	% FECHA: Anote la fecha en que se terminó la revisión.
-	\UCccitem{Fecha}{11-11-14} 
-	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
-	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
-	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
-	\UCccitem{Resultado}{Corregir}
-	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
-	\UCccitem{Observaciones}{
-		\begin{UClist}
-			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
-			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
-			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
-			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
-			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
-			
-		\end{UClist}		
-	}
+%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+%	% FECHA: Anote la fecha en que se terminó la revisión.
+%	\UCccitem{Fecha}{11-11-14} 
+%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+%	\UCccitem{Resultado}{Corregir}
+%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+%	\UCccitem{Observaciones}{
+%		\begin{UClist}
+%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+%			
+%		\end{UClist}		
+%	}
 %--------------------------------------------------------
 
 	\UCsection{Atributos}
@@ -45,7 +46,7 @@
 \UCli \cdtRef{actor:CIEAlumno}{Alumno}
 	\end{UClist}
 }
-	\UCitem{Propósito}{}
+	\UCitem{Propósito}{Proporciona una herramienta que le permita al alumno conocer el lugar y los horarios en los que puede buscar a algún profesor sin la necesidad de buscar esa información mediante sus compañeros, otros profesores o prefectos.}
 	\UCitem{Entradas}{
         \begin{UClist} 
 			\UCli No Aplica
@@ -53,27 +54,29 @@
 	\UCitem{Salidas}{
 		\UCli Fotografía del profesor
 		\UCli Nombre del profesor
-		\UCli Número de salón o cubículo del profesor
+		\UCli Nombre del espacio asignado al profesor
 		\UCli Academía a la que pertenece el profesor
 		\UCli Tabla que muestra los datos de: 
 			\begin{itemize}
-				\item Cubículo
+				\item Número de cubículo (en caso de contar con él)
 				\item Horario de Atención
 				\item E-mail
 				\item Teléfono
 				\item Página Web
 				\item Materias Impartidas
-				\item Trabajos Terminales Dirigidos
+				\item Trabajos terminales dirigidos de interés del profesor por mostrar.
 			\end{itemize}
 	}
 	\UCitem{Precondiciones}{
 		\begin{UClist}		
 			\UCli {\bf Interna:} Para que la fotografía y número de teléfono aparezcan el profesor deberá aceptar los términos y condiciones de la aplicación.
+			\UCli {\bf Interna:} Contar con el catálogo de profesores.
+			\UCli {\bf Interna:} Contar con la información cargada por profesor del catálogo de profesores.
 		\end{UClist}
 		}
 	\UCitem{Postcondiciones}{
 	    \begin{UClist}
-		\UCli {\bf Externa:} Los alumnos podrán visualizar información mas detallada de un profesor en especifico.
+		\UCli {\bf Externa:} Los alumnos podrán visualizar información mas detallada de un profesor en específico.
    	    \end{UClist}
 	}
     \UCitem{Reglas de negocio}{
@@ -88,7 +91,7 @@
 %		\UCli \cdtIdRef{MSG27}{Cuenta no activada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
 	    \end{UClist}
 	}
-	\UCitem{Tipo}{Secundario, incluye del caso de uso \cdtIdRef{CUPM-01}{Consultar Profesor}.}
+	\UCitem{Tipo}{Secundario, viene del caso de uso \cdtIdRef{CUPM-01}{Consultar Profesor}.}
  \end{UseCase}
 
  \begin{UCtrayectoria}
