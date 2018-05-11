@@ -17,8 +17,45 @@ class ConsultarViewController: UIViewController {
     var movilidad : Formulario?
     private var pdfDocument: PDFDocument?
     //    MARK: - OUTLETS
-    @IBOutlet var tipoImageView: UIImageView!
+//    @IBOutlet var tipoImageView: UIImageView!
     var pdfView: PDFView!
+    
+    @IBOutlet var nacionalImageView: UIImageView!
+    @IBOutlet var internacionalImageView: UIImageView!
+    @IBOutlet var posgradoImageView: UIImageView!
+    
+    @IBOutlet var nacionalLabel: UILabel!
+    @IBOutlet var internacionalLabel: UILabel!
+    @IBOutlet var posgradoLabel: UILabel!
+    
+    @IBAction func univNalBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func convNalBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func resNalBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func univInterBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func convInterBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func resInterBtn(_ sender: Any) {
+    }
+    
+    @IBAction func uniPosBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func convPosBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func resPosBtn(_ sender: UIButton) {
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +70,7 @@ class ConsultarViewController: UIViewController {
             let urlRequest: URLRequest = URLRequest.init(url: url)
             urlSession.dataTask(with: urlRequest) { (aData, aResponse, aError) in
                 guard aError == nil else{
-                    print(aError)
+                    print(aError as Any)
                     return
                 }
                 self.pdfDocument = PDFDocument(data: aData!)
@@ -52,10 +89,10 @@ class ConsultarViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        tipoImageView.layer.cornerRadius = 24
+//        tipoImageView.layer.cornerRadius = 24
 //        navigationItem.title = movilidad?.tipo.capitalized
 //        navigationController?.navigationBar.prefersLargeTitles = true
-        tipoImageView.image = movilidad?.imagen
+//        tipoImageView.image = movilidad?.imagen
     }
 
     override func didReceiveMemoryWarning() {
