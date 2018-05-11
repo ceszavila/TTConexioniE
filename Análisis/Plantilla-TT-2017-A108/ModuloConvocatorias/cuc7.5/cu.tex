@@ -1,0 +1,53 @@
+\begin{UseCase}{CUC7.5}{Registrar convocatoria de movilidad}{
+		Permite llevar a cabo el registro de una nueva convocatoria de movilidad. Las convocatorias de movilidad se agregan cada vez que una nueva es aprovada en el instituto y estas son por año.
+			
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{11 de Mayo del 2018}
+			
+		\UCsection{Atributos}
+		\UCitem{Actor}{ \textbf{Responsable UPIS}}
+		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda realizar el registro de nuevas convocatorias de movilidad.}
+		\UCitem{Entradas}{
+			\begin{UClist}
+				\UCli Año de la convocatoria
+				\UCli URL de las convocatorias
+			\end{UClist}
+		}
+		\UCitem{Salidas}{	
+			\begin{UClist}
+				\UCli Año de la convocatoria
+				\UCli URL de las convocatorias
+			\end{UClist}
+		}
+		\UCitem{Precondiciones}{\textbf{Manual: }La convocatoria debió haber sido aprobada en el instituto.}
+		\UCitem{Postcondiciones}{Se podrá consultar la nueva convocatoria de movilidad.}
+		\UCitem{Reglas de negocio}{Ninguna}
+		\UCitem{Errores}{\UCerr{Uno}{Cuando no se logra llevar a cabo la operación de manera correcta,}{se muestra el mensaje de error termina el caso de uso.}}
+		\UCitem{Tipo}{Primario.}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		\UCpaso [\UCactor] Solicita agregar una nueva convocatoria de movilidad tocando el botón \cdtButton{Agregar} de la pantalla \cdtIdRef{IUC7c}{Gestión de convocatorias}. 
+		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7.5}{Agregar convocatoria de movilidad}.
+		\UCpaso [\UCactor] Ingresa la información solicitada.
+		\UCpaso [\UCactor]  Solicita finalizar el registro de la convocatoria tocando el botón \cdtButton{Guardar}
+		\UCpaso [\UCsist] Persiste la información registrada. \refErr{Uno}
+		\UCpaso [\UCsist] Regresa a la pantalla \cdtIdRef{IUC7c}{Gestión de convocatorias} con la nueva convocatoria registrada.
+	\end{UCtrayectoria}
+	
+	\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{Cuando el actor requiere volver a la pantalla anterior.}
+		\UCpaso[\UCactor] Solicita regresar a la pantalla anterior tocando el botón \cdtButton{Atrás}.
+		
+		\UCpaso [\UCsist] Regrasa a la pantalla anterior.
+	\end{UCtrayectoriaA}
+	

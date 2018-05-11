@@ -488,3 +488,16 @@
 	\renewcommand{\UCccsection}[1]{}
 }
 
+%-------------------------------------------------------------------------------------------
+% Definir un error:
+% \UCerr{num}{Condición}{Resultado}
+\newcommand{\UCerr}[3]{
+	\textbf{E#1:} \hypertarget{\arabic{counterUC}:err#1} #2 #3
+}
+%-------------------------------------------------------------------------------------------
+% Referencia a un Error.
+% use: \refErr{Número}
+\newcommand{\refErr}[1]{%
+	%
+	\hyperlink{\arabic{counterUC}:err#1}{ $[$Error  #1$]$}%
+}
