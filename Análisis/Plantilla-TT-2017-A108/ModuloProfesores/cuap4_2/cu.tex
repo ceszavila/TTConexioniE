@@ -1,0 +1,140 @@
+\begin{UseCase}{CUAP-4.2}{Editar Profesor}
+	{
+		Este caso de uso le permite al \cdtRef{actor:CIEProfesor}{Responsable de Profesores} editar la información de los profesores de la Escuela Superior de Cómputo. Esto con la finalidad de compartir la información con los alumnos.
+			
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Cesar Raúl Avila Padilla}
+		\UCccitem{Evaluador}{José David Ortega Pacheco}
+		\UCitem{Operación}{Editar}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{10 de abril del 2018}
+		
+		
+		%--------------------------------------------------------
+		%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+		%	% FECHA: Anote la fecha en que se terminó la revisión.
+		%	\UCccitem{Fecha}{11-11-14} 
+		%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+		%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+		%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+		%	\UCccitem{Resultado}{Corregir}
+		%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+		%	\UCccitem{Observaciones}{
+		%		\begin{UClist}
+		%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+		%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+		%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+		%			
+		%		\end{UClist}		
+		%	}
+		%--------------------------------------------------------
+		
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEProfesor}{Responsable de Profesores}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Modificar la información de los profesores que imparten clases en la Escuela Superior de Cómputo.}
+		\UCitem{Entradas}{
+			        \begin{UClist} 
+			           \UCli Fotografía: Se selecciona del carrete.
+			           \UCli Nombre: \ioEscribir.
+			           \UCli Academia: \ioEscribir.
+			           \UCli E-mail: \ioEscribir.
+			           \UCli Teléfono: \ioEscribir.
+			           \UCli Página web: \ioEscribir.
+			           \UCli Materias: \ioEscribir.
+			           \UCli TT's: \ioEscribir.
+			        \end{UClist}
+		}
+		\UCitem{Salidas}{
+		  \begin{UClist} 
+			\UCli Fotografía: Se selecciona del carrete.
+			\UCli Nombre: \ioSeleccionar.
+			\UCli Academia: \ioSeleccionar.
+			\UCli E-mail: \ioSeleccionar.
+			\UCli Teléfono: \ioSeleccionar.
+			\UCli Página web: \ioSeleccionar.
+			\UCli Materias: \ioSeleccionar.
+			\UCli TT's: \ioSeleccionar.
+		\end{UClist}
+		}
+		\UCitem{Precondiciones}{
+		\begin{UClist}
+			\UCli Que exista al menos un profesor registrado en el sistema.
+		\end{UClist}
+		}
+		\UCitem{Postcondiciones}{
+		Modificará la información del profesor en el sistema.
+		}
+		\UCitem{Reglas de negocio}{
+			\begin{UClist}
+				       \UCli \cdtIdRef{RN-S1}{Datos Obligatorios}.
+			\end{UClist}
+		}
+		\UCitem{Errores}{
+			\begin{UClist}
+						\UCli No Aplica.
+			\end{UClist}
+		}
+		\UCitem{Tipo}{Secundario, extiende del caso de uso, \cdtIdRef{IUAP-4}{Gestionar Profesores}.}
+		%	\UCitem{Fuente}{
+		%	    \begin{UClist}
+		%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+		%	    \end{UClist}
+		%	}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Presiona el nombre del profesor al que desea modificar su información en la pantalla \cdtIdRef{IUAP-4}{Gestionar Profesores}.
+			\UCpaso[\UCsist] Obtiene la información refenrenciada en la sección \textit{Salidas} del profesor
+		\UCpaso[\UCsist] Construye la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.
+		\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}. junto con los botones \cdtButton{Editar} y \cdtButton{Eliminar}. \refTray{A}
+		\UCpaso[\UCactor] Ingresa los datos solicitados por la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.\label{CUAP4.1:Editar} 
+		\UCpaso[\UCactor] Ingresa la fotografía solicitada en la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.
+		\UCpaso Presiona el botón \cdtButton{Editar} de la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.\label{CUAP4.1:Editar3} \refTray{B}
+		\UCpaso[\UCsist] Reemplaza la fotografía por default con la fotografía seleccionada por el actor.
+		\UCpaso[\UCsist] Verifica que no se omitan datos marcados como obligatorios como se indica en la regla de negocios \cdtIdRef{RN-S1}{Datos Obligatorios}. \refTray{C}
+		\UCpaso[\UCsist] Modifica la información del profesor en el sistema. \label{CUAP4.1:Editar2}
+		\UCpaso[\UCsist] Construye el mensaje \cdtIdRef{MSG01}{Operación exitosa} con los valores \textit{Valor= El profesor y OPERACIÓN = editó}.
+		\UCpaso[\UCsist] Muestra el mensaje  \cdtIdRef{MSG01}{Operación exitosa} en la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.
+		
+				
+%		\UCpaso[\UCactor] Desea conocer mas detalles de un profesor tocando el nombre del profesor seleccionado. \refTray{A}
+%		
+%		\UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUPM-02}{Consultar Detalles de Profesor}
+		
+	\end{UCtrayectoria}
+	
+	\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{El actor presiona el botón \cdtButton{Eliminar}.}
+		\UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUAP-4.3}{Eliminar profesor}
+	\end{UCtrayectoriaA}
+	
+		\begin{UCtrayectoriaA}{B}{El actor no ingresa la fotografía.}
+		\UCpaso[\UCsist] Asigna la foto por default para los profesores sin fotografía registrada.
+		\UCpaso[] Continua en el paso \ref{CUAP4.1:Editar3} de la trayectoria principal.
+	\end{UCtrayectoriaA}
+	
+	\begin{UCtrayectoriaA}{A}{Faltan campos obligatorios.}
+		\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG02}{Datos Obligatorios} en la pantalla  \cdtIdRef{IUAP-4.2}{Editar Profesor}.
+		\UCpaso[] Continua en el paso \ref{CUAP4.1:Editar} de la trayectoria principal.
+	\end{UCtrayectoriaA}
+	
+	% 
+	%  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
+	% 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+	% 	
+	% 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+	% 	
+	% 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+	% \end{UCtrayectoriaA}
+
