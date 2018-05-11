@@ -77,7 +77,7 @@
 						\UCli No Aplica.
 			\end{UClist}
 		}
-		\UCitem{Tipo}{Terciario, extiende del caso de uso, \cdtIdRef{IUAP-4.2}{Eliminar Profesor}.}
+		\UCitem{Tipo}{Secundario, extiende del caso de uso, \cdtIdRef{IUAP-4}{Gestionar Profesores}.}
 		%	\UCitem{Fuente}{
 		%	    \begin{UClist}
 		%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
@@ -90,13 +90,9 @@
 		\UCpaso[\UCsist] Obtiene la información refenrenciada en la sección \textit{Salidas} del profesor
 		\UCpaso[\UCsist] Construye la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.
 		\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}. junto con los botones \cdtButton{Editar} y \cdtButton{Eliminar}. 
-		\UCpaso[\UCactor] Ingresa los datos solicitados por la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.\label{CUAP4.1:Editar} 
-		\UCpaso[\UCactor] Ingresa la fotografía solicitada en la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.
-		\UCpaso Presiona el botón \cdtButton{Editar} de la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.\label{CUAP4.1:Editar3} \refTray{A}
-		\UCpaso[\UCsist] Reemplaza la fotografía por default con la fotografía seleccionada por el actor.
-		\UCpaso[\UCsist] Verifica que no se omitan datos marcados como obligatorios como se indica en la regla de negocios \cdtIdRef{RN-S1}{Datos Obligatorios}. \refTray{B}
-		\UCpaso[\UCsist] Modifica la información del profesor en el sistema. \label{CUAP4.1:Editar2}
-		\UCpaso[\UCsist] Construye el mensaje \cdtIdRef{MSG01}{Operación exitosa} con los valores \textit{Valor= El profesor y OPERACIÓN = editó}.
+		\UCpaso[\UCactor] Presiona el botón \cdtButton{Eliminar} de la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.\label{CUAP4.2:Editar3} \refTray{A}
+		\UCpaso[\UCsist] Elimina al profesor del sistema.
+		\UCpaso[\UCsist] Construye el mensaje \cdtIdRef{MSG01}{Operación exitosa} con los valores \textit{Valor= El profesor y OPERACIÓN = editó, por favor oprima el botón atrás}.
 		\UCpaso[\UCsist] Muestra el mensaje  \cdtIdRef{MSG01}{Operación exitosa} en la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.
 		
 				
@@ -106,15 +102,10 @@
 		
 	\end{UCtrayectoria}
 	
-		\begin{UCtrayectoriaA}{A}{El actor no ingresa la fotografía.}
-		\UCpaso[\UCsist] Asigna la foto por default para los profesores sin fotografía registrada.
-		\UCpaso[] Continua en el paso \ref{CUAP4.1:Editar3} de la trayectoria principal.
+		\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{El actor presiona el botón \cdtButton{Editar}.}
+		\UCpaso[\UCsist] Se ejecuta el caso de uso \cdtIdRef{CUAP-4.2}{Editar Profesor}
 	\end{UCtrayectoriaA}
-	
-	\begin{UCtrayectoriaA}{B}{Faltan campos obligatorios.}
-		\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG02}{Datos Obligatorios} en la pantalla  \cdtIdRef{IUAP-4.2}{Editar Profesor}.
-		\UCpaso[] Continua en el paso \ref{CUAP4.1:Editar} de la trayectoria principal.
-	\end{UCtrayectoriaA}
+
 	
 	% 
 	%  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
