@@ -1,0 +1,117 @@
+\begin{UseCase}{CUAP-4}{Gestionar Profesores}
+	{
+		Este caso de uso le permite al \cdtRef{actor:CIEProfesor}{Responsable de Profesores} gestionar la información de los profesores de la Escuela Superior de Cómputo. Esto con la finalidad de compartir la  información con los alumnos.
+			
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{José David Ortega Pacheco}
+		\UCitem{Operación}{Gestinar}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Media}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{10 de abril del 2018}
+		
+		
+		%--------------------------------------------------------
+		%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+		%	% FECHA: Anote la fecha en que se terminó la revisión.
+		%	\UCccitem{Fecha}{11-11-14} 
+		%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+		%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+		%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+		%	\UCccitem{Resultado}{Corregir}
+		%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+		%	\UCccitem{Observaciones}{
+		%		\begin{UClist}
+		%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+		%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+		%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+		%			
+		%		\end{UClist}		
+		%	}
+		%--------------------------------------------------------
+		
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEProfesor}{Responsable de Profesores}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Gestionar la información de los profesores que imparten clases en la Escuela Superior de Cómputo.}
+		\UCitem{Entradas}{No Aplica
+			%        \begin{UClist} 
+			%           \UCli
+			%           \UCli
+			%        \end{UClist}
+		}
+		\UCitem{Salidas}{
+			\begin{UClist} 
+				\UCli Fotografía del profesor
+				\UCli Nombre del profesor
+				\UCli Cubículo del profesor
+			\end{UClist}	
+		}
+		\UCitem{Precondiciones}{
+		Ninguna.
+		}
+		\UCitem{Postcondiciones}{
+		Ninguna.
+		}
+		\UCitem{Reglas de negocio}{
+			\begin{UClist}
+				       \UCli No Aplica.
+			\end{UClist}
+		}
+		\UCitem{Errores}{
+			\begin{UClist}
+						\UCli No Aplica.
+			\end{UClist}
+		}
+		\UCitem{Tipo}{Primario.}
+		%	\UCitem{Fuente}{
+		%	    \begin{UClist}
+		%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+		%	    \end{UClist}
+		%	}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Presiona el botón \botProfesores de la pantalla \cdtIdRef{IUPA}{Pantalla Principal Administrador}.
+		\UCpaso[\UCsist] Obtiene el nombre, fotografía y cubículo de los profesores registrados en el sistema. \refTray{A}
+		\UCpaso[\UCsist] Construye la tabla de la pantalla \cdtIdRef{IUAP-4}{Gestionar Profesores}. \label{CUAP4:GestionarProfesor}
+		\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUAP-4}{Gestionar Profesores} junto con el botón \cdtButton{Registrar}. \label{CUAP4:Registrar}
+		
+				
+%		\UCpaso[\UCactor] Desea conocer mas detalles de un profesor tocando el nombre del profesor seleccionado. \refTray{A}
+%		
+%		\UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUPM-02}{Consultar Detalles de Profesor}
+		
+	\end{UCtrayectoria}
+	
+	
+	\begin{UCtrayectoriaA}{A}{No hay profesores registrados.}
+		\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUAP-4}{Gestionar Profesores}.
+		\UCpaso[] Continua en el paso \ref{CUAP4:GestionarProfesor} de la trayectoria principal.
+	\end{UCtrayectoriaA}
+	
+	% 
+	%  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
+	% 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+	% 	
+	% 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+	% 	
+	% 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+	% \end{UCtrayectoriaA}
+	
+	\subsection{Puntos de extensión}
+	
+	\UCExtensionPoint
+	{El actor requiere registrar la información de un profesor presionado el botón \cdtButton{Registrar}}
+	{ Paso \ref{CUAP4:Registrar} de la trayectoria principal}
+	{\cdtIdRef{CUAP-4.1}{Registrar Profesor}}

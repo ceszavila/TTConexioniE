@@ -3,7 +3,7 @@ En este capítulo se definen los casos de uso que se desarrollaron para esta eta
 \section{Casos de Uso}
 %===========================================================
 \subsection{Modelo de comportamiento del módulo:  Salones \label{chp:modeloComportamientoSalones}}
-En este capítulo se describen los casos de uso referentes a la consulta, registro, edición y eliminación de espacios con la finalidad de brindarles la ubicación de áreas en la Escuela Superior de Cómputo a los alumnos y visitantes. \bigskip
+En este capítulo se describen los casos de uso referentes a la consulta de espacios con la finalidad de brindarles la ubicación de áreas en la Escuela Superior de Cómputo a los alumnos y visitantes. \bigskip
 
 \begin{objetivos}[Elementos de un caso de uso]
 	\item {\bf Resumen:} Descripción textual del caso de uso.
@@ -25,7 +25,7 @@ En este capítulo se describen los casos de uso referentes a la consulta, regist
 %===========================================================
 \subsection{Modelo de comportamiento del módulo:  Profesores \label{chp:modeloComportamientoProfesores}}
 
-En este capítulo se describen los casos de uso referentes a la consulta, registro, modificación y eliminación de información de los profesores que conforman la plantilla docente de la Escuela Superior de Cómputo. \bigskip
+En este capítulo se describen los casos de uso referentes a la de información de los profesores que conforman la plantilla docente de la Escuela Superior de Cómputo. \bigskip
 
 \begin{objetivos}[Elementos de un caso de uso]
 	\item {\bf Resumen:} Descripción textual del caso de uso.
@@ -44,7 +44,7 @@ En este capítulo se describen los casos de uso referentes a la consulta, regist
 %===========================================================
 \subsection{Modelo de comportamiento del módulo: Unidades de Aprendizaje \label{chp:modeloComportamientoUnidadesDeAprendizaje}}
 
-En este capítulo se describen los casos de uso referentes a la consulta, registro, modificación y eliminación de información de las unidades de aprendizaje que se encuentran disponible por semestre en la Escuela Superior de Cómputo. \bigskip
+En este capítulo se describen los casos de uso referentes a la consulta  de información de las unidades de aprendizaje que se encuentran disponible por semestre en la Escuela Superior de Cómputo. \bigskip
 
 \begin{objetivos}[Elementos de un caso de uso]
 	\item {\bf Resumen:} Descripción textual del caso de uso.
@@ -62,9 +62,45 @@ En este capítulo se describen los casos de uso referentes a la consulta, regist
 \cfinput{ModuloUnidades/cuu5_4_1/cu}
 
 
+\subsection{Modelo de comportamiento del módulo de administrador: Unidades de Aprendizaje \label{chp:modeloComportamientoUnidadesDeAprendizajeAdministrador}}
 
+En este capítulo se describen los casos de uso referentes al registro, modificación y eliminación de información de las unidades de aprendizaje que se encuentran disponible por semestre en la Escuela Superior de Cómputo. \bigskip
 
+\begin{objetivos}[Elementos de un caso de uso]
+	\item {\bf Resumen:} Descripción textual del caso de uso.
+	\item {\bf Actores:} Lista de los actores que intervienen en el caso de uso.
+	\item {\bf Propósito:} Una breve descripción del objetivo que busca el actor al ejecutar el caso de uso.
+	\item {\bf Entradas:} Lista de los datos de entrada requeridos durante la ejecución del caso de uso.
+	\item {\bf Salidas:} Lista de los datos de salida que presenta el sistema durante la ejecución del caso de uso.
+	\item {\bf Precondiciones:} Descripción de las operaciones o condiciones que se deben cumplir previamente para que el caso de uso pueda ejecutarse correctamente.
+	\item {\bf Postcondiciones:} Lista de los cambios que ocurrirán en el sistema después de la ejecución del caso de uso y de las consecuencias en el sistema.
+	\item {\bf Reglas de negocio:} Lista de las reglas que describen, limitan o controlan algún aspecto del negocio del caso de uso.
+	\item {\bf Errores:} Lista de los posibles errores que pueden surgir durante la ejecución del caso de uso.
+	\item {\bf Trayectorias:} Secuencia de los pasos que ejecutará el caso de uso.
+\end{objetivos}
+\cfinput{ModuloUnidades/cuau5/cu}
+\cfinput{ModuloUnidades/cuau5_1/cu}
+\cfinput{ModuloUnidades/cuau5_2/cu}
+\cfinput{ModuloUnidades/cuau5_3/cu}
 
+\subsection{Modelo de comportamiento del módulo de administrador: Profesores \label{chp:modeloComportamientoProfesoresAdminnistrador}}
+
+En este capítulo se describen los casos de uso referentes al registro, modificación y eliminación de información de los profesores de la Escuela Superior de Cómputo.. \bigskip
+
+\begin{objetivos}[Elementos de un caso de uso]
+	\item {\bf Resumen:} Descripción textual del caso de uso.
+	\item {\bf Actores:} Lista de los actores que intervienen en el caso de uso.
+	\item {\bf Propósito:} Una breve descripción del objetivo que busca el actor al ejecutar el caso de uso.
+	\item {\bf Entradas:} Lista de los datos de entrada requeridos durante la ejecución del caso de uso.
+	\item {\bf Salidas:} Lista de los datos de salida que presenta el sistema durante la ejecución del caso de uso.
+	\item {\bf Precondiciones:} Descripción de las operaciones o condiciones que se deben cumplir previamente para que el caso de uso pueda ejecutarse correctamente.
+	\item {\bf Postcondiciones:} Lista de los cambios que ocurrirán en el sistema después de la ejecución del caso de uso y de las consecuencias en el sistema.
+	\item {\bf Reglas de negocio:} Lista de las reglas que describen, limitan o controlan algún aspecto del negocio del caso de uso.
+	\item {\bf Errores:} Lista de los posibles errores que pueden surgir durante la ejecución del caso de uso.
+	\item {\bf Trayectorias:} Secuencia de los pasos que ejecutará el caso de uso.
+\end{objetivos}
+
+\cfinput{ModuloProfesores/cuap4/cu}
 
 \section{Modelo de Interacción del Módulo Salones}
 \cfinput{ModuloSalones/cu1/ui}
@@ -79,3 +115,13 @@ En este capítulo se describen los casos de uso referentes a la consulta, regist
 \cfinput{ModuloUnidades/cuu5_4/ui}
 \cfinput{ModuloUnidades/cuu5_4_1/ui}
 
+
+
+\section{Modelo de Interacción del Administrador del Módulo Salones}
+\cfinput{ModuloUnidades/cuau5/uiA}
+\cfinput{ModuloUnidades/cuau5/ui}
+\cfinput{ModuloUnidades/cuau5_1/ui}
+\cfinput{ModuloUnidades/cuau5_2/ui}
+
+\section{Modelo de Interacción del Administrador del Módulo Profesores}
+\cfinput{ModuloProfesores/cuap4/ui }
