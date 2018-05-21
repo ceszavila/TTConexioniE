@@ -62,92 +62,101 @@
 \BOOKMARK [2][-]{subsection.8.4.1}{Resumen}{section.8.4}% 62
 \BOOKMARK [2][-]{subsection.8.4.2}{Descripci\363n}{section.8.4}% 63
 \BOOKMARK [2][-]{subsection.8.4.3}{Trayectorias del caso de uso}{section.8.4}% 64
-\BOOKMARK [2][-]{subsection.8.4.4}{Modelo de comportamiento del m\363dulo: Profesores }{section.8.4}% 65
-\BOOKMARK [1][-]{section.8.5}{CUPM-01 Consultar Profesores}{chapter.8}% 66
-\BOOKMARK [2][-]{subsection.8.5.1}{Resumen}{section.8.5}% 67
-\BOOKMARK [2][-]{subsection.8.5.2}{Descripci\363n}{section.8.5}% 68
-\BOOKMARK [2][-]{subsection.8.5.3}{Trayectorias del caso de uso}{section.8.5}% 69
-\BOOKMARK [2][-]{subsection.8.5.4}{Puntos de extensi\363n}{section.8.5}% 70
-\BOOKMARK [1][-]{section.8.6}{CUPM-02 Consultar Detalle de Profesor}{chapter.8}% 71
-\BOOKMARK [2][-]{subsection.8.6.1}{Resumen}{section.8.6}% 72
-\BOOKMARK [2][-]{subsection.8.6.2}{Descripci\363n}{section.8.6}% 73
-\BOOKMARK [2][-]{subsection.8.6.3}{Trayectorias del caso de uso}{section.8.6}% 74
-\BOOKMARK [2][-]{subsection.8.6.4}{Modelo de comportamiento del m\363dulo: Unidades de Aprendizaje }{section.8.6}% 75
-\BOOKMARK [1][-]{section.8.7}{CUAU-5 Gestionar Unidades de Aprendizaje}{chapter.8}% 76
-\BOOKMARK [2][-]{subsection.8.7.1}{Resumen}{section.8.7}% 77
-\BOOKMARK [2][-]{subsection.8.7.2}{Descripci\363n}{section.8.7}% 78
-\BOOKMARK [2][-]{subsection.8.7.3}{Trayectorias del caso de uso}{section.8.7}% 79
-\BOOKMARK [2][-]{subsection.8.7.4}{Puntos de extensi\363n}{section.8.7}% 80
-\BOOKMARK [1][-]{section.8.8}{CUAU-5.1 Registrar Unidad de Aprendizaje}{chapter.8}% 81
-\BOOKMARK [2][-]{subsection.8.8.1}{Resumen}{section.8.8}% 82
-\BOOKMARK [2][-]{subsection.8.8.2}{Descripci\363n}{section.8.8}% 83
-\BOOKMARK [2][-]{subsection.8.8.3}{Trayectorias del caso de uso}{section.8.8}% 84
-\BOOKMARK [1][-]{section.8.9}{CUAU-5.2 Editar Unidad de Aprendizaje}{chapter.8}% 85
+\BOOKMARK [1][-]{section.8.5}{CUAS-03 Gestionar salones}{chapter.8}% 65
+\BOOKMARK [2][-]{subsection.8.5.1}{Resumen}{section.8.5}% 66
+\BOOKMARK [2][-]{subsection.8.5.2}{Descripci\363n}{section.8.5}% 67
+\BOOKMARK [2][-]{subsection.8.5.3}{Trayectorias del caso de uso}{section.8.5}% 68
+\BOOKMARK [2][-]{subsection.8.5.4}{Puntos de extensi\363n}{section.8.5}% 69
+\BOOKMARK [1][-]{section.8.6}{CUAS-03.1 Registrar sal\363n}{chapter.8}% 70
+\BOOKMARK [2][-]{subsection.8.6.1}{Resumen}{section.8.6}% 71
+\BOOKMARK [2][-]{subsection.8.6.2}{Descripci\363n}{section.8.6}% 72
+\BOOKMARK [2][-]{subsection.8.6.3}{Trayectorias del caso de uso}{section.8.6}% 73
+\BOOKMARK [2][-]{subsection.8.6.4}{Modelo de comportamiento del m\363dulo: Profesores }{section.8.6}% 74
+\BOOKMARK [1][-]{section.8.7}{CUPM-01 Consultar Profesores}{chapter.8}% 75
+\BOOKMARK [2][-]{subsection.8.7.1}{Resumen}{section.8.7}% 76
+\BOOKMARK [2][-]{subsection.8.7.2}{Descripci\363n}{section.8.7}% 77
+\BOOKMARK [2][-]{subsection.8.7.3}{Trayectorias del caso de uso}{section.8.7}% 78
+\BOOKMARK [2][-]{subsection.8.7.4}{Puntos de extensi\363n}{section.8.7}% 79
+\BOOKMARK [1][-]{section.8.8}{CUPM-02 Consultar Detalle de Profesor}{chapter.8}% 80
+\BOOKMARK [2][-]{subsection.8.8.1}{Resumen}{section.8.8}% 81
+\BOOKMARK [2][-]{subsection.8.8.2}{Descripci\363n}{section.8.8}% 82
+\BOOKMARK [2][-]{subsection.8.8.3}{Trayectorias del caso de uso}{section.8.8}% 83
+\BOOKMARK [2][-]{subsection.8.8.4}{Modelo de comportamiento del m\363dulo: Unidades de Aprendizaje }{section.8.8}% 84
+\BOOKMARK [1][-]{section.8.9}{CUAU-5 Gestionar Unidades de Aprendizaje}{chapter.8}% 85
 \BOOKMARK [2][-]{subsection.8.9.1}{Resumen}{section.8.9}% 86
 \BOOKMARK [2][-]{subsection.8.9.2}{Descripci\363n}{section.8.9}% 87
 \BOOKMARK [2][-]{subsection.8.9.3}{Trayectorias del caso de uso}{section.8.9}% 88
-\BOOKMARK [1][-]{section.8.10}{CUAU-5.3 Eliminar Unidad de Aprendizaje}{chapter.8}% 89
-\BOOKMARK [2][-]{subsection.8.10.1}{Resumen}{section.8.10}% 90
-\BOOKMARK [2][-]{subsection.8.10.2}{Descripci\363n}{section.8.10}% 91
-\BOOKMARK [2][-]{subsection.8.10.3}{Trayectorias del caso de uso}{section.8.10}% 92
-\BOOKMARK [1][-]{section.8.11}{CUUM-5.4 Consultar Unidades de Aprendizaje}{chapter.8}% 93
-\BOOKMARK [2][-]{subsection.8.11.1}{Resumen}{section.8.11}% 94
-\BOOKMARK [2][-]{subsection.8.11.2}{Descripci\363n}{section.8.11}% 95
-\BOOKMARK [2][-]{subsection.8.11.3}{Trayectorias del caso de uso}{section.8.11}% 96
-\BOOKMARK [2][-]{subsection.8.11.4}{Puntos de extensi\363n}{section.8.11}% 97
-\BOOKMARK [1][-]{section.8.12}{CUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{chapter.8}% 98
+\BOOKMARK [2][-]{subsection.8.9.4}{Puntos de extensi\363n}{section.8.9}% 89
+\BOOKMARK [1][-]{section.8.10}{CUAU-5.1 Registrar Unidad de Aprendizaje}{chapter.8}% 90
+\BOOKMARK [2][-]{subsection.8.10.1}{Resumen}{section.8.10}% 91
+\BOOKMARK [2][-]{subsection.8.10.2}{Descripci\363n}{section.8.10}% 92
+\BOOKMARK [2][-]{subsection.8.10.3}{Trayectorias del caso de uso}{section.8.10}% 93
+\BOOKMARK [1][-]{section.8.11}{CUAU-5.2 Editar Unidad de Aprendizaje}{chapter.8}% 94
+\BOOKMARK [2][-]{subsection.8.11.1}{Resumen}{section.8.11}% 95
+\BOOKMARK [2][-]{subsection.8.11.2}{Descripci\363n}{section.8.11}% 96
+\BOOKMARK [2][-]{subsection.8.11.3}{Trayectorias del caso de uso}{section.8.11}% 97
+\BOOKMARK [1][-]{section.8.12}{CUAU-5.3 Eliminar Unidad de Aprendizaje}{chapter.8}% 98
 \BOOKMARK [2][-]{subsection.8.12.1}{Resumen}{section.8.12}% 99
 \BOOKMARK [2][-]{subsection.8.12.2}{Descripci\363n}{section.8.12}% 100
 \BOOKMARK [2][-]{subsection.8.12.3}{Trayectorias del caso de uso}{section.8.12}% 101
-\BOOKMARK [2][-]{subsection.8.12.4}{Modelo de comportamiento del m\363dulo: Convocatoria de movilidad }{section.8.12}% 102
-\BOOKMARK [1][-]{section.8.13}{CUC7 Gestionar convocatorias}{chapter.8}% 103
-\BOOKMARK [2][-]{subsection.8.13.1}{Resumen}{section.8.13}% 104
-\BOOKMARK [2][-]{subsection.8.13.2}{Descripci\363n}{section.8.13}% 105
-\BOOKMARK [2][-]{subsection.8.13.3}{Trayectorias del caso de uso}{section.8.13}% 106
-\BOOKMARK [2][-]{subsection.8.13.4}{Puntos de extensi\363n}{section.8.13}% 107
-\BOOKMARK [1][-]{section.8.14}{CUC7.5 Registrar convocatoria de movilidad}{chapter.8}% 108
-\BOOKMARK [2][-]{subsection.8.14.1}{Resumen}{section.8.14}% 109
-\BOOKMARK [2][-]{subsection.8.14.2}{Descripci\363n}{section.8.14}% 110
-\BOOKMARK [2][-]{subsection.8.14.3}{Trayectorias del caso de uso}{section.8.14}% 111
-\BOOKMARK [1][-]{section.8.15}{CUAP-4 Gestionar Profesores}{chapter.8}% 112
+\BOOKMARK [1][-]{section.8.13}{CUUM-5.4 Consultar Unidades de Aprendizaje}{chapter.8}% 102
+\BOOKMARK [2][-]{subsection.8.13.1}{Resumen}{section.8.13}% 103
+\BOOKMARK [2][-]{subsection.8.13.2}{Descripci\363n}{section.8.13}% 104
+\BOOKMARK [2][-]{subsection.8.13.3}{Trayectorias del caso de uso}{section.8.13}% 105
+\BOOKMARK [2][-]{subsection.8.13.4}{Puntos de extensi\363n}{section.8.13}% 106
+\BOOKMARK [1][-]{section.8.14}{CUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{chapter.8}% 107
+\BOOKMARK [2][-]{subsection.8.14.1}{Resumen}{section.8.14}% 108
+\BOOKMARK [2][-]{subsection.8.14.2}{Descripci\363n}{section.8.14}% 109
+\BOOKMARK [2][-]{subsection.8.14.3}{Trayectorias del caso de uso}{section.8.14}% 110
+\BOOKMARK [2][-]{subsection.8.14.4}{Modelo de comportamiento del m\363dulo: Convocatoria de movilidad }{section.8.14}% 111
+\BOOKMARK [1][-]{section.8.15}{CUC7 Gestionar convocatorias}{chapter.8}% 112
 \BOOKMARK [2][-]{subsection.8.15.1}{Resumen}{section.8.15}% 113
 \BOOKMARK [2][-]{subsection.8.15.2}{Descripci\363n}{section.8.15}% 114
 \BOOKMARK [2][-]{subsection.8.15.3}{Trayectorias del caso de uso}{section.8.15}% 115
 \BOOKMARK [2][-]{subsection.8.15.4}{Puntos de extensi\363n}{section.8.15}% 116
-\BOOKMARK [1][-]{section.8.16}{CUAP-4.1 Registrar Profesor}{chapter.8}% 117
+\BOOKMARK [1][-]{section.8.16}{CUC7.5 Registrar convocatoria de movilidad}{chapter.8}% 117
 \BOOKMARK [2][-]{subsection.8.16.1}{Resumen}{section.8.16}% 118
 \BOOKMARK [2][-]{subsection.8.16.2}{Descripci\363n}{section.8.16}% 119
 \BOOKMARK [2][-]{subsection.8.16.3}{Trayectorias del caso de uso}{section.8.16}% 120
-\BOOKMARK [1][-]{section.8.17}{CUAP-4.2 Editar Profesor}{chapter.8}% 121
+\BOOKMARK [1][-]{section.8.17}{CUAP-4 Gestionar Profesores}{chapter.8}% 121
 \BOOKMARK [2][-]{subsection.8.17.1}{Resumen}{section.8.17}% 122
 \BOOKMARK [2][-]{subsection.8.17.2}{Descripci\363n}{section.8.17}% 123
 \BOOKMARK [2][-]{subsection.8.17.3}{Trayectorias del caso de uso}{section.8.17}% 124
-\BOOKMARK [1][-]{section.8.18}{CUAP-4.3 Eliminar Profesor}{chapter.8}% 125
-\BOOKMARK [2][-]{subsection.8.18.1}{Resumen}{section.8.18}% 126
-\BOOKMARK [2][-]{subsection.8.18.2}{Descripci\363n}{section.8.18}% 127
-\BOOKMARK [2][-]{subsection.8.18.3}{Trayectorias del caso de uso}{section.8.18}% 128
-\BOOKMARK [1][-]{section.8.19}{Modelo de Interacci\363n del M\363dulo Salones}{chapter.8}% 129
-\BOOKMARK [2][-]{subsection.8.19.1}{IUPP Pantalla Principal}{section.8.19}% 130
-\BOOKMARK [2][-]{subsection.8.19.2}{IUSM-01 Consultar Asignaci\363n de Grupos}{section.8.19}% 131
-\BOOKMARK [2][-]{subsection.8.19.3}{IUSM-02 Consultar Nivel de Sal\363n}{section.8.19}% 132
-\BOOKMARK [2][-]{subsection.8.19.4}{IUSM-02.1 Consultar Sal\363n}{section.8.19}% 133
-\BOOKMARK [2][-]{subsection.8.19.5}{IUSM-03 Consultar Edificio de Sal\363n}{section.8.19}% 134
-\BOOKMARK [1][-]{section.8.20}{Modelo de Interacci\363n del M\363dulo Profesores}{chapter.8}% 135
-\BOOKMARK [2][-]{subsection.8.20.1}{IUPM-01 Consultar Profesor}{section.8.20}% 136
-\BOOKMARK [2][-]{subsection.8.20.2}{IUPM-02 Consultar Detalle de Profesor}{section.8.20}% 137
-\BOOKMARK [1][-]{section.8.21}{Modelo de Interacci\363n del M\363dulo Unidades de Aprendizaje}{chapter.8}% 138
-\BOOKMARK [2][-]{subsection.8.21.1}{IUUM-5.4 Consultar Unidades de Aprendizaje}{section.8.21}% 139
-\BOOKMARK [2][-]{subsection.8.21.2}{IUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{section.8.21}% 140
-\BOOKMARK [1][-]{section.8.22}{Modelo de Interacci\363n del M\363dulo Convocatoria de Movilidad}{chapter.8}% 141
-\BOOKMARK [1][-]{section.8.23}{Modelo de Interacci\363n del Administrador del M\363dulo Salones}{chapter.8}% 142
-\BOOKMARK [2][-]{subsection.8.23.1}{IUPA Pantalla Principal Administrador}{section.8.23}% 143
-\BOOKMARK [2][-]{subsection.8.23.2}{IUAU-5 Gestionar Unidades de Aprendizaje}{section.8.23}% 144
-\BOOKMARK [2][-]{subsection.8.23.3}{IUAU-5.1 Registrar Unidad de Aprendizaje}{section.8.23}% 145
-\BOOKMARK [2][-]{subsection.8.23.4}{IUAU-5.2 Editar Unidad de Aprendizaje}{section.8.23}% 146
-\BOOKMARK [1][-]{section.8.24}{Modelo de Interacci\363n del Administrador del M\363dulo Profesores}{chapter.8}% 147
-\BOOKMARK [2][-]{subsection.8.24.1}{IUAP-4 Gestionar Profesores}{section.8.24}% 148
-\BOOKMARK [2][-]{subsection.8.24.2}{IUAP-4.1 Registrar Profesor}{section.8.24}% 149
-\BOOKMARK [1][-]{section.8.25}{Estudio de Factibilidad}{chapter.8}% 150
-\BOOKMARK [2][-]{subsection.8.25.1}{Econ\363mica}{section.8.25}% 151
-\BOOKMARK [2][-]{subsection.8.25.2}{Tecnol\363gica}{section.8.25}% 152
-\BOOKMARK [2][-]{subsection.8.25.3}{Operativa}{section.8.25}% 153
+\BOOKMARK [2][-]{subsection.8.17.4}{Puntos de extensi\363n}{section.8.17}% 125
+\BOOKMARK [1][-]{section.8.18}{CUAP-4.1 Registrar Profesor}{chapter.8}% 126
+\BOOKMARK [2][-]{subsection.8.18.1}{Resumen}{section.8.18}% 127
+\BOOKMARK [2][-]{subsection.8.18.2}{Descripci\363n}{section.8.18}% 128
+\BOOKMARK [2][-]{subsection.8.18.3}{Trayectorias del caso de uso}{section.8.18}% 129
+\BOOKMARK [1][-]{section.8.19}{CUAP-4.2 Editar Profesor}{chapter.8}% 130
+\BOOKMARK [2][-]{subsection.8.19.1}{Resumen}{section.8.19}% 131
+\BOOKMARK [2][-]{subsection.8.19.2}{Descripci\363n}{section.8.19}% 132
+\BOOKMARK [2][-]{subsection.8.19.3}{Trayectorias del caso de uso}{section.8.19}% 133
+\BOOKMARK [1][-]{section.8.20}{CUAP-4.3 Eliminar Profesor}{chapter.8}% 134
+\BOOKMARK [2][-]{subsection.8.20.1}{Resumen}{section.8.20}% 135
+\BOOKMARK [2][-]{subsection.8.20.2}{Descripci\363n}{section.8.20}% 136
+\BOOKMARK [2][-]{subsection.8.20.3}{Trayectorias del caso de uso}{section.8.20}% 137
+\BOOKMARK [1][-]{section.8.21}{Modelo de Interacci\363n del M\363dulo Salones}{chapter.8}% 138
+\BOOKMARK [2][-]{subsection.8.21.1}{IUPP Pantalla Principal}{section.8.21}% 139
+\BOOKMARK [2][-]{subsection.8.21.2}{IUSM-01 Consultar Asignaci\363n de Grupos}{section.8.21}% 140
+\BOOKMARK [2][-]{subsection.8.21.3}{IUSM-02 Consultar Nivel de Sal\363n}{section.8.21}% 141
+\BOOKMARK [2][-]{subsection.8.21.4}{IUSM-02.1 Consultar Sal\363n}{section.8.21}% 142
+\BOOKMARK [2][-]{subsection.8.21.5}{IUSM-03 Consultar Edificio de Sal\363n}{section.8.21}% 143
+\BOOKMARK [1][-]{section.8.22}{Modelo de Interacci\363n del M\363dulo Profesores}{chapter.8}% 144
+\BOOKMARK [2][-]{subsection.8.22.1}{IUPM-01 Consultar Profesor}{section.8.22}% 145
+\BOOKMARK [2][-]{subsection.8.22.2}{IUPM-02 Consultar Detalle de Profesor}{section.8.22}% 146
+\BOOKMARK [1][-]{section.8.23}{Modelo de Interacci\363n del M\363dulo Unidades de Aprendizaje}{chapter.8}% 147
+\BOOKMARK [2][-]{subsection.8.23.1}{IUUM-5.4 Consultar Unidades de Aprendizaje}{section.8.23}% 148
+\BOOKMARK [2][-]{subsection.8.23.2}{IUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{section.8.23}% 149
+\BOOKMARK [1][-]{section.8.24}{Modelo de Interacci\363n del M\363dulo Convocatoria de Movilidad}{chapter.8}% 150
+\BOOKMARK [1][-]{section.8.25}{Modelo de Interacci\363n del Administrador del M\363dulo Salones}{chapter.8}% 151
+\BOOKMARK [2][-]{subsection.8.25.1}{IUPA Pantalla Principal Administrador}{section.8.25}% 152
+\BOOKMARK [2][-]{subsection.8.25.2}{IUAU-5 Gestionar Unidades de Aprendizaje}{section.8.25}% 153
+\BOOKMARK [2][-]{subsection.8.25.3}{IUAU-5.1 Registrar Unidad de Aprendizaje}{section.8.25}% 154
+\BOOKMARK [2][-]{subsection.8.25.4}{IUAU-5.2 Editar Unidad de Aprendizaje}{section.8.25}% 155
+\BOOKMARK [1][-]{section.8.26}{Modelo de Interacci\363n del Administrador del M\363dulo Profesores}{chapter.8}% 156
+\BOOKMARK [2][-]{subsection.8.26.1}{IUAP-4 Gestionar Profesores}{section.8.26}% 157
+\BOOKMARK [2][-]{subsection.8.26.2}{IUAP-4.1 Registrar Profesor}{section.8.26}% 158
+\BOOKMARK [1][-]{section.8.27}{Estudio de Factibilidad}{chapter.8}% 159
+\BOOKMARK [2][-]{subsection.8.27.1}{Econ\363mica}{section.8.27}% 160
+\BOOKMARK [2][-]{subsection.8.27.2}{Tecnol\363gica}{section.8.27}% 161
+\BOOKMARK [2][-]{subsection.8.27.3}{Operativa}{section.8.27}% 162
