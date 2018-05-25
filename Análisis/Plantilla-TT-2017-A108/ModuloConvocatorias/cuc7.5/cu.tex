@@ -1,5 +1,7 @@
-\begin{UseCase}{CUC7.5}{Registrar convocatoria de movilidad}{
-		Permite llevar a cabo el registro de una nueva convocatoria de movilidad. Las convocatorias de movilidad se agregan cada vez que una nueva es aprovada en el instituto y estas son por año.
+\begin{UseCase}{CUAC-7.5}{Registrar convocatoria de movilidad}{
+		Permite llevar a cabo el registro de una nueva convocatoria de movilidad. Las convocatorias de movilidad se agregan cada vez que una nueva es aprobada en el instituto lo cuál sucede por periodo escolar.
+		Existen dos tipos de convocatoria de movilidad que deben ser registrados por periodo escolar, la movilidad nacional y la movilidad internacional, ambas con sus respectivos requisitos y universidades participantes.
+		
 			
 		}
 		\UCitem{Versión}{1.0}
@@ -19,35 +21,44 @@
 		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda realizar el registro de nuevas convocatorias de movilidad.}
 		\UCitem{Entradas}{
 			\begin{UClist}
-				\UCli Año de la convocatoria
-				\UCli URL de las convocatorias
+				\UCli Tipo de movilidad: Se toca en la pantalla.
+				\UCli Periodo de la convocatoria: \ioEscribir.
+				\UCli Año de la convocatoria: \ioEscribir
+				\UCli URL de las universidades participantes: \ioEscribir
+				\UCli URL de las convocatorias: \ioEscribir
+				\UCli URL de los resultados: \ioEscribir
 			\end{UClist}
 		}
-		\UCitem{Salidas}{	
-			\begin{UClist}
-				\UCli Año de la convocatoria
-				\UCli URL de las convocatorias
-			\end{UClist}
+		\UCitem{Salidas}{ Ninguna
+%			\begin{UClist}
+%				\UCli Año de la convocatoria
+%				\UCli URL de las convocatorias
+%			\end{UClist}
 		}
 		\UCitem{Precondiciones}{\textbf{Manual: }La convocatoria debió haber sido aprobada en el instituto.}
 		\UCitem{Postcondiciones}{Se podrá consultar la nueva convocatoria de movilidad.}
-		\UCitem{Reglas de negocio}{Ninguna}
-		\UCitem{Errores}{\UCerr{Uno}{Cuando no se logra llevar a cabo la operación de manera correcta,}{se muestra el mensaje de error termina el caso de uso.}}
-		\UCitem{Tipo}{Primario.}
+		\UCitem{Reglas de negocio}{
+		\begin{UClist}
+			\UCli \cdtIdRef{RN-S1}{Datos Obligatorios}.
+		\end{UClist}
+	}
+		\UCitem{Errores}{\UCerr{Uno}{Cuando no se llena algún campo marcado como obligatorio,}{se muestra el mensaje \cdtIdRef{MSG-1}{Datos Obligatorios} y regresa al paso \ref{CUAC-7.5:Datos} de la trayectoria principal.}}
+		\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUAC-7.4}{Gestionar convocatoria de movilidad}}
 	\end{UseCase}
 	
 	\begin{UCtrayectoria}
-		\UCpaso [\UCactor] Solicita agregar una nueva convocatoria de movilidad tocando el botón \cdtButton{Agregar} de la pantalla \cdtIdRef{IUC7c}{Gestión de convocatorias}. 
-		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7.5}{Agregar convocatoria de movilidad}.
-		\UCpaso [\UCactor] Ingresa la información solicitada.
-		\UCpaso [\UCactor]  Solicita finalizar el registro de la convocatoria tocando el botón \cdtButton{Guardar}
-		\UCpaso [\UCsist] Persiste la información registrada. \refErr{Uno}
-		\UCpaso [\UCsist] Regresa a la pantalla \cdtIdRef{IUC7c}{Gestión de convocatorias} con la nueva convocatoria registrada.
+		\UCpaso [\UCactor] Solicita agregar una nueva convocatoria de movilidad tocando el botón \cdtButton{Registrar Convocatoria} de la pantalla \cdtIdRef{IUAC-7.4}{Gestionar convocatoria de movilidad}. 
+		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUAC-7.5}{Agregar convocatoria de movilidad}.
+		\UCpaso [\UCactor] Ingresa la información solicitada. \label{CUAC-7.5:Datos}
+		\UCpaso [\UCactor] Solicita finalizar el registro de la convocatoria tocando el botón \cdtButton{Registrar}
+		\UCpaso [\UCsist] Verifica que no se haya dejado algún campo obligatorio vacío con base en la regla de negocio \cdtIdRef{RN-S1}{Datos Obligatorios}. \refErr{Uno}.
+		\UCpaso [\UCsist] Persiste la información registrada. 
+		\UCpaso [\UCsist] Regresa a la pantalla \cdtIdRef{IUAC-7.4}{Gestionar convocatoria de movilidad} con la nueva convocatoria registrada.
 	\end{UCtrayectoria}
 	
 	\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{Cuando el actor requiere volver a la pantalla anterior.}
 		\UCpaso[\UCactor] Solicita regresar a la pantalla anterior tocando el botón \cdtButton{Atrás}.
 		
-		\UCpaso [\UCsist] Regrasa a la pantalla anterior.
+		\UCpaso [\UCsist] Regrasa a la pantalla \cdtIdRef{IUAC-7.4}{Gestionar convocatorias de movilidad}.
 	\end{UCtrayectoriaA}
 	

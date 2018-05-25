@@ -1,5 +1,6 @@
-\begin{UseCase}{CUC7}{Gestionar convocatorias}{
-		Permite realizar las operaciones pertinentes para tener el control de las convocatorias de móvilidad o de cursos, según sea el caso. Para poder realizar dichas operaciones el usuario debió haber ingresado al sistema con su usuario y contraseña, previamiente.
+\begin{UseCase}{CUAC-7.4}{Gestionar convocatoria de movilidad}{
+		Permite al \cdtRef{actor:CIEUpis}{Responsable UPIS} realizar las operaciones pertinentes para tener el control de las convocatorias de móvilidad. Para poder realizar dichas operaciones el usuario debió haber ingresado al sistema con su usuario y contraseña, previamiente. \\
+		El alumno podrá consultar los procesos de movilidad por periodo escolar con la información gestionada mediante este caso de uso.
 			
 		}
 		\UCitem{Versión}{1.0}
@@ -17,18 +18,24 @@
 		\UCsection{Atributos}
 		\UCitem{Actor}{
 			\begin{UClist} 
-				\UCli \textbf{Responable UTEC}
-				\UCli \textbf{Responsable UPIS}
+				\UCli \cdtRef{actor:CIEUpis}{Responsable UPIS}
 			\end{UClist}
 		}
-		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda realizar las operaciones de registrar, editar, eliminar y consultar, de las convocatorias de cursos y movilidad.}
-		\UCitem{Entradas}{
+		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda realizar las operaciones de registrar, editar, eliminar y consultar, de las convocatorias de movilidad.}
+		\UCitem{Entradas}{Ninguna
+%			\begin{UClist}
+%				\UCli Correo electrónico del actor
+%				\UCli Contraseña del actor
+%			\end{UClist}
+		}
+		\UCitem{Salidas}{
 			\begin{UClist}
-				\UCli Correo electrónico del actor
-				\UCli Contraseña del actor
+				\UCli Se muestra una tabla con las convocatorias de la sección internacional.
+				\UCli Se muestra una tabla con las convocatorias de la sección nacional.
+				\UCli Periodo y año de la convocatoria
 			\end{UClist}
-		}
-		\UCitem{Salidas}{Se muestra en una tabla el año de todas las convocatorias registradas. }
+	
+ }
 		\UCitem{Precondiciones}{El actor deberá haber iniciado sesión en el sistema.}
 		\UCitem{Postcondiciones}{Se podrá agregar, editar, eliminar o consultar convocatorias de movilidad o de cursos.}
 		\UCitem{Reglas de negocio}{Ninguna}
@@ -37,7 +44,7 @@
 	\end{UseCase}
 	
 	\begin{UCtrayectoria}
-		\UCpaso[\UCactor] Solicita gestionar las convocatorias de movilidad o de cursos tocando el icono \textbf{icono} del menú.
+		\UCpaso[\UCactor] Solicita gestionar las convocatorias de movilidad tocando el icono \textbf{icono} del menú.
 		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7a}{Selección de convocatorias}.
 		\UCpaso[\UCactor] \label{CUC7:Seleccion} Selecciona una opción de las disponibles.
 		\UCpaso [\UCsist] Obtiene el año del tipo de convocatorias seleccionado en el paso \ref{CUC7:Seleccion} de la trayectoria principal.
