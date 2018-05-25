@@ -37,14 +37,19 @@
 	
  }
 		\UCitem{Precondiciones}{El actor deberá haber iniciado sesión en el sistema.}
-		\UCitem{Postcondiciones}{Se podrá agregar, editar, eliminar o consultar convocatorias de movilidad o de cursos.}
+		\UCitem{Postcondiciones}{
+			\begin{UClist}
+				\UCli Se podrá agregar, editar o eliminar convocatorias de movilidad o de cursos.
+				\UCli Los alumnos podrán consultar las convocatorias de movilidad registradas.
+			\end{UClist}	
+	}
 		\UCitem{Reglas de negocio}{Ninguna}
-		\UCitem{Errores}{\UCerr{Uno}{Cuando el actor ingresó su usuario y/o contraseña de manera equivocada,}{se muestra el mensaje de error y regresa al paso \ref{CUC7:Datos} de la trayectoria principal.}}
+		\UCitem{Errores}{No aplica}
 		\UCitem{Tipo}{Primario.}
 	\end{UseCase}
 	
 	\begin{UCtrayectoria}
-		\UCpaso[\UCactor] Solicita gestionar las convocatorias de movilidad tocando el icono \textbf{icono} del menú.
+		\UCpaso[\UCactor] Solicita gestionar las convocatorias de movilidad tocando el icono \botMovilidad del menú principal.
 		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7a}{Selección de convocatorias}.
 		\UCpaso[\UCactor] \label{CUC7:Seleccion} Selecciona una opción de las disponibles.
 		\UCpaso [\UCsist] Obtiene el año del tipo de convocatorias seleccionado en el paso \ref{CUC7:Seleccion} de la trayectoria principal.

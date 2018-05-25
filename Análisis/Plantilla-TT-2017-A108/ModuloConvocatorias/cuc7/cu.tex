@@ -1,0 +1,46 @@
+\begin{UseCase}{CUAC-07}{Gestionar convocatorias de cursos}{
+		Permite realizar las operaciones pertinentes para tener el control de las convocatorias de cursos. Para poder realizar dichas operaciones el usuario debió haber ingresado al sistema con su usuario y contraseña, previamiente.
+			
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{24 de Mayo del 2018}
+			
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEUtec}{Responable UTEC}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda realizar las operaciones de registrar, editar, eliminar y consultar, de las convocatorias de cursos y movilidad.}
+		\UCitem{Entradas}{
+			\begin{UClist}
+				\UCli Correo electrónico del actor
+				\UCli Contraseña del actor
+			\end{UClist}
+		}
+		\UCitem{Salidas}{Se muestra en una tabla el año de todas las convocatorias registradas. }
+		\UCitem{Precondiciones}{El actor deberá haber iniciado sesión en el sistema.}
+		\UCitem{Postcondiciones}{Se podrá agregar, editar, eliminar o consultar convocatorias de movilidad o de cursos.}
+		\UCitem{Reglas de negocio}{Ninguna}
+		\UCitem{Errores}{Ninguno}
+		\UCitem{Tipo}{Primario.}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		
+		\UCpaso[\UCactor] Solicita gestionar las convocatorias de cursos tocando el icono \textbf{icono} del menú.
+		
+		\UCpaso Obtiene el nombre de las convocatorias de cursos registrados.
+		
+		\UCpaso Muestra la pantalla \textbf{Gestionar cursos}
+		
+	\end{UCtrayectoria}
