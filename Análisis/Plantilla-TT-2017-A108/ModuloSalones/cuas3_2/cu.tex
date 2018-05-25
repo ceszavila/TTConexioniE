@@ -69,13 +69,13 @@
 	}
     \UCitem{Reglas de negocio}{\cdtIdRef{RN-S1}{Datos Obligatorios}.}
 	\UCitem{Errores}{Ninguno}
-	\UCitem{Tipo}{Primario.}
+	\UCitem{Tipo}{Secundario, viene de \cdtIdRef{IUAS-03}{Gestionar salones}}
 %	\UCitem{Fuente}{
  \end{UseCase}
 
  \begin{UCtrayectoria}
     
-    \UCpaso [\UCactor] Solicta editar la asignación de un salón tocando el botón el salón que se requiere editar en la pantalla \textbf{Pantalla gestionar salones}.
+    \UCpaso [\UCactor] Solicta editar la asignación de un salón tocando el botón el salón que se requiere editar en la pantalla \cdtIdRef{IUAS-03}{Gestionar salones}.
     
     \UCpaso Obtiene la locaclización de la Escuela Superior de Cómputo.
     
@@ -87,7 +87,7 @@
     
     \UCpaso Obtiene el número de edificio en el que se encuentra el salón.
     
-    \UCpaso Muestra la pantalla \textbf{Editar salón}.
+    \UCpaso Muestra la pantalla \cdtIdRef{IUAS-03.2}{Editar salón}.
     
     \UCpaso [\UCactor] Ingresa los datos solicitados.
     
@@ -97,7 +97,7 @@
     
     \UCpaso Persiste la información registrada.
     
-    \UCpaso Regresa a la pantalla \textbf{Gestionar salones}.
+    \UCpaso Regresa a la pantalla \cdtIdRef{IUAS-03}{Gestionar salones}.
     
 \end{UCtrayectoria}
 
@@ -105,7 +105,7 @@
 	
 	\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \textbf{Volver}.
 	
-	\UCpaso Regresa a la pantalla.
+	\UCpaso Regresa a la pantalla \cdtIdRef{IUAS-03}{Gestionar salones}.
 	
 \end{UCtrayectoriaA}
 

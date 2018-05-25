@@ -69,18 +69,18 @@
 	}
     \UCitem{Reglas de negocio}{\cdtIdRef{RN-S1}{Datos Obligatorios}}
 	\UCitem{Errores}{Ninguno}
-	\UCitem{Tipo}{Primario.}
+	\UCitem{Tipo}{Secundario, viene de \cdtIdRef{CUAS-03}{Gestionar salones}}
 %	\UCitem{Fuente}{
 
  \end{UseCase}
 
  \begin{UCtrayectoria}
     
-    \UCpaso [\UCactor] Solicta registrar un nuevo salón tocando el botón \textbf{Registrar Salón} de la pantalla \textbf{Gestionar salones}.
+    \UCpaso [\UCactor] Solicta registrar un nuevo salón tocando el botón \textbf{Registrar Salón} de la pantalla \cdtIdRef{IUAS-03}{Gestionar salones}.
     
     \UCpaso Obtiene la locaclización de la Escuela Superior de Cómputo.
     
-    \UCpaso Muestra la pantalla.
+    \UCpaso Muestra la pantalla \cdtIdRef{IUAS-03.1}{Registrar salón}.
     
     \UCpaso [\UCactor] Ingresa los datos solicitados.
     
@@ -90,7 +90,7 @@
     
     \UCpaso Persiste la información registrada.
     
-    \UCpaso Regresa a la pantalla.
+    \UCpaso Regresa a la pantalla \cdtIdRef{IUAS-03}{Gestionar salones}.
     
 \end{UCtrayectoria}
 
@@ -98,7 +98,7 @@
 	
 	\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \textbf{Volver}.
 	
-	\UCpaso Regresa a la pantalla.
+	\UCpaso Regresa a la pantalla \cdtIdRef{IUAS-03}{Gestionar salones}.
 	
 \end{UCtrayectoriaA}
 
