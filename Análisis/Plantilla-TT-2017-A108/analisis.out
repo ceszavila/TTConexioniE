@@ -166,25 +166,29 @@
 \BOOKMARK [2][-]{subsection.8.28.1}{IUSM-01 Consultar Asignaci\363n de Grupo}{section.8.28}% 166
 \BOOKMARK [2][-]{subsection.8.28.2}{IUSM-02 Consultar Nivel de Sal\363n}{section.8.28}% 167
 \BOOKMARK [2][-]{subsection.8.28.3}{IUSM-03 Consultar Edificio}{section.8.28}% 168
-\BOOKMARK [1][-]{section.8.29}{Modelo de Interacci\363n del M\363dulo Profesores}{chapter.8}% 169
-\BOOKMARK [2][-]{subsection.8.29.1}{IUPM-01 Consultar Profesor}{section.8.29}% 170
-\BOOKMARK [2][-]{subsection.8.29.2}{IUPM-02 Consultar Detalle de Profesor}{section.8.29}% 171
-\BOOKMARK [1][-]{section.8.30}{Modelo de Interacci\363n del M\363dulo Unidades de Aprendizaje}{chapter.8}% 172
-\BOOKMARK [2][-]{subsection.8.30.1}{IUUM-5.4 Consultar Unidades de Aprendizaje}{section.8.30}% 173
-\BOOKMARK [2][-]{subsection.8.30.2}{IUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{section.8.30}% 174
-\BOOKMARK [1][-]{section.8.31}{Modelo de Interacci\363n del M\363dulo Convocatorias}{chapter.8}% 175
-\BOOKMARK [2][-]{subsection.8.31.1}{IUAC-7 Gestionar convocatorias de cursos}{section.8.31}% 176
-\BOOKMARK [2][-]{subsection.8.31.2}{IUAC-7.1 Registrar convocatoria de curso}{section.8.31}% 177
-\BOOKMARK [2][-]{subsection.8.31.3}{IUAC-7.2 Editar convocatoria de curso}{section.8.31}% 178
-\BOOKMARK [2][-]{subsection.8.31.4}{IUAC-7.3 Eliminar convocatoria de curso}{section.8.31}% 179
-\BOOKMARK [2][-]{subsection.8.31.5}{IUAC-7.4 Gestionar convocatorias de movilidad}{section.8.31}% 180
-\BOOKMARK [2][-]{subsection.8.31.6}{IUAC-7.5 Registrar convocatoria de movilidad}{section.8.31}% 181
-\BOOKMARK [2][-]{subsection.8.31.7}{IUAC-7.6 Editar convocatoria de movilidad}{section.8.31}% 182
-\BOOKMARK [2][-]{subsection.8.31.8}{IUAC-7.7 Eliminar convocatoria de movilidad}{section.8.31}% 183
-\BOOKMARK [1][-]{section.8.32}{Modelo de Interacci\363n del Administrador del M\363dulo Profesores}{chapter.8}% 184
-\BOOKMARK [2][-]{subsection.8.32.1}{IUAP-4 Gestionar Profesores}{section.8.32}% 185
-\BOOKMARK [2][-]{subsection.8.32.2}{IUAP-4.1 Registrar Profesor}{section.8.32}% 186
-\BOOKMARK [1][-]{section.8.33}{Estudio de Factibilidad}{chapter.8}% 187
-\BOOKMARK [2][-]{subsection.8.33.1}{Econ\363mica}{section.8.33}% 188
-\BOOKMARK [2][-]{subsection.8.33.2}{Tecnol\363gica}{section.8.33}% 189
-\BOOKMARK [2][-]{subsection.8.33.3}{Operativa}{section.8.33}% 190
+\BOOKMARK [2][-]{subsection.8.28.4}{IUAS-03 Gestionar salones}{section.8.28}% 169
+\BOOKMARK [2][-]{subsection.8.28.5}{IUAS-03.1 Registrar sal\363n}{section.8.28}% 170
+\BOOKMARK [2][-]{subsection.8.28.6}{IUAS-03.2 Editar sal\363n}{section.8.28}% 171
+\BOOKMARK [2][-]{subsection.8.28.7}{IUAS-03.3 Eliminar sal\363n}{section.8.28}% 172
+\BOOKMARK [1][-]{section.8.29}{Modelo de Interacci\363n del M\363dulo Profesores}{chapter.8}% 173
+\BOOKMARK [2][-]{subsection.8.29.1}{IUPM-01 Consultar Profesor}{section.8.29}% 174
+\BOOKMARK [2][-]{subsection.8.29.2}{IUPM-02 Consultar Detalle de Profesor}{section.8.29}% 175
+\BOOKMARK [1][-]{section.8.30}{Modelo de Interacci\363n del M\363dulo Unidades de Aprendizaje}{chapter.8}% 176
+\BOOKMARK [2][-]{subsection.8.30.1}{IUUM-5.4 Consultar Unidades de Aprendizaje}{section.8.30}% 177
+\BOOKMARK [2][-]{subsection.8.30.2}{IUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{section.8.30}% 178
+\BOOKMARK [1][-]{section.8.31}{Modelo de Interacci\363n del M\363dulo Convocatorias}{chapter.8}% 179
+\BOOKMARK [2][-]{subsection.8.31.1}{IUAC-7 Gestionar convocatorias de cursos}{section.8.31}% 180
+\BOOKMARK [2][-]{subsection.8.31.2}{IUAC-7.1 Registrar convocatoria de curso}{section.8.31}% 181
+\BOOKMARK [2][-]{subsection.8.31.3}{IUAC-7.2 Editar convocatoria de curso}{section.8.31}% 182
+\BOOKMARK [2][-]{subsection.8.31.4}{IUAC-7.3 Eliminar convocatoria de curso}{section.8.31}% 183
+\BOOKMARK [2][-]{subsection.8.31.5}{IUAC-7.4 Gestionar convocatorias de movilidad}{section.8.31}% 184
+\BOOKMARK [2][-]{subsection.8.31.6}{IUAC-7.5 Registrar convocatoria de movilidad}{section.8.31}% 185
+\BOOKMARK [2][-]{subsection.8.31.7}{IUAC-7.6 Editar convocatoria de movilidad}{section.8.31}% 186
+\BOOKMARK [2][-]{subsection.8.31.8}{IUAC-7.7 Eliminar convocatoria de movilidad}{section.8.31}% 187
+\BOOKMARK [1][-]{section.8.32}{Modelo de Interacci\363n del Administrador del M\363dulo Profesores}{chapter.8}% 188
+\BOOKMARK [2][-]{subsection.8.32.1}{IUAP-4 Gestionar Profesores}{section.8.32}% 189
+\BOOKMARK [2][-]{subsection.8.32.2}{IUAP-4.1 Registrar Profesor}{section.8.32}% 190
+\BOOKMARK [1][-]{section.8.33}{Estudio de Factibilidad}{chapter.8}% 191
+\BOOKMARK [2][-]{subsection.8.33.1}{Econ\363mica}{section.8.33}% 192
+\BOOKMARK [2][-]{subsection.8.33.2}{Tecnol\363gica}{section.8.33}% 193
+\BOOKMARK [2][-]{subsection.8.33.3}{Operativa}{section.8.33}% 194
