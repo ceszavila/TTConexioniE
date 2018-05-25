@@ -53,28 +53,43 @@
 	
 	\begin{UCtrayectoria}
 		
-		\UCpaso [\UCactor] Solicta editar una convocatoria de cursos tocando la convocatoria que requiere modificar, en la pantalla \textbf{Gestionar convocatorias de cursos}.
+		\UCpaso [\UCactor] Solicta editar una convocatoria de cursos tocando la convocatoria que requiere modificar, en la pantalla \cdtIdRef{IUAC-7}{Gestionar convocatorias de cursos}.
 		
 		\UCpaso Obtiene el nombre, la fecha de inicio, la fecha de término, el costo para externos, el costo para estudiantes del IPN, la descripción, los requisitos y la URL de la convocatoria de cursos seleccionada.
 		
-		\UCpaso Muestra la pantalla \textbf{Editar convocatoria de curso}.
+		\UCpaso Muestra la pantalla \cdtIdRef{IUAC-7.2}{Editar convocatoria de curso}.
 		
 		\UCpaso [\UCactor] Ingresa los datos solicitados.
 		
-		\UCpaso [\UCactor] Solicita finalizar la operación tocando el botón \textbf{Editar}. \refTray{A}
+		\UCpaso [\UCactor] Solicita finalizar la operación tocando el botón \cdtButton{Editar}. \refTray{A} \refTray{B}
 		
 		\UCpaso Verifica que se haya ingresado los campos marcados como obligatorios, con base en la regla \cdtIdRef{RN-S1}{Datos Obligatorios}.
 		
 		\UCpaso Persiste la información registrada.
 		
-		\UCpaso Regresa a la pantalla \textbf{Gestionar convocatorias de cursos}.
+		\UCpaso Regresa a la pantalla \cdtIdRef{IUAC-7}{Gestionar convocatorias de cursos}.
 		
 	\end{UCtrayectoria}
 
 	\begin{UCtrayectoriaA}{A}{Cuando el actor requiere cancelar la operación.}
 		
-		\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \textbf{Volver}.
+		\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \cdtButton{Volver}.
 		
-		\UCpaso Regresa a la pantalla.
+		\UCpaso Regresa a la pantalla \cdtIdRef{IUAC-7}{Gestionar convocatorias de cursos}.
 		
 	\end{UCtrayectoriaA}
+
+	\begin{UCtrayectoriaA}{B}{Cuando el actor requiere eliminar la convocatoria de curso.}
+		
+		\UCpaso [\UCactor] Solicita eliminar la convocatoria de curso tocando \cdtButton{Eliminar} de la pantalla \cdtIdRef{IUAC-7.2}{Editar convocatoria de curso}.
+		
+		\UCpaso \label{CUAC-7.2:Eliminar} Ejecuta el caso de uso \cdtIdRef{CUAC-7.3}{Eliminar convocatoria de curso}.
+		
+	\end{UCtrayectoriaA}
+
+	\subsection{Puntos de extensión}
+	
+	\UCExtensionPoint
+	{El actor requiere eliminar una nueva convocatoria de cursos}
+	{ Paso \ref{CUAC-7.2:Eliminar} de la trayectoria principal}
+	{\cdtIdRef{CUAC-7.3}{Eliminar convocatoria de curso}}

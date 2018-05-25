@@ -1,0 +1,56 @@
+\begin{UseCase}{CUCM-8.1}{Consultar convocatoria de movilidad}{
+		Permite visualizar las convocatorias de movilidad que estarán disponibles en la Escuela Superior de Cómputon durante el periodo escolar actual. \\
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{24 de Mayo del 2018}
+			
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEAlumno}{Alumno}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Proporcionar un medio por el cual los alumno de la Escuela Superior de Cómputo puedan visualizar las convocatorias de movilidad que estarán disponibles en dicha escuela.}
+		\UCitem{Entradas}{Nombre de la convocatoria de curso}
+		\UCitem{Salidas}{Se muestra en dos tablas el nombre de las convocatorias, ordenadas por tipo de movilidad \textbf{Nacional} e \textbf{Internacional}}
+		\UCitem{Precondiciones}{\textbf{Interna}: Debe existir la información de las convocatorias de cursos.}
+		\UCitem{Postcondiciones}{El alumno conocerá las convocatorias de movilidad de la Escuela Superior de Cómputo.}
+		\UCitem{Reglas de negocio}{Ninguna}
+		\UCitem{Errores}{Ninguno}
+		\UCitem{Tipo}{Primario.}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		
+		\UCpaso [\UCactor] Solicita consultar las convocatorias para movilidad tocando el icono \botMovilidad{} en el menú principal.
+		
+		\UCpaso Obtiene el nombre de todas las convocatorias de movilidad que serán impartidos para el periodo escolar actual.
+		
+		\UCpaso Ordena las convocatorias obtenidas por tipo de movilidad, \textbf{Nacional} e \textbf{Internacional}.
+		
+		\UCpaso Muestra la pantalla \cdtIdRef{UICM-8.1}{Consultar convocatorias de movilidad} con la información obtenida.
+		
+		\UCpaso [\UCactor] \label{CUCM-8.1:Consulta} Consulta las convocatorias de movilidad por el tipo de convocatoria.
+		
+	\end{UCtrayectoria}
+
+	\subsection{Puntos de extensión}
+	
+	\UCExtensionPoint
+	{El actor requiere consultar una convocatoria nacional}
+	{ Paso \ref{CUCM-8.1:Consulta} de la trayectoria principal}
+	{\cdtIdRef{CUCM-8.1.1}{Consultar convocatoria nacional}}
+	
+	\UCExtensionPoint
+	{El actor requiere consultar una convocatoria internacional}
+	{ Paso \ref{CUCM-8.1:Consulta} de la trayectoria principal}
+	{\cdtIdRef{CUCM-8.1.2}{Consultar convocatoria internacional}}

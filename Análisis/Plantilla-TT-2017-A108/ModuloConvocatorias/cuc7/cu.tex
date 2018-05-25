@@ -1,5 +1,5 @@
-\begin{UseCase}{CUAC-7}{Gestionar convocatorias de cursos}{
-		Permite realizar las operaciones pertinentes para tener el control de las convocatorias de cursos. Para poder realizar dichas operaciones el usuario debió haber ingresado al sistema con su usuario y contraseña, previamiente.
+\begin{UseCase}{CUAC-7.4}{Gestionar convocatorias de movilidad}{
+		Permite realizar las operaciones pertinentes para tener el control de las convocatorias de móvilidad o de cursos, según sea el caso. Para poder realizar dichas operaciones el usuario debió haber ingresado al sistema con su usuario y contraseña, previamiente.
 			
 		}
 		\UCitem{Versión}{1.0}
@@ -12,12 +12,13 @@
 		\UCccitem{Volatilidad}{Baja}
 		\UCccitem{Madurez}{Alta}
 		\UCitem{Estatus}{Por revisar}
-		\UCitem{Fecha del último estatus}{24 de Mayo del 2018}
+		\UCitem{Fecha del último estatus}{11 de Mayo del 2018}
 			
 		\UCsection{Atributos}
 		\UCitem{Actor}{
 			\begin{UClist} 
-				\UCli \cdtRef{actor:CIEUtec}{Responable UTEC}
+				\UCli \textbf{Responable UTEC}
+				\UCli \textbf{Responsable UPIS}
 			\end{UClist}
 		}
 		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda realizar las operaciones de registrar, editar, eliminar y consultar, de las convocatorias de cursos y movilidad.}
@@ -29,18 +30,39 @@
 		}
 		\UCitem{Salidas}{Se muestra en una tabla el año de todas las convocatorias registradas. }
 		\UCitem{Precondiciones}{El actor deberá haber iniciado sesión en el sistema.}
-		\UCitem{Postcondiciones}{Se podrá agregar, editar, eliminar o consultar convocatorias de cursos.}
+		\UCitem{Postcondiciones}{Se podrá agregar, editar, eliminar o consultar convocatorias de movilidad o de cursos.}
 		\UCitem{Reglas de negocio}{Ninguna}
-		\UCitem{Errores}{Ninguno}
+		\UCitem{Errores}{\UCerr{Uno}{Cuando el actor ingresó su usuario y/o contraseña de manera equivocada,}{se muestra el mensaje de error y regresa al paso \ref{CUC7:Datos} de la trayectoria principal.}}
 		\UCitem{Tipo}{Primario.}
 	\end{UseCase}
 	
 	\begin{UCtrayectoria}
-		
-		\UCpaso[\UCactor] Solicita gestionar las convocatorias de cursos tocando el icono \textbf{icono} del menú.
-		
-		\UCpaso Obtiene el nombre de las convocatorias de cursos registrados.
-		
-		\UCpaso Muestra la pantalla \textbf{Gestionar cursos}
+		\UCpaso[\UCactor] Solicita gestionar las convocatorias de movilidad o de cursos tocando el icono \textbf{icono} del menú.
+		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7a}{Selección de convocatorias}.
+		\UCpaso[\UCactor] \label{CUC7:Seleccion} Selecciona una opción de las disponibles.
+		\UCpaso [\UCsist] Obtiene el año del tipo de convocatorias seleccionado en el paso \ref{CUC7:Seleccion} de la trayectoria principal.
+		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7b}{Convocatotias}
+		\UCpaso [\UCactor] Solicita ingresar como administrador tocando el botón \cdtButton{Acceso de administrador}. \refTray{A}
+		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7c}{Inicio de sesión de administrador}.
+		\UCpaso [\UCactor] \label{CUC7:Datos} Proporciona la información solicitada.
+		\UCpaso [\UCactor] Solicita continuar la operación tocando el botón \cdtButton{Acceder}. \refTray{A}
+		\UCpaso [\UCsist] Verifica que los datos proporcionados sean correctos. \refErr{Uno}
+		\UCpaso [\UCsist] Obtiene el año del tipo de convocatorias seleccionado en el paso \ref{CUC7:Seleccion} de la trayectoria principal.
+		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{UIC7c}{Gestión de convocatorias}.
+		\UCpaso [\UCactor]  \label{CUC7:Agregar} Gestiona las convocatorias mediante el uso del botón \cdtButton{Agregar}.
 		
 	\end{UCtrayectoria}
+	
+	\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{Cuando el actor requiere volver a la pantalla anterior.}
+		\UCpaso[\UCactor] Solicita regresar a la pantalla anterior tocando el botón \cdtButton{Atrás}.
+		
+		\UCpaso [\UCsist] Regrasa a la pantalla anterior.
+	\end{UCtrayectoriaA}
+	
+	\subsection{Puntos de extensión}
+	
+	\UCExtensionPoint
+	{El actor requiere agregar una nueva convocatoria}
+	{ Paso \ref{CUC7:Agregar} de la trayectoria principal}
+	{\cdtIdRef{CUC7.5}{Registrar convocatoria de movilidad}}
+	

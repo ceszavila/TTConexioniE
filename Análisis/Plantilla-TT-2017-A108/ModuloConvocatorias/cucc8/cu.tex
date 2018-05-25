@@ -1,0 +1,56 @@
+\begin{UseCase}{CUCC-8}{Consultar convocatoria de cursos}{
+		Permite visualizar las convocatorias de los cursos que serán impartidos en la Escuela Superior de Cómputon durante el periodo escolar actual. \\
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{24 de Mayo del 2018}
+			
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEAlumno}{Alumno}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Proporcionar un medio por el cual los alumno de la Escuela Superior de Cómputo puedan visualizar las convocatorias de cursos que serán impartidos en dicha escuela.}
+		\UCitem{Entradas}{Nombre de la convocatoria de curso}
+		\UCitem{Salidas}{
+			\begin{UClist}
+				\UCli Nombre del curso
+				\UCli Fecha de inicio del curso
+				\UCli Fecha de término del curso
+				\UCli Costo del curso para externos
+				\UCli Costo del curso para estudiantes del IPN
+				\UCli Descripción del curso
+				\UCli Requisitos del curso
+				\UCli URL del curso
+		\end{UClist}}
+		\UCitem{Precondiciones}{\textbf{Interna}: Debe existir la información de las convocatorias de cursos.}
+		\UCitem{Postcondiciones}{El alumno conocerá las convocatorias de cursos de la Escuela Superior de Cómputo.}
+		\UCitem{Reglas de negocio}{Ninguna}
+		\UCitem{Errores}{Ninguno}
+		\UCitem{Tipo}{Primario.}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		
+		\UCpaso [\UCactor] Solicita consultar las convocatorias para cursos tocando el icono \botCursos{} en el menú principal.
+		
+		\UCpaso Obtiene el nombre de todas las convocatorias de cursos que serán impartidos para el periodo escolar actual.
+		
+		\UCpaso [\UCactor] Selecciona la convocatoria que requiere consultar.
+		
+		\UCpaso Obtiene el nombre, la fecha de inicio, la fecha de término, el costo para externos, el costo para estudiantes del IPN, la descripción, los requisitos y la URL, del curso seleccionado.
+		
+		\UCpaso Muestra la pantalla \cdtIdRef{UICC-8}{Consultar convocatorias de cursos} con la información obtenida.
+		
+		\UCpaso [\UCactor] Consulta la información mostrada
+		
+	\end{UCtrayectoria}

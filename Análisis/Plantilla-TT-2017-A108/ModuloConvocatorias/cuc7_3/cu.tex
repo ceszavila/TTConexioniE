@@ -1,4 +1,4 @@
-\begin{UseCase}{CUAC-7.3}{Eliminar convocatoria de cursos}{
+\begin{UseCase}{CUAC-7.3}{Eliminar convocatoria de curso}{
 		Permite eliminar el registro de una convocatoria de cursos de la Escuela Superior de Cómputo debido a que este ya no será impartido en el periodo escolar actual. \\
 		}
 		\UCitem{Versión}{1.0}
@@ -31,20 +31,20 @@
 	
 	\begin{UCtrayectoria}
 		
-		\UCpaso [\UCactor] Solicta eliminar una convocatoria de cursos tocando el botón \textbf{Eliminar} en la pantalla \textbf{Editar convocatoria de cursos}. \refTray{A}
+		\UCpaso [\UCactor] Solicta eliminar una convocatoria de cursos tocando el botón \cdtButton{Eliminar} en la pantalla \cdtIdRef{UIAC-7.2}{Editar convocatoria de curso}. \refTray{A}
 		
-		\UCpaso Elimina el registro del salón.
+		\UCpaso Elimina el registro de la convocatoria de curso.
 		
-		\UCpaso Muestra el mensaje \textbf{Operación exitosa}.
+		\UCpaso Muestra el mensaje \cdtIdRef{MGS1}{Operación exitosa}.
 		
-		\UCpaso Regresa a la pantalla \textbf{Gestionar convocatorias de curso}
+		\UCpaso Regresa a la pantalla \cdtIdRef{UIAC-7}{Gestionar convocatorias de cursos}.
 		
 	\end{UCtrayectoria}
 
 	\begin{UCtrayectoriaA}{A}{Cuando el actor requiere cancelar la operación.}
 		
-		\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \textbf{Volver}.
+		\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \cdtButton{Volver}.
 		
-		\UCpaso Regresa a la pantalla.
+		\UCpaso Regresa a la pantalla \cdtIdRef{UIAC-7}{Gestionar convocatorias de cursos}.
 		
 	\end{UCtrayectoriaA}
