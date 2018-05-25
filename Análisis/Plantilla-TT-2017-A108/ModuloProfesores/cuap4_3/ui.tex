@@ -1,22 +1,21 @@
-\subsection{IUAP-4.2  Editar  Profesor}
+\subsection{IUAP-4.3  Eliminar  Profesor}
 
 \subsubsection{Objetivo}
 
 % Explicar el objetivo para el que se construyo la interfaz, generalmente es la descripción de la actividad a desarrollar, como Seleccionar grupos para inscribir materias de un alumno, controlar el acceso al sistema mediante la solicitud de un login y password de los usuarios, etc.
 	
-    Esta pantalla permite al \cdtRef{actor:CIEProfesor}{Responsable de Profesores}  modificar la información de los profesores que están impartiendo clases en la ESCOM.
+    Esta pantalla permite al \cdtRef{actor:CIEProfesor}{Responsable de Profesores} eliminar a algún profesor que por alguna razón ya no forme parte de la plantilla docente de la ESCOM.
 \subsubsection{Diseño}
 
 % Presente la figura de la interfaz y explique paso a paso ``a manera de manual de usuario'' como se debe utilizar la interfaz. No olvide detallar en la redacción los datos de entradas y salidas. Explique como utilizar cada botón y control de la pantalla, para que sirven y lo que hacen. Si el Botón lleva a otra pantalla, solo indique la pantalla y explique lo que pasará cuando se cierre dicha pantalla (la explicación sobre el funcionamiento de la otra pantalla estará en su archivo correspondiente).
 
-    En la figura~\ref{IUAP-4.2} se muestra la pantalla ``Editar Profesor'', la cual esta compuesta por los campos: Nombre, cubículo, academia, e-mail, teléfono, página web, materias, tt's así como de la fotografía del profesor.
-       \IUfig[.3]{/ModuloProfesores/IUAP4_2.png}{IUAP-4.2}{Editar Profesor}
+    En la figura~\ref{IUAP-4.3} se muestra la pantalla ``Eliminar Profesor“, en ella se ve el mensaje de confirmación de eliminación.
+       \IUfig[.3]{/ModuloProfesores/IUAP4_3.png}{IUAP-4.3}{Eliminar Profesor}
 
 
 
 \subsubsection{Comandos}
     \begin{itemize}
-	\item \cdtButton{Editar}, dirige a la misma pantalla.
-	\item \cdtButton{Eliminar}, dirige a la pantalla \cdtIdRef{IUAP-4.2}{Editar Profesor}.
-	\item \cdtButton{Atrás}, dirige a la pantalla \cdtIdRef{IUAP-4}{Gestionar Profesores}
+	\item \cdtButton{Eliminar}, dirige a la pantalla \cdtIdRef{IUAP-4}{Gestionar Profesores}.
+	\item \cdtButton{Cancelar}, dirige a la pantalla \cdtIdRef{IUAP-4.3}{Editar Profesor}
     \end{itemize}
