@@ -1,0 +1,79 @@
+\begin{UseCase}{CUAS-03.3}{Eliminar salón}{
+	Permite eliminar el registro de un salón de la Escuela Superior de Cómputo debido a que se requiere realizar una reestructuración de los espacios de dicha escuela o simplemente no será contemplado para el periodo escolar actual. \\
+    }
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Registro}
+    \UCccitem{Prioridad}{Alta}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Por revisar}
+    \UCitem{Fecha del último estatus}{24 de mayo del 2018}
+
+
+%--------------------------------------------------------
+%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+%	% FECHA: Anote la fecha en que se terminó la revisión.
+%	\UCccitem{Fecha}{11-11-14} 
+%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+%	\UCccitem{Resultado}{Corregir}
+%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+%	\UCccitem{Observaciones}{
+%		\begin{UClist}
+%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+%			
+%		\end{UClist}		
+%	}
+%--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{
+		\begin{UClist} 
+\UCli \cdtRef{actor:CIEPrefectura}{Responsable Prefectura}
+	\end{UClist}
+}
+	\UCitem{Propósito}{Proporcionar una herramienta que permita realizar el registro de nuevos salones para la Escuela Superior de Cómputo.}
+	\UCitem{Entradas}{Ninguno}
+	\UCitem{Salidas}{Ninguna}
+	\UCitem{Precondiciones}{Ninguna}
+	\UCitem{Postcondiciones}{
+	    \begin{UClist}
+		\UCli {\bf Interna:} Se podrá realizar el registro de un nuevo salón para la Escuela Superior de Cómputo
+   	    \end{UClist}
+	}
+    \UCitem{Reglas de negocio}{Ninguno}
+	\UCitem{Errores}{Ninguno}
+	\UCitem{Tipo}{Primario.}
+%	\UCitem{Fuente}{
+ \end{UseCase}
+
+ \begin{UCtrayectoria}
+    
+    \UCpaso [\UCactor] Solicta eliminar la asignación de un salón tocando \cdtButton{Eliminar} en la pantalla \textbf{Pantalla gestionar salones}. \refTray{A}
+    
+    \UCpaso Elimina el registro del salón.
+    
+    \UCpaso Muestra el mensaje \textbf{Operación exitosa}.
+    
+    \UCpaso Regresa a la pantalla \textbf{Gestionar salones}
+    
+\end{UCtrayectoria}
+
+\begin{UCtrayectoriaA}{A}{Cuando el actor requiere cancelar la operación.}
+	
+	\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \textbf{Volver}.
+	
+	\UCpaso Regresa a la pantalla.
+	
+\end{UCtrayectoriaA}
+
+
