@@ -151,7 +151,7 @@
 \BOOKMARK [2][-]{subsection.8.24.1}{Resumen}{section.8.24}% 151
 \BOOKMARK [2][-]{subsection.8.24.2}{Descripci\363n}{section.8.24}% 152
 \BOOKMARK [2][-]{subsection.8.24.3}{Trayectorias del caso de uso}{section.8.24}% 153
-\BOOKMARK [1][-]{section.8.25}{CUAC-7.4 Gestionar convocatoria de movilidad}{chapter.8}% 154
+\BOOKMARK [1][-]{section.8.25}{CUAC-7.4 Gestionar convocatorias de movilidad}{chapter.8}% 154
 \BOOKMARK [2][-]{subsection.8.25.1}{Resumen}{section.8.25}% 155
 \BOOKMARK [2][-]{subsection.8.25.2}{Descripci\363n}{section.8.25}% 156
 \BOOKMARK [2][-]{subsection.8.25.3}{Trayectorias del caso de uso}{section.8.25}% 157
@@ -172,16 +172,24 @@
 \BOOKMARK [1][-]{section.8.29}{Modelo de Interacci\363n del M\363dulo Unidades de Aprendizaje}{chapter.8}% 172
 \BOOKMARK [2][-]{subsection.8.29.1}{IUUM-5.4 Consultar Unidades de Aprendizaje}{section.8.29}% 173
 \BOOKMARK [2][-]{subsection.8.29.2}{IUUM-5.4.1 Consultar Detalle de Unidad de Aprendizaje}{section.8.29}% 174
-\BOOKMARK [1][-]{section.8.30}{Modelo de Interacci\363n del M\363dulo Convocatoria de Movilidad}{chapter.8}% 175
-\BOOKMARK [1][-]{section.8.31}{Modelo de Interacci\363n del Administrador del M\363dulo Salones}{chapter.8}% 176
-\BOOKMARK [2][-]{subsection.8.31.1}{IUPA Pantalla Principal Administrador}{section.8.31}% 177
-\BOOKMARK [2][-]{subsection.8.31.2}{IUAU-5 Gestionar Unidades de Aprendizaje}{section.8.31}% 178
-\BOOKMARK [2][-]{subsection.8.31.3}{IUAU-5.1 Registrar Unidad de Aprendizaje}{section.8.31}% 179
-\BOOKMARK [2][-]{subsection.8.31.4}{IUAU-5.2 Editar Unidad de Aprendizaje}{section.8.31}% 180
-\BOOKMARK [1][-]{section.8.32}{Modelo de Interacci\363n del Administrador del M\363dulo Profesores}{chapter.8}% 181
-\BOOKMARK [2][-]{subsection.8.32.1}{IUAP-4 Gestionar Profesores}{section.8.32}% 182
-\BOOKMARK [2][-]{subsection.8.32.2}{IUAP-4.1 Registrar Profesor}{section.8.32}% 183
-\BOOKMARK [1][-]{section.8.33}{Estudio de Factibilidad}{chapter.8}% 184
-\BOOKMARK [2][-]{subsection.8.33.1}{Econ\363mica}{section.8.33}% 185
-\BOOKMARK [2][-]{subsection.8.33.2}{Tecnol\363gica}{section.8.33}% 186
-\BOOKMARK [2][-]{subsection.8.33.3}{Operativa}{section.8.33}% 187
+\BOOKMARK [1][-]{section.8.30}{Modelo de Interacci\363n del M\363dulo Convocatorias}{chapter.8}% 175
+\BOOKMARK [2][-]{subsection.8.30.1}{IUAC-7 Gestionar convocatorias de cursos}{section.8.30}% 176
+\BOOKMARK [2][-]{subsection.8.30.2}{IUAC-7.1 Registrar convocatoria de curso}{section.8.30}% 177
+\BOOKMARK [2][-]{subsection.8.30.3}{IUAC-7.2 Editar convocatoria de curso}{section.8.30}% 178
+\BOOKMARK [2][-]{subsection.8.30.4}{IUAC-7.3 Eliminar convocatoria de curso}{section.8.30}% 179
+\BOOKMARK [2][-]{subsection.8.30.5}{IUAC-7.4 Gestionar convocatorias de movilidad}{section.8.30}% 180
+\BOOKMARK [2][-]{subsection.8.30.6}{IUAC-7.5 Registrar convocatoria de movilidad}{section.8.30}% 181
+\BOOKMARK [2][-]{subsection.8.30.7}{IUAC-7.6 Editar convocatoria de movilidad}{section.8.30}% 182
+\BOOKMARK [2][-]{subsection.8.30.8}{IUAC-7.7 Eliminar convocatoria de movilidad}{section.8.30}% 183
+\BOOKMARK [1][-]{section.8.31}{Modelo de Interacci\363n del Administrador del M\363dulo Salones}{chapter.8}% 184
+\BOOKMARK [2][-]{subsection.8.31.1}{IUPA Pantalla Principal Administrador}{section.8.31}% 185
+\BOOKMARK [2][-]{subsection.8.31.2}{IUAU-5 Gestionar Unidades de Aprendizaje}{section.8.31}% 186
+\BOOKMARK [2][-]{subsection.8.31.3}{IUAU-5.1 Registrar Unidad de Aprendizaje}{section.8.31}% 187
+\BOOKMARK [2][-]{subsection.8.31.4}{IUAU-5.2 Editar Unidad de Aprendizaje}{section.8.31}% 188
+\BOOKMARK [1][-]{section.8.32}{Modelo de Interacci\363n del Administrador del M\363dulo Profesores}{chapter.8}% 189
+\BOOKMARK [2][-]{subsection.8.32.1}{IUAP-4 Gestionar Profesores}{section.8.32}% 190
+\BOOKMARK [2][-]{subsection.8.32.2}{IUAP-4.1 Registrar Profesor}{section.8.32}% 191
+\BOOKMARK [1][-]{section.8.33}{Estudio de Factibilidad}{chapter.8}% 192
+\BOOKMARK [2][-]{subsection.8.33.1}{Econ\363mica}{section.8.33}% 193
+\BOOKMARK [2][-]{subsection.8.33.2}{Tecnol\363gica}{section.8.33}% 194
+\BOOKMARK [2][-]{subsection.8.33.3}{Operativa}{section.8.33}% 195

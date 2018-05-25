@@ -1,25 +1,18 @@
-\subsection{IUR 1 Iniciar sesión}
- 
+\subsection{IUAC-7.6 Editar convocatoria de movilidad}
+
 \subsubsection{Objetivo}
 
-    Esta pantalla permite al actor \cdtRef{actor:usuarioEscuela}{Coordinador del programa} iniciar sesión en el sistema, recuperar la contraseña de acceso al sistema o registrarse para formar parte del mismo.
+Esta pantalla permite al actor \cdtRef{actor:CIEUpis}{Responsable UPIS} editar una convocatoria de movilidad, en ella podrá modificar el tipo de convocatoria, si es nacional o internacional, el periodo, las universidades participantes, etc.
 
 \subsubsection{Diseño}
 
-    En la figura~\ref{IUR 1} se muestra la pantalla ``Iniciar sesión'', por medio de la cual se podrá acceder al sistema. \\
+En la figura~\ref{IUAC-7.6} se muestra la pantalla ``Editar convocatoria de movilidad'', por medio de la cual se pueden modificar los datos previamente registrados. \\
 
-    \IUfig[1]{pantallas/registro/IUR1}{IUR 1}{Iniciar sesión}
+\IUfig[.3]{/ModuloConvocatorias/IUAC7_6.png}{IUAC-7.6}{Editar convocatoria de movilidad}
 
 \subsubsection{Comandos}
 \begin{itemize}
-    \item \cdtButton{Aceptar}: Permite al actor ingresar al sistema, dirige a la pantalla de Bienvenida que se muestra en la figura \ref{fig:inicio}.
-    \item \cdtButton{Recuperar contraseña}: Permite al actor solicitar el envío de su contraseña a su correo, dirige a la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}.
-    \item \cdtButton{Inscribirse al programa}: Se utiliza solicitar la inscripción de una escuela para formar parte del programa, dirige a la pantalla \cdtIdRef{IUR 3}{Solicitar preinscripción}.
+	\item \cdtButton{Editar}: Permite al actor guardar los datos modificados durante la edición.
+	\item \cdtButton{Atrás}: Dirige a la pantalla \cdtIdRef{IUAC-7.4}{Gestionar convocatorias de movilidads}
+	\item \cdtButton{Eliminar}: Permite al actor eliminar los datos registrados y dirige a la pantalla \cdtIdRef{IUAC-7.7}{Eliminar convocatoria de movilidad}.
 \end{itemize}
-
-\subsubsection{Mensajes}
-
-\begin{description}
-    \item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar de sesión} cuando el actor omitió un dato marcado como requerido.
-    \item[\cdtIdRef{MSG22}{Nombre de usuario y/o contraseña incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar de sesión} indicando que el nombre de usuario y/o contraseña son incorrectos.
-\end{description}

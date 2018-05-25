@@ -1,25 +1,17 @@
-\subsection{IUR 1 Iniciar sesión}
+\subsection{IUAC-7.3 Eliminar convocatoria de curso}
  
 \subsubsection{Objetivo}
 
-    Esta pantalla permite al actor \cdtRef{actor:usuarioEscuela}{Coordinador del programa} iniciar sesión en el sistema, recuperar la contraseña de acceso al sistema o registrarse para formar parte del mismo.
+    Esta pantalla permite al actor \cdtRef{actor:CIEUtec}{Responsable UTEC} eliminar una convocatoria de curso.
 
 \subsubsection{Diseño}
 
-    En la figura~\ref{IUR 1} se muestra la pantalla ``Iniciar sesión'', por medio de la cual se podrá acceder al sistema. \\
+    En la figura~\ref{IUAC-7.3} se muestra la pantalla ``Eliminar convocatoria de curso'', por medio de la cual se puede eliminar la información previamente registrada de algún curso en específico. \\
 
-    \IUfig[1]{pantallas/registro/IUR1}{IUR 1}{Iniciar sesión}
+\IUfig[.3]{/ModuloConvocatorias/IUAC7_3.png}{IUAC-7.3}{Eliminar convocatoria de curso}
 
 \subsubsection{Comandos}
 \begin{itemize}
-    \item \cdtButton{Aceptar}: Permite al actor ingresar al sistema, dirige a la pantalla de Bienvenida que se muestra en la figura \ref{fig:inicio}.
-    \item \cdtButton{Recuperar contraseña}: Permite al actor solicitar el envío de su contraseña a su correo, dirige a la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}.
-    \item \cdtButton{Inscribirse al programa}: Se utiliza solicitar la inscripción de una escuela para formar parte del programa, dirige a la pantalla \cdtIdRef{IUR 3}{Solicitar preinscripción}.
+	\item \cdtButton{Cancelar}: Regresa a la pantalla \cdtIdRef{IUAC-7.2}{Editar convocatoria de curso}
+	\item \cdtButton{Eliminar}: Permite al actor eliminar los datos registrados y dirige a la pantalla \cdtIdRef{IUAC-7}{Gestionar convocatorias de cursos}.
 \end{itemize}
-
-\subsubsection{Mensajes}
-
-\begin{description}
-    \item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar de sesión} cuando el actor omitió un dato marcado como requerido.
-    \item[\cdtIdRef{MSG22}{Nombre de usuario y/o contraseña incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar de sesión} indicando que el nombre de usuario y/o contraseña son incorrectos.
-\end{description}
