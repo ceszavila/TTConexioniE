@@ -5,9 +5,12 @@ En este capítulo definimos los módulos que se trabajaron durante el primero pe
 	\begin{itemize}
 		\item \textbf{Profesores}
 		\item \textbf{Salones}
+		\item \textbf{Unidades de Aprendizaje}
+		\item \textbf{Convocatorias de Cursos}
+		\item \textbf{Convocatorias de Movilidad}
 	\end{itemize}
 Que forman parte de los prototipos por iteraciones según la metodología usada, implementando las funcionalidades que posteriormente serán explicadas a detalles en los apartados correspondientes.
-\section{Modulo de Profesores}	El módulo de \textbf{Profesores} consiste en el prototipo de una agenda de contactos con la plantilla del personal docente de la escuela, el cuál muestra el nombre, cubículo y fotografía de los profesores. Este prototipo también cuenta con detalles de medios de contacto de los profesores los cuales son:
+\section{Módulo de Profesores}	El módulo de \textbf{Profesores} consiste en el prototipo de una agenda de contactos con la plantilla del personal docente de la escuela, el cuál muestra el nombre, cubículo y fotografía de los profesores. Este prototipo también cuenta con detalles de medios de contacto de los profesores los cuales son:
 	\begin{itemize}
 		\item Cubículo
 		\item Horario de Atención
@@ -100,7 +103,8 @@ Al finalizar la etapa de desarrollo se logro obtener el prototipo de los profeso
 	\end{center}
 \end{figure}
 
-\section{Modulo de Salones}
+
+\section{Módulo de Salones}
 El módulo de \textbf{Salones} consiste en el prototipo de ubicación de los salones asignados a los grupos, en el cual se puede visualizar una lista de los grupos y el salón que tiene asignado, una vez seleccionado grupo se muestra la siguiente información:
 \begin{itemize}
 	\item Ubicación geográfica del usuario y del edificio al que pertenece el grupo seleccionado.
@@ -127,28 +131,28 @@ Siguiendo con este análisis nos dimos cuenta que ya cubríamos la problemática
 Así que nos propusimos a rediseñar nuestra propuesta de solución, en esta nueva propuesta se mantuvo la vista 3D del edificio y la vista aérea del nivel pero con la diferencia que está vez decidimos utilizar mapas geográficos y y la ubicación geográfica del alumno. Esto con la finalidad de darle una mejor ubicación de la escuela al alumno, con esta vista podría ver que tan cerca o que tan lejos se encuentra del edificio, así como poder girar los mapas de norte a sur y de este a oeste para una mejor localización, así como implementar un acercamiento sobre los mapas y ver un poco mas detallado el área en donde se encuentra. Ademas de brindarle detalles sobre el edificio como el tipo de aulas que tiene el edificio, la accesibilidad al edificio así como los servicios con los que cuenta.\\
 
 Una vez definida nuestra propuesta de solución decdimos realizar la maqueta que se muestra en las figuras \ref{fig:maquetasalon1}, \ref{fig:maquetasalon2}, \ref{fig:maquetasalon3} y \ref{fig:maquetasalon4},   
- \begin{figure}[h!]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/maqueta/UIS3AsignaciondeSalones.png}
 		\caption{Maqueta IUS3 Asignación de Salones.}
 		\label{fig:maquetasalon1}
 	\end{center}
 \end{figure}
- \begin{figure}[h!]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/maqueta/UIS31DetallesSalon.png}
 		\caption{Maqueta IUS3.1 Detalles de Nivel.}
 		\label{fig:maquetasalon2}
 	\end{center}
 \end{figure}
- \begin{figure}[h!]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/maqueta/UIS32DetallesSalon.png}
 		\caption{Maqueta IUS3.2 Detalles de Salón.}
 		\label{fig:maquetasalon3}
 	\end{center}
 \end{figure}
- \begin{figure}[h!]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/maqueta/UIS32DetallesEdificio.png}
 		\caption{Maqueta IUS3.3 Detalles de Edificio.}
@@ -173,74 +177,206 @@ La parte más complicada de esta etapa fue la curva de aprendizaje de los mapas 
 	\item  \textbf{Google Maps}: Google Maps crea aplicaciones de iOS repletas de funciones para los usuarios ya que tiene un muy amplio catalogo de funcionalidades que ayudan a hacer muy intuitivo el trato de usuario-aplicación. Sin Embargo las API's de Google Maps para iOS están disponibles a través de CocoaPods y al igual que mapbox al utilizar API's o SDK nos atrasaban en el aspecto del desarrollo pues no solo teníamos que aprender sus métodos de programación también teníamos que  aprender el uso de CocoaPods.
 	\item \textbf{MapKit}: Muestra mapas o imágenes satélitales  directamente desde la interfaz de la aplicación, llama a los puntos de interés y determine la información de marcas de lugar para las coordenadas del mapa. Puede agregar anotaciones y superposiciones al mapa para llamar a puntos de interés o destinos de usuarios. Ademas de mencionar que este Framework es nativo de Apple y en su defecto funciona de manera nativa con Swift.
 \end{itemize}
- Después de analizar todas las herramientas que nos podían brindar los métodos para desarrollar lo antes analizado tomamos la decisión de utilizar el framework nativo de Apple 'MapKit' ya que al no requerir de ningún API y contener una muy buena documentación de los mismos creadores del lenguaje que decidimos utilizar para el desarrollo, nos dimos a la tarea de aprender a utilizar los métodos que permitían el desarrollo de nuestras necesidades.\\
- 
- Los principales  métodos y clases que nos permitieron el desarrollo de nuestro análisis fueron las siguientes: \textbf{'Mapkit'}, \textbf{'MKAnnotation'}, \textbf{'MKAnnotationView'}, \textbf{'MKPolygon'} y \textbf{'MKOverlay'}, para un mejor entendimiento del comportamiento de estas clases se desarrollo un prototipo el cual es presentado en la figura \ref{mapkit}\\
- \begin{figure}[h!]
- 	\begin{center}
- 		\includegraphics[width=0.3\textwidth]{images/maqueta/mapkit.png}
- 		\caption{Creación de Polígonos con MapKit.}
- 		\label{mapkit}
- 	\end{center}
- \end{figure}
+Después de analizar todas las herramientas que nos podían brindar los métodos para desarrollar lo antes analizado tomamos la decisión de utilizar el framework nativo de Apple 'MapKit' ya que al no requerir de ningún API y contener una muy buena documentación de los mismos creadores del lenguaje que decidimos utilizar para el desarrollo, nos dimos a la tarea de aprender a utilizar los métodos que permitían el desarrollo de nuestras necesidades.\\
 
- Una vez comprendidas todas esas clases y métodos iniciamos el desarrollo del prototipo, se mostrarán algunos códigos de los fragmentos mas complejos implementados en las siguientes figuras: \ref{plist}, \ref{edificioplist}, \ref{poligono} y \ref{detalleedificio}\\
- 
-  \begin{figure}[h!]
- 	\begin{center}
- 		\fbox{\includegraphics[width=\textwidth]{images/codigos/plist}}	
- 		\caption{Creación de Property List XML de Coordenadas.}
- 		\label{plist}
- 	\end{center}
- \end{figure}
- \begin{figure}[h!]
+Los principales  métodos y clases que nos permitieron el desarrollo de nuestro análisis fueron las siguientes: \textbf{'Mapkit'}, \textbf{'MKAnnotation'}, \textbf{'MKAnnotationView'}, \textbf{'MKPolygon'} y \textbf{'MKOverlay'}, para un mejor entendimiento del comportamiento de estas clases se desarrollo un prototipo el cual es presentado en la figura \ref{mapkit}\\
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{images/maqueta/mapkit.png}
+		\caption{Creación de Polígonos con MapKit.}
+		\label{mapkit}
+	\end{center}
+\end{figure}
+
+Una vez comprendidas todas esas clases y métodos iniciamos el desarrollo del prototipo, se mostrarán algunos códigos de los fragmentos mas complejos implementados en las siguientes figuras: \ref{plist}, \ref{edificioplist}, \ref{poligono} y \ref{detalleedificio}\\
+
+\begin{figure}[h!]
+	\begin{center}
+		\fbox{\includegraphics[width=\textwidth]{images/codigos/plist}}	
+		\caption{Creación de Property List XML de Coordenadas.}
+		\label{plist}
+	\end{center}
+\end{figure}
+\begin{figure}[h!]
 	\begin{center}
 		\fbox{\includegraphics[width=\textwidth]{images/codigos/edificioplist}}	
 		\caption{Lectura de coordenadas del Property List.}
 		\label{edificioplist}
 	\end{center}
 \end{figure}
- \begin{figure}[h!]
+\begin{figure}[h!]
 	\begin{center}
 		\fbox{\includegraphics[width=\textwidth]{images/codigos/poligono}}	
 		\caption{Creación de los Polígonos.}
 		\label{poligono}
 	\end{center}
 \end{figure}
-  \begin{figure}[h!]
- 	\begin{center}
- 		\fbox{\includegraphics[width=\textwidth]{images/codigos/detallesedificio}}	
- 		\caption{Clase de Detalles del Edifico.}
- 		\label{detalleedificio}
- 	\end{center}
- \end{figure}
+\begin{figure}[h!]
+	\begin{center}
+		\fbox{\includegraphics[width=\textwidth]{images/codigos/detallesedificio}}	
+		\caption{Clase de Detalles del Edifico.}
+		\label{detalleedificio}
+	\end{center}
+\end{figure}
+
+Finalizando esta etapa obteniendo las funcionalidades descritas anteriormente y que se muestran en las figuras: \ref{S1}, \ref{S2}, \ref{S3} y \ref{S4}. \\
+
+\begin{figure}[h!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.3\textwidth]{images/resultados/S1}}
+		\caption{Asignación de salones.}
+		\label{S1}
+	\end{center}
+\end{figure}\begin{figure}[h!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.3\textwidth]{images/resultados/S2}}
+		\caption{Consultar  Salón.}
+		\label{S2}
+	\end{center}
+\end{figure}\begin{figure}[h!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.3\textwidth]{images/resultados/S3}}
+		\caption{Consultar Nivel.}
+		\label{S3}
+	\end{center}
+\end{figure}\begin{figure}[h!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.3\textwidth]{images/resultados/S4}}
+		\caption{Consultar Edificio.}
+		\label{S4}
+	\end{center}
+\end{figure}
+
+\section{Módulo de Unidades de aprendizaje}
+El módulo de \textbf{Unidades de Aprendizaje} consiste en el análisis e implementación de un apartado del sistema en donde listamos las unidades de aprendiaje que actualmente se ofertan en la Escuela Superior de Cómputo así como la siguiente información de cada una de ellas:
+\begin{itemize}
+	\item Nombre de la unidad de aprendizaje
+	\item Tipo de unidad de aprendizaje
+	\item Académia a la que pertenece la unidad de aprendizaje
+	\item Programa académico de la unidad de aprendizaje
+\end{itemize}  
+
+\subsection{Etapa de Análisis}
+En esta etapa determinamos la información que sería más útil para el alumno sin sobrecargar de información la pantalla final. \\
+En un inicio se consideró la posibilidad de ligar las unidades de aprendizaje a un banco de datos con el material didáctico registrado en nuestra aplicación, con la finalidad de otorgarle al alumno una herramienta de soporte al consultar las unidades de aprendizaje que ofrece el plan de estudio actual en la Escuela Superior de Cómputo. \\
+La primera dificultad se presentó como se determinó que el alcance de la aplicación no llegaría a cubrir el módulo de materiales didácticos por lo que se prescidió de crear ese vínculo entre módulos. \\
+En el análisis se incluyó la creación de los casos de uso tanto de la consulta de unidades de aprendizaje para el alumno como el registro, edición y eliminación de éstas por parte del actor encargado de realizarlo.
+
+
+\subsection{Etapa de Desarrollo}
+Continuando con nuestra etapa de desarrollo basada en \textit{Programación Orientada a Objetos} nos dimos a la tarea de realizar la creación de nuestro objeto \textit{Unidad de Aprendizaje} y sus atributos.
+
+Mediante el uso de herramientas dentro del entorno de desarrollo \textbf{Xcode} tales como \textbf{TableViews}, \textbf{Custom ViewCell}, \textbf{TableViewControllers} y \textbf{Storieboards} se logró desarrollar la tabla de unidades de aprendizaje mostradas tanto para el alumno como para el administrador como se muestran en la figura \ref{unidades}
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{images/ModuloUnidades/IUAU5.png}
+		\caption{Tabla Unidades de Aprendizaje.}
+		\label{unidades}
+	\end{center}
+\end{figure}
+
+Posteriormente se desarolló el contenido de cada unidad de aprendizaje utilizando la herramienta de \textbf{WebViewController} para mostrar el programa académico de las unidades de manera embebida en la pantalla de información. \\
+
+Finalizando esta etapa obteniendo las funcionalidades descritas anteriormente y que se muestran en las interfaces de usuario \cdtIdRef{IUAU-5}{Gestionar Unidades de Aprendizaje}, \cdtIdRef{IUAU-5.1}{Registrar Unidad de Aprendizaje}, \cdtIdRef{IUAU-5.2}{Editar Unidad de Aprendizaje}. \\
+
+\section{Módulo de Convocatorias de Cursos}
+El módulo de \textbf{Convocatorias de Cursos} consiste en el análisis e implementación de un apartado del sistema en donde listamos los cursos que se ofertan en la Escuela Superior de Cómputo por parte del Centro de Educación Continua y cuales campos de información son los siguientes:
+\begin{itemize}
+	\item Nombre curso
+	\item Fecha de inicio del curso
+	\item Fecha de término del curso
+	\item Costro del curso tanto para externos como para alumnos del IPN si se requiere
+	\item Descripción del curso 
+	\item Requisitos del curso
+	\item Enlace a la página de registro del curso
+\end{itemize}  
+
+\subsection{Etapa de Análisis}
+En esta etapa se analizó la información que se le mostraría al alumno. De la misma manera que las convocatoria de movilidad lo único que podríamos mostrarle eran las consultas al curso así como un enlace en el que los alumnos puedan obtener más información. \\
+Se consideró fuera del alcance permitir que el alumno pueda registrarse dentro de la apliación pues no se cuentan con los Servicios Web por parte de las plataformas tecnolgócias que se utilizan actualmente en la escuela. \\
+
+
+
+\subsection{Etapa de Desarrollo}
+Continuando con nuestra etapa de desarrollo basada en \textit{Programación Orientada a Objetos} nos dimos a la tarea de realizar la creación de nuestro objeto \textit{Convocatorias de Cursos} y sus atributos.
+
+Mediante el uso de herramientas dentro del entorno de desarrollo \textbf{Xcode} tales como \textbf{TableViews}, \textbf{Custom ViewCell}, \textbf{TableViewControllers} y \textbf{Storieboards} se logró desarrollar la tabla de convocatorias de cursos desplegadas tanto para el alumno como para el administrador como se muestran en la figura \ref{ConvCursos}
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{images/ModuloConvocatorias/IUAC7.png}
+		\caption{Tabla Convocatorias de Cursos.}
+		\label{ConvCursos}
+	\end{center}
+\end{figure}
+
+Posteriormente se desarolló el contenido de cada convocatoria de cursos con la información listada anteriormente y un botón que permita ver más información sobre la convocatoria en la página oficial del Centro de Educación Continua. \\
+
+Finalizando esta etapa obteniendo las funcionalidades descritas anteriormente y que se muestran en las interfaces de usuario \cdtIdRef{IUAC-7}{Gestionar convocatorias de cursos}, \cdtIdRef{IUAC-7.1}{Registrar convocatoria de curso}, \cdtIdRef{IUAC-7.2}{Editar convocatoria de curso}, \cdtIdRef{IUAC-7.3}{Eliminar convocatoria de curso}. \\
+
+ \section{Módulo de Unidades de aprendizaje}
+ El módulo de \textbf{Unidades de Aprendizaje} consiste en el análisis e implementación de un apartado del sistema en donde listamos las unidades de aprendiaje que actualmente se ofertan en la Escuela Superior de Cómputo así como la siguiente información de cada una de ellas:
+ \begin{itemize}
+ 	\item Nombre de la unidad de aprendizaje
+ 	\item Tipo de unidad de aprendizaje
+ 	\item Académia a la que pertenece la unidad de aprendizaje
+ 	\item Programa académico de la unidad de aprendizaje
+ \end{itemize}  
  
- Finalizando esta etapa obteniendo las funcionalidades descritas anteriormente y que se muestran en las figuras: \ref{S1}, \ref{S2}, \ref{S3} y \ref{S4}. \\
+ \subsection{Etapa de Análisis}
+ En esta etapa determinamos la información que sería más útil para el alumno sin sobrecargar de información la pantalla final. \\
+ En un inicio se consideró la posibilidad de ligar las unidades de aprendizaje a un banco de datos con el material didáctico registrado en nuestra aplicación, con la finalidad de otorgarle al alumno una herramienta de soporte al consultar las unidades de aprendizaje que ofrece el plan de estudio actual en la Escuela Superior de Cómputo. \\
+ La primera dificultad se presentó como se determinó que el alcance de la aplicación no llegaría a cubrir el módulo de materiales didácticos por lo que se prescidió de crear ese vínculo entre módulos. \\
+ En el análisis se incluyó la creación de los casos de uso tanto de la consulta de unidades de aprendizaje para el alumno como el registro, edición y eliminación de éstas por parte del actor encargado de realizarlo.
+ 
+ 
+ \subsection{Etapa de Desarrollo}
+ Continuando con nuestra etapa de desarrollo basada en \textit{Programación Orientada a Objetos} nos dimos a la tarea de realizar la creación de nuestro objeto \textit{Unidad de Aprendizaje} y sus atributos.
+ 
+ Mediante el uso de herramientas dentro del entorno de desarrollo \textbf{Xcode} tales como \textbf{TableViews}, \textbf{Custom ViewCell}, \textbf{TableViewControllers} y \textbf{Storieboards} se logró desarrollar la tabla de unidades de aprendizaje mostradas tanto para el alumno como para el administrador como se muestran en la figura \ref{unidades}
  
  \begin{figure}[h!]
  	\begin{center}
- 		\fbox{\includegraphics[width=0.3\textwidth]{images/resultados/S1}}
- 		\caption{Asignación de salones.}
- 		\label{S1}
+ 		\includegraphics[width=0.3\textwidth]{images/ModuloUnidades/IUAU5.png}
+ 		\caption{Tabla Unidades de Aprendizaje.}
+ 		\label{unidades}
  	\end{center}
- \end{figure}\begin{figure}[h!]
- \begin{center}
- 	\fbox{\includegraphics[width=0.3\textwidth]{images/resultados/S2}}
- 	\caption{Consultar  Salón.}
- 	\label{S2}
- \end{center}
-\end{figure}\begin{figure}[h!]
-\begin{center}
-	\fbox{\includegraphics[width=0.3\textwidth]{images/resultados/S3}}
-	\caption{Consultar Nivel.}
-	\label{S3}
-\end{center}
-\end{figure}\begin{figure}[h!]
-\begin{center}
-	\fbox{\includegraphics[width=0.3\textwidth]{images/resultados/S4}}
-	\caption{Consultar Edificio.}
-	\label{S4}
-\end{center}
-\end{figure}
+ \end{figure}
+ 
+ Posteriormente se desarolló el contenido de cada unidad de aprendizaje utilizando la herramienta de \textbf{WebViewController} para mostrar el programa académico de las unidades de manera embebida en la pantalla de información. \\
+ 
+ Finalizando esta etapa obteniendo las funcionalidades descritas anteriormente y que se muestran en las interfaces de usuario \cdtIdRef{IUAU-5}{Gestionar Unidades de Aprendizaje}, \cdtIdRef{IUAU-5.1}{Registrar Unidad de Aprendizaje}, \cdtIdRef{IUAU-5.2}{Editar Unidad de Aprendizaje}. \\
+ 
+ \section{Módulo de Convocatorias de Movilidad}
+ El módulo de \textbf{Convocatorias de Movilidad} consiste en el análisis e implementación de un apartado del sistema en donde listamos las convocatorias de movilidad que se están ofertando actualmente en el instituto así como un histórico de las que se han ofertado en periodo escolares anteriores. Las convocatorias se dividen en movilidad nacional y movilidad internacional y cuentan con las siguientes características:
+ \begin{itemize}
+ 	\item Nombre de la convocatoria de movilidad
+ 	\item Periodo de la convocatoria de movilidad
+ 	\item Enlace a la página del insituto con los detalles de la convocatoria
+ 	\item Enlace a la página del instituo con las unidades participantes en la convocatoria
+ 	\item Enlace a los resultados de los aplicantes que fueron o no asignados a alguna universidad participante
+ \end{itemize}  
+ 
+ \subsection{Etapa de Análisis}
+ En esta etapa se analizó la información que se le mostraría al alumno. De la misma manera que las convocatoria de cursos lo único que podríamos mostrarle eran las consultas a los enlaces que ofrece el instituto para informar de las fechas y requisitos necesarios para llevar un proceso de movilidad así como las universidades en las que podría aplicar y cuando su momento llegué la consulta de los resultados publicados. \\
+ Se consideró fuera del alcance permitir que el alumno pueda registrarse dentro de la apliación pues no se cuentan con los Servicios Web por parte de las plataformas tecnolgócias que se utilizan actualmente en la escuela. \\
  
  
+ 
+ \subsection{Etapa de Desarrollo}
+ Continuando con nuestra etapa de desarrollo basada en \textit{Programación Orientada a Objetos} nos dimos a la tarea de realizar la creación de nuestro objeto \textit{Convocatorias de Cursos} y sus atributos.
+ 
+ Mediante el uso de herramientas dentro del entorno de desarrollo \textbf{Xcode} tales como \textbf{TableViews}, \textbf{Custom ViewCell}, \textbf{TableViewControllers} y \textbf{Storieboards} se logró desarrollar la tabla de convocatorias de cursos desplegadas tanto para el alumno como para el administrador como se muestran en la figura \ref{ConvMov}
+ 
+ \begin{figure}[h!]
+ 	\begin{center}
+ 		\includegraphics[width=0.3\textwidth]{images/ModuloConvocatorias/IUCM8_1.png}
+ 		\caption{Tabla Convocatorias de Movilidad.}
+ 		\label{ConvMov}
+ 	\end{center}
+ \end{figure}
+ 
+ Posteriormente se desarolló el contenido de cada convocatoria de cursos con la información listada anteriormente y los botones para ingresar a la convocatoria en la página del IPN, para ver las universidades participantes y los resultados. \\
+ 
+ Finalizando esta etapa obteniendo las funcionalidades descritas anteriormente y que se muestran en las interfaces de usuario \cdtIdRef{IUAC-7.4}{Gestionar convocatorias de movilidad}, \cdtIdRef{IUAC-7.5}{Registrar convocatoria de movilidad}, \cdtIdRef{IUAC-7.6}{Editar convocatoria de movilidad}, \cdtIdRef{IUAC-7.7}{Eliminar convocatoria de movilidad}, \cdtIdRef{IUCM-8.1}{Consultar convocatoria de movilidad}, \cdtIdRef{IUCM-8.1.1}{Consultar convocatoria nacional}, \cdtIdRef{IUCM-8.1.2}{Consultar convocatoria internacional} \\
