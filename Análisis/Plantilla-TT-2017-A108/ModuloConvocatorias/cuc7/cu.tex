@@ -32,23 +32,15 @@
 		\UCitem{Precondiciones}{El actor deberá haber iniciado sesión en el sistema.}
 		\UCitem{Postcondiciones}{Se podrá agregar, editar, eliminar o consultar convocatorias de movilidad o de cursos.}
 		\UCitem{Reglas de negocio}{Ninguna}
-		\UCitem{Errores}{\UCerr{Uno}{Cuando el actor ingresó su usuario y/o contraseña de manera equivocada,}{se muestra el mensaje de error y regresa al paso \ref{CUC7:Datos} de la trayectoria principal.}}
+		\UCitem{Errores}{\UCerr{Uno}{Cuando el actor ingresó su usuario y/o contraseña de manera equivocada,}{se muestra el mensaje \cdtIdRef{MSG5}{Login Incorrecto} y regresa al paso \ref{CUC7:Datos} de la trayectoria principal.}}
 		\UCitem{Tipo}{Primario.}
 	\end{UseCase}
 	
 	\begin{UCtrayectoria}
-		\UCpaso[\UCactor] Solicita gestionar las convocatorias de movilidad o de cursos tocando el icono \textbf{icono} del menú.
-		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7a}{Selección de convocatorias}.
+		\UCpaso[\UCactor] Solicita gestionar las convocatorias de movilidad tocando el icono \botMovilidad del menú \cdtIdRef{IUPP}{Pantalla Principal}.
 		\UCpaso[\UCactor] \label{CUC7:Seleccion} Selecciona una opción de las disponibles.
 		\UCpaso [\UCsist] Obtiene el año del tipo de convocatorias seleccionado en el paso \ref{CUC7:Seleccion} de la trayectoria principal.
-		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7b}{Convocatotias}
-		\UCpaso [\UCactor] Solicita ingresar como administrador tocando el botón \cdtButton{Acceso de administrador}. \refTray{A}
-		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{IUC7c}{Inicio de sesión de administrador}.
-		\UCpaso [\UCactor] \label{CUC7:Datos} Proporciona la información solicitada.
-		\UCpaso [\UCactor] Solicita continuar la operación tocando el botón \cdtButton{Acceder}. \refTray{A}
-		\UCpaso [\UCsist] Verifica que los datos proporcionados sean correctos. \refErr{Uno}
-		\UCpaso [\UCsist] Obtiene el año del tipo de convocatorias seleccionado en el paso \ref{CUC7:Seleccion} de la trayectoria principal.
-		\UCpaso [\UCsist] Muestra la pantalla \cdtIdRef{UIC7c}{Gestión de convocatorias}.
+		\UCpaso [\UCsist] \label{CUC:7Editar} Muestra la pantalla \cdtIdRef{CUAC-7.4}{Gestionar convocatorias de movilidad}
 		\UCpaso [\UCactor]  \label{CUC7:Agregar} Gestiona las convocatorias mediante el uso del botón \cdtButton{Agregar}.
 		
 	\end{UCtrayectoria}
@@ -66,3 +58,12 @@
 	{ Paso \ref{CUC7:Agregar} de la trayectoria principal}
 	{\cdtIdRef{CUC7.5}{Registrar convocatoria de movilidad}}
 	
+	\UCExtensionPoint
+	{El actor requiere editar una convocatoria de movilidad}
+	{ Paso \ref{CUC7:Editar} de la trayectoria principal}
+	{\cdtIdRef{CUC7.6}{Registrar convocatoria de movilidad}}
+	
+	\UCExtensionPoint
+	{El actor requiere eliminar una convocatoria de movilidad}
+	{ Paso \ref{CUC7:Editar} de la trayectoria principal}
+	{\cdtIdRef{CUC7.7}{Eliminar convocatoria de movilidad}}
