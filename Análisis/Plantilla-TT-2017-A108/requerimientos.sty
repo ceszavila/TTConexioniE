@@ -64,6 +64,30 @@
 %----------------------------------------------------
 \newcommand{\refSistReq}[1]{\hyperlink{ReqSist:#1}{#1}}
 
+
+%----------------------------------------------------
+%Entorno para escribir los resultados de pruebas
+%----------------------------------------------------
+\newenvironment{pruebas}{%
+	\begin{longtable}{| p{0.2\textwidth}| p{0.2\textwidth}| p{0.2\textwidth}|p{0.2\textwidth}|}
+		\hline
+		\rowcolor{colorPrincipal}
+		\multicolumn{4}{|c|}{\bf\color{white}{Pruebas de casos de uso}}\\\hline
+		\rowcolor{colorGris}
+		\bf \color{white}
+		Id & \bf\color{white}Nombre & \bf \color{white}Prueba & \bf \color{white}Resultado  \\ \hline
+		\endhead}
+	{\end{longtable}}
+
+%----------------------------------------------------
+%Comando para agregar un renglón a la tabla de requerimientos del sistema
+%----------------------------------------------------
+\newcommand{\prueSistItem}[4]{\hypertarget{PrueSist:#1}{#1} & #2 & #3 & #4 \\\hline}
+%----------------------------------------------------
+%Comando para referenciar al requerimiento del sistema
+%----------------------------------------------------
+\newcommand{\prueSistReq}[1]{\hyperlink{ReqSist:#1}{#1}}
+	
 %----------------------------------------------------
 %Entorno para escribir los requerimientos del sistema
 %----------------------------------------------------
