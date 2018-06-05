@@ -1,0 +1,6 @@
+framework module Pods_PruebaFirebaseTT2 {
+  umbrella header "Pods-PruebaFirebaseTT2-umbrella.h"
+
+  export *
+  module * { export * }
+}

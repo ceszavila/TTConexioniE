@@ -1,0 +1,6 @@
+framework module Pods_Conexio_n_iE {
+  umbrella header "Pods-Conexión iE-umbrella.h"
+
+  export *
+  module * { export * }
+}
