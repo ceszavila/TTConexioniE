@@ -1,0 +1,70 @@
+{
+  "salones": [
+    {
+      "id_salon": 1,
+      "nombre_salon": "1102",
+      "grupo_salon": "1CM1",
+      "numero_edificio": "1A",
+      "imagennivel_salon": "PrimerPiso.jpg",
+      "imagenaerea_salon": "Salon1.jpg",
+      "latitud_salon": "19.505068",
+      "longitud_salon": "-99.14704"
+    },
+    {
+      "id_salon": 2,
+      "nombre_salon": "1102",
+      "grupo_salon": "1CM1",
+      "numero_edificio": "1A",
+      "imagennivel_salon": "PlantaBaja",
+      "imagenaerea_salon": "Salon1",
+      "latitud_salon": "19.505068",
+      "longitud_salon": "-99.14704"
+    },
+    {
+      "id_salon": 3,
+      "nombre_salon": "1102",
+      "grupo_salon": "1CM1",
+      "numero_edificio": "1A",
+      "imagennivel_salon": "PrimerPiso",
+      "imagenaerea_salon": "Salon3",
+      "latitud_salon": "19.505068",
+      "longitud_salon": "-99.14704 "
+    },
+    {
+      "id_salon": 4,
+      "nombre_salon": "1102",
+      "grupo_salon": "1CM1",
+      "numero_edificio": "1A",
+      "imagennivel_salon": "PrimerPiso",
+      "imagenaerea_salon": "Salon3",
+      "latitud_salon": "19.504715",
+      "longitud_salon": "-99.146407"
+    }
+  ],
+  "profesor": [
+    {
+      "id_profesor": 1,
+      "nombre_profesor": "Ulises Velez Saldaña",
+      "academia_profesor": "Sistemas Distribuidos",
+      "fotografia_profesor": "ulises",
+      "correo_profesor": "ulises@ipn.mx",
+      "telefono_profesor": "555555555",
+      "pagina_profesor": "www.ulises.com",
+      "materia_profesor": "ADOO, Ingenieria de Software",
+      "tt_profesor": "Conexíon iE, SIRM",
+      "cubiculo_profesor": "2203"
+    },
+    {
+      "id_profesor": 2,
+      "nombre_profesor": "José David Ortega Pacheco",
+      "academia_profesor": "Sistemas Operativos",
+      "fotografia_profesor": "david",
+      "correo_profesor": "david@ipn.mx",
+      "telefono_profesor": "333333333",
+      "pagina_profesor": "www.david.com",
+      "materia_profesor": "Sistemas Operativos, Sistemas Digitales",
+      "tt_profesor": "Conexíon iE",
+      "cubiculo_profesor": "2203"
+    }
+  ]
+}
