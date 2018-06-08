@@ -116,6 +116,7 @@
 		D5F584511F8ACAD600329D4C /* ProfesorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesorTableViewController.swift; sourceTree = "<group>"; };
 		D5F584551F8AD63C00329D4C /* ProfesorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesorCell.swift; sourceTree = "<group>"; };
 		D5F5C8541F95C7A3008ACB75 /* DetallesSalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesSalonViewController.swift; sourceTree = "<group>"; };
+		FC8B98E420C8D56400520768 /* Conexión iE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Conexión iE.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +268,7 @@
 		D5F584351F89262100329D4C /* Conexión iE */ = {
 			isa = PBXGroup;
 			children = (
+				FC8B98E420C8D56400520768 /* Conexión iE.entitlements */,
 				D5CF039120B692490061951F /* Movilidad */,
 				D5AC3EC6205B62AF002B6DBB /* conexionie.sqlite */,
 				D5AC3EC0205987CD002B6DBB /* DataBase.h */,
@@ -335,6 +337,11 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -618,6 +625,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Conexión iE/Conexión iE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQA7KL9WLD;
 				INFOPLIST_FILE = "Conexión iE/Info.plist";
@@ -639,6 +647,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Conexión iE/Conexión iE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQA7KL9WLD;
 				INFOPLIST_FILE = "Conexión iE/Info.plist";
