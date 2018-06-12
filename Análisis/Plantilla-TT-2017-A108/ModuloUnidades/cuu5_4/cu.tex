@@ -44,11 +44,7 @@
 			\end{UClist}
 		}
 		\UCitem{Propósito}{Proporcionarle al actor una herramienta visual que le permita consular las materias que serán impartidas en un periodo escolar.}
-		\UCitem{Entradas}{No Aplica
-			%        \begin{UClist} 
-			%           \UCli
-			%           \UCli
-			%        \end{UClist}
+		\UCitem{Entradas}{Elemento a buscar en la barra de búsqueda
 		}
 		\UCitem{Salidas}{
 			\begin{UClist} 
@@ -87,12 +83,22 @@
 		\UCpaso[\UCactor] Toca el botón \botUnidades de la pantalla \cdtIdRef{IUPP}{Pantalla Principal}
 		\UCpaso[\UCsist] Obtiene las unidades de aprendizaje que han sido registradas en el sistema. \label{CUU5.4:Paso1} \refTray{A}
 		\UCpaso[\UCsist] Construye la tabla de la pantalla \cdtIdRef{IUUM-5.4}{Consultar Unidades de Aprendizaje} con la información obtenida en el paso \ref{CUU5.4:Paso1}. 
-		\UCpaso[\UCsist] Muestra en la pantalla \cdtIdRef{IUUM-5.4}{Consultar Unidades de Aprendizaje} con los nombres de las unidades aprendizaje seleccionables. \label{CUU5.4:uasseleccionables}
+		\UCpaso[\UCsist] Muestra en la pantalla \cdtIdRef{IUUM-5.4}{Consultar Unidades de Aprendizaje} con los nombres de las unidades aprendizaje seleccionables. \label{CUU5.4:uasseleccionables} \refTray{B}
 	\end{UCtrayectoria}
+	
+		\subsection{Trayectorias alternativas}
+	
 	
 	\begin{UCtrayectoriaA}{A}{No existen unidades de aprendizaje registradas en el sistema.}
 		\UCpaso[\UCsist] Construye la tabla de la pantalla  \cdtIdRef{IUUM-5.4}{Consultar Unidades de Aprendizaje} con los datos vacíos.
 		\UCpaso[] Continua en el paso \ref{CUU5.4:Paso1} de la trayectoria principal.
+	\end{UCtrayectoriaA}
+	
+	\begin{UCtrayectoriaA}{B}{El alumno dese buscar una unidad de aprendizaje específica.}
+		\UCpaso[\UCactor] Toca el campo de texto para realizar la búsqueda.
+		\UCpaso[\UCsist] Habilita el campo de texto para que el actor pueda realizar la búsqueda.
+		\UCpaso[\UCactor] Ingresa el nombre del elemento que desea encontrar.
+		\UCpaso[\UCsist] Obtiene la información de acuerdo a la cadena de caractéres ingresada. 
 	\end{UCtrayectoriaA}
 	
 	\subsection{Puntos de extensión}

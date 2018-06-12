@@ -45,11 +45,7 @@
 			\end{UClist}
 		}
 		\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita encontrar a un profesor de la Escuela Superior de Cómputo en el listado de los docentes para consultar el detalle de su información si así lo desea.}
-		\UCitem{Entradas}{No Aplica
-			%        \begin{UClist} 
-			%           \UCli
-			%           \UCli
-			%        \end{UClist}
+		\UCitem{Entradas}{Elemento a buscar en la barra de búsqueda
 		}
 		\UCitem{Salidas}{
 			\begin{UClist} 
@@ -91,13 +87,23 @@
 		
 		\UCpaso[\UCsist] Obtiene la lista de los profesores registrados.
 		
-		\UCpaso[\UCsist] Muestra en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor} la lista de los profesores adscritos a la ESCOM de los que podrá consultar el detalle de su información si así lo desea. \label{CUPM-01:detalles}
-				
+		\UCpaso[\UCsist] Muestra en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor} la lista de los profesores adscritos a la ESCOM de los que podrá consultar el detalle de su información si así lo desea. \label{CUPM-01:detalles} \refTray{A}
+		
+		\UCpaso[\UCactor] Consulta la lista de profesores.
 %		\UCpaso[\UCactor] Desea conocer mas detalles de un profesor tocando el nombre del profesor seleccionado. \refTray{A}
 %		
 %		\UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUPM-02}{Consultar Detalles de Profesor}
 		
 	\end{UCtrayectoria}
+
+	\subsection{Trayectorias alternativas}
+	
+\begin{UCtrayectoriaA}{A}{El alumno dese buscar un profesor específico.}
+	\UCpaso[\UCactor] Toca el campo de texto para realizar la búsqueda.
+	\UCpaso[\UCsist] Habilita el campo de texto para que el actor pueda realizar la búsqueda.
+	\UCpaso[\UCactor] Ingresa el nombre del elemento que desea encontrar.
+	\UCpaso[\UCsist] Obtiene la información de acuerdo a la cadena de caractéres ingresada. 
+\end{UCtrayectoriaA}
 	
 	
 %	\begin{UCtrayectoriaA}{A}{El alumno no desea conocer el nivel y salón.}

@@ -45,9 +45,8 @@
 }
 	\UCitem{Propósito}{Proporcionale al alumno una herramienta que le permita conocer el salón al que fue asignado su grupo o grupos dependiendo de las unidades de aprendizaje que inscribió.}
 	\UCitem{Entradas}{
-        \begin{UClist} 
-           \UCli Ninguna
-        \end{UClist}}
+ Elemento a buscar en la barra de búsqueda
+}
 	\UCitem{Salidas}{
 		\begin{UClist} 
 			\UCli Tabla que muestra el listado de los grupos del periodo escolar actual y la asignación de espacios con los que contarán los grupos.
@@ -85,7 +84,7 @@
     
      \UCpaso[\UCsist] Obtiene la información de la asignación de grupos. \label{CUMS-01:info}
     
-    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos} con la información obtenida en el paso \ref{CUMS-01:info}. \label{CUMS-01:salon}
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos} con la información obtenida en el paso \ref{CUMS-01:info}. \label{CUMS-01:salon} \refTray{A}
     
     \UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}. \footnote{La funcionalidad del botón \textbf{Atrás} es un componente precargado del entorno de desarrollo XCode y puede variar dependiendo del idioma configurado por el usuario.}
     
@@ -95,13 +94,19 @@
 %    
 %    \UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUSM-02}{Consultar Nivel de Salón}
 %    
+
 \end{UCtrayectoria}
+
+\subsection{Trayectorias alternativas}
+
 %
-%\begin{UCtrayectoriaA}{A}{El alumno no desea conocer el nivel y salón.}
-%	\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás} de la pantalla .
-%	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPP}{Pantalla Principal}.
-%\end{UCtrayectoriaA}
-% 
+\begin{UCtrayectoriaA}{A}{El alumno dese buscar un grupo específico.}
+	\UCpaso[\UCactor] Toca el campo de texto para realizar la búsqueda.
+	\UCpaso[\UCsist] Habilita el campo de texto para que el actor pueda realizar la búsqueda.
+	\UCpaso[\UCactor] Ingresa el nombre del elemento que desea encontrar.
+	\UCpaso[\UCsist] Obtiene la información de acuerdo a la cadena de caractéres ingresada. 
+\end{UCtrayectoriaA}
+ 
 
 \subsection{Puntos de extensión}
 %

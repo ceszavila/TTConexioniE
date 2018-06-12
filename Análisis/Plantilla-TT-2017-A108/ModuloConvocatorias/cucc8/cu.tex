@@ -20,7 +20,7 @@
 			\end{UClist}
 		}
 		\UCitem{Propósito}{Proporcionar un medio por el cual los alumno de la Escuela Superior de Cómputo puedan visualizar las convocatorias de cursos que serán impartidos en dicha escuela.}
-		\UCitem{Entradas}{Nombre de la convocatoria de curso}
+		\UCitem{Entradas}{Elemento a buscar en la barra de búsqueda}
 		\UCitem{Salidas}{
 			\begin{UClist}
 				\UCli Nombre del curso
@@ -49,8 +49,17 @@
 		
 		\UCpaso Obtiene el nombre, la fecha de inicio, la fecha de término, el costo para externos, el costo para estudiantes del IPN, la descripción, los requisitos y la URL, del curso seleccionado.
 		
-		\UCpaso Muestra la pantalla \cdtIdRef{UICC-8}{Consultar convocatorias de cursos} con la información obtenida.
+		\UCpaso Muestra la pantalla \cdtIdRef{UICC-8}{Consultar convocatorias de cursos} con la información obtenida.  \refTray{A}
 		
-		\UCpaso [\UCactor] Consulta la información mostrada
+		\UCpaso [\UCactor] Consulta la información mostrada. 
 		
 	\end{UCtrayectoria}
+
+	\subsection{Trayectorias alternativas}
+
+\begin{UCtrayectoriaA}{A}{El alumno dese buscar un curso específico.}
+	\UCpaso[\UCactor] Toca el campo de texto para realizar la búsqueda.
+	\UCpaso[\UCsist] Habilita el campo de texto para que el actor pueda realizar la búsqueda.
+	\UCpaso[\UCactor] Ingresa el nombre del elemento que desea encontrar.
+	\UCpaso[\UCsist] Obtiene la información de acuerdo a la cadena de caractéres ingresada. 
+\end{UCtrayectoriaA}
