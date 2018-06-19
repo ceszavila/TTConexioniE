@@ -84,7 +84,7 @@
     
      \UCpaso[\UCsist] Obtiene la información de la asignación de grupos. \label{CUMS-01:info}
     
-    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos} con la información obtenida en el paso \ref{CUMS-01:info}. \label{CUMS-01:salon} \refTray{A}
+    \UCpaso[\UCsist] \label{CUMS-01:salon}Muestra la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos} con la información obtenida en el paso \ref{CUMS-01:info} ordenada númericamente de menor a mayor y por orden alfabético.  \refTray{A} \refTray{B}
     
     \UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}. \footnote{La funcionalidad del botón \textbf{Atrás} es un componente precargado del entorno de desarrollo XCode y puede variar dependiendo del idioma configurado por el usuario.}
     
@@ -105,6 +105,12 @@
 	\UCpaso[\UCsist] Habilita el campo de texto para que el actor pueda realizar la búsqueda.
 	\UCpaso[\UCactor] Ingresa el nombre del elemento que desea encontrar.
 	\UCpaso[\UCsist] Obtiene la información de acuerdo a la cadena de caractéres ingresada. 
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{B}{El alumno dese buscar el espacio asignado al grupo por tipo de espacio.}
+	\UCpaso[\UCactor] Toca una opción de la barra de secciones mostrada en la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos}.
+	\UCpaso[\UCsist] Obtiene las asignaciones de grupos cuyo tipo corresponde al seleccionado.
+	\UCpaso[\UCsist] Muestra las asignaciones de los grupos filtradas por tipo de espacio como se ve en la pantalla \cdtIdRef{IUSM-01a}{Consultar Asignación de Grupo por tipo}. 
 \end{UCtrayectoriaA}
  
 

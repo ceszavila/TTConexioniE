@@ -54,18 +54,12 @@
 	\UCitem{Salidas}{
 		\UCli Fotografía del profesor
 		\UCli Nombre del profesor
-		\UCli Nombre del espacio asignado al profesor
-		\UCli Academía a la que pertenece el profesor
-		\UCli Tabla que muestra los datos de: 
-			\begin{itemize}
-				\item Número de cubículo (en caso de contar con él)
-				\item Horario de Atención
-				\item E-mail
-				\item Teléfono
-				\item Página Web
-				\item Materias Impartidas
-				\item Trabajos terminales dirigidos de interés del profesor por mostrar.
-			\end{itemize}
+		\UCli Academía a la que pertenece
+		\UCli Cubículo
+		\UCli E-mail
+		\UCli Teléfono
+		\UCli Página web
+		\UCli Lista de unidades de aprendizaje que imparte
 	}
 	\UCitem{Precondiciones}{
 		\begin{UClist}		
@@ -95,7 +89,7 @@
  \end{UseCase}
 
  \begin{UCtrayectoria}
-    \UCpaso[\UCactor] El alumno desea obtener información detallada del profesor tocando ls celda del profesor en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor}.
+    \UCpaso[\UCactor] El alumno desea obtener información detallada del profesor tocando la celda del profesor en la pantalla \cdtIdRef{IUPM-01}{Consultar Profesor}.
     \UCpaso[\UCsist] Obtiene la información del profesor. \label{CUPM-02:detalleProfesor}
     \UCpaso[\UCsist] Construye la tabla de la pantalla \cdtIdRef{IUPM-02}{Consultar Detalle de Profesor} con la información obtenida en el paso \ref{CUPM-02:detalleProfesor}.
     \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPM-02}{Consultar Detalle de Profesor} con la información obtenida.

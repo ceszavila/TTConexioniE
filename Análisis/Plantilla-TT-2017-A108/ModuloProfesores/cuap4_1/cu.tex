@@ -46,14 +46,14 @@
 		\UCitem{Propósito}{Registrar la información de los profesores que imparten clases en la Escuela Superior de Cómputo.}
 		\UCitem{Entradas}{
 			        \begin{UClist} 
-			           \UCli Fotografía: Se selecciona del carrete.
-			           \UCli Nombre: \ioEscribir.
-			           \UCli Academia: \ioEscribir.
-			           \UCli E-mail: \ioEscribir.
-			           \UCli Teléfono: \ioEscribir.
-			           \UCli Página web: \ioEscribir.
-			           \UCli Materias: \ioEscribir.
-			           \UCli TT's: \ioEscribir.
+		\UCli Fotografía del profesor
+\UCli Nombre del profesor
+\UCli Academía a la que pertenece
+\UCli Cubículo
+\UCli E-mail
+\UCli Teléfono
+\UCli Página web
+\UCli Materias que imparte
 			        \end{UClist}
 		}
 		\UCitem{Salidas}{
@@ -94,7 +94,6 @@
 		\UCpaso[\UCsist] Reemplaza la fotografía por default con la fotografía seleccionada por el actor.
 		\UCpaso[\UCsist] Verifica que no se omitan datos marcados como obligatorios como se indica en la regla de negocios \cdtIdRef{RN-S1}{Datos Obligatorios}. \refTray{B}
 		\UCpaso[\UCsist] Registra la información del profesor en el sistema. \label{CUAP4.1:Registrar2}
-		\UCpaso[\UCsist] Construye el mensaje \cdtIdRef{MSG01}{Operación exitosa} con los valores \textit{Valor= El profesor y OPERACIÓN = registró}.
 		\UCpaso[\UCsist] Muestra el mensaje  \cdtIdRef{MSG01}{Operación exitosa} en la pantalla \cdtIdRef{IUAP-4.1}{Registrar Profesor}.
 		
 				
