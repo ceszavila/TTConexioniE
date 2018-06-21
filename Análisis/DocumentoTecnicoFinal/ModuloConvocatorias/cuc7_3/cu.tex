@@ -1,0 +1,50 @@
+\begin{UseCase}{CUAC-7.3}{Eliminar convocatoria de curso}{
+		Permite eliminar el registro de una convocatoria de cursos de la Escuela Superior de Cómputo debido a que este ya no será impartido en el periodo escolar actual. \\
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{24 de Mayo del 2018}
+			
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEUtec}{Responable UTEC}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda eliminar las convocatorias de cursos para la Escuela Superior de Cómputo.}
+		\UCitem{Entradas}{Ninguno}
+		\UCitem{Salidas}{Ninguno}
+		\UCitem{Precondiciones}{\textbf{Externa}: Se debió aprobar la eliminación de la convocatoria del curso.}
+		\UCitem{Postcondiciones}{Se podrá registrar una nueva convocatoria para cursos}
+		\UCitem{Reglas de negocio}{Ninguna}
+		\UCitem{Errores}{Ninguno}
+		\UCitem{Tipo}{Primario.}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		
+		\UCpaso [\UCactor] Solicta eliminar una convocatoria de cursos tocando el botón \cdtButton{Eliminar} en la pantalla \cdtIdRef{UIAC-7.2}{Editar convocatoria de curso}. \refTray{A}
+		
+		\UCpaso Elimina el registro de la convocatoria de curso.
+		
+		\UCpaso Muestra el mensaje \cdtIdRef{MGS1}{Operación exitosa}.
+		
+		\UCpaso Regresa a la pantalla \cdtIdRef{UIAC-7}{Gestionar convocatorias de cursos}.
+		
+	\end{UCtrayectoria}
+
+	\begin{UCtrayectoriaA}{A}{Cuando el actor requiere cancelar la operación.}
+		
+		\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \cdtButton{Volver}.
+		
+		\UCpaso Regresa a la pantalla \cdtIdRef{UIAC-7}{Gestionar convocatorias de cursos}.
+		
+	\end{UCtrayectoriaA}

@@ -1,0 +1,35 @@
+\subsection{IUPR 2 Modificar residuo sólido del plan de acción}
+
+\subsubsection{Objetivo}
+
+      Esta pantalla permite al actor modificar la información de un residuo sólido del plan de acción así como la cantidad que desea disminuir o reciclar.
+
+\subsubsection{Diseño}
+    
+    En la figura ~\ref{IUPR 2} se muestra la pantalla ``Modificar residuo sólido del plan de acción'', la cual permite al actor modificar un residuo sólido del plan de acción. 
+    El actor deberá ingresar los datos referentes al residuo sólido del plan de acción.\\
+ 
+      \IUfig[.9]{pantallas/planAccion/cupr2/iupr2}{IUPR 2}{Modificar residuo sólido del plan de acción}
+  
+    Al oprimir el botón \cdtButton{Aceptar} el sistema validará la información ingresada y señalará los campos cuyos datos no cumplan con las reglas de negocio establecidas.\\
+      
+    
+
+\subsubsection{Comandos}
+    \begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor confirmar la modificación del residuo sólido del plan de acción, dirige a la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} o a la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar la modificación del residuo sólido del plan de acción, dirige a la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} o a la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+      	    
+	\item [\cdtIdRef{MSG4}{No se encontró información sustantiva}:] Se muestra en la pantalla \cdtIdRef{IUPRS 1}{Registrar meta de residuos sólidos} o en la pantalla \cdtIdRef{IUPRS 2}{Modificar meta de residuos sólidos} cuando el sistema no cuenta con información en los catálogos de tipo y residuo sólido.
+	\item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUPR 2}{Modificar residuo sólido del plan de acción} cuando el actor no ingresó un dato requerido para realizar la operación.
+	\item[\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUPR 2}{Modificar residuo sólido del plan de acción} cuando el formato de alguno de los datos ingresados es incorrecto.
+	\item[\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUPR 2}{Modificar residuo sólido del plan de acción} cuando el actor escribió un dato que excede el tamaño especificado por el sistema.
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.	
+	\item[\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.
+	
+    \end{description}

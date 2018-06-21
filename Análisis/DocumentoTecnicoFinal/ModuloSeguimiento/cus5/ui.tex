@@ -1,0 +1,28 @@
+\subsection{IUS 5 Administrar avances de consumo responsable}
+
+\subsubsection{Objetivo}
+    
+Esta pantalla permite al usuario \cdtRef{actor:usuarioEscuela}{Coordinador del programa} administrar los avances de las metas y acciones registradas correspondientes al objetivo de consumo responsable, a partir del cual se accede al registro de avances de meta o acciones.
+
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUS 5} se muestra la pantalla ``Administrar avances de consumo responsable'', en la cual se muestran las metas registradas para el objetivo de consumo responsable. A partir de esta pantalla se puede acceder al resgistro de un avance para una meta en particular o el resgitro de avances para las acciones. 
+
+    \IUfig[.9]{pantallas/seguimiento/cus5/ius5}{IUS 5}{Administrar avances de consumo responsable}
+
+
+\subsubsection{Comandos}
+    \begin{itemize}
+    \item \botMetas [Registrar avance de meta]: Se utiliza para acceder a la pantalla de registro de avance de meta.
+    \item \botAutoAjus [Registrar avance de acciones]: Permite al actor ingresar al registro de avance de acciones.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+    \item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}] Indica al actor que no se puede administrar los avances de objetivos ya que la escuela no se encuentra en un estado que lo permita.
+
+	\item [\cdtIdRef{MSG2}{No existe información registrada por el momento}:] Se muestra en la pantalla \cdtIdRef{IUS 5}{Administrar avances de consumo responsable} indicando al actor que no existen registros de metas en el sistema por el momento.
+	
+	\item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla \cdtIdRef{IUS 1}{Administrar avances de objetivos} para indicarle al actor que no puede administrar los avances debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la acción.
+    \end{description}

@@ -1,0 +1,45 @@
+\subsection{IUIBB 7 Registrar flora}
+
+\subsubsection{Objetivo}
+
+      En esta pantalla el \cdtRef{actor:usuarioEscuela}{Coordinador del programa} puede registrar en el sistema las especies vegetales que se encuentran ubicadas en los ecosistemas y áreas verdes cercanas a la escuela.
+
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUIBB 7} se muestra la pantalla ``Registrar flora'', por medio de la cual se podrán registrar las especies vegetales que se localizan en los ecosistemas y áreas verdes cercanos a la escuela. El actor deberá ingresar la información solicitada para el registro de la especie vegetal en la pantalla .\\
+        
+    Una vez que se haya ingresado toda la información solicitada para el registro de la especie vegetal deberá oprimir el botón \cdtButton{Aceptar}, el sistema validará y registrará la información sólo si se han cumplido todas las reglas de negocio establecidas.\\
+    
+    Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUIBB 6}{ Administrar inventario de flora}, para indicar que la información de la especie vegetal se ha registrado exitosamente.
+      
+    \IUfig[.9]{pantallas/InformacionBase/cuibb7/IUIBB7RegistrarFlora}{IUIBB 7}{Registrar flora}
+
+
+
+\subsubsection{Comandos}
+    \begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor confirmar el registro de la especie vegetal, dirige a la pantalla \cdtIdRef{IUIBB 6}{ Administrar inventario de flora}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar el registro de la especie vegetal, dirige a la pantalla \cdtIdRef{IUIBB 6}{ Administrar inventario de flora}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+      
+	    \item [\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUIBB 6}{Administrar inventario de flora} cuando el registro de la especie vegetal se ha realizado correctamente.	    
+	    
+	    \item [\cdtIdRef{MSG4}{No se encontró información sustantiva}:] Se muestra en la pantalla \cdtIdRef{IUIBB 6}{Administrar inventario de flora} cuando el sistema no cuenta con información en el catálogo de categoría.
+	    
+	    \item [\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUIBB 7}{Registrar flora} cuando no se ha ingresado un dato marcado como requerido.
+	    
+	     \item [\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUIBB 7}{Registrar flora} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+	    
+	    \item [\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUIBB 7}{Registrar flora} cuando se ha excedido la longitud de alguno de los campos.
+	    
+	     \item [\cdtIdRef{MSG8}{Registro repetido}:] Se muestra en la pantalla \cdtIdRef{IUIBB 7}{Registrar flora} cuando el actor proporcionó un nombre científico  para la especie vegetal que ya se encuentra registrado en el sistema.
+	     
+	     	     \item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUIBB 1}{Administrar información base para indicadores de biodiversidad} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	   
+	   \item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra sobre la pantalla en la pantalla \cdtIdRef{IUIBB 1}{Administrar información base para indicadores de biodiversidad} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizarla.
+	    
+    \end{description}

@@ -1,0 +1,133 @@
+\begin{UseCase}{CUSM-03}{Consultar Edificio}
+    {
+	Este caso de uso le permite al \cdtRef{actor:CIEAlumno}{Alumno} consultar la información del edificio dentro de la Escuela Superior de Cómputo.
+	Cuando el alumno requiera saber el número de niveles de un edificio, sus características de accesibilidad y el tipo de espacios con los que cuenta dicho edificio, el caso de uso le permite conocer esta información desde la aplicación móvil.
+    }
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Consulta}
+    \UCccitem{Prioridad}{Alta}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Alta}
+    \UCitem{Estatus}{Por revisar}
+    \UCitem{Fecha del último estatus}{10 de Abril del 2018}
+
+
+%--------------------------------------------------------
+%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+%	% FECHA: Anote la fecha en que se terminó la revisión.
+%	\UCccitem{Fecha}{11-11-14} 
+%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+%	\UCccitem{Resultado}{Corregir}
+%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+%	\UCccitem{Observaciones}{
+%		\begin{UClist}
+%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+%			
+%		\end{UClist}		
+%	}
+%--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{
+		\begin{UClist} 
+%			\UCli \cdtRef{actor:usuarioEscuela}{Coordinador del programa}%Cambiar con nuestros actores
+%			\UCli \cdtRef{actor:usuarioSMAGEM}{Director del programa}%Cambiar con nuestros actores
+\UCli \cdtRef{actor:CIEAlumno}{Alumno}
+	\end{UClist}
+}
+	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le permita ubicar geográficamente la posición del edificio al que quiera dirigirse y las características de éste.}
+	\UCitem{Entradas}{No Aplica
+%        \begin{UClist} 
+%           \UCli 
+%           \UCli
+%        \end{UClist}
+}
+	\UCitem{Salidas}{
+		\begin{UClist} 
+				\UCli Nombre del Edifcio
+		        \UCli ID de Edificio
+		        \UCli Número de niveles del Edificio 
+		        \UCli Indicadores visuales de accesibilidad
+		        \UCli Indicadores visuales del tipo de espacio
+		\end{UClist}
+	   }
+	\UCitem{Precondiciones}{
+		\begin{UClist}		
+			\UCli {\bf Interna:} El sistema debe tener cargados los edificios de la ESCOM.
+			\UCli {\bf Interna:} El sistema debe tener cargada la información de los edificios de la ESCOM.
+%			\UCli {\bf Interna:} El sistema debe tener asociados los espacios a los grupos por periodo escolar.
+		\end{UClist}
+		}
+	\UCitem{Postcondiciones}{
+	    \begin{UClist}
+		\UCli {\bf Externa:} Los alumnos podrán saber el tipo de espacio que ofrece el edificio en él cual ha sido asignado su grupo.
+		\UCli {\bf Externa:} Los alumnos sabrán la estructura de accesibilidad con la que cuenta determinado edificio.
+   	    \end{UClist}
+	}
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+           \UCli No Aplica
+	\end{UClist}
+    }
+	\UCitem{Errores}{
+	    \begin{UClist}
+			\UCli No Aplica
+	    \end{UClist}
+	}
+	\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUSM-02}{Consultar Nivel de Salón} .}
+%	\UCitem{Fuente}{
+%	    \begin{UClist}
+%%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+%	    \end{UClist}
+%	}
+ \end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Desea conocer la información de un \textbf{Edificio} en ESCOM tocando el icono \botInformacion del mapa que se encuentra en la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos}
+
+	\UCpaso[\UCsist] Obtiene la información del edificio seleccionado. \label{CUSM-03:info}
+
+	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-03}{Consultar Edificio de Salón} con la información obtenida en el paso \ref{CUSM-03:info}
+
+	\UCpaso[\UCactor] El actor toca el icono \botCerrar en la pantalla \cdtIdRef{IUSM-03}{Consultar Edificio de Salón}.
+	
+	\UCpaso[\UCsist] Muestra la pantalla  \cdtIdRef{IUSM-01}{Consultar Asignación de Salones}.
+	
+ \end{UCtrayectoria}
+
+% \begin{UCtrayectoriaA}{A}{El actor alumno desea consultar las áreas de ESCOM.}
+%    \UCpaso[\UCactor] Desea conocer la ubicación de un \textbf{Edificio} en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+%    
+%   \UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+%   
+%   \UCpaso[\UCactor] Desea saber como llegar a un edificio específico presionando su marcador. 
+%   
+%    \UCpaso[\UCsist] Le muestra las opciones de navegación para llegar del edificio de destino.
+%    
+%    \UCpaso[\UCactor] El actor presiona el botón de \cdtButton{Menú} y regresa al menú principal.
+% \end{UCtrayectoriaA}
+ 
+
+ 
+%\subsection{Puntos de extensión}
+%
+%\UCExtensionPoint
+%{El actor requiere recuperar su contraseña}
+%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+%{\cdtIdRef{CUR 2}{Recuperar contraseña}}
+%
+%\UCExtensionPoint
+%{El actor requiere solicitar la inscripción de su escuela al programa}
+%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+%{\cdtIdRef{CUR 3}{Solicitar inscripción}}
+ 

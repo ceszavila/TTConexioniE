@@ -1,0 +1,150 @@
+
+\begin{UseCase}{CUR 9}{Administrar responsable del programa}
+	{
+		Este caso de uso permite administrar al responsable del programa mediante las acciones de registro, modificación y consulta del mismo.
+	  
+	}
+
+	\UCitem{Versión}{0.3}
+	\UCccsection{Administración de Requerimientos}
+	\UCitem{Autor}{Angélica Madrid Jiménez}
+	\UCccitem{Evaluador}{José David Ortega Pacheco}
+	\UCitem{Operación}{Administración}
+	\UCccitem{Prioridad}{Alta}
+	\UCccitem{Complejidad}{Baja}
+	\UCccitem{Volatilidad}{Baja}
+	\UCccitem{Madurez}{Alta}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{5 de Noviembre del 2014}
+		
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+% 	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+% 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+% 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+% 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+% 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+% 			\RCitem{PC1}{\TODO{En el resumen, este caso de uso no podrá eliminar al responsable del programa}}{Fecha de entrega}
+% 			\RCitem{PC2}{\TODO{cambiar la  Operación: Administración}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{prpósito: Permitir la administración de la información del responsable del Programa registrado teiendo la opción de modificarlo, no se va apoder eliminar al responsable}}{Fecha de entrega}
+% 			\RCitem{PC4}{\TODO{Precondicion : Que el Coordinador del Programa haya iniciado sesión, la otra también se queda}}{Fecha de entrega}
+% 			\RCitem{PC4}{\TODO{agregar la fuente}}{Fecha de entrega} 			
+% 			\RCitem{PC4}{\TODO{Trayectoria pinricipal, agregar la referencia a la pantalla del menú }}{Fecha de entrega} 			
+% 			\RCitem{PC4}{\TODO{Redacción de puntos de exensión, verificar que no terminen con doble punto}}{Fecha de entrega} 			
+% 			 \RCitem{PC4}{\TODO{Verificar que los nombres de los casos de uso en los puntos de extensión coincidadn con los puntos a donde llega la liga, especificamente Modificar ...}}{Fecha de entrega} 			
+%			\RCitem{PC4}{\TODO{Punto de extensión de Visualizar, está mal la liga }}{Fecha de entrega} 			 	
+%			\RCitem{PC4}{\TODO{Modificar la pantalla, agregar una en donde se muestra la tabla vacía y el btón de registrar habilitado y una en donde este un registro y el botón deshabilitado }}{Fecha de entrega} 			 		
+%			\RCitem{PC4}{\TODO{Objetivo de pantalla: El actor puede administrar la información del Responsable del programa }}{Fecha de entrega} 			 								 
+%			\RCitem{PC4}{\TODO{Comando de visualizar en patalla, la liga está mal nombrada }}{Fecha de entrega} 			 				
+% 		\end{UClist}		
+% 	}
+% %--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor(es)}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+	\UCitem{Propósito}{Permitir la consulta de los datos del responsable del programa registrado, teniendo la opción de modificar o visualizar su información. De no existir en el sistema se permite hacer su registro.}
+	\UCitem{Entradas}{Ninguna.}
+	\UCitem{Salidas}{
+
+	  \begin{UClist}
+	    \UCli {Tabla que muestra los siguientes datos del responsable del programa: }{\cdtRef{persona:nombre}{Nombre(s)}, \cdtRef{persona:primerApellido}{Primer apellido}, \cdtRef{persona:segundoApellido}{Segundo apellido} y \cdtRef{responsable:puesto}{Puesto}.}
+	    \UCli \cdtIdRef{MSG2}{No existe información registrada por el momento}: Se muestra el mensaje cuando el responsable del programa no ha sido registrado.
+	 \end{UClist}
+
+	}
+
+	\UCitem{Precondiciones}{
+
+		\begin{UClist}
+			\UCli {\bf Interna:} Que el actor haya iniciado sesión.
+			\UCli {\bf Interna:} La información escolar y el coordinador del programa deben estar previamente registrados.
+			\UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:inscrita}{inscrita}.
+			\UCli {\bf Interna:} Que el periodo de registro de escuelas se encuentre vigente.
+		\end{UClist}
+
+	}
+
+	\UCitem{Postcondiciones}{Ninguna.}
+	\UCitem{Reglas de negocio}{Ninguna.}
+	\UCitem{Errores}{
+
+			   \UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra sobre la pantalla \cdtIdRef{IUR 9}{Administrar responsable del programa} indicando al actor que no se puede administrar la información del responsable del programa debido al estado en que se encuentra la escuela.
+		\UCli	\cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra sobre la pantalla \cdtIdRef{IUR 9}{Administrar responsable del programa} para indicarle al actor que no puede administrar la información del responsable del programa debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar el registro de escuelas.	
+	
+	}
+	\UCitem{Tipo}{Primario.}
+
+	\UCitem{Fuente}{
+ 
+	   	\begin{UClist}
+			\UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+	    \end{UClist}
+  	}
+
+	\end{UseCase}
+
+
+	\begin{UCtrayectoria}
+
+		%1
+		\UCpaso[\UCactor] Solicita administrar al responsable del programa seleccionando la opción ``Información general'' del menú \cdtIdRef{MN2}{Menú del Coordinador del programa} y posteriormente la opción ``Responsable del programa''.
+		%2
+    \UCpaso[\UCsist] Verifica que la escuela se encuentre en estado ``Inscrita''. \refTray{A}    
+
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para administrar la información escolar. \refTray{B}
+    
+		\UCpaso[\UCsist] Busca los datos del responsable del programa registrados en el sistema. \refTray{C} %Si no hay datos se muestra un mensaje de que aun no hay responsable registrado
+		%3
+		\UCpaso[\UCsist] Muestra los datos del responsable del programa en la pantalla \cdtIdRef{IUR 9}{Administrar responsable del programa}.
+		%4
+% 		\UCpaso Deshabilita el botón \cdtButton{Registrar responsable} en la pantalla \cdtIdRef{IUR 9}{Administrar responsable del Programa}.
+% 		%5
+		\UCpaso[\UCactor] Administra al responsable del programa por medio de los botones \cdtButton{Registrar responsable} \botEdit y \botV. \label{cur9:Acciones}
+
+ \end{UCtrayectoria}
+
+	%%%TRAYECTORIAS ALTERNAS
+
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en el estado ``Inscrita''}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla \cdtIdRef{IUR 9}{Administrar responsable del programa} indicando al actor que no puede completar la información escolar debido a que la escuela no se encuentra en estado ``Inscrita''.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro de escuelas}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla \cdtIdRef{IUR 9}{Administrar responsable del programa} indicando al actor que no puede completar la información escolar debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar la acción.
+ \end{UCtrayectoriaA} 
+
+ 	\begin{UCtrayectoriaA}{C}{El responsable del programa no ha sido registrado en el sistema.}
+
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG2}{No existe información registrada por el momento} en la pantalla \cdtIdRef{IUR 9.1}{Administrar responsable del programa} indicando que no existe un responsable del programa registrado en el sistema.
+
+% 	\UCpaso Habilita el botón \cdtButton{Registrar responsable} en la pantalla \cdtIdRef{IUR 9.1}{Administrar responsable del programa}.
+
+% 	\UCpaso[\UCactor] Registra al Responsable del programa por medio del botón \cdtButton{Registrar responsable}.
+      \UCpaso Continúa en el paso \ref{cur9:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+
+	%%%PUNTOS DE EXTENSIÓN
+	\subsection{Puntos de extensión}
+
+		\UCExtensionPoint
+		{El actor desea agregar al responsable del programa}
+		{ Paso \ref{cur9:Acciones} de la trayectoria principal}
+		{\cdtIdRef{CUR 10}{Registrar responsable del programa}}
+
+		\UCExtensionPoint
+		{El actor desea modificar la información del responsable del programa}
+		{ Paso \ref{cur9:Acciones} de la trayectoria principal}
+		{\cdtIdRef{CUR 11}{Modificar responsable del programa}}
+
+		\UCExtensionPoint
+		{El actor desea visualizar la información del responsable del programa}
+		{ Paso \ref{cur9:Acciones} de la trayectoria principal}
+		{\cdtIdRef{CUR 12}{Visualizar responsable del programa}}

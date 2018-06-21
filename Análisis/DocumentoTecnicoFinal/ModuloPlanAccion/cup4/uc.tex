@@ -1,0 +1,114 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUP 4}{Eliminar objetivo}
+		{
+	    Después de registrar un objetivo, el actor puede haber detectado algún error en la información ingresada o puede ocurrir que este
+	    ya no sea requerido, en ese caso el actor podrá eliminar el objetivo a través de este caso de uso.
+	
+	}
+	
+	\UCitem{Versión}{1.0}
+	\UCccsection{Administración de Requerimientos}
+	\UCitem{Autor}{Natalia Giselle Hernández Sánchez}
+	\UCccitem{Evaluador}{}
+	\UCitem{Operación}{Eliminación}
+	\UCccitem{Prioridad}{Media}
+	\UCccitem{Terminado}{}
+	\UCccitem{Evaluado}{}
+	\UCccitem{Complejidad}{Media}
+	\UCccitem{Volatilidad}{Media}
+	\UCccitem{Madurez}{Media}
+	\UCitem{Estatus}{Terminado}
+	\UCitem{Fecha del último estatus}{25 de noviembre de 2014}
+
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+ 	\UCccsection{Revisión Versión 1} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ 	\UCccitem{Fecha}{1-Dic} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{Nayeli Vega}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ 			\RCitem{PC1}{\DONE{Porpósito: No coincide con el resumen}}{Fecha de entrega}
+ 			\RCitem{PC2}{\DONE{Salidas: Liga a pantalla IUP1.1 esta rota}}{Fecha de entrega}
+ 			\RCitem{PC3}{\DONE{Postcondiciones: Cambiar desaparecerá por borrará o eliminará}}{Fecha de entrega}
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+	\UCitem{Propósito}{Eliminar un objetivo que contiene errores o que ya no es requerido.}
+	\UCitem{Entradas}{
+		Ninguna
+		
+	}
+	\UCitem{Salidas}{
+		\begin{UClist} 
+			\UCli \cdtIdRef{MSG31}{Confirmar eliminación}: Se muestra en la \cdtIdRef{IUP 1}{Administrar objetivos} para que el actor confirme la eliminación del objetivo.
+		\end{UClist}
+	}
+
+	\UCitem{Precondiciones}{			\UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:planEdicion}{Plan de acción en edición}.
+			\UCli {\bf Interna:} Que el periodo de registro de plan de acción se encuentre vigente.
+	}
+	
+	\UCitem{Postcondiciones}{
+		\begin{UClist}
+			\UCli {\bf Interna:} Se borrará el objetivo del sistema.
+		\end{UClist}
+	}
+
+	\UCitem{Reglas de \hspace{1 cm} negocio}{
+		Ninguna
+	}
+	\UCitem{Errores}{		\UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.
+		\UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.
+	}
+
+	\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUP 1}{Administrar objetivos}}
+
+% 	\UCitem{Fuente}{
+% 		\begin{UClist}
+% 			\UCli 
+% 		\end{UClist}
+% 	}
+
+	%OBSERVACIONES: Utilice este campo para cualquier precisión o comentario que crea necesario para el usuario, analista o desarrollador que no pudo especificar en los demás campos. 
+	%\UCitem{Observaciones}{}
+
+ \end{UseCase}
+
+ \begin{UCtrayectoria}
+\UCpaso[\UCactor] Solicita eliminar el objetivo oprimiendo el botón \botKo  del registro que desea eliminar en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}.
+	\UCpaso[\UCsist] Verifica que la escuela se encuentre en  estado ``Plan de acción en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para el registro del plan de acción. \refTray{B}.
+\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG31}{Confirmar eliminación} en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos} indicando al actor que si acepta eliminar 
+el elemento no podrá recuperar la información posteriormente.
+\UCpaso[\UCactor] Confirma la eliminación del registro oprimiendo el botón \cdtButton{Aceptar} del mensaje emergente. \refTray{C}
+	\UCpaso[\UCsist] Verifica que la escuela se encuentre en  estado ``Plan de acción en edición''. \refTray{A}.
+\UCpaso[\UCsist] Elimina el registro que hace referencia al objetivo seleccionado.
+\UCpaso[\UCsist] Elimina el registro de las metas y acciones asociadas al objetivo seleccionado.
+\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla  
+\cdtIdRef{IUP 1}{Administrar objetivos} y actualiza la lista de objetivos que se muestra en la pantalla.
+ \end{UCtrayectoria}
+
+\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en el estado ``Plan de acción en edición''.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla en que se encuentre navegando el actor indicando que no puede administrar los objetivos del plan de acción debido a que la escuela no se encuentra en el estado ``Plan de acción en edición''. 
+ \end{UCtrayectoriaA}
+ 
+   \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro del plan de acción}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla en que se encuentre navegando el actor indicando que no puede administrar los objetivos del plan de acción debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro del plan de acción.
+ \end{UCtrayectoriaA} 
+ 
+\begin{UCtrayectoriaA}[Fin del caso de uso]{C}{El actor cancela la operación.}
+	\UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} del mensaje emergente.
+	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}.
+\end{UCtrayectoriaA}
+  

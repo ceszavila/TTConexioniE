@@ -1,0 +1,177 @@
+%!TEX encoding = UTF-8 Unicode
+
+\begin{UseCase}{CUP 5}{Administrar metas}
+	{
+		
+		Este caso de uso tiene como objetivo mostrar al actor todas las \cdtRef{gls:meta}{metas}
+		registradas en el sistema, el actor podrá acceder a diversas operaciones como registrar, modificar y
+		eliminar metas, así como administrar las acciones asociadas a estas.
+	}
+	%\UCitem{\DONEUC}{Edición}
+	\UCitem{Versión}{1.0}
+	\UCccsection{Administración de Requerimientos}	
+	\UCitem{Autor}{Natalia Giselle Hernández Sánchez}	
+	\UCccitem{Evaluador}{}
+	\UCitem{Operación}{Administración}
+	\UCccitem{Prioridad}{Alta}
+	\UCccitem{Complejidad}{Media}
+	\UCccitem{Volatilidad}{Alta}
+	\UCccitem{Madurez}{Baja}
+	\UCitem{Estatus}{Terminado}
+	\UCitem{Fecha del último estatus}{24 de noviembre de 2014}
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+ 	\UCccsection{Revisión Versión .1} % Anote la versión que se revisó.
+ 	\UCccitem{Fecha}{3-Dic} 
+ 	\UCccitem{Evaluador}{Nayeli Vega}
+ 	\UCccitem{Resultado}{Corregir}
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+ 			\RCitem{PC1}{\DONE{Resumen: Liga rota en metas}}{Fecha de entrega}
+ 			\RCitem{PC2}{\DONE{Postcondiciones: Ligas rotas de los casos de uso}}{Fecha de entrega}
+ 			\RCitem{PC3}{\DONE{Puntos de extensión: Ligas rotas de los casos de uso}}{Fecha de entrega}
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+	\UCitem{Propósito}{
+		Administrar las metas asociadas a un objetivo registradas en el sistema a través de una tabla de resultados.
+	}
+	\UCitem{Entradas}{
+		Ninguna
+	}
+	\UCitem{Salidas}{
+		\begin{UClist}
+			%\UCli \cdtRef{meta}{Meta}: \ioTabla{ la \cdtRef{meta:problematica}{problemática}, la \cdtRef{meta:meta}{meta}, el \cdtRef{valorAlcanzar:valor}{valor a alcanzar} y la \cdtRef{valorAlcanzar:unidad}{unidad}}{de metas}.
+			\UCli \cdtIdRef{MSG2}{No existe información registrada por el momento}: Se muestra en la pantalla \cdtIdRef{IUP 5}{Administrar metas} cuando no existen metas registradas.
+		\end{UClist}
+	}
+
+	\UCitem{Precondiciones}{
+		\begin{UClist}
+			\UCli {\bf Interna:} Que exista al menos un \cdtRef{objetivo}{objetivo} registrado en el sistema.
+			\UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:planEdicion}{Plan de acción en edición}.
+			\UCli {\bf Interna:} Que el periodo de registro de plan de acción se encuentre vigente.			
+		\end{UClist}
+	}
+	
+	\UCitem{Postcondiciones}{
+		\begin{UClist}
+			\UCli {\bf Interna:} Se podrá registrar una meta de las líneas de acción ``Agua'' y ``Energía'' por medio del caso de uso \cdtIdRef{CUPL 1}{Registrar meta}. 
+			\UCli {\bf Interna:} Se podrá registrar una meta de la línea de acción ``Residuos sólidos'' por medio del caso de uso \cdtIdRef{CUPRS 1}{Registrar meta de residuos sólidos}.
+			\UCli {\bf Interna:} Se podrá registrar una meta de la línea de acción ``Biodiversidad'' por medio del caso de uso \cdtIdRef{CUPB 1}{Registrar meta de biodiversidad}.
+			\UCli {\bf Interna:} Se podrá registrar una meta de la línea de acción ``Ambiente escolar'' por medio del caso de uso \cdtIdRef{CUPAE 1}{Registrar meta de ambiente escolar}.
+			\UCli {\bf Interna:} Se podrá registrar una meta de la línea de acción ``Consumo responsable'' por medio del caso de uso \cdtIdRef{CUPCR 1}{Registrar meta de consumo responsable}.
+			\UCli {\bf Interna:} Se podrá modificar una meta de las líneas de acción ``Agua'' y ``Energía'' por medio del caso de uso \cdtIdRef{CUPL 2}{Modificar meta}.
+			\UCli {\bf Interna:} Se podrá modificar una meta de la línea de acción ``Residuos sólidos'' por medio del caso de uso \cdtIdRef{CUPRS 2}{Modificar meta de residuos sólidos}.
+			\UCli {\bf Interna:} Se podrá modificar una meta de la línea de acción ``Biodiversidad'' por medio del caso de uso \cdtIdRef{CUPB 2}{Modificar meta de biodiversidad}.
+			\UCli {\bf Interna:} Se podrá modificar una meta de la línea de acción ``Ambiente escolar'' por medio del caso de uso \cdtIdRef{CUPAE 2}{Modificar meta de ambiente escolar}.
+			\UCli {\bf Interna:} Se podrá modificar una meta de la línea de acción ``Consumo responsable'' por medio del caso de uso \cdtIdRef{CUPCR 2}{Modificar meta de consumo responsable}.
+			\UCli {\bf Interna:} Se podrá eliminar una meta por medio del caso de uso \cdtIdRef{CUP 6}{Eliminar meta}.
+			\UCli {\bf Interna:} Se podrán administrar las acciones de una meta por medio del caso de uso \cdtIdRef{CUP 7}{Administrar acciones}.
+		\end{UClist}
+	}
+
+	\UCitem{Reglas de \hspace{1 cm} negocio}{
+		\begin{UClist}
+			\UCli \cdtIdRef{RN-S6}{Títulos de las administraciones}: Indica cómo se debe mostrar el título del formulario.
+		\end{UClist}
+	}
+
+	\UCitem{Errores}{
+	\UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.
+	\UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.
+	}
+
+	\UCitem{Tipo}{
+		Secundario, extiende del caso de uso \cdtIdRef{CUP 1}{Administrar objetivos}.
+	}
+
+% 	\UCitem{Fuente}{
+% 		\begin{UClist}
+% 			\UCli %Minuta de la reunión \cdtIdRef{M-15TR}{Toma de Requerimientos}.
+% 		\end{UClist}
+% 	}
+	
+\end{UseCase}
+%-------------------------------------------------------%trayectoria Principal-----------------------------------------------
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita administrar las metas oprimiendo el botón \botAdm referente al objetivo, en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}. %PENDIENTE
+	\UCpaso[\UCsist] Verifica que la escuela se encuentre en  estado ``Plan de acción en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para el registro del plan de acción. \refTray{B}.    
+    \UCpaso[\UCsist] Busca la información de las metas asociadas al objetivo seleccionado. \refTray{C}
+    \UCpaso[\UCsist] Verifica la línea de acción asociada a la meta para indicarla en el título como lo indica la regla de negocio \cdtIdRef{RN-S6}{Títulos de las administraciones}.
+    \UCpaso[\UCsist] Muestra la información de las metas en la pantalla \cdtIdRef{IUP 5}{Administrar metas}. 
+    \UCpaso[\UCactor] Administra las metas a través de los botones: \cdtButton{Registrar}, \botAdm, \botEdit y \botKo. \label{cup5:Mostrar}
+ \end{UCtrayectoria}
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en el estado ``Plan de acción en edición''.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla en que se encuentre navegando el actor indicando que no puede administrar los objetivos del plan de acción debido a que la escuela no se encuentra en el estado ``Plan de acción en edición''. 
+ \end{UCtrayectoriaA}
+ 
+   \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro del plan de acción}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla en que se encuentre navegando el actor indicando que no puede administrar los objetivos del plan de acción debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro del plan de acción.
+ \end{UCtrayectoriaA}
+ 
+\begin{UCtrayectoriaA}[Fin del caso de uso]{C}{No hay registros de metas asociadas al objetivo.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG2}{No existe información registrada por el momento} en pantalla \cdtIdRef{IUP 5}{Administrar metas} 
+    indicando que aún no hay metas registradas.
+ \end{UCtrayectoriaA}
+ 
+
+\subsection{Puntos de extensión}
+
+  \UCExtensionPoint{El actor requiere registrar una meta de la línea de acción ``Agua'' o ``Energía''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPL 1}{Registrar meta}}
+	
+  \UCExtensionPoint{El actor requiere registrar una meta de la línea de acción ``Residuos sólidos''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPRS 1}{Registrar meta de residuos sólidos}}
+	
+  \UCExtensionPoint{El actor requiere registrar una meta de la línea de acción ``Biodiversidad''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPB 1}{Registrar meta de biodiversidad}}
+	
+  \UCExtensionPoint{El actor requiere registrar una meta de la línea de acción ``Ambiente escolar''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPAE 1}{Registrar meta de ambiente escolar}}
+
+  \UCExtensionPoint{El actor requiere registrar una meta de la línea de acción ``Consumo responsable''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPCR 1}{Registrar meta de consumo responsable}}	
+
+  \UCExtensionPoint{El actor require modificar una meta de la línea de acción ``Agua'' o ``Energía''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPL 2}{Modificar meta}}
+	
+  \UCExtensionPoint{El actor requiere modificar una meta de la línea de acción ``Residuos sólidos''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPRS 2}{Modificar meta de residuos sólidos}}
+	
+  \UCExtensionPoint{El actor requiere modificar una meta de la línea de acción ``Biodiversidad''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPB 2}{Modificar meta de biodiversidad}}
+	
+  \UCExtensionPoint{El actor requiere modificar una meta de la línea de acción ``Ambiente escolar''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPAE 2}{Modificar meta de ambiente escolar}}
+
+  \UCExtensionPoint{El actor requiere modificar una meta de la línea de acción ``Consumo responsable''}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUPCR 2}{Modificar meta de consumo responsable}}
+	
+  \UCExtensionPoint{El actor require eliminar una meta}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUP 6}{Eliminar meta}}
+
+  \UCExtensionPoint{El actor require administrar las acciones de una meta}
+	{Paso \ref{cup5:Mostrar}}
+	{\cdtIdRef{CUP 7}{Administrar acciones}}
+
+
+
+ 

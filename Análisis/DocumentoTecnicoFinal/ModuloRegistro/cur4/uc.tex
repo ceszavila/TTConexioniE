@@ -1,0 +1,166 @@
+\begin{UseCase}{CUR 4}{Registrar coordinador del programa}
+    {
+	Este caso de uso permite al actor continuar con la solicitud de inscripción de la escuela ingresando los datos del director.
+    }
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Victor Lozano Ortega}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Registro}
+    \UCccitem{Prioridad}{Alta}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Alta}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{5 de Noviembre del 2014}
+
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+ 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+ 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+ 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+% 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+% 			\RCitem{PC1}{\TOCHK{En RESUMEN, PREINSCRIPCIÓN por inscripción}}{21 de octubre de 2014}
+%			\RCitem{PC2}{\TOCHK{Versión 0.2s}}{21 de octubre de 2014}
+% 			\RCitem{PC3}{\TOCHK{Propósito Preinscripción por Inscripción}}{21 de octubre de 2014}
+% 			\RCitem{PC4}{\TOCHK{En la sección de entradas, falta la carta compromiso que es un archivo}}{21 de octubre de 2014}
+% 			\RCitem{PC5}{\TOCHK{Propósito Preinscripción por Inscripción}}{21 de octubre de 2014}
+%			\RCitem{PC6}{\TOCHK{Precondición Externa. que el actor haya solicitado la inscripción de la escuela}}{21 de octubre de 2014}
+% 			\RCitem{PC7}{\TOCHK{Revisar ortografía en postcondiciones: Válida, revisar redacción, ponerla en términos de el sistema podrá enviar un correo ....}}{21 de octubre de 2014}
+%			\RCitem{PC8}{\TOCHK{Reglas de negocio, agregar una para el formato y tamaño de archivo}}{21 de octubre de 2014}
+% 			\RCitem{PC9}{\TOCHK{Propósito Preinscripción por Inscripción}}{21 de octubre de 2014}
+%			\RCitem{PC10}{\TOCHK{Mensaje. Falta el mensaje de confirmación de envío de información}}{21 de octubre de 2014}
+% 			\RCitem{PC11}{\TOCHK{Trayectoria principal, cambiar PREINSCRIPCION por INSCRIPCION}}{21 de octubre de 2014}
+%			\RCitem{PC12}{\DONE{Describir una validación por cada trayectoria alternativa}}{21 de octubre de 2014}
+ %			\RCitem{PC13}{\TOCHK{En el paso 8 de la trayectoria, el sistema unicamente registra datos del director}}{21 de octubre de 2014} 			
+% 			\RCitem{PC14}{\TOCHK{En PANTALLAS, eliminar del Objetivo la palabra preregistrar}}{21 de octubre de 2014}
+% 			\RCitem{PC14}{\TOCHK{En PANTALLAS, en COMANDOS hace falta el botón de ADJUNTAR}}{21 de octubre de 2014} 	
+% 			\RCitem{PC14}{\TOCHK{En PANTALLAS, falta mensaje de error en el formato y tamaño de archivo}}{21 de octubre de 2014} 			 			
+% 			\RCitem{PC2}{\TOCHK{Agregar a las reglas de negocio: RN-S2 que tiene que ver con el correo electrónico}}{Fecha de entrega}
+% 			 \RCitem{PC2}{\TOCHK{Agregar a la sección de mensajes: MSG16: formato de correo electrónico que tiene que ver con el correo electrónico}}{Fecha de entrega}
+% 			 \RCitem{PC2}{\TOCHK{Agregar en la trayectoria principal a la regla de negocio RN-S2 que tiene que ver con el correo con su respectiva trayectoria alterna}}{Fecha de entrega} 			 
+
+ %		\end{UClist}		
+% 	}
+% %--------------------------------------------------------
+
+    \UCsection{Atributos}
+    \UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+    \UCitem{Propósito}{Continuar con la solicitud de inscripción de la escuela ingresando los datos del director de la misma.}
+    \UCitem{Entradas}{
+	\begin{UClist}
+	    \UCli \cdtRef{persona:nombre}{Nombre(s)}: \ioEscribir.
+	    \UCli \cdtRef{persona:primerApellido}{Primer apellido}: \ioEscribir.
+	    \UCli \cdtRef{persona:segundoApellido}{Segundo apellido}: \ioEscribir.
+	    \UCli \cdtRef{coordinador:nombramiento}{Nombramiento}: \ioAdjuntar.
+	    \UCli \cdtRef{coordinador:cartaCompromiso}{Carta compromiso}: \ioAdjuntar.
+	    \UCli \cdtRef{persona:correo}{Correo electrónico}: \ioEscribir.
+	    \UCli \cdtRef{empleado:telefono}{Teléfono}: \ioEscribir.
+	    \UCli \cdtRef{empleado:extension}{Extensión}: \ioEscribir.
+	    \UCli \cdtRef{fig:captcha}{Captcha}: \ioEscribir.
+	\end{UClist}
+    }
+    \UCitem{Salidas}{
+	\begin{UClist} 
+	    \UCli \cdtRef{fig:captcha}{Captcha}: \ioGenerar.
+	    \UCli \cdtIdRef{MSG1}{Operación realizada exitosamente}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} cuando el correo ha sido enviado exitosamente.
+	\end{UClist}
+    }
+    \UCitem{Precondiciones}{
+	\begin{UClist}
+	    \UCli {\bf Interna:} Que exista registrada la escuela en el sistema.
+	    \UCli {\bf Externa:} El actor solicita la inscripción de la escuela.
+	    \UCli {\bf Externa:} Que el estado de la escuela sea \cdtRef{estado:preinscripcion}{preinscripción}.
+	\end{UClist}
+    }
+    \UCitem{Postcondiciones}{
+	\begin{UClist}
+	\UCli {\bf Interna:} El sistema enviará un correo de confirmación al actor para hacer válida la cuenta de correo electrónico asociado a la escuela.
+	\UCli {\bf Interna:} La escuela se encontrará en estado \cdtRef{estado:aprobar}{por aprobar}.
+	\end{UClist}
+    }
+    \UCitem{Reglas de negocio}{
+      \begin{UClist}
+            \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+            \UCli \cdtIdRef{RN-S2}{Formato de correo electrónico}: Verifica que el correo electrónico sea válido.
+            \UCli \cdtIdRef{RN-S5}{Archivos permitidos en el sistema}: Verifica que los archivos adjuntados cumplan con el tamaño  y formato especificados en el sistema.
+      \end{UClist}
+    }
+    \UCitem{Errores}{
+      \begin{UClist}
+	  \UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa} cuando no se ha ingresado un dato marcado como requerido.
+	  \UCli \cdtIdRef{MSG6}{Formato incorrecto}: Se muestra en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa} especificando el dato cuyo valor no cumple con el tipo de dato definido en el diccionario de datos.
+	  \UCli \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}: Se muestra en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa} cuando el actor proporciona un dato que excede la longitud máxima.
+	  \UCli \cdtIdRef{MSG13}{Error en formato de archivo}: Se muestra en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa}, para indicar que no se puede efectuar la operación de registro debido al error en los archivos adjuntados indicando dicho error.
+	  \UCli \cdtIdRef{MSG16}{Error en formato de correo electrónico}: Se muestra en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa} indicando que el correo electrónico proporcionado no tiene un formato válido.
+      \end{UClist}
+    }
+    \UCitem{Tipo}{Primario}
+    \UCitem{Fuente}{
+      \begin{UClist}
+        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+      \end{UClist}
+    }
+    \end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita continuar con la inscripción de la escuela mediante el botón \cdtButton{Aceptar}, en la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa}.
+    \UCpaso[\UCactor] Ingresa los datos del director de  la escuela en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa}. \label{cur4:Acciones}
+    \UCpaso[\UCactor] Solicita guardar los datos del director de la escuela oprimiendo el botón \cdtButton{Aceptar} de la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa}. \refTray{A}
+    \UCpaso[\UCsist] Verifica que los datos introducidos por el actor sean correctos como lo indica la regla de negocio \cdtIdRef{RN-S1}{Información correcta}.  \refTray{B} \refTray{C} \refTray{D}
+   \UCpaso[\UCsist]Verifica el formato del correo electrónico como lo indica la regla de negocio \cdtIdRef{RN-S2}{Formato de correo electrónico} \refTray{E} 
+   \UCpaso[\UCsist] Verifica que los archivos adjuntados cumplan con la especificación que se indica en la regla de negocio \cdtIdRef{RN-S5}{Archivos permitidos en el sistema}.\refTray{F}
+%     \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG3}{Confirmación de envío de información} como \cdtRef{fig:pantallaEmergente}{pantalla emergente}, indicando al actor que debe confirmar el envío de la información.
+%     \UCpaso[\UCactor] Confirma el envío de información de la escuela oprimiendo el botón \cdtButton{Aceptar} de la \cdtRef{fig:pantallaEmergente}{pantalla emergente}. \refTray{F}
+    \UCpaso[\UCsist] Registra los datos del director en el sistema y cambia el estado de la escuela a \cdtRef{estado:aprobar}{por aprobar}.
+%    \UCpaso[\UCsist] Envía un correo para la verificación de la dirección de correo electrónico proporcionada.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} cuando el correo ha sido enviado exitosamente.
+ \end{UCtrayectoria}
+
+ \begin{UCtrayectoriaA}[Fin de caso de uso]{A}{El actor desea cancelar la operación.}
+    \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUR 3}{Solicitar inscripción}.
+ \end{UCtrayectoriaA}
+
+   \begin{UCtrayectoriaA}{B}{El actor ingresó un tipo de dato incorrecto.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG6}{Formato incorrecto} y señala el campo que presenta el dato inválido en la 
+    pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa} para indicar que se ha ingresado un tipo de dato inválido.
+    \UCpaso[] Continúa con el paso \ref{cur4:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{C}{El actor proporciona un dato que excede la longitud máxima.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo} en la pantalla \cdtIdRef{IUR 4}{ Registrar coordinador del programa} especificando el dato cuya longitud excede el tamaño máximo permitido.
+   \UCpaso[] Continúa en el paso \ref{cur4:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{D}{El actor no ingresó un dato marcado como requerido.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} y
+    señala el campo que presenta la omisión en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa}, para indicar que
+    no se puede efectuar la operación de registro debido a la falta de información requerida.
+   \UCpaso[] Continúa en el paso \ref{cur4:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+ 
+ \begin{UCtrayectoriaA}{E}{El actor no proporciona un correo válido.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG16}{Error en formato de correo electrónico} en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa} indicando que el correo electrónico proporcionado no cumple con un formato válido.
+    \UCpaso Continúa en el paso \ref{cur4:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+ \begin{UCtrayectoriaA}{F}{Los archivos adjuntados no cumplen con la especificación definida.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG13}{El archivo no cuenta con el formato solicitado} en la pantalla \cdtIdRef{IUR 4}{Registrar coordinador del programa}, para indicar que
+    no se puede efectuar la operación de registro debido al error en los archivos adjuntados indicando dicho error.
+   \UCpaso[] Continúa en el paso \ref{cur4:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+
+%  \begin{UCtrayectoriaA}{F}{El actor desea cancelar el envío de información.}
+%     \UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón de \cdtButton{Cancelar} de la \cdtRef{fig:pantallaEmergente}{pantalla emergente}.
+%     \UCpaso[] Continúa en el paso \ref{cur4:Acciones} de la trayectoria principal.
+%  \end{UCtrayectoriaA}

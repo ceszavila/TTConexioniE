@@ -1,0 +1,133 @@
+\begin{UseCase}{CUSM-02}{Consultar Nivel de Salón}
+    {
+	Para que el \cdtRef{actor:CIEAlumno}{Alumno} pueda conocer la ubicación de un salón en especifico es necesario saber en que nivel de un edificio se encuentra. Es por eso que este caso de uso permite al \cdtRef{actor:CIEAlumno}{Alumno} localizar el nivel de un edificio en particular.
+
+	
+    }
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Consulta}
+    \UCccitem{Prioridad}{Alta}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Por revisar}
+    \UCitem{Fecha del último estatus}{10 de Abril del 2018}
+
+
+%--------------------------------------------------------
+%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+%	% FECHA: Anote la fecha en que se terminó la revisión.
+%	\UCccitem{Fecha}{11-11-14} 
+%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+%	\UCccitem{Resultado}{Corregir}
+%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+%	\UCccitem{Observaciones}{
+%		\begin{UClist}
+%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+%			
+%		\end{UClist}		
+%	}
+%--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{
+		\begin{UClist} 
+\UCli \cdtRef{actor:CIEAlumno}{Alumno}
+	\end{UClist}
+}
+	\UCitem{Propósito}{Proporcionarle al actor una herramienta que le facilite la ubicación de los niveles y consecuentemente salones a los que puede dirigirse por edificio.}
+	\UCitem{Entradas}{
+        \begin{UClist} 
+           \UCli Ninguna
+        \end{UClist}}
+	\UCitem{Salidas}{
+		\begin{UClist} 
+			\UCli Mapa de la Escuela Superior de Cómputo.
+			\UCli Polígono del edificio perteneciente al grupo seleccionado.
+			\UCli Marcador con el nombre del edificio perteneciente al grupo seleccionado.
+			\UCli Vista lateral 3D de los niveles del edificio del grupo seleccionado.
+		\end{UClist}	
+}
+	\UCitem{Precondiciones}{
+		\begin{UClist}		
+			\UCli {\bf Interna:} El sistema debe tener cargados los edificios de la ESCOM.
+			\UCli {\bf Interna:} El sistema debe tener cargados los niveles por edificio.
+			\UCli {\bf Interna:} El sistema debe tener cargados los salones por edificio.
+		\end{UClist}
+		}
+	\UCitem{Postcondiciones}{
+	    \begin{UClist}
+		\UCli {\bf Externa:} Los alumnos podrán saber en el momento que lo necesiten, el nivel de un edificio donde se ubica el salón que fue asignado a su grupo sin tener que buscar las hojas de asignación de salones.
+   	    \end{UClist}
+	}
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+            \UCli No Aplica
+%\cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+	\end{UClist}
+    }
+	\UCitem{Errores}{
+	    \begin{UClist}
+		\UCli No Aplica
+%		\UCli \cdtIdRef{MSG22}{Nombre de usuario y/o contraseña incorrecto}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que el nombre de usuario y/o contraseña son incorrectos.
+%		\UCli \cdtIdRef{MSG27}{Cuenta no activada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
+	    \end{UClist}
+	}
+	\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUSM-01}{Consultar Asignación de Grupo}.}
+ \end{UseCase}
+
+ \begin{UCtrayectoria}
+ \UCpaso[\UCactor] Seleciona un grupo tocando la celda de la tabla donde se encuentra el grupo a consulta de la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos}.
+
+\UCpaso[\UCsist] Obtiene el mapa  de la Escuela Superior de cómputo, el polígono del edificio, salón y niveles del edificio del grupo seleccionado. \label{CUSM-02:info}
+
+\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUSM-02}{Consultar Nivel de Salón} con la información obtenida en el paso \ref{CUSM-02:info} \label{CUSM-02:infoEdif}
+
+\UCpaso[\UCactor] Toca la opción \cdtButton{Niveles} de la pantalla \cdtIdRef{IUSM-02}{Consultar Nivel de Salón}. \refTray{A} 
+
+\UCpaso[\UCsist] Muestra la vista lateral 3D marcando de color amarillo el nivel  en donde se encuentra el salón del grupo.
+
+\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás}. \label{CUSM-02:atras} \footnote{La funcionalidad del botón \textbf{Atrás} es un componente precargado del entorno de desarrollo XCode y puede variar dependiendo del idioma configurado por el usuario.}
+
+ \end{UCtrayectoria}
+
+ \begin{UCtrayectoriaA}{A}{El alumno desea conocer el salón.}
+	\UCpaso[\UCactor] Toca la opción \cdtButton{Salones} de la pantalla  \cdtIdRef{IUSM-02}{Consultar nivel de salón}.
+	\UCpaso[\UCsist] Obtiene la informaicón del salón seleccionado.
+	\UCpaso[\UCsist] Muestra el salón del grupo seleccionado en una vista aérea del nivel al que pertenece el grupo de la pantalla \cdtIdRef{IUSM-02.1}{Consultar Salón}.
+	\UCpaso[\UCsist] Regresa al paso \ref{CUSM-02:atras} de la trayectoria principal.
+\end{UCtrayectoriaA}
+
+
+
+
+% \begin{UCtrayectoriaA}{A}{El actor alumno desea consultar las áreas de ESCOM.}
+%    \UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+%    
+%   \UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+%   
+%   \UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+% \end{UCtrayectoriaA}
+% 
+
+ 
+\subsection{Puntos de extensión}
+%
+\UCExtensionPoint
+{El actor requiere conocer la información de un edificio}
+{ Paso \ref{CUSM-02:infoEdif} de la trayectoria principal}
+{\cdtIdRef{CUSM-03}{Consultar Edificio de Salón}}
+%\UCExtensionPoint
+%{El actor requiere solicitar la inscripción de su escuela al programa}
+%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+%{\cdtIdRef{CUR 3}{Solicitar inscripción}}
+ 

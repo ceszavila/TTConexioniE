@@ -1,0 +1,127 @@
+\begin{UseCase}{CUUM-5.4}{Consultar Unidades de Aprendizaje}
+	{
+		Para que un alumno pueda conocer las materias que serán impartidas durante un periodo escolar es necesario realizar la consulta de las mismas. Es por eso que este caso de uso permite al \cdtRef{actor:CIEAlumno}{Alumno} conocer las unidades de aprendizaje que estarán disponibles para un periodo escolar vigente.
+			
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Cesar Raúl Avila Padilla}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{09 de Abril del 2018}
+		
+		
+		%--------------------------------------------------------
+		%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+		%	% FECHA: Anote la fecha en que se terminó la revisión.
+		%	\UCccitem{Fecha}{11-11-14} 
+		%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+		%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+		%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+		%	\UCccitem{Resultado}{Corregir}
+		%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+		%	\UCccitem{Observaciones}{
+		%		\begin{UClist}
+		%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+		%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+		%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+		%			
+		%		\end{UClist}		
+		%	}
+		%--------------------------------------------------------
+		
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEAlumno}{Alumno}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Proporcionarle al actor una herramienta visual que le permita consular las materias que serán impartidas en un periodo escolar.}
+		\UCitem{Entradas}{Elemento a buscar en la barra de búsqueda
+		}
+		\UCitem{Salidas}{
+			\begin{UClist} 
+				\UCli Unidad de Aprendizaje.
+			\end{UClist}	
+		}
+		\UCitem{Precondiciones}{
+			\begin{UClist}		
+				\UCli {\bf Interna:} Que exista al menos una unidad de aprendizaje registrada en el sistema.
+			\end{UClist}
+		}
+		\UCitem{Postcondiciones}{
+			\begin{UClist}
+				\UCli {\bf Externa:} El actor conocerá las unidades de aprendizaje que serán impartidas en el periodo escolar.
+			\end{UClist}
+		}
+		\UCitem{Reglas de negocio}{
+			\begin{UClist}
+				       \UCli No Aplica
+			\end{UClist}
+		}
+		\UCitem{Errores}{
+			\begin{UClist}
+						\UCli No Aplica
+			\end{UClist}
+		}
+		\UCitem{Tipo}{Primario, viene de \cdtIdRef{IUPP}{Pantalla Principal}}
+		%	\UCitem{Fuente}{
+		%	    \begin{UClist}
+		%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+		%	    \end{UClist}
+		%	}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Toca el botón \botUnidades de la pantalla \cdtIdRef{IUPP}{Pantalla Principal}
+		\UCpaso[\UCsist] Obtiene las unidades de aprendizaje que han sido registradas en el sistema. \label{CUU5.4:Paso1} \refTray{A}
+		\UCpaso[\UCsist] Construye la tabla de la pantalla \cdtIdRef{IUUM-5.4}{Consultar Unidades de Aprendizaje} con la información obtenida en el paso \ref{CUU5.4:Paso1}. 
+		\UCpaso[\UCsist] Muestra en la pantalla \cdtIdRef{IUUM-5.4}{Consultar Unidades de Aprendizaje} con los nombres de las unidades aprendizaje seleccionables. \label{CUU5.4:uasseleccionables} \refTray{B}
+	\end{UCtrayectoria}
+	
+		\subsection{Trayectorias alternativas}
+	
+	
+	\begin{UCtrayectoriaA}{A}{No existen unidades de aprendizaje registradas en el sistema.}
+		\UCpaso[\UCsist] Construye la tabla de la pantalla  \cdtIdRef{IUUM-5.4}{Consultar Unidades de Aprendizaje} con los datos vacíos.
+		\UCpaso[] Continua en el paso \ref{CUU5.4:Paso1} de la trayectoria principal.
+	\end{UCtrayectoriaA}
+	
+	\begin{UCtrayectoriaA}{B}{El alumno dese buscar una unidad de aprendizaje específica.}
+		\UCpaso[\UCactor] Toca el campo de texto para realizar la búsqueda.
+		\UCpaso[\UCsist] Habilita el campo de texto para que el actor pueda realizar la búsqueda.
+		\UCpaso[\UCactor] Ingresa el nombre del elemento que desea encontrar.
+		\UCpaso[\UCsist] Obtiene la información de acuerdo a la cadena de caractéres ingresada. 
+	\end{UCtrayectoriaA}
+	
+	\subsection{Puntos de extensión}
+	
+	\UCExtensionPoint
+	{El actor requiere consultar los detalles de una unidad de aprendizaje}
+	{ Paso \ref{CUU5.4:uasseleccionables} de la trayectoria principal}
+	{\cdtIdRef{CUUM-5.4.1}{Consultar Detalle de Unidad de Aprendizaje}}
+	
+
+	
+	% 
+	%  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
+	% 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+	% 	
+	% 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+	% 	
+	% 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+	% \end{UCtrayectoriaA}
+	
+	
+	
+	%\UCExtensionPoint
+	%{El actor requiere solicitar la inscripción de su escuela al programa}
+	%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+	%{\cdtIdRef{CUR 3}{Solicitar inscripción}}

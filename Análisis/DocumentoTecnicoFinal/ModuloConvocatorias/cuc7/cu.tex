@@ -1,0 +1,68 @@
+\begin{UseCase}{CUAC-7}{Gestionar convocatorias de cursos}{
+		Permite realizar las operaciones pertinentes para tener el control de las convocatorias de cursos. Para poder realizar dichas operaciones el usuario debió haber ingresado al sistema con su usuario y contraseña, previamiente.
+			
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{11 de Mayo del 2018}
+			
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \textbf{Responable UTEC}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda realizar las operaciones de registrar, editar, eliminar y consultar, de las convocatorias de cursos.}
+		\UCitem{Entradas}{No aplica
+		}
+		\UCitem{Salidas}{
+		\begin{UClist}
+			\UCli Se muestra en una tabla las convocatorias registradas.
+			\UCli \cdtIdRef{MSG6}{Elementos No Disponibles}
+		\end{UClist}
+		 }
+		\UCitem{Precondiciones}{El actor deberá haber iniciado sesión en el sistema.}
+		\UCitem{Postcondiciones}{Se podrá agregar, editar, eliminar o consultar convocatorias de cursos.}
+		\UCitem{Reglas de negocio}{Ninguna}
+		\UCitem{Errores}{\UCerr{Uno}{Cuando el actor ingresó su usuario y/o contraseña de manera equivocada,}{se muestra el mensaje \cdtIdRef{MSG5}{Login Incorrecto} y regresa al paso \ref{CUC7:Datos} de la trayectoria principal.}}
+		\UCitem{Tipo}{Primario, viene de \cdtIdRef{IUPP}{Pantalla Principal}}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Solicita gestionar las convocatorias de cursos tocando el icono \botCursos del menú \cdtIdRef{IUPA}{Pantalla Principal del administrador}.
+		\UCpaso [\UCsist] Obtiene las convocatorias de cursos registradas en la aplicación.
+		\UCpaso [\UCsist] \label{CUC7:Editar} Muestra la pantalla \cdtIdRef{IUAC-7}{Gestionar convocatorias de cursos}
+		\UCpaso [\UCactor]  \label{CUC7:Agregar} Gestiona las convocatorias de cursos.
+		
+	\end{UCtrayectoria}
+	
+	\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{Cuando el actor requiere volver a la pantalla anterior.}
+		\UCpaso[\UCactor] Solicita regresar a la pantalla anterior tocando el botón \cdtButton{Atrás}.
+		
+		\UCpaso [\UCsist] Regrasa a la pantalla anterior.
+	\end{UCtrayectoriaA}
+	
+	\subsection{Puntos de extensión}
+	
+	\UCExtensionPoint
+	{El actor requiere agregar una nueva convocatoria}
+	{ Paso \ref{CUC7:Agregar} de la trayectoria principal}
+	{\cdtIdRef{CUC7.1}{Registrar convocatoria de curso}}
+	
+	\UCExtensionPoint
+	{El actor requiere editar una convocatoria de curso}
+	{ Paso \ref{CUC7:Editar} de la trayectoria principal}
+	{\cdtIdRef{CUC7.2}{Editar convocatoria de curso}}
+	
+	\UCExtensionPoint
+	{El actor requiere eliminar una convocatoria de curso}
+	{ Paso \ref{CUC7:Editar} de la trayectoria principal}
+	{\cdtIdRef{CUC7.3}{Eliminar convocatoria de curso}}

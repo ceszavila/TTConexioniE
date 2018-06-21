@@ -1,0 +1,40 @@
+\subsection{IUP 2 Registrar objetivo}
+                     
+\subsubsection{Objetivo}
+
+   Esta pantalla permite al actor registrar un \cdtRef{gls:objetivo}{objetivo} por cada línea de acción. Una vez finalizado el registro, el actor podrá registrar metas asociadas al objetivo. 
+
+	
+\subsubsection{Diseño}
+
+  En la figura ~\ref{IUP 2} se muestra la pantalla ``Registrar objetivo'',
+  la cual permite al actor registrar un objetivo. 
+  El actor deberá ingresar los datos referentes al objetivo, así como seleccionar la línea de acción a la que corresponde.\\
+ 
+  \IUfig[.9]{pantallas/planAccion/cup2/iup2}{IUP 2}{Registrar objetivo}
+  
+  El sistema buscará las líneas de acción disponibles para colocarlas como opciones en la lista desplegable ``Línea de acción''.\\
+  
+  Al oprimir el botón \cdtButton{Aceptar} el sistema validará la información ingresada y señalará los campos cuyos datos no cumplan con las reglas de negocio establecidas.\\
+  
+  Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}, para indicar que la información del
+  objetivo se ha registrado correctamente.
+    
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor confirmar el registro del objetivo, dirige a la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar el registro del objetivo, dirige a la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}.
+\end{itemize}
+
+
+\subsubsection{Mensajes}
+
+\begin{description}
+	\item[\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos} cuando el objetivo se ha registrado correctamente.
+	\item[\cdtIdRef{MSG4}{No se encontró información sustantiva}:] Se muestra en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos} cuando hace falta información referente a las líneas de acción.
+	\item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUP 2}{Registrar objetivo} cuando el actor no ingresó un dato requerido para realizar la operación.
+	\item[\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUP 2}{Registrar objetivo} cuando el actor escribió un dato que excede el tamaño especificado por el sistema.
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.	
+	\item[\cdtIdRef{MSG33}{Unicidad de objetivos por línea de acción}:] Se muestra en la pantalla \cdtIdRef{IUP 2}{Registrar objetivo} cuando el actor seleccionó una línea de acción que ya tiene asociado un objetivo.
+	\item[\UCli \cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.
+\end{description}

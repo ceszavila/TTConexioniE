@@ -1,0 +1,110 @@
+\begin{UseCase}{CUAS-03}{Gestionar salones}{
+	Permite realizar las operaciones necesarias para tener el control de los salones de la Escuela Superior de Cómputo. Dichos espacios son una parte importante de la escuela ya que en ellos se pueden impartir unidades de aprendizaje, pueden ser laboratorios o salas de trabajo terminal. \\
+	Mediante este caso de uso se puede registrar, editar y eliminar un nuevo salón.
+    }
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Consulta}
+    \UCccitem{Prioridad}{Alta}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Media}
+    \UCitem{Estatus}{Por revisar}
+    \UCitem{Fecha del último estatus}{20 de mayo del 2018}
+
+
+%--------------------------------------------------------
+%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+%	% FECHA: Anote la fecha en que se terminó la revisión.
+%	\UCccitem{Fecha}{11-11-14} 
+%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+%	\UCccitem{Resultado}{Corregir}
+%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+%	\UCccitem{Observaciones}{
+%		\begin{UClist}
+%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+%			
+%		\end{UClist}		
+%	}
+%--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{
+		\begin{UClist} 
+\UCli \cdtRef{actor:CIEPrefectura}{Responsable Prefectura}
+	\end{UClist}
+}
+	\UCitem{Propósito}{Proporcionar una herramienta que permita a realizar las operaciones necesarias para tener el control de los salones de la Escuela Superior de Cómputo.}
+	\UCitem{Entradas}{
+        \begin{UClist} 
+           \UCli Ninguna
+        \end{UClist}}
+	\UCitem{Salidas}{
+		\begin{UClist} 
+			\UCli Tabla que muestra el listado de los salones de la Escuela Superior de Cómputo.
+			\UCli \cdtIdRef{MSG6}{Elementos No Disponibles}
+		\end{UClist}	
+	}
+	\UCitem{Precondiciones}{
+		\begin{UClist}		
+			\UCli {\bf Interna:} El sistema debe tener cargados los salones de la Escuela Superior de Cómputo.
+		\end{UClist}
+		}
+	\UCitem{Postcondiciones}{
+	    \begin{UClist}
+		\UCli {\bf Externa:} Los alumnos podrán consultar el registro de los salones.
+   	    \end{UClist}
+	}
+    \UCitem{Reglas de negocio}{Ninguna}
+	\UCitem{Errores}{Ninguno}
+	\UCitem{Tipo}{Primario, viene del menú \cdtIdRef{IUPA}{Pantalla Principal Administrador}}
+%	\UCitem{Fuente}{
+ \end{UseCase}
+
+ \begin{UCtrayectoria}
+    
+    \UCpaso [\UCactor] Solicita gestionar los salones de la Escuela Superior de Cómputo tocando el botón \textbf{Administrar salones} de la pantalla \cdtIdRef{IUPA}{Pantalla Principal Administrador}.
+    
+    \UCpaso Obtiene el número de salón de todos los salones que se tienen registrados.
+    
+    \UCpaso \label{CUAS-03:Pantalla} Muestra la pantalla \cdtIdRef{IUAS-03}{Gestionar salones} 
+    
+    \UCpaso [\UCactor] Gestiona los salones.
+\end{UCtrayectoria}
+%
+%\begin{UCtrayectoriaA}{A}{El alumno no desea conocer el nivel y salón.}
+%	\UCpaso[\UCactor] Toca el botón \cdtButton{Atrás} de la pantalla .
+%	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPP}{Pantalla Principal}.
+%\end{UCtrayectoriaA}
+% 
+
+\subsection{Puntos de extensión}
+%
+\UCExtensionPoint
+{El actor requiere registrar un nuevo salón}
+{ Paso \ref{CUAS-03:Pantalla} de la trayectoria principal}
+{\cdtIdRef{CUAS-03.1}{Registrar salón}}
+
+\UCExtensionPoint
+{El actor requiere editar un salón}
+{ Paso \ref{CUAS-03:Pantalla} de la trayectoria principal}
+{\cdtIdRef{CUAS-03.2}{Editar salón}}
+
+\UCExtensionPoint
+{El actor requiere eliminar un salón}
+{ Paso \ref{CUAS-03:Pantalla} de la trayectoria principal}
+{\cdtIdRef{CUAS-03.3}{Eliminar salón}}
+%
+%\UCExtensionPoint
+%{El actor requiere solicitar la inscripción de su escuela al programa}
+%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+%{\cdtIdRef{CUR 3}{Solicitar inscripción}}
+ 

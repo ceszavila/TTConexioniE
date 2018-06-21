@@ -1,0 +1,43 @@
+\subsection{IUP 9 Modificar acción}
+
+\subsubsection{Objetivo}
+   
+   Esta pantalla permite al actor modificar una \cdtRef{gls:acción}{acción}, cuando existen errores en la información o simplemente cuando esta se haya actualizado.
+
+	
+\subsubsection{Diseño}
+
+  En la figura ~\ref{IUP 9} se muestra la pantalla ``Modificar acción'', en la cual se mostrará la información de la acción en modo edición para que
+  de este modo puedan ingresarse los nuevos datos.
+  Para realizar la modificación, el actor deberá ingresar los nuevos datos referentes a la acción, y podrá decidir nuevamente si la acción es o no cuantificable.\\
+  
+  \IUfig[.9]{pantallas/planAccion/cup9/iup9.png}{IUP 9}{Modificar acción}
+
+
+  Si el actor selecciona que la meta es cuantificable el sistema solicitará  el valor a alcanzar y la unidad, como se muestra en la imagen ~\ref{IUP 9.1}, de lo contrario
+  el sistema no solicitará estos valores.
+    
+   \IUfig[.9]{pantallas/planAccion/cup9/iup9_1}{IUP 9.1}{Modificar acción cuantificable}
+   
+  Al oprimir el botón \cdtButton{Aceptar} el sistema validará la información ingresada y señalará los campos cuyos datos no cumplan con las reglas de negocio establecidas.\\
+  
+  Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUP 7}{Administrar acciones}, para indicar que la información de la acción
+  se ha modificado correctamente.
+    
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor confirmar la modificación de la acción, dirige a la pantalla \cdtIdRef{IUP 7}{Administrar acciones}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar la modificación de la acción, dirige a la pantalla \cdtIdRef{IUP 7}{Administrar acciones}.
+\end{itemize}
+
+
+\subsubsection{Mensajes}
+
+\begin{description}
+	\item[\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUP 7}{Administrar acciones} cuando la acción se ha registrado correctamente.
+	\item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUP 9}{Modificar acción} cuando el actor no ingresó un dato requerido para realizar la operación.
+	\item[\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUP 9}{Modificar acción} cuando el formato de alguno de los datos ingresados es incorrecto.	
+	\item[\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUP 9}{Modificar acción} cuando el actor escribió un dato que excede el tamaño especificado por el sistema.
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.	
+	\item[\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.	
+	\end{description}

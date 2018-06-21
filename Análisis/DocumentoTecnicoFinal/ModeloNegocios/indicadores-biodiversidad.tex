@@ -1,0 +1,109 @@
+% \begin{indicador}{ID}{Nombre del indicador}
+% 	{Fórmula}
+% 	{
+% 		Descripción del indicador.
+% 	} 	
+% 	\INitem{Variable 1}{Unidad 1}{Descripción de variable 1}
+% 	\INitem{Variable 2}{Unidad 2}{Descripción de variable 2}
+% \end{indicador}
+
+\subsection{Biodiversidad}
+
+A diferencia de las líneas de acción ``Agua'' y ``Energía'', el propósito de incluir ``Biodiversidad'' como línea de acción no es optimizar el uso de un recurso, sino promover el conocimiento de un aspecto natural y el reconocimiento de sus beneficios. \\
+
+En esta sección se muestran los indicadores para la línea de acción ``Biodiversidad'' propuestos para el programa.
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IB 1}{Porcentaje de personas que conocen el concepto de biodiversidad}
+	{$\%P = \frac{A}{B} * 100$} 
+	{
+		La fuente de datos de este indicador son las respuestas a los cuestionarios de biodiversidad aplicados. Se calcula dividiendo el número de respuestas afirmativas entre el número total de cuestionarios contestados. 
+	} 	
+	\INitem{$\cdtRef{gls:personasBio}{\%P}$}{$\%$}{\cdtRef{gls:personasBio}{Porcentaje de personas que conocen el concepto de biodiversidad}.}
+	\INitem{$A$}{$personas$}{Número de \cdtRef{biodiversidad:siConocenConcepto}{personas que conocen el concepto} de biodiversidad.}
+	\INitem{$B$}{$personas$}{Número de \cdtRef{biodiversidad:encuestados}{personas encuestadas}.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IB 2}{Número total de especies de flora y fauna presentes en la escuela por año}
+	{$NT = NFLO + NFA$}
+	{
+		Esta es una medición básica para desarrollar otro tipo de indicadores. El número de especies es en sí, una medida de biodiversidad.\\
+
+		Una especie de flora se refiere a todos y cada uno de los tipos de plantas capaces de entrecruzarse y de producir descendencia fértil, presentes en la una lugar específico, en este caso, la escuela.\\
+
+		Por su parte, una especie de fauna se refiere a todos y cada uno de los tipos de animales capaces de entrecruzarse y de producir descendencia fértil, presentes en la una lugar específico, en este caso, la escuela.
+	} 	
+	\INitem{$\cdtRef{gls:totalEspecies}{NT}$}{$especies$}{\cdtRef{gls:totalEspecies}{Número total de especies}.}
+	\INitem{$NFLO$}{$especies$}{Número especies de flora presentes en la escuela, se calcula sumando los registros del \cdtRef{inventario}{inventario} de la flora.} %PENDIENTE
+	\INitem{$NFA$}{$especies$}{Número especies de fauna presentes en la escuela, se calcula sumando los registros del \cdtRef{inventario}{inventario} de la fauna.} %PENDIENTE
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IB 3}{Porcentaje de especies endémicas en la escuela por año}
+	{$\%EE = \frac{NEE}{NT} * 100$} %%EE = A/B*100
+	{
+		Se calcula dividiendo el número de especies endémicas encontradas entre el total de especies, multiplicado por cien. \\
+		
+		El dato resultante proporciona información de la cantidad de especies originarias y exclusivas de cada región en relación con otras que tienen amplia distribución. 
+		Una especie endémica es aquella exclusiva de una determinada región geográfica.
+	} 	
+	\INitem{$\cdtRef{gls:porcentajeEspeciesEndemicas}{\%EE}$}{$\%$}{\cdtRef{gls:porcentajeEspeciesEndemicas}{Porcentaje de especies endémicas}.}
+	\INitem{$NEE$}{$especies$}{Se refiere al número total de especies endémicas, se calcula sumando todos los registros del inventario que indiquen que se trata de una especie \cdtRef{inventario:endemico}{endémica}.}
+	\INitem{$\cdtRef{gls:totalEspecies}{NT}$}{$especies$}{\cdtRef{gls:totalEspecies}{Número total de especies}, calculada con el indicador \cdtIdRef{IB 2}{Número total de especies de flora y fauna presentes en la escuela por año}.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IB 4}{Número de árboles plantados en un año}
+	{$TAP = NAP$}
+	{
+		La forestación y la reforestación, son acciones asociadas a aumentar la abundancia de especies, así como para fomentar los servicios ambientales que los ecosistemas ofrecen. 
+		Su medición representa las acciones humanas que se toman para evitar o mitigar problemas como pérdida de cobertura vegetal. 
+	} 	
+	\INitem{$\cdtRef{gls:arbolesPlantados}{TAP}$}{$\acute{a}rboles$}{Número de \cdtRef{gls:arbolesPlantados}{árboles plantados}.}
+	\INitem{$\cdtRef{avanceArboles:avanceArboles}{NAP}$}{$\acute{a}rboles$}{\cdtRef{avanceArboles:avanceArboles}{Avance acumulado de árboles plantados}.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IB 5}{Tasa de supervivencia de árboles plantados}
+	{$TS = \frac{AP_{a\tilde{n}o1}}{AP_{a\tilde{n}o2}} * 100$}%TS=A/B*100
+	{
+		Se refiere al número de árboles vivos después de un año de sembrados. La supervivencia de individuo durante el primer año, aumenta las probabilidades de que el árbol llegue a la edad adulta y aporte servicios ambientales.
+	} 	
+	\INitem{$\cdtRef{gls:tasaSupervivencia}{TS}$}{$ $}{Se refiere a la \cdtRef{gls:tasaSupervivencia}{tasa de supervivencia de árboles plantados}.}
+	\INitem{$AP_{a\tilde{n}o1}$}{$\acute{a}rboles$}{\cdtRef{avanceArboles:avanceArboles}{Avance acumulado de árboles plantados} en el primer año.}
+	\INitem{$AP_{a\tilde{n}o2}$}{$\acute{a}rboles$}{\cdtRef{avanceArboles:avanceArboles}{Avance acumulado de árboles plantados} en el segundo año.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IB 6}{Número de ecosistemas locales}
+	{$NE = EI_1 + EI_2 + ... + EI_n$}
+	{
+		El número ecosistemas alrededor de las escuelas es una medida de biodiversidad local. Si se hace el conteo año con año, se podrá apreciar si existe desaparición de ecosistemas en el área.
+	} 	
+	\INitem{$\cdtRef{gls:numeroEco}{NE}$}{$ $}{\cdtRef{gls:numeroEco}{Número de ecosistemas identificados}.}
+	\INitem{$EI_1$}{$ $}{Primer \cdtRef{biodiversidad:tipoDeEcosistema}{tipo de ecosistema} identificado en las inmediaciones de la escuela.}
+	\INitem{$EI_2$}{$ $}{Segundo \cdtRef{biodiversidad:tipoDeEcosistema}{tipo de ecosistema} identificado en las inmediaciones de la escuela.}
+	\INitem{$EI_n$}{$ $}{Último \cdtRef{biodiversidad:tipoDeEcosistema}{tipo de ecosistema} identificado en las inmediaciones de la escuela.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IB 7}{Porcentaje de áreas verdes en la escuela}
+	{$\%AV = \frac{SAV}{SE} * 100$}
+	{
+		Este indicador es considerado una medida de calidad de vida porque, entre otras cosas,  ayudan a regular el microclima y proporcionan cierto balance entre elementos naturales y construidos por el hombre, en especial en zonas urbanas.
+	}
+	\INitem{$\cdtRef{gls:porcentajeAV}{\%AV}$}{$\%$}{\cdtRef{gls:porcentajeAV}{Porcentaje de áreas verdes} de la escuela.}
+	\INitem{$SAV$}{$m^2$}{Es la \cdtRef{biodiversidad:superficieAreasVerdes}{superficie de áreas verdes} de la escuela.}
+	\INitem{$SE$}{$m^2$}{Es la \cdtRef{escuela:superficieTotal}{superficie total del predio}.}
+\end{indicador}
+%------------------------------------------------------------------------------------------------
+\begin{indicador}{IB 8}{Metros cuadrados de áreas verdes por persona en la escuela}
+	{$AVP = \frac{SAV}{NP}$}
+	{
+		Este indicador mide la extensión de las áreas verdes existentes y la relación con el número de personas. Es complementario al indicador anterior. 
+		La Organización Mundial de la Salud (OMS), considera que debería haber entre 10 y 15 $m^2$ por habitante en una zona urbana.  
+		Esta medición en la escuela, puede ser muy didáctica si se explica lo recomendado por la OMS. 
+	}
+	\INitem{$\cdtRef{gls:aVPersona}{AVP}$}{$\frac{m^2}{persona}$}{\cdtRef{gls:aVPersona}{Superficie de áreas verdes por persona}.}
+	\INitem{$SAV$}{$m^2$}{Es la \cdtRef{biodiversidad:superficieAreasVerdes}{superficie de áreas verdes} de la escuela.}
+	\INitem{$NP$}{$personas$}{Total de personas en la escuela, es la suma de \cdtRef{comunidad:docentesF}{docentes femeninos}, \cdtRef{comunidad:docentesM}{docentes masculinos},
+				\cdtRef{comunidad:adminF}{personal administrativo femenino}, \cdtRef{comunidad:adminM}{personal administrativo masculino}, 
+				\cdtRef{comunidad:alumnosF}{alumnos femeninos}, \cdtRef{comunidad:alumnosM}{alumnos masculinos},
+				\cdtRef{comunidad:limpiezaF}{personal de limpieza y mantenimiento femenino}, \cdtRef{comunidad:limpiezaM}{personal de limpieza y mantenimiento masculino}, 
+				\cdtRef{comunidad:apoyoF}{personal de apoyo femenino}, \cdtRef{comunidad:apoyoM}{personal de apoyo masculino}, 
+				\cdtRef{comunidad:visitantesF}{visitantes femeninos (promedio diario)} y \cdtRef{comunidad:visitantesM}{visitantes masculinos (promedio diario)}.} %PENDIENTE
+\end{indicador}

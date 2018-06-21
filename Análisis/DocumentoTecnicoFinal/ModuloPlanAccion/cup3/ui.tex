@@ -1,0 +1,40 @@
+\subsection{IUP 3 Modificar objetivo}
+
+\subsubsection{Objetivo}
+   
+   Esta pantalla permite al actor modificar la información de un \cdtRef{gls:objetivo}{objetivo} y la línea de acción correspondiente. 
+      
+
+	
+\subsubsection{Diseño}
+
+  En la figura ~\ref{IUP 3} se muestra la pantalla ``Modificar objetivo'', en la cual se mostrará la información del objetivo en modo edición para que
+  de este modo puedan ingresarse los nuevos datos del objetivo.
+  Para realizar la modificación, el actor deberá ingresar los nuevos datos referentes al objetivo, así como seleccionar la línea de acción correspondiente.\\
+  
+  \IUfig[1]{pantallas/planAccion/cup3/iup3.png}{IUP 3}{Modificar objetivo}
+
+  Al oprimir el botón \cdtButton{Aceptar} el sistema validará la información ingresada y señalará los campos cuyos datos no cumplan con las reglas de negocio establecidas.\\
+  
+  Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}, para indicar que la información del objetivo
+  se ha modificado correctamente.
+    
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor confirmar la modificación del objetivo, dirige a la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar la modificación del objetivo, dirige a la pantalla \cdtIdRef{IUP 1}{Administrar objetivos}.
+\end{itemize}
+
+
+\subsubsection{Mensajes}
+
+\begin{description}
+
+	\item[\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos} cuando el objetivo se ha registrado correctamente.
+	\item[\cdtIdRef{MSG4}{No se encontró información sustantiva}:] Se muestra en la pantalla \cdtIdRef{IUP 1}{Administrar objetivos} cuando hace falta información referente a la línea de acción.
+	\item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUP 3}{Modificar objetivo} cuando el actor no ingresó un dato requerido para realizar la operación.
+	\item[\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUP 3}{Modificar objetivo} cuando el actor escribió un dato que excede el tamaño especificado por el sistema.
+	\item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.
+	\item[\cdtIdRef{MSG33}{Unicidad de objetivos por línea de acción}:] Se muestra en la pantalla \cdtIdRef{IUP 3}{Modificar objetivo} cuando el actor seleccionó una línea de acción que ya tiene asociado un objetivo.	
+	\item[\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.
+\end{description}

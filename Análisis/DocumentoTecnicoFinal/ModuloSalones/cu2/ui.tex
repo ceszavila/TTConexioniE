@@ -1,0 +1,24 @@
+\subsection{IUSM-02  Consultar Nivel de Salón}
+
+\subsubsection{Objetivo}
+
+% Explicar el objetivo para el que se construyo la interfaz, generalmente es la descripción de la actividad a desarrollar, como Seleccionar grupos para inscribir materias de un alumno, controlar el acceso al sistema mediante la solicitud de un login y password de los usuarios, etc.
+	
+    Esta pantalla permite al \cdtRef{actor:CIEAlumno}{Alumno} consultar en que nivel de un edificio se encuentra el salón al que fue asignado su grupo.
+\subsubsection{Diseño}
+
+% Presente la figura de la interfaz y explique paso a paso ``a manera de manual de usuario'' como se debe utilizar la interfaz. No olvide detallar en la redacción los datos de entradas y salidas. Explique como utilizar cada botón y control de la pantalla, para quex sirven y lo que hacen. Si el Botón lleva a otra pantalla, solo indique la pantalla y explique lo que pasará cuando se cierre dicha pantalla (la explicación sobre el funcionamiento de la otra pantalla estará en su archivo correspondiente).
+
+    En la figura~\ref{IUSM-02} se muestra la pantalla ``Consultar Nivel de Salón'', en ella se muestra el mapa geográfico de la ESCOM, el polígono dibujando el edificio al que pertenece un salón, marcador en el mapa con el identificador del edificio y la vista lateral 3D de los niveles que tiene el edificio al que pertenece el salón.
+    
+    \IUfig[.3]{/ModuloSalones/S3.png}{IUSM-02}{Consultar Nivel de Salón}
+
+
+
+\subsubsection{Comandos}
+    \begin{itemize}
+
+	\item Botón \botInformacion, dirige a la pantalla \cdtIdRef{IUSM-03}{Consultar Edificio de Salón}
+	\item Botón \cdtButton{Salones}, dirige a la pantalla \cdtIdRef{IUSM-02.1}{Consultar Nivel de Salón}
+	\item Botón \cdtButton{Atrás}, dirige a la pantalla \cdtIdRef{IUSM-01}{Consultar Asignación de Grupos} 
+    \end{itemize}

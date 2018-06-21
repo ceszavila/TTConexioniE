@@ -1,0 +1,188 @@
+\begin{UseCase}{CUPL 1}{Registrar meta}
+	{
+		Este caso de uso permite al actor solicitar el registro de una \cdtRef{gls:meta}{meta} de la línea de acción ``Energía'' o ``Agua'',
+		cuando los datos solicitados para la meta sean ingresados serán
+		validados y registrados.
+		
+	}
+	\UCitem{Versión}{1.0}
+	\UCccsection{Administración de Requerimientos}	
+	\UCitem{Autor}{Natalia Giselle Hernández Sánchez}	
+	\UCccitem{Evaluador}{}
+	\UCitem{Operación}{Registro}
+	\UCccitem{Prioridad}{Alta}
+	\UCccitem{Complejidad}{Media}
+	\UCccitem{Volatilidad}{Media}
+	\UCccitem{Madurez}{Media}
+	\UCitem{Estatus}{Terminado} 
+	\UCitem{Fecha del último estatus}{01 de diciembre de 2014}
+
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+ 	\UCccsection{} 
+ 	\UCccitem{Fecha}{3-Dic}
+ 	\UCccitem{Evaluador}{Nayel Vega}
+ 	\UCccitem{Resultado}{Corregir}
+ 	\UCccitem{Observaciones}{
+ 		\begin{UClist}
+ 			\RCitem{PC1}{\DONE{Entradas: La etiqueta de Fecha de inicio de ejecución falta poner DE LA META}}{}
+ 			\RCitem{PC2}{\DONE{Entradas: La etiqueta de Fecha de término  de ejecución falta poner DE LA META }}{} 	 					
+ 			\RCitem{PC3}{\DONE{Entradas: Entiqueta enfocada a capacitación o sensibilización agregar y/o}}{}
+ 			\RCitem{PC4}{\DONE{Salidas: El periodo es Periodo de ejecuión del plan de acción}}{}
+ 			\RCitem{PC5}{\DONE{Revisar que las etiquetas anteriores etén bien en los demas casos de uso den donde se utilicen}}{} 			
+			\RCitem{PC6}{\DONE{Interfaz: en Objetivo, liga rota en las metas}}{} 			
+			
+ 		\end{UClist}		
+ 	}
+% %--------------------------------------------------------
+% %--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa}}
+	\UCitem{Propósito}{Registrar una meta asociada a un objetivo de la línea de acción ``Agua'' o ``Energía''.}
+
+	\UCitem{Entradas}{
+	  \begin{UClist}
+	   \UCli De la sección ``Información de la meta'':
+	      \begin{Citemize}
+		\item \cdtRef{meta:problematica}{Problemática}: \ioEscribir.
+		\item \cdtRef{meta:meta}{Meta}: \ioEscribir.
+		\item \cdtRef{meta:fechaInicio}{Fecha de inicio de ejecución de la meta}: \ioCalendario.
+		\item \cdtRef{meta:fechaTermino}{Fecha de término de ejecución de la meta}: \ioCalendario.
+	      \end{Citemize}
+	   \UCli De la sección ``Información de la capacitación y/o sensibilización'':
+	      \begin{Citemize}
+		\item \cdtRef{meta:capacitacionSensibilizacion}{Enfocada a capacitación y/o sensibilización}: \ioRadioBoton.
+		\item \cdtRef{capacitacionSensibilizacion:numActividades}{Número de actividades de capacitación y/o sensibilización a realizar}: \ioEscribir.
+		\item \cdtRef{capacitacionSensibilizacion:numAlumnos}{Alumnos}: \ioEscribir.
+		\item \cdtRef{capacitacionSensibilizacion:numDocenteAdministrativo}{Personal docente y administrativo}: \ioEscribir.
+		\item \cdtRef{capacitacionSensibilizacion:numDirectivos}{Personal directivo}: \ioEscribir.
+		\item \cdtRef{capacitacionSensibilizacion:numPadres}{Padres de familia}: \ioEscribir.
+	      \end{Citemize}
+	    \UCli De la sección ``Cuantificar meta'':
+	      \begin{Citemize}
+		\item \cdtRef{meta:valorAlcanzar}{Valor a alcanzar}: \ioEscribir.
+		\item \cdtRef{meta:nombreValor}{Descripción del valor a alcanzar}: \ioEscribir.
+		\item \cdtRef{unidad}{Unidad}: \ioSeleccionar.
+		\item \cdtRef{unidad:unidad}{Nueva unidad}: \ioEscribir.
+	      \end{Citemize}
+	  \end{UClist}
+	}	
+	
+	\UCitem{Salidas}{
+		\begin{UClist} 
+			\UCli \cdtRef{gls:periodoPlanAccion}{Periodo para ejecutar el plan de acción}: \ioObtener.
+			\UCli \cdtIdRef{MSG1}{Operación realizada exitosamente}: Se muestra en la pantalla \cdtIdRef{IUP 5}{Administrar metas} cuando la meta se ha registrado correctamente.
+		\end{UClist}
+	}
+	\UCitem{Precondiciones}{
+		\begin{UClist}
+\UCli {\bf Interna:} Que la escuela se encuentre en estado \cdtRef{estado:planEdicion}{Plan de acción en edición}.
+			\UCli {\bf Interna:} Que el periodo de registro de plan de acción se encuentre vigente.		
+			\UCli {\bf Interna:} Que exista información referente a la unidad.
+		\end{UClist}
+	}
+	
+	\UCitem{Postcondiciones}{
+		\begin{UClist}
+ 			\UCli {\bf Interna:} Se registrará una nueva meta en el sistema.
+ 			\UCli {\bf Interna:} Se registrará una unidad con estado ``Por aprobar''.
+		\end{UClist}
+	}
+	
+	\UCitem{Reglas de negocio}{
+		\begin{UClist}
+			\UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información ingresada por el actor sea correcta.
+		\end{UClist}
+	}
+	
+	\UCitem{Errores}{
+		\begin{UClist}	
+		        \UCli \cdtIdRef{MSG4}{No se encontró información sustantiva}: Se muestra en la pantalla \cdtIdRef{IUP 5}{Administrar metas} cuando hace falta información referente a la unidad.
+			\UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra en la pantalla \cdtIdRef{IUPL 1}{Registrar meta} cuando el actor no ingresó un dato requerido para realizar la operación.
+			\UCli \cdtIdRef{MSG6}{Formato incorrecto}: Se muestra en la pantalla \cdtIdRef{IUPL 1}{Registrar meta} cuando el formato de alguno de los datos ingresados es incorrecto.
+ 			\UCli \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}: Se muestra en la pantalla \cdtIdRef{IUPL 1}{Registrar meta} cuando el actor escribió un dato que excede el tamaño especificado por el sistema.
+\UCli \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}: Se muestra en la pantalla en que se encuentre navegando el actor debido al estado en que se encuentra la escuela.
+\UCli \cdtIdRef{MSG41}{Acción fuera del periodo}: Se muestra en la pantalla en que se encuentre navegando el actor indicando que la fecha no se encuentra dentro del periodo de registro de plan de acción.
+		\end{UClist}
+	}
+
+	\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUP 5}{Administrar metas}}
+% 	\UCitem{Fuente}{
+% 		\begin{UClist}
+% 			\UCli 
+% 		\end{UClist}
+% 	}
+
+\end{UseCase}
+ 
+ 
+\begin{UCtrayectoria}
+	\UCpaso[\UCactor] Solicita registrar una meta oprimiendo el botón \cdtButton{Registrar} en la pantalla \cdtIdRef{IUP 5}{Administrar metas}.
+	\UCpaso[\UCsist] Verifica que la escuela se encuentre en  estado ``Plan de acción en edición''. \refTray{A}.
+    \UCpaso[\UCsist] Verifica que la fecha actual se encuentre dentro del periodo definido por la SMAGEM para el registro del plan de acción. \refTray{B}.	
+	\UCpaso[\UCsist] Busca el periodo de ejecución del plan de acción.
+	\UCpaso[\UCsist] Verifica que exista información referente a la unidad. \refTray{C}
+	\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUPL 1}{Registrar meta} por medio de la cual se realizará el registro de la meta.
+	\UCpaso[\UCactor] Ingresa los datos correspondientes a la sección ``Información de la meta'' de la pantalla \cdtIdRef{IUPL 1}{Registrar meta}. \label{cupl1:ingresaDatos}
+	\UCpaso[\UCactor] Selecciona que la meta está enfocada a la capacitación y/o sensibilización. \refTray{D}
+	\UCpaso[\UCactor] Ingresa los datos correspondientes a la sección ``Información de la capacitación y/o sensibilización'' de la pantalla \cdtIdRef{IUPL 1.1}{Registrar meta: Capacitación y/o sensibilización}.
+	\UCpaso[\UCactor] Solicita registrar la meta oprimiendo el botón \cdtButton{Aceptar} de la pantalla \cdtIdRef{IUPL 1}{Registrar meta}. \refTray{F} \label{cupl1:oprimeAceptar}
+\UCpaso[\UCsist] Verifica que la escuela se encuentre en  estado ``Plan de acción en edición''. \refTray{A}.	
+	\UCpaso[\UCsist] Verifica que los datos ingresados por el actor sean correctos como lo indica la regla de negocio \cdtIdRef{RN-S1}{Información correcta}. \refTray{G} \refTray{H} \refTray{I}
+	\UCpaso[\UCsist] Registra la nueva meta en el sistema.
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUP 5}{Administrar metas} indicando que se ha realizado el registro de la meta satisfactoriamente.
+\end{UCtrayectoria}
+ 
+ 
+ \begin{UCtrayectoriaA}[Fin del caso de uso]{A}{La escuela no se encuentra en el estado ``Plan de acción en edición''.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG28}{Operación no permitida por estado de la entidad} en la pantalla en que se encuentre navegando el actor indicando que no puede administrar los objetivos del plan de acción debido a que la escuela no se encuentra en el estado ``Plan de acción en edición''. 
+ \end{UCtrayectoriaA}
+ 
+   \begin{UCtrayectoriaA}[Fin del caso de uso]{B}{La fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro del plan de acción}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG41}{Acción fuera del periodo} en la pantalla en que se encuentre navegando el actor indicando que no puede administrar los objetivos del plan de acción debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para el registro del plan de acción.
+ \end{UCtrayectoriaA}
+ 
+ 
+\begin{UCtrayectoriaA}[Fin del caso de uso]{C}{No existe información referente a la unidad.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG4}{No se encontró información sustantiva} en la pantalla \cdtIdRef{IUP 5}{Administrar metas} indicando que la operación no puede continuar debido a la falta información necesaria para el sistema.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{D}{La meta no está enfocada a la capacitación y/o sensibilización.}
+	\UCpaso[\UCactor] Selecciona que la meta no está enfocada a la capacitación y/o sensibilización. 
+	\UCpaso[\UCactor] Ingresa el valor y el nombre del valor a alcanzar en la sección ``Cuantificar meta'' de la pantalla \cdtIdRef{IUPL 1.2}{Registrar meta: Cuantificar meta}.
+	\UCpaso[\UCactor] Selecciona la unidad del valor a alcanzar en la sección ``Cuantificar meta'' de la pantalla \cdtIdRef{IUPL 1.2}{Registrar meta: Cuantificar meta}. \refTray{E}
+	\UCpaso[] Continúa en el paso \ref{cupl1:oprimeAceptar} de la trayectoria principal.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{E}{El actor selecciona la opción ``Otra'' como unidad del valor a alcanzar.}
+	\UCpaso[\UCactor] Selecciona ``Otra'' como la unidad del valor a alcanzar en la sección ``Cuantificar meta'' de la pantalla \cdtIdRef{IUPL 1.2}{Registrar meta: Cuantificar meta}.
+	\UCpaso[\UCsist] Muestra la pantalla  \cdtIdRef{IUPL 1}{Registrar meta} con el campo ``Nueva unidad''.
+	\UCpaso[\UCactor] Ingresa la nueva unidad del valor a alcanzar.
+	\UCpaso[\UCsist] Registra la nueva unidad en el sistema con estado ``Por aprobar''.
+	\UCpaso[] Continúa en el paso \ref{cupl1:oprimeAceptar} de la trayectoria principal.
+\end{UCtrayectoriaA} 
+
+\begin{UCtrayectoriaA}[Fin del caso de uso]{F}{El actor desea cancelar la operación.}
+	\UCpaso[\UCactor] Solicita cancelar la operación oprimiendo el botón \cdtButton{Cancelar} de la pantalla \cdtIdRef{IUPL 1}{Registrar meta}.
+	\UCpaso[\UCsist] Muestra la pantalla  \cdtIdRef{IUP 5}{Administrar metas}.
+\end{UCtrayectoriaA} 
+
+\begin{UCtrayectoriaA}{G}{El actor no proporcionó alguno de los datos requeridos.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} en la pantalla  \cdtIdRef{IUPL 1}{Registrar meta},
+	indicando que no se puede registrar la meta debido a la omisión de un dato requerido y señala los campos faltantes.
+	\UCpaso[] Continúa en el paso \ref{cupl1:ingresaDatos} de la trayectoria principal.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{H}{El actor proporcionó un dato que es incorrecto.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG6}{Formato incorrecto} en la pantalla \cdtIdRef{IUPL 1}{Registrar meta}
+	cuando se ha ingresado un dato con formato inválido y señala los campos inválidos.
+	\UCpaso[] Continúa en el paso \ref{cupl1:ingresaDatos} de la trayectoria principal.
+\end{UCtrayectoriaA}
+ 
+\begin{UCtrayectoriaA}{I}{El actor proporcionó un dato que excede la longitud máxima.}
+	\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo} en la pantalla \cdtIdRef{IUPL 1}{Registrar meta}
+	cuando se ha excedido la longitud máxima permitida y señala los campos que excedieron la longitud.
+	\UCpaso[] Continúa en el paso \ref{cupl1:ingresaDatos} de la trayectoria principal.
+\end{UCtrayectoriaA}

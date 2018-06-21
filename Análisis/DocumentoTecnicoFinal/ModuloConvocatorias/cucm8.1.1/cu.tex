@@ -1,0 +1,54 @@
+\begin{UseCase}{CUCM-8.1.1}{Consultar convocatoria nacional}{
+		Permite visualizar las convocatorias de movilidad nacionales que estarán disponibles en la Escuela Superior de Cómputon durante el periodo escolar actual. \\
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{24 de Mayo del 2018}
+			
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEAlumno}{Alumno}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Proporcionar un medio por el cual los alumno de la Escuela Superior de Cómputo puedan visualizar las convocatorias de movilidad nacional que estarán disponibles en dicha escuela.}
+		\UCitem{Entradas}{Nombre de la convocatoria de curso}
+		\UCitem{Salidas}{
+			\begin{UClist}
+				\UCli Tipo de movilidad
+				\UCli Periodo de la convocatoria
+				\UCli Año de la convocatoria
+				\UCli URL de las universidades participantes
+				\UCli URL de las convocatorias
+				\UCli URL de los resultados
+		\end{UClist}}
+		\UCitem{Precondiciones}{\textbf{Interna}: Debe existir la información de las convocatorias de movilidad nacional.}
+		\UCitem{Postcondiciones}{El alumno conocerá las convocatorias de movilidad nacional de la Escuela Superior de Cómputo.}
+		\UCitem{Reglas de negocio}{Ninguna}
+		\UCitem{Errores}{Ninguno}
+		\UCitem{Tipo}{Primario.}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		
+		\UCpaso [\UCactor] Solicita consultar la información de la convocatoria para movilidad nacional tocando la convocatoria que requiere consultar en la pantalla \cdtIdRef{UICM-8.1}{Consultar convocatorias de movilidad}.
+		
+		\UCpaso Obtiene el tipo, el periodo y el año de la convocatoria de movilidad seleccionada.
+		
+		\UCpaso Obtiene las URL de universidades participantes, convocatorias y resultados, de la convocatoria de movilidad seleccionada.
+		
+		\UCpaso Muestra la pantalla \cdtIdRef{IUCM-8.1.1}{Consultar convocatoria nacional} con la información obtenida.
+		
+		\UCpaso [\UCactor] Consulta la información obtenida.
+		
+	\end{UCtrayectoria}
+
+

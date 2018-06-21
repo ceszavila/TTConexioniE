@@ -1,0 +1,117 @@
+\begin{UseCase}{CUAU-5.3}{Eliminar Unidad de Aprendizaje}
+	{
+		Cuando una unidad de aprendizaje ya no será impartida es necesario eliminarla de sistema. Es por eso que este caso de uso permite al \cdtRef{actor:CIEEstructura}{Responsable EE} eliminar la información de una unidad de aprendizaje.
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Cesar Raúl Avila Padilla}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Eliminar}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{09 de Abril del 2018}
+		
+		
+		%--------------------------------------------------------
+		%	\UCccsection{Revisión Versión 0.3} % Anote la versión que se revisó.
+		%	% FECHA: Anote la fecha en que se terminó la revisión.
+		%	\UCccitem{Fecha}{11-11-14} 
+		%	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+		%	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+		%	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+		%	\UCccitem{Resultado}{Corregir}
+		%	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+		%	\UCccitem{Observaciones}{
+		%		\begin{UClist}
+		%			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+		%			\RCitem{PC1}{\DONE{Agregar a precondiciones el estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC2}{\DONE{Agregar el paso de la trayectoria de validación del estado de la cuenta}}{Fecha de entrega}
+		%			\RCitem{PC3}{\DONE{Agregar el mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+		%			\RCitem{PC4}{\DONE{Verificar las ligas a los estados}}{Fecha de entrega}
+		%			
+		%		\end{UClist}		
+		%	}
+		%--------------------------------------------------------
+		
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEEstructura}{Responsable EE}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Eliminar la información de una unidad de aprendizaje del sistema.}
+		\UCitem{Entradas}{
+			  Ninguna.
+		}
+		\UCitem{Salidas}{
+			\begin{UClist} 
+			 \UCli Nombre: \ioObtener.
+			\UCli Tipo: \ioObtener.
+			\UCli Academia: \ioObtener.
+			\UCli Programa académico: \ioObtener.
+			\end{UClist}	
+		}
+		\UCitem{Precondiciones}{
+			\begin{UClist}		
+				\UCli {\bf Interna:} Que exista al menos una unidad de aprendizaje registrada en el sistema.
+			\end{UClist}
+		}
+		\UCitem{Postcondiciones}{
+			\begin{UClist}
+				\UCli Eliminará la información de la unidad de aprendizaje en el sistema.
+			\end{UClist}
+		}
+		\UCitem{Reglas de negocio}{
+		Ninguna.
+		}
+		\UCitem{Errores}{
+			\begin{UClist}
+						\UCli No Aplica.
+			\end{UClist}
+		}
+		\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUAU-5}{Gestionar Unidades de Aprendizaje}.}
+		%	\UCitem{Fuente}{
+		%	    \begin{UClist}
+		%        \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+		%	    \end{UClist}
+		%	}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		\UCpaso[\UCactor] Toca el nombre de la unidad de aprendizaje que desea modificar de la pantalla \cdtIdRef{IUAU-5}{Gestionar Unidades de Aprendizaje}
+		\UCpaso[\UCsist] Construye la pantalla \cdtIdRef{IUAU-5.2}{Editar Unidad de Aprendizaje}.
+		\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUAU-5.2}{Editar Unidad de Aprendizaje} con los botones \cdtButton{Actualizar}, \cdtButton{Eliminar} y \cdtButton{Cancelar}. \label{CUU5.2:uaEditar} \refTray{A} \refTray{B}
+		\UCpaso[\UCactor] Presiona el botón \cdtButton{Eliminar} de la pantalla  \cdtIdRef{IUAU-5.2}{Editar Unidad de Aprendizaje}
+		\UCpaso[\UCsist] Elimina la información de  la unidad de aprendizaje en el sistema.
+		\UCpaso[\UCsist] Construye el mensaje \cdtIdRef{MSG01}{Operación exitosa} con los valores \textit{VALOR = La unidad de aprendizaje y OPERACIÓN = eliminó}.
+		\UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG01}{Operación exitosa} en la pantalla \cdtIdRef{IUAU-5}{Gestionar Unidades de Aprendizaje}.
+	 	\end{UCtrayectoria}
+	
+	\begin{UCtrayectoriaA}[Fin del caso de uso]{A}{Presiona el botón \cdtButton{Actualizar}.}
+		\UCpaso[\UCsist] Ejecuta el caso de uso \cdtIdRef{CUAU-5.2}{Eliminar Unidad de Aprendizaje}
+	\end{UCtrayectoriaA}
+	
+	\begin{UCtrayectoriaA}[Fin del caso de uso]{B}{Presiona el botón \cdtButton{Cancelar}.}
+		\UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUAU-5}{Gestionar Unidades de Aprendizaje}.
+	\end{UCtrayectoriaA}
+
+
+	
+	% 
+	%  \begin{UCtrayectoriaA}{B}{El actor visitante desea consultar las áreas de ESCOM.}
+	% 	\UCpaso[\UCactor] Desea conocer la ubicación de un espacio en ESCOM presionando la opción Áreas de ESCOM del menú principal \textbf{CIE-IU001}
+	% 	
+	% 	\UCpaso[\UCsist] Obtiene la vista aérea de la Escuela Superior de cómputo y los polígonos de las zonas definidas como marcadores de los distintos espacios de la escuela como se muestra en la pantalla CIE-IU003
+	% 	
+	% 	\UCpaso[\UCactor] Desea saber como llegar a un espacio específico presionando su marcador. \ref{cur1:consultar}
+	% \end{UCtrayectoriaA}
+	
+	
+	
+	%\UCExtensionPoint
+	%{El actor requiere solicitar la inscripción de su escuela al programa}
+	%{ Paso \ref{cur1:Acciones} de la trayectoria principal}
+	%{\cdtIdRef{CUR 3}{Solicitar inscripción}}

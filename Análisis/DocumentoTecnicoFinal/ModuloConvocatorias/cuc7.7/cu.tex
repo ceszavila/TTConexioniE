@@ -1,0 +1,50 @@
+\begin{UseCase}{CUAC-7.7}{Eliminar convocatoria de movilidad}{
+		Permite eliminar el registro de una convocatoria de movilidad de la Escuela Superior de Cómputo debido a que este ya no aplicará para el periodo escolar actual. \\
+		}
+		\UCitem{Versión}{1.0}
+		\UCccsection{Administración de Requerimientos}
+		\UCitem{Autor}{Ivo Sebastián Sam Álvarez-Tostado}
+		\UCccitem{Evaluador}{Ulises Velez Saldaña}
+		\UCitem{Operación}{Consulta}
+		\UCccitem{Prioridad}{Alta}
+		\UCccitem{Complejidad}{Baja}
+		\UCccitem{Volatilidad}{Baja}
+		\UCccitem{Madurez}{Alta}
+		\UCitem{Estatus}{Por revisar}
+		\UCitem{Fecha del último estatus}{24 de Mayo del 2018}
+			
+		\UCsection{Atributos}
+		\UCitem{Actor}{
+			\begin{UClist} 
+				\UCli \cdtRef{actor:CIEUpis}{Responsable UPIS}
+			\end{UClist}
+		}
+		\UCitem{Propósito}{Proporcionar un medio por el cual se pueda eliminar las convocatorias de movilidad para la Escuela Superior de Cómputo.}
+		\UCitem{Entradas}{Ninguno}
+		\UCitem{Salidas}{Ninguno}
+		\UCitem{Precondiciones}{\textbf{Externa}: Se debió aprobar la eliminación de la convocatoria de movilidad.}
+		\UCitem{Postcondiciones}{Se podrá registrar una nueva convocatoria para movilidad}
+		\UCitem{Reglas de negocio}{Ninguna}
+		\UCitem{Errores}{Ninguno}
+		\UCitem{Tipo}{Primario.}
+	\end{UseCase}
+	
+	\begin{UCtrayectoria}
+		
+		\UCpaso [\UCactor] Solicta eliminar una convocatoria de movilidad tocando el botón \cdtButton{Eliminar} en la pantalla \cdtIdRef{IUAC-7.6}{Editar convocatoria de movilidad}. \refTray{A}
+		
+		\UCpaso Elimina el registro de la convocatoria de movilidad.
+		
+		\UCpaso Muestra el mensaje \cdtIdRef{MSG1}{Operación exitosa}.
+		
+		\UCpaso Regresa a la pantalla \cdtIdRef{IUAC-7.6}{Gestionar convocatorias de curso}
+		
+	\end{UCtrayectoria}
+
+	\begin{UCtrayectoriaA}{A}{Cuando el actor requiere cancelar la operación.}
+		
+		\UCpaso [\UCactor] Solicita cancelar la operación tocando el botón \textbf{Volver}.
+		
+		\UCpaso Regresa a la pantalla.
+		
+	\end{UCtrayectoriaA}

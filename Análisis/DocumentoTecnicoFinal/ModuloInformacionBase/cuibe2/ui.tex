@@ -1,0 +1,55 @@
+\subsection{IUIBE 2 Registrar información base para indicadores de energía}
+
+\subsubsection{Objetivo}
+
+      En esta pantalla el \cdtRef{actor:usuarioEscuela}{Coordinador del programa} puede registrar o modificar la información base para indicadores de energía que permita conocer el estado en que se encuentra una escuela con respecto al consumo y ahorro de energía.
+
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUIBE 2} se muestra la pantalla ``Registrar información base para indicadores de energía'', por medio de la cual se podrá registrar la información base que permitirá conocer el estado en que se encuentra una escuela con respecto al consumo y ahorro de energía. El actor deberá ingresar la información solicitada en la pantalla, en el caso de que se trate de una modificación de la información aparecerán los datos previamente ingresados en los campos respectivos de la pantalla.\\
+    
+    En el caso de que se seleccione la opción ``No'' en la pregunta ``¿La escuela cuenta con servicio e energía eléctrica?'' el resto de las preguntas no se mostrarán, únicamente los botones de \cdtButton{Aceptar} y \cdtButton{Cancelar}. Si se selecciona la opción ``Si'' se muestra la pregunta ``¿Cuenta con recibos sobre el consumo de energía eléctrica en la escuela?'' como se muestra en la figura~\ref{IUIBE 2.2}\\
+    
+    Si se selecciona la opción ``Si'' en la pregunta ``¿Cuenta con recibos sobre el consumo de energía eléctrica en la escuela?'' se solicitará la frecuencia con la que recibe los recibos de cobro por concepto de energía eléctrica como se muestra en la figura~\ref{IUIBE 2.3}. Si elige la opción ``Anual'' se mostrarán dos campos de texto para el ``Consumo anual'' en kilowatts-hora y el ``Importe anual'' en pesos respectivamente como se muestra en la figura~\ref{IUIBE 2.4}.\\
+    
+    En el caso de que seleccione la opción ``Bimestral'' deberá seleccionar el bimestre al que corresponde cada uno de los recibos que registrará e ingresar el consumo de energía eléctrica por bimestre en kilowatts-hora y el importe bimestral en pesos. Los registros por cada uno de los recibos bimestrales se mostrarán en una tabla, el consumo e importe por cada bimestre se sumará para mostrar los totales de ambos datos al final de la tabla como se muestra en la figura~\ref{IUIBE 2.5}. Lo mismo ocurre con si se selecciona como periodo mes, semestre o año, dependiendo el periodo seleccionado es la frecuencia con la que se solicita el consumo e importe. \\
+    
+    Si se selecciona la opción ``No'' en la pregunta ``¿Cuenta con recibos sobre el consumo de energía eléctrica en la escuela?'' se solicitará únicamente el consumo de energía e importe anual promedio.\\  
+    
+    Una vez que se haya ingresado toda la información solicitada para el registro de la información deberá oprimir el botón \cdtButton{Aceptar}, si se trata de una modificación se mostrará el mensaje \cdtIdRef{MSG30}{Confirmar la modificación de un registro} en una pantalla emergente como se muestra en la figura~\ref{IUIBE 2.1} para indicar al actor que la información previa a la modificación se perderá. El sistema validará y registrará la información sólo si se han cumplido todas las reglas de negocio establecidas.\\
+    
+    Finalmente se mostrará el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUIBE 1}{ Administrar información base para indicadores de energía}, para indicar que la información base se ha registrado o modificado exitosamente.
+      
+    \IUfig[.9]{pantallas/InformacionBase/cuibe2/IUIBE2RegistrarInformacion.png}{IUIBE 2}{Registrar información base para indicadores de energía}
+    \IUfig[.7]{pantallas/InformacionBase/cuibe2/IUIBE2Modificar.png}{IUIBE 2.1}{Registrar información base para indicadores de energía: Mensaje de confirmación}
+    \IUfig[.9]{pantallas/InformacionBase/cuibe2/IUIBE2RegistrarInformacion1.png}{IUIBE 2.2}{Registrar información base para indicadores de energía: Cuenta con servicio de energía eléctrica}
+    \IUfig[.9]{pantallas/InformacionBase/cuibe2/IUIBE2RegistrarInformacion3.png}{IUIBE 2.3}{Registrar información base para indicadores de energía: Con recibos de cobro}
+    \IUfig[.9]{pantallas/InformacionBase/cuibe2/IUIBE2RegistrarInformacion2.png}{IUIBE 2.4}{Registrar información base para indicadores de energía: Sin recibos de cobro}
+    \IUfig[.9]{pantallas/InformacionBase/cuibe2/IUIBE2RegistrarInformacion4.png}{IUIBE 2.5}{Registrar información base para indicadores de energía: Recibos bimestrales}
+  
+\subsubsection{Comandos}
+    \begin{itemize}
+	\item \cdtButton{Aceptar}: Permite al actor confirmar el registro o modificación de la información base para indicadores de energía, dirige a la pantalla \cdtIdRef{IUIBE 1}{ Administrar información base para indicadores de energía}.
+	\item \cdtButton{Cancelar}: Permite al actor cancelar el registro o modificación de la información base para indicadores de energía, dirige a la pantalla \cdtIdRef{IUIBE 1}{ Administrar información base para indicadores de energía}.
+    \end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+      
+	    \item [\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} cuando el registro de la información base para indicadores de energía se ha realizado correctamente.
+	    
+	    \item [\cdtIdRef{MSG4}{No se encontró información sustantiva}:] Se muestra en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} cuando el sistema no cuenta con información en los catálogos de bimestre o año.
+	    
+	    \item [\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} cuando no se ha ingresado un dato marcado como requerido.
+	    
+	    \item [\cdtIdRef{MSG6}{Formato incorrecto}:] Se muestra en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} cuando el tipo de dato ingresado no cumple con el tipo de dato solicitado en el campo.
+	    
+	    \item [\cdtIdRef{MSG7}{Se ha excedido la longitud máxima del campo}:] Se muestra en la pantalla \cdtIdRef{IUIBE 2}{Registrar información base para indicadores de energía} cuando se ha excedido la longitud de alguno de los campos.	    
+	      
+	    \item[\cdtIdRef{MSG28}{Operación no permitida por estado de la entidad}:] Se muestra en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} indicando al actor que no se puede realizar la operación debido al estado en que se encuentra la escuela.
+	    
+	    \item [\cdtIdRef{MSG30}{Confirmar la modificación de un registro}:] Se muestra en la pantalla emergente \cdtIdRef{IUIBE 2.1}{Registrar información base para indicadores de energía: Mensaje de confirmación} para indicar al actor que al guardar los cambios realizados en la información base la información previa se perderá.  
+	    
+	    \item [\cdtIdRef{MSG41}{Acción fuera del periodo}:] Se muestra sobre la pantalla en la pantalla \cdtIdRef{IUIBE 1}{Administrar información base para indicadores de energía} para indicarle al actor que no puede realizar la operación debido a que la fecha actual se encuentra fuera del periodo definido por la SMAGEM para realizar el registro.
+    \end{description}

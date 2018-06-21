@@ -1,0 +1,131 @@
+\begin{UseCase}{CUR 2}{Recuperar contraseña}
+    {
+	Este caso de uso permite al actor recuperar su contraseña cuando la haya olvidado. Cuando se solicite recuperar contraseña, el sistema enviará un 
+	correo al usuario con la información para iniciar sesión.
+    }
+    \UCitem{Versión}{1.0}
+    \UCccsection{Administración de Requerimientos}
+    \UCitem{Autor}{Victor Lozano Ortega}
+    \UCccitem{Evaluador}{José David Ortega Pacheco}
+    \UCitem{Operación}{Modificación}
+    \UCccitem{Prioridad}{Alta}
+    \UCccitem{Complejidad}{Baja}
+    \UCccitem{Volatilidad}{Baja}
+    \UCccitem{Madurez}{Alta}
+    \UCitem{Estatus}{Terminado}
+    \UCitem{Fecha del último estatus}{5 de Noviembre del 2014}
+
+%% Copie y pegue este bloque tantas veces como revisiones tenga el caso de uso.
+%% Esta sección la debe llenar solo el Revisor
+% %--------------------------------------------------------
+% 	\UCccsection{Revisión Versión XX} % Anote la versión que se revisó.
+% 	% FECHA: Anote la fecha en que se terminó la revisión.
+% 	\UCccitem{Fecha}{Fecha en que se termino la revisión} 
+% 	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+% 	\UCccitem{Evaluador}{Nombre de quien revisó}
+% 	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+% 	\UCccitem{Resultado}{Corregir, Desechar, Rehacer todo, terminar.}
+% 	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+% 	\UCccitem{Observaciones}{
+% 		\begin{UClist}
+% 			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+% 			\RCitem{PC1}{\TOCHK{Resumen: Es recuperar, no reestablecer. Permite recuperar }}{Fecha de entrega}
+% 			\RCitem{PC2}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 			\RCitem{PC3}{\TODO{Descripción del pendiente}}{Fecha de entrega}
+% 		\end{UClist}		
+% 	}
+% %--------------------------------------------------------
+	\UCccsection{Revisión Versión 0.4} % Anote la versión que se revisó.
+	% FECHA: Anote la fecha en que se terminó la revisión.
+	\UCccitem{Fecha}{11-11-14} 
+	% EVALUADOR: Coloque el nombre completo de quien realizó la revisión.
+	\UCccitem{Evaluador}{Natalia Giselle Hernández Sánchez}
+	% RESULTADO: Coloque la palabra que mas se apegue al tipo de acción que el analista debe realizar.
+	\UCccitem{Resultado}{Corregir}
+	% OBSERVACIONES: Liste los cambios que debe realizar el Analista.
+	\UCccitem{Observaciones}{
+		\begin{UClist}
+			% PC: Petición de Cambio, describa el trabajo a realizar, si es posible indique la causa de la PC. Opcionalmente especifique la fecha en que considera razonable que se deba terminar la PC. No olvide que la numeración no se debe reiniciar en una segunda o tercera revisión.
+			\RCitem{PC1}{\DONE{Agregar la precondición del estado de la cuenta}}{Fecha de entrega}
+			\RCitem{PC2}{\DONE{Agregar validación del estado de la cuenta}}{Fecha de entrega}
+			\RCitem{PC3}{\DONE{Agregar mensaje de cuenta no activada a la sección de errores}}{Fecha de entrega}
+			\RCitem{PC4}{\DONE{Verficar ligas del estado de la cuenta}}{Fecha de entrega}
+			\RCitem{PC5}{\DONE{Quitar el mensaje MSG2 y agregar el mensaje MSG12}}{Fecha de entrega}
+			\RCitem{PC6}{\TODO{Revisar máquina de estados e impactos en los casos de uso}}{Fecha de entrega}
+			
+		\end{UClist}		
+	}
+%--------------------------------------------------------
+
+	\UCsection{Atributos}
+	\UCitem{Actor(es)}{\cdtRef{actor:usuarioEscuela}{Coordinador del programa} y \cdtRef{actor:usuarioSMAGEM}{Director del programa}}
+	\UCitem{Propósito}{Recuperar contraseña de una cuenta.}
+	\UCitem{Entradas}{
+	    \begin{UClist}
+	      \UCli \cdtRef{cuenta:usuario}{Nombre de usuario}: \ioEscribir.
+	    \end{UClist}
+	}
+	\UCitem{Salidas}{
+	    \begin{UClist}
+		\UCli \cdtIdRef{MSG1}{Operación realizada exitosamente}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} cuando el sistema ha enviado exitosamente el correo solicitado para recuperar la contraseña.
+	    \end{UClist}
+	}
+	\UCitem{Precondiciones}{
+	    \begin{UClist}
+		\UCli {\bf Interna:} Que el usuario se encuentre registrado en el sistema.
+		\UCli {\bf Interna:} Que el estado de la cuenta del usuario sea \cdtRef{estado:activa}{activa}.
+	    \end{UClist}
+	}
+	\UCitem{Postcondiciones}{
+	    \begin{UClist}
+		\UCli {\bf Interna:} El actor podrá iniciar sesión mediante el caso de uso \cdtIdRef{CUR 1}{Iniciar sesión}.
+		\UCli {\bf Interna:} La contraseña de la cuenta de usuario será modificada en el sistema.
+	    \end{UClist}
+	}
+    \UCitem{Reglas de negocio}{
+    	\begin{UClist}
+            \UCli \cdtIdRef{RN-S1}{Información correcta}: Verifica que la información introducida sea correcta.
+	\end{UClist}
+    }
+	\UCitem{Errores}{
+	    \begin{UClist}
+		\UCli \cdtIdRef{MSG12}{Entidad no encontrada}: Se muestra cuando no existe un usuario registrado con ese nombre, se muestra en la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}.
+		\UCli \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}: Se muestra cuando algún dato marcado como requerido no ha sido ingresado, se muestra en la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}.
+		\UCli \cdtIdRef{MSG27}{Cuenta no activada}: Se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
+	    \end{UClist}
+	}
+	\UCitem{Tipo}{Secundario, extiende del caso de uso \cdtIdRef{CUR 1}{Iniciar sesión}.}
+	\UCitem{Fuente}{
+	    \begin{UClist}
+		    \UCli Minuta de la reunión \cdtIdRef{M-3TR}{Toma de requerimientos}.
+	    \end{UClist}
+	}
+ \end{UseCase}
+
+ \begin{UCtrayectoria}
+    \UCpaso[\UCactor] Solicita recuperar su contraseña mediante el botón \cdtButton{Recuperar contraseña} en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión}.
+    \UCpaso[\UCsist] Muestra la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}.
+    \UCpaso[\UCactor] Ingresa su nombre de usuario en la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}. \label{cur2:Acciones}
+    \UCpaso[\UCactor] Confirma la recuperación de su contraseña oprimiendo el botón \cdtButton{Aceptar} en la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}.
+    \UCpaso[\UCsist] Verifica que los datos introducidos por el actor sean correctos como lo indica la regla de negocio \cdtIdRef{RN-S1}{Información correcta}. \refTray{A}
+    \UCpaso[\UCsist] Verifica que exista una cuenta asociada al nombre de usuario ingresado. \refTray{B}
+    \UCpaso[\UCsist] Verifica que el estado de la cuenta sea \cdtRef{estado:activa}{activa}. \refTray{C}
+    \UCpaso[\UCsist] Envía un correo con las instrucciones para recuperar la contraseña al correo asociado al nombre de usuario.
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG1}{Operación realizada exitosamente} en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} cuando el correo ha sido enviado exitosamente.
+ \end{UCtrayectoria}
+
+
+ \begin{UCtrayectoriaA}{A}{El actor no ingresó un dato marcado como requerido.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada} en la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}, para indicar que no puede efectuar la operación de registro debido a la falta de información requerida.
+   \UCpaso[] Continúa en el paso \ref{cur2:Acciones} de la trayectoria principal.
+ \end{UCtrayectoriaA}
+ 
+ \begin{UCtrayectoriaA}[Fin de caso de uso]{B}{No existe información registrada referente al actor}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG12}{Entidad no encontrada} en la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña} indicando que no hay información registrada referente al nombre de usuario proporcionado.
+  \end{UCtrayectoriaA}
+  
+ \begin{UCtrayectoriaA}[Fin de caso de uso]{C}{La cuenta no está activa.}
+    \UCpaso[\UCsist] Muestra el mensaje \cdtIdRef{MSG27}{Cuenta no activada} en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión} indicando que la cuenta no está activada.
+ \end{UCtrayectoriaA} 
+  
+ 

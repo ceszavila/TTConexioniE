@@ -1,0 +1,26 @@
+\subsection{IUR 2 Recuperar contraseña}
+
+\subsubsection{Objetivo}
+
+    Esta pantalla permite al actor \cdtRef{actor:usuarioEscuela}{Coordinador del programa} solicitar la recuperación de su contraseña para acceder al sistema.
+
+\subsubsection{Diseño}
+
+    En la figura~\ref{IUR 2} se muestra la pantalla ``Recuperar contraseña'', por medio de la cual se ingresa el nombre de usuario al cual se encuentra asociado el correo electrónico para el envío del correo que permite recuperar la contraseña de acceso al sistema. \\
+
+    \IUfig[.7]{pantallas/registro/IUR2}{IUR 2}{Recuperar contraseña}
+
+\subsubsection{Comandos}
+\begin{itemize}
+    \item \cdtButton{Aceptar}: Se utiliza para solicitar el envío del correo para la recuperación de la contraseña, dirige a la pantalla \cdtIdRef{IUR 1}{Iniciar sesión}.
+\end{itemize}
+
+\subsubsection{Mensajes}
+
+    \begin{description}
+	\item[\cdtIdRef{MSG1}{Operación realizada exitosamente}:] Se muestra cuando el sistema ha enviado exitosamente el correo solicitado para recuperar la contraseña, se muestra en la pantalla \cdtIdRef{IUR 1}{Iniciar sesión}.
+	\item[\cdtIdRef{MSG2}{No existe información registrada por el momento}:] Se muestra cuando no existe una escuela registrada con la clave de centro de trabajo ingresada, se muestra en la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}.
+	\item[\cdtIdRef{MSG5}{Falta un dato requerido para efectuar la operación solicitada}:] Se muestra cuando algún dato marcado como requerido no ha sido ingresado, se muestra en la pantalla \cdtIdRef{IUR 2}{Recuperar contraseña}.
+
+    \end{description}
+ 
